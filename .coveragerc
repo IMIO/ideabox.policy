@@ -1,0 +1,6 @@
+[report]
+include =
+    src/ideabox/*
+omit =
+    */test*
+    */upgrades/*

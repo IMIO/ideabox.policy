@@ -47,6 +47,9 @@ setup(
         'plone.app.referenceablebehavior',
         'plone.app.relationfield',
         'plone.app.lockingbehavior',
+        'collective.z3cform.select2',
+        'plone.api',
+        'plone.app.dexterity',
     ],
     extras_require={
         'test': [

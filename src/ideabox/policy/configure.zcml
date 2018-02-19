@@ -19,6 +19,8 @@
 
   <include file="upgrades.zcml" />
 
+  <include package="collective.z3cform.select2" />
+
   <genericsetup:registerProfile
       name="default"
       title="ideabox.policy"

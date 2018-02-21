@@ -10,14 +10,6 @@ from transaction import commit
 from plone import api
 from zope.component.hooks import setSite
 
-from zope.configuration import xmlconfig
-
-
-def parse_zcml(package, file):
-    context = xmlconfig._getContext()
-    xmlconfig.include(context, file + '.zcml', package)
-    context.execute_actions()
-
 
 def add_project(portal, project_id, title, project_type, category, project_body, image_source):
     if 'projects' in portal:
@@ -75,6 +67,7 @@ def data_recovery(filename, image, portal):
             project_body,
             image
         )
+        print project_title
 
 
 def main(app):

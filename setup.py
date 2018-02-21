@@ -43,13 +43,14 @@ setup(
         'Products.GenericSetup>=1.8.2',
         'setuptools',
         'z3c.jbot',
-        'plone.app.dexterity==2.1.1',
+        'plone.app.dexterity',
         'plone.app.referenceablebehavior',
         'plone.app.relationfield',
         'plone.app.lockingbehavior',
         'collective.z3cform.select2',
         'plone.api',
-        'plone.app.dexterity',
+        'plone.dexterity',
+        'plone.app.contenttypes'
     ],
     extras_require={
         'test': [

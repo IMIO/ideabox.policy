@@ -5,20 +5,23 @@ ideabox.policy
  Affinitic SPRL
 
 """
-from collective.z3cform.select2.widget.widget import MultiSelect2FieldWidget
-from plone.autoform import directives as form
-from zope.interface import Interface, implements
 from zope import schema
-from ideabox.policy import _
-from plone.supermodel import model
+
+from collective.z3cform.select2.widget.widget import MultiSelect2FieldWidget
+from plone.app.textfield import RichText
+from plone.autoform import directives as form
 from plone.dexterity.content import Container
+from plone.supermodel import model
+from zope.interface import implements
+
+from ideabox.policy import _
 from ideabox.policy import vocabularies
 
 
 class IProject(model.Schema):
     """IProject"""
 
-    projecttype = schema.Choice(
+    project_type = schema.Choice(
         title=_(u"Type"),
         source=vocabularies.types,
         required=True
@@ -34,6 +37,10 @@ class IProject(model.Schema):
         required=False,
     )
 
+    body = RichText(
+            title=u"Contenu",
+            required=True,
+        )
 
 
 class Project(Container):

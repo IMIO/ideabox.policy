@@ -13,12 +13,10 @@
   -->
   <!--<includeDependencies package="." />-->
 
-  <include package=".browser" />
-
   <include file="permissions.zcml" />
-
   <include file="upgrades.zcml" />
 
+  <include package=".browser" />
   <include package="collective.z3cform.select2" />
 
   <genericsetup:registerProfile

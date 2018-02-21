@@ -19,12 +19,12 @@ def post_install(context):
     # Do something at the end of the installation of this package.
     portal = api.portal.get()
     if portal.get('projects') is None:
-        api.content.create(
-            type='Folder',
-            id='projects',
-            title='PROJECTS',
-            container=portal
-        )
+            api.content.create(
+                type='Folder',
+                id='projects',
+                title='PROJECTS',
+                container=portal
+            )
 
 
 def uninstall(context):

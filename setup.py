@@ -50,7 +50,8 @@ setup(
         'collective.z3cform.select2',
         'plone.api',
         'plone.dexterity',
-        'plone.app.contenttypes'
+        'plone.app.contenttypes',
+        'password-generator',
     ],
     extras_require={
         'test': [

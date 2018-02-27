@@ -6,27 +6,45 @@ Copyright by Affinitic sprl
 
 import csv
 import os
-from transaction import commit
+
 from plone import api
+from plone.i18n.normalizer import idnormalizer
+from transaction import commit
 from zope.component.hooks import setSite
+from ideabox.policy.utils import token_type_recorevery, token_category_recorvery
 
 
-def add_project(portal, project_id, title, project_type, category, project_body, image_source):
+def add_project(portal,
+                project_id,
+                title,
+                project_type,
+                category,
+                project_body,
+                image_source,
+                project_author):
     if 'projects' in portal:
         container = portal['projects']
-        with api.env.adopt_user(username="admin"):
-            project = api.content.create(
-                type='Project',
-                title=title,
-                project_type=project_type,
-                category=category,
-                body=u'<br>'.join(project_body.decode('utf8').splitlines()),
-                container=container,
-            )
-            project.old_id = project_id
-            file_path = os.path.join(image_source, project_id + '.jpg')
-            if os.path.isfile(file_path):
-                add_image_from_file(project, project_id + '.jpg', image_source)
+        with api.env.adopt_user(username='admin'):
+            api.user.grant_roles(username=project_author,
+                                 roles=['Contributor', ]
+                                 )
+            with api.env.adopt_user(username=project_author):
+                project = api.content.create(
+                    type='Project',
+                    title=title,
+                    project_type=project_type,
+                    category=category,
+                    body=u'<br>'.join(project_body.decode('utf8').splitlines()),
+                    container=container,
+                )
+                file_path = os.path.join(image_source, project_id + '.jpg')
+                if os.path.isfile(file_path):
+                    add_image_from_file(project, project_id + '.jpg', image_source)
+
+        with api.env.adopt_user(username='admin'):
+            api.user.revoke_roles(username=project_author,
+                                  roles=['Contributor', ]
+                                  )
 
 
 def add_image_from_file(container, file_name, source):
@@ -57,15 +75,28 @@ def data_recovery(filename, image, portal):
         project_type = line[1]
         project_body = line[18]
         project_category = line[5]
+        project_author = line[3]
+        project_mail = line[4]
+
+        project_categorys = project_category.decode('utf8').split(";")[:-1]
+
+        token_type = token_type_recorevery(project_type)
+        token_categorys = token_category_recorvery(project_categorys)
+
+        if len(project_author) < 3:
+            project_author = idnormalizer.normalize(project_mail[0:3].decode('utf8'))
+        else:
+            project_author = idnormalizer.normalize(project_author.decode('utf8'))
 
         add_project(
             portal,
             project_id,
             project_title,
-            project_type,
-            project_category,
+            token_type,
+            token_categorys,
             project_body,
-            image
+            image,
+            project_author
         )
         print project_title
 

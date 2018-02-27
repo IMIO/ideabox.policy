@@ -22,7 +22,7 @@ def post_install(context):
             api.content.create(
                 type='Folder',
                 id='projects',
-                title='PROJECTS',
+                title='Projets',
                 container=portal
             )
 

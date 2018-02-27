@@ -13,6 +13,7 @@ from plone.autoform import directives as form
 from plone.dexterity.content import Container
 from plone.supermodel import model
 from zope.interface import implements
+from plone.dexterity.browser import view
 
 from ideabox.policy import _
 from ideabox.policy import vocabularies
@@ -45,3 +46,14 @@ class IProject(model.Schema):
 
 class Project(Container):
     implements(IProject)
+
+
+class ProjectView(view.DefaultView):
+
+    @property
+    def get_images_url(self):
+        contents = self.context.listFolderContents(contentFilter={"portal_type": "Image"})
+        images_url = []
+        for content in contents:
+            images_url.append(content.absolute_url)
+        return images_url

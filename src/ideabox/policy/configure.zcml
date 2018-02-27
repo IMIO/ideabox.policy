@@ -17,6 +17,7 @@
   <include file="upgrades.zcml" />
 
   <include package=".browser" />
+  <include package=".content" />
   <include package="collective.z3cform.select2" />
 
   <genericsetup:registerProfile

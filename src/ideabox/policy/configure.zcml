@@ -13,6 +13,7 @@
   <include package=".browser" />
   <include package=".content" />
   <include package="collective.z3cform.select2" />
+  <include package="cioppino.twothumbs" />
 
   <genericsetup:registerProfile
       name="default"

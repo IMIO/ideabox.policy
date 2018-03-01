@@ -47,10 +47,10 @@ def add_project(portal,
         rate.setupAnnotations(project)
         if project_like:
             for x in range(0, int(project_like)):
-                rate.loveIt(project, 'userimportp'+str(x))
+                rate.loveIt(project, 'userimportp' + str(x))
         if project_unlike:
             for x in range(0, int(project_unlike)):
-                rate.hateIt(project, 'userimportn'+str(x))
+                rate.hateIt(project, 'userimportn' + str(x))
 
         with api.env.adopt_user(username='admin'):
             api.user.revoke_roles(username=project_author,

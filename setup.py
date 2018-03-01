@@ -52,6 +52,8 @@ setup(
         'plone.dexterity',
         'plone.app.contenttypes',
         'password-generator',
+        'cioppino.twothumbs',
+
     ],
     extras_require={
         'test': [

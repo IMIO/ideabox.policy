@@ -12,6 +12,7 @@ from plone.i18n.normalizer import idnormalizer
 from transaction import commit
 from zope.component.hooks import setSite
 from ideabox.policy.utils import token_type_recorevery, token_category_recorvery
+from cioppino.twothumbs import rate
 
 
 def add_project(portal,
@@ -21,7 +22,9 @@ def add_project(portal,
                 category,
                 project_body,
                 image_source,
-                project_author):
+                project_author,
+                project_like,
+                project_unlike):
     if 'projects' in portal:
         container = portal['projects']
         with api.env.adopt_user(username='admin'):
@@ -40,6 +43,14 @@ def add_project(portal,
                 file_path = os.path.join(image_source, project_id + '.jpg')
                 if os.path.isfile(file_path):
                     add_image_from_file(project, project_id + '.jpg', image_source)
+
+        rate.setupAnnotations(project)
+        if project_like:
+            for x in range(0, int(project_like)):
+                rate.loveIt(project, 'userimportp'+str(x))
+        if project_unlike:
+            for x in range(0, int(project_unlike)):
+                rate.hateIt(project, 'userimportn'+str(x))
 
         with api.env.adopt_user(username='admin'):
             api.user.revoke_roles(username=project_author,
@@ -77,6 +88,8 @@ def data_recovery(filename, image, portal):
         project_category = line[5]
         project_author = line[3]
         project_mail = line[4]
+        project_like = line[15]
+        project_unlike = line[16]
 
         project_categorys = project_category.decode('utf8').split(";")[:-1]
 
@@ -96,7 +109,9 @@ def data_recovery(filename, image, portal):
             token_categorys,
             project_body,
             image,
-            project_author
+            project_author,
+            project_like,
+            project_unlike
         )
         print project_title
 

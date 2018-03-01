@@ -19,6 +19,7 @@
   <property name="add_permission">cmf.AddPortalContent</property>
   <property name="klass">ideabox.policy.content.project.Project</property>
   <property name="behaviors">
+    <element value="cioppino.twothumbs.interfaces.ILoveThumbsDontYou" />
     <element value="plone.app.content.interfaces.INameFromTitle"/>
     <element value="plone.app.dexterity.behaviors.metadata.IBasic"/>
     <element value="eea.facetednavigation.subtypes.interfaces.IPossibleFacetedNavigable"/>

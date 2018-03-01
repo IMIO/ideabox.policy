@@ -9,6 +9,7 @@
 
 
 <metal:main fill-slot="main" tal:define="images_url view/get_images_url">
+  <div tal:content="structure here/@@rate-if-you-dare"/>
   <tal:block tal:repeat="image_url images_url">
     <img tal:attributes="src image_url"/>
   </tal:block>

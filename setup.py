@@ -41,6 +41,7 @@ setup(
         'Products.GenericSetup>=1.8.2',
         'cioppino.twothumbs',
         'collective.z3cform.select2',
+        'cpskin.diazotheme.spirit',
         'password-generator',
         'plone.api',
         'plone.api',

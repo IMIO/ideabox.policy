@@ -1,18 +1,19 @@
 # encoding: utf-8
-"""
-Licensed under the GPL license, see LICENCE.txt for more details.
-Copyright by Affinitic sprl
-"""
 
+from Zope2.App import startup
+from cioppino.twothumbs import rate
+from plone import api
+from plone.i18n.normalizer import idnormalizer
+from plone.namedfile.file import NamedBlobImage
+from transaction import commit
+from zope.component.hooks import setSite
+
+import argparse
 import csv
 import os
 
-from plone import api
-from plone.i18n.normalizer import idnormalizer
-from transaction import commit
-from zope.component.hooks import setSite
-from ideabox.policy.utils import token_type_recorevery, token_category_recorvery
-from cioppino.twothumbs import rate
+from ideabox.policy.utils import token_category_recorvery
+from ideabox.policy.utils import token_type_recorevery
 
 
 def add_project(portal,
@@ -62,7 +63,6 @@ def add_image_from_file(container, file_name, source):
     file_path = os.path.join(source, file_name)
     if not container.hasObject(file_name):
         # with deterity image
-        from plone.namedfile.file import NamedBlobImage
         named_blob_image = NamedBlobImage(
             data=open(file_path, 'r').read(),
             filename=unicode(file_name)
@@ -117,9 +117,6 @@ def data_recovery(filename, image, portal):
 
 
 def main(app):
-    import argparse
-    from Zope2.App import startup
-
     startup.startup()
 
     parser = argparse.ArgumentParser()

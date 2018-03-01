@@ -1,16 +1,14 @@
 # encoding: utf-8
-"""
-Licensed under the GPL license, see LICENCE.txt for more details.
-Copyright by Affinitic sprl
-"""
 
-import csv
-
-import password_generator
+from Zope2.App import startup
 from plone import api
 from plone.i18n.normalizer import urlnormalizer
 from transaction import commit
 from zope.component.hooks import setSite
+
+import argparse
+import csv
+import password_generator
 
 
 def add_user(author, mail):
@@ -43,9 +41,6 @@ def data_recovery(filename):
 
 
 def main(app):
-    import argparse
-    from Zope2.App import startup
-
     startup.startup()
 
     parser = argparse.ArgumentParser()

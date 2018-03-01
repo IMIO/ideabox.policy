@@ -7,8 +7,8 @@
       i18n:domain="ideabox.policy">
 <body>
 
-
 <metal:main fill-slot="main" tal:define="images_url view/get_images_url">
+  <h1 tal:content="context/Title"/>
   <div tal:content="structure here/@@rate-if-you-dare"/>
   <tal:block tal:repeat="image_url images_url">
     <img tal:attributes="src image_url"/>

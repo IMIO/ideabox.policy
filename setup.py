@@ -38,22 +38,20 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-        # -*- Extra requirements: -*-
-        'plone.api',
         'Products.GenericSetup>=1.8.2',
-        'setuptools',
-        'z3c.jbot',
+        'cioppino.twothumbs',
+        'collective.z3cform.select2',
+        'password-generator',
+        'plone.api',
+        'plone.api',
+        'plone.app.contenttypes',
         'plone.app.dexterity',
+        'plone.app.lockingbehavior',
         'plone.app.referenceablebehavior',
         'plone.app.relationfield',
-        'plone.app.lockingbehavior',
-        'collective.z3cform.select2',
-        'plone.api',
         'plone.dexterity',
-        'plone.app.contenttypes',
-        'password-generator',
-        'cioppino.twothumbs',
-
+        'setuptools',
+        'z3c.jbot',
     ],
     extras_require={
         'test': [

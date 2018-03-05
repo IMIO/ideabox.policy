@@ -1,25 +1,101 @@
 <div>
-    <div class="titre-rss">
+    <div class="homepage-titre-rss">
         <h2>
-            <a class="title" href=""></a>
+            <a class="homepage-title" href="">hgvgvhgvhv</a>
         </h2>
     </div>
-    <div class="results">
-        <ul class="standard-results">
-            <tal:repeat>
-            <li class="bloc-item">
-                <a href="" class="title">
-                    <h3 tal:content="">
-                    </h3>
-                </a>
-                <div class="description"></div>
-                <div>
-                    <a href="" class="more">
+    <div class="homepage-results">
+        <ul class="homepage-standard-results">
+            <li class="homepage-bloc-item">
+                <div class="homepage-bloc-item-title">
+                    <a href="">
+                        <h3>
+                            bjbjbbjhb
+                        </h3>
+                    </a>
+                </div>
+                <div class="homepage-bloc-item-description">jnkbbjkb</div>
+                <div class="homepage-bloc-item-more">
+                    <a href="">
                         Découvrez la démarche
                     </a>
                 </div>
             </li>
-            </tal:repeat>
+            <li class="homepage-bloc-item">
+                <div class="homepage-bloc-item-title">
+                    <a href="">
+                        <h3>
+                            bjbjbbjhb
+                        </h3>
+                    </a>
+                </div>
+                <div class="homepage-bloc-item-description">jnkbbjkb</div>
+                <div class="homepage-bloc-item-more">
+                    <a href="">
+                        Découvrez la démarche
+                    </a>
+                </div>
+            </li>
+            <li class="homepage-bloc-item">
+                <div class="homepage-bloc-item-title">
+                    <a href="">
+                        <h3>
+                            bjbjbbjhb
+                        </h3>
+                    </a>
+                </div>
+                <div class="homepage-bloc-item-description">jnkbbjkb</div>
+                <div class="homepage-bloc-item-more">
+                    <a href="">
+                        Découvrez la démarche
+                    </a>
+                </div>
+            </li>
+            <li class="homepage-bloc-item">
+                <div class="homepage-bloc-item-title">
+                    <a href="">
+                        <h3>
+                            bjbjbbjhb
+                        </h3>
+                    </a>
+                </div>
+                <div class="homepage-bloc-item-description">jnkbbjkb</div>
+                <div class="homepage-bloc-item-more">
+                    <a href="">
+                        Découvrez la démarche
+                    </a>
+                </div>
+            </li>
+            <li class="homepage-bloc-item">
+                <div class="homepage-bloc-item-title">
+                    <a href="">
+                        <h3>
+                            bjbjbbjhb
+                        </h3>
+                    </a>
+                </div>
+                <div class="homepage-bloc-item-description">jnkbbjkb</div>
+                <div class="homepage-bloc-item-more">
+                    <a href="">
+                        Découvrez la démarche
+                    </a>
+                </div>
+            </li>
+            <li class="homepage-bloc-item">
+                <div class="homepage-bloc-item-title">
+                    <a href="">
+                        <h3>
+                            bjbjbbjhb
+                        </h3>
+                    </a>
+                </div>
+                <div class="homepage-bloc-item-description">jnkbbjkb</div>
+                <div class="homepage-bloc-item-more">
+                    <a href="">
+                        Découvrez la démarche
+                    </a>
+                </div>
+            </li>
         </ul>
     </div>
 

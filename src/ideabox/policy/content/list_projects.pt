@@ -1,29 +1,130 @@
 <div>
-    <div class="titre-rss">
+    <div class="homepage-titre-rss">
         <h2>
-            <a class="title" href=""></a>
+            <a class="homepage-title" href="">TOTTTEE</a>
         </h2>
     </div>
-    <div class="results">
-        <ul class="standard-results">
-            <tal:repeat>
-            <li class="bloc-item">
+    <div class="homepage-results">
+        <ul class="homepage-standard-results">
+            <li class="homepage-bloc-item">
                 <div>
-                    <div>
-                        <a href="" class="title">
+                    <div class="homepage-bloc-item-title">
+                        <a href="">
                             <h3 tal:content="">
+                                titre
                             </h3>
                         </a>
                     </div>
-                    <div>
-                        <a href="" class="more" tal:content=""></a>
+                    <div class="homepage-bloc-item-more">
+                        <a href="">10 projets</a>
                     </div>
                 </div>
-                <div class="description" tal:content="">
+                <div class="homepage-bloc-item-description">
+                    hgvhvhv vhvhjvjv jvhvhvvv jhvjh
                 </div>
             </li>
-            </tal:repeat>
+            <li class="homepage-bloc-item">
+                <div>
+                    <div class="homepage-bloc-item-title">
+                        <a href="">
+                            <h3 tal:content="">
+                                titre
+                            </h3>
+                        </a>
+                    </div>
+                    <div class="homepage-bloc-item-more">
+                        <a href="">10 projets</a>
+                    </div>
+                </div>
+                <div class="homepage-bloc-item-description">
+                    hgvhvhv vhvhjvjv jvhvhvvv jhvjh
+                </div>
+            </li>
+            <li class="homepage-bloc-item">
+                <div>
+                    <div class="homepage-bloc-item-title">
+                        <a href="">
+                            <h3 tal:content="">
+                                titre
+                            </h3>
+                        </a>
+                    </div>
+                    <div class="homepage-bloc-item-more">
+                        <a href="">10 projets</a>
+                    </div>
+                </div>
+                <div class="homepage-bloc-item-description">
+                    hgvhvhv vhvhjvjv jvhvhvvv jhvjh
+                </div>
+            </li>
+            <li class="homepage-bloc-item">
+                <div>
+                    <div class="homepage-bloc-item-title">
+                        <a href="">
+                            <h3 tal:content="">
+                                titre
+                            </h3>
+                        </a>
+                    </div>
+                    <div class="homepage-bloc-item-more">
+                        <a href="">10 projets</a>
+                    </div>
+                </div>
+                <div class="homepage-bloc-item-description">
+                    hgvhvhv vhvhjvjv jvhvhvvv jhvjh
+                </div>
+            </li>
+            <li class="homepage-bloc-item">
+                <div>
+                    <div class="homepage-bloc-item-title">
+                        <a href="">
+                            <h3 tal:content="">
+                                titre
+                            </h3>
+                        </a>
+                    </div>
+                    <div class="homepage-bloc-item-more">
+                        <a href="">10 projets</a>
+                    </div>
+                </div>
+                <div class="homepage-bloc-item-description">
+                    hgvhvhv vhvhjvjv jvhvhvvv jhvjh
+                </div>
+            </li>
+            <li class="homepage-bloc-item">
+                <div>
+                    <div class="homepage-bloc-item-title">
+                        <a href="">
+                            <h3 tal:content="">
+                                titre
+                            </h3>
+                        </a>
+                    </div>
+                    <div class="homepage-bloc-item-more">
+                        <a href="">10 projets</a>
+                    </div>
+                </div>
+                <div class="homepage-bloc-item-description">
+                    hgvhvhv vhvhjvjv jvhvhvvv jhvjh
+                </div>
+            </li>
+            <li class="homepage-bloc-item">
+                <div>
+                    <div class="homepage-bloc-item-title">
+                        <a href="">
+                            <h3 tal:content="">
+                                titre
+                            </h3>
+                        </a>
+                    </div>
+                    <div class="homepage-bloc-item-more">
+                        <a href="">10 projets</a>
+                    </div>
+                </div>
+                <div class="homepage-bloc-item-description">
+                    hgvhvhv vhvhjvjv jvhvhvvv jhvjh
+                </div>
+            </li>
         </ul>
     </div>
-
 </div>

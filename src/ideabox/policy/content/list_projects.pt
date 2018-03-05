@@ -1,0 +1,29 @@
+<div>
+    <div class="titre-rss">
+        <h2>
+            <a class="title" href=""></a>
+        </h2>
+    </div>
+    <div class="results">
+        <ul class="standard-results">
+            <tal:repeat>
+            <li class="bloc-item">
+                <div>
+                    <div>
+                        <a href="" class="title">
+                            <h3 tal:content="">
+                            </h3>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="" class="more" tal:content=""></a>
+                    </div>
+                </div>
+                <div class="description" tal:content="">
+                </div>
+            </li>
+            </tal:repeat>
+        </ul>
+    </div>
+
+</div>

@@ -1,4 +1,5 @@
 graft src/ideabox
 graft docs
 include *.rst
+include *.GPL
 global-exclude *.pyc

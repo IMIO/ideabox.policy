@@ -1,26 +1,23 @@
 # encoding: utf-8
 
+import argparse
+import csv
+import os
+
 from Zope2.App import startup
 from cioppino.twothumbs import rate
+from ideabox.policy.utils import token_type_recovery
 from plone import api
 from plone.i18n.normalizer import idnormalizer
 from plone.namedfile.file import NamedBlobImage
 from transaction import commit
 from zope.component.hooks import setSite
 
-import argparse
-import csv
-import os
-
-from ideabox.policy.utils import token_category_recorvery
-from ideabox.policy.utils import token_type_recorevery
-
 
 def add_project(portal,
                 project_id,
                 title,
                 project_type,
-                category,
                 project_body,
                 image_source,
                 project_author,
@@ -37,7 +34,6 @@ def add_project(portal,
                     type='Project',
                     title=title,
                     project_type=project_type,
-                    category=category,
                     body=u'<br>'.join(project_body.decode('utf8').splitlines()),
                     container=container,
                 )
@@ -85,16 +81,12 @@ def data_recovery(filename, image, portal):
         project_title = line[2]
         project_type = line[1]
         project_body = line[18]
-        project_category = line[5]
         project_author = line[3]
         project_mail = line[4]
         project_like = line[15]
         project_unlike = line[16]
 
-        project_categorys = project_category.decode('utf8').split(";")[:-1]
-
-        token_type = token_type_recorevery(project_type)
-        token_categorys = token_category_recorvery(project_categorys)
+        token_type = token_type_recovery(project_type)
 
         if len(project_author) < 3:
             project_author = idnormalizer.normalize(project_mail[0:3].decode('utf8'))
@@ -106,7 +98,6 @@ def data_recovery(filename, image, portal):
             project_id,
             project_title,
             token_type,
-            token_categorys,
             project_body,
             image,
             project_author,

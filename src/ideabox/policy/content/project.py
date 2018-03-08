@@ -7,16 +7,13 @@ ideabox.policy
 """
 from zope import schema
 
-from collective.z3cform.select2.widget.widget import MultiSelect2FieldWidget
+from ideabox.policy import _
+from ideabox.policy import vocabularies
 from plone.app.textfield import RichText
-from plone.autoform import directives as form
+from plone.dexterity.browser import view
 from plone.dexterity.content import Container
 from plone.supermodel import model
 from zope.interface import implements
-from plone.dexterity.browser import view
-
-from ideabox.policy import _
-from ideabox.policy import vocabularies
 
 
 class IProject(model.Schema):
@@ -28,20 +25,10 @@ class IProject(model.Schema):
         required=True
     )
 
-    form.widget(category=MultiSelect2FieldWidget)
-    category = schema.List(
-        title=_(u'Categories'),
-        value_type=schema.Choice(
-            title=_(u'Categories'),
-            source=vocabularies.categories,
-        ),
-        required=False,
-    )
-
     body = RichText(
-            title=u"Contenu",
-            required=True,
-        )
+        title=u"Contenu",
+        required=True,
+    )
 
 
 class Project(Container):

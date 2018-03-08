@@ -5,21 +5,63 @@
       lang="en"
       metal:use-macro="context/main_template/macros/master"
       i18n:domain="ideabox.policy">
-<body>
+    <body>
 
-<metal:main fill-slot="main" tal:define="images_url view/get_images_url">
-  <h1 tal:content="context/Title"/>
-  <div tal:content="structure here/@@rate-if-you-dare"/>
-  <tal:block tal:repeat="image_url images_url">
-    <img tal:attributes="src image_url"/>
-  </tal:block>
+        <metal:main fill-slot="main" tal:define="images_url view/get_images_url">
+        <h1 tal:content="context/Title"/>
+            <div tal:content="structure here/@@rate-if-you-dare"/>
+                <tal:block tal:repeat="image_url images_url">
+                <img tal:attributes="src image_url"/>
+                </tal:block>
 
-  <tal:block repeat="widget view/widgets/values">
-        <tal:block tal:condition="python:widget.__name__ not in ('IBasic.title', 'IBasic.description', 'title', 'description',)">
-            <tal:widget tal:replace="structure widget/@@ploneform-render-widget"/>
-        </tal:block>
-    </tal:block>
-</metal:main>
+                <tal:block repeat="widget view/widgets/values">
+                <tal:block tal:condition="python:widget.__name__ not in ('IBasic.title', 'IBasic.description', 'title', 'description',)">
+                <tal:widget tal:replace="structure widget/@@ploneform-render-widget"/>
+                </tal:block>
+                </tal:block>
 
-</body>
+
+                <ol class="timeline">
+                    <li>
+                        <div class="step">
+                            <div>08</div>
+                            <div>Jan.</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step">
+                            <div>22</div>
+                            <div>Mars</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step">
+                            <div>14</div>
+                            <div>Juin</div>
+                        </div>
+                    </li>
+                    <li class="current">
+                        <div class="step">
+                            <div>01</div>
+                            <div>Sept.</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step">
+                            <div>30</div>
+                            <div>Déc.</div>
+                        </div>
+                    </li>
+                </ol>
+                <ol class="timeline-text">
+                    <li><span>Dépôt des idées</span></li>
+                    <li><span>Analyse des idées par la Ville de Liège</span></li>
+                    <li><span>Votez pour vos idées préférées!</span></li>
+                    <li class="current"><span>Analyse des résultats</span></li>
+                    <li><span>On met ensemble les actions prioritaires en oeuvre!</span></li>
+                </ol>
+                </metal:main>
+
+
+    </body>
 </html>

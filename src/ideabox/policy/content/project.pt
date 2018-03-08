@@ -67,7 +67,39 @@
             <div class="img" tal:attributes="style string: background-image:url(${image_url})"></div>
             </tal:block>
         </div>
-
+        
+        <div class="faceted-projects-ungrouped-view">
+          <div class="event-entry no-view">
+            <a href="" title="">
+              <tal:block tal:repeat="image_url images_url">
+                <div class="pageleadImage" tal:attributes="style string: background-image:url(${image_url})"></div>
+              </tal:block>
+              <div class="pagecaption">
+                  <h3>Diversifier le design et la conception des bancs publics</h3>
+              </div>
+            </a>
+          </div>
+          <div class="event-entry no-view">
+            <a href="" title="">
+              <tal:block tal:repeat="image_url images_url">
+                <div class="pageleadImage" tal:attributes="style string: background-image:url(${image_url})"></div>
+              </tal:block>
+              <div class="pagecaption">
+                  <h3>Diversifier le design et la conception des bancs publics</h3>
+              </div>
+            </a>
+          </div>
+          <div class="event-entry no-view">
+            <a href="" title="">
+              <tal:block tal:repeat="image_url images_url">
+                <div class="pageleadImage" tal:attributes="style string: background-image:url(${image_url})"></div>
+              </tal:block>
+              <div class="pagecaption">
+                  <h3>Diversifier le design et la conception des bancs publics</h3>
+              </div>
+            </a>
+          </div>
+        </div>
 
         </metal:main>
     </body>

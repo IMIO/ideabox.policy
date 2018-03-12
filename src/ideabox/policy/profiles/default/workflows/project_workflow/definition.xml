@@ -152,7 +152,7 @@
 
     <exit-transition transition_id="study"/>
     <exit-transition transition_id="progress"/>
-    <exit-transition transition_id="realise"/>
+    <exit-transition transition_id="realize"/>
     <exit-transition transition_id="vote_analysis"/>
 
     <permission-map name="Access contents information" acquired="False">
@@ -204,7 +204,7 @@
     </description>
 
     <exit-transition transition_id="progress"/>
-    <exit-transition transition_id="realise"/>
+    <exit-transition transition_id="realize"/>
     <exit-transition transition_id="back_accepted"/>
 
     <permission-map name="Access contents information" acquired="False">
@@ -230,7 +230,7 @@
       in progress
     </description>
 
-    <exit-transition transition_id="realise"/>
+    <exit-transition transition_id="realize"/>
     <exit-transition transition_id="back_in_study"/>
 
     <permission-map name="Access contents information" acquired="False">
@@ -251,9 +251,9 @@
     </permission-map>
   </state>
 
-  <state state_id="realised" title="realised" i18n:attributes="">
+  <state state_id="realized" title="realized" i18n:attributes="">
     <description i18n:translate="">
-      realised
+      realized
     </description>
 
     <exit-transition transition_id="back_in_progress"/>
@@ -480,18 +480,18 @@
   </guard>
   </transition>
 
-  <transition transition_id="realise"
-              new_state="realised"
-              title="realise"
+  <transition transition_id="realize"
+              new_state="realized"
+              title="realize"
               trigger="USER"
               before_script="" after_script=""
               i18n:attributes="">
   <description i18n:translate="">
-     realise
+     realize
   </description>
-  <action url="%(content_url)s/content_status_modify?workflow_action=realise"
+  <action url="%(content_url)s/content_status_modify?workflow_action=realize"
         category="workflow"
-        i18n:translate="">realise</action>
+        i18n:translate="">realize</action>
   <guard>
     <guard-permission>Modify portal content</guard-permission>
   </guard>

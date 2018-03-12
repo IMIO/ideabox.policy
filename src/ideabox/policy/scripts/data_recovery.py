@@ -8,7 +8,7 @@ from Zope2.App import startup
 from cioppino.twothumbs import rate
 from ideabox.policy.utils import token_type_recovery
 from plone import api
-from plone.i18n.normalizer import idnormalizer
+from plone.i18n.normalizer import urlnormalizer
 from plone.namedfile.file import NamedBlobImage
 from transaction import commit
 from zope.component.hooks import setSite
@@ -22,7 +22,8 @@ def add_project(portal,
                 image_source,
                 project_author,
                 project_like,
-                project_unlike):
+                project_unlike,
+                project_status):
     if 'projects' in portal:
         container = portal['projects']
         with api.env.adopt_user(username='admin'):
@@ -50,6 +51,17 @@ def add_project(portal,
                 rate.hateIt(project, 'userimportn' + str(x))
 
         with api.env.adopt_user(username='admin'):
+            if project_status in ['selected', 'rejected']:
+                api.content.transition(obj=project, transition='deposit')
+                api.content.transition(obj=project, transition='to_be_analysed')
+                api.content.transition(obj=project, transition='vote')
+                api.content.transition(obj=project, transition='vote_analysis')
+                if project_status == 'selected':
+                    api.content.transition(obj=project, transition='accept')
+                else:
+                    api.content.transition(obj=project, transition='reject')
+
+        with api.env.adopt_user(username='admin'):
             api.user.revoke_roles(username=project_author,
                                   roles=['Contributor', ]
                                   )
@@ -72,7 +84,7 @@ def add_image_from_file(container, file_name, source):
         image.reindexObject()
 
 
-def data_recovery(filename, image, portal):
+def data_recovery(filename, image, portal, status):
     csv_file = open(filename, 'rb')
     reader = csv.reader(csv_file, delimiter=";")
     reader.next()
@@ -89,9 +101,9 @@ def data_recovery(filename, image, portal):
         token_type = token_type_recovery(project_type)
 
         if len(project_author) < 3:
-            project_author = idnormalizer.normalize(project_mail[0:3].decode('utf8'))
+            project_author = urlnormalizer.normalize(project_mail[0:3].decode('utf8'), locale='fr')
         else:
-            project_author = idnormalizer.normalize(project_author.decode('utf8'))
+            project_author = urlnormalizer.normalize(project_author.decode('utf8'), locale='fr')
 
         add_project(
             portal,
@@ -102,7 +114,8 @@ def data_recovery(filename, image, portal):
             image,
             project_author,
             project_like,
-            project_unlike
+            project_unlike,
+            status
         )
         print project_title
 
@@ -115,13 +128,14 @@ def main(app):
     parser.add_argument('csv', help='csv file')
     parser.add_argument('img', help='localisation of pictures')
     parser.add_argument('name', help='Name of plone site')
+    parser.add_argument('status', help='status of types')
     args = parser.parse_args()
 
     setSite(app[args.name])
     portal = app[args.name]
 
     if args.csv and args.img:
-        data_recovery(args.csv, args.img, portal)
+        data_recovery(args.csv, args.img, portal, args.status)
         commit()
 
 

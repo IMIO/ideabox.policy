@@ -57,17 +57,6 @@
         </tal:block>
         </tal:block>
 
-        <div id="slider">
-            <tal:block tal:repeat="image_url images_url">
-            <div class="img" tal:attributes="style string: background-image:url(${image_url})"></div>
-            <div class="img" tal:attributes="style string: background-image:url(${image_url})"></div>
-            <div class="img" tal:attributes="style string: background-image:url(${image_url})"></div>
-            <div class="img" tal:attributes="style string: background-image:url(${image_url})"></div>
-            <div class="img" tal:attributes="style string: background-image:url(${image_url})"></div>
-            <div class="img" tal:attributes="style string: background-image:url(${image_url})"></div>
-            </tal:block>
-        </div>
-        
         <div class="faceted-projects-ungrouped-view">
           <div class="event-entry no-view">
             <a href="" title="">
@@ -101,6 +90,46 @@
           </div>
         </div>
 
+        <!--SLIDER -->
+        <section id="slider_show">
+            <ul class="slider_content elements_5">
+                <!--                TARGET-->
+                <li id="button_start"></li>
+                <li id="button_stop"></li>
+                <tal:block tal:repeat="image_url images_url">
+                    <li id="button_1"></li>
+                    <li id="button_2"></li>
+                    <li id="button_3"></li>
+                    <li id="button_4"></li>
+                    <li id="button_5"></li>
+                </tal:block>
+
+                <!--                SLIDE WITH ANIMATION-->
+                <li id="slider_images" class="sl_space elements_5">
+                    <tal:block tal:repeat="image_url images_url">
+                    <div id="slide_1" class="slide" tal:attributes="style string: background-image:url(${image_url})"></div>
+                    <div id="slide_2" class="slide" tal:attributes="style string: background-image:url(${image_url})"></div>
+                    <div id="slide_3" class="slide" tal:attributes="style string: background-image:url(${image_url})"></div>
+                    <div id="slide_4" class="slide" tal:attributes="style string: background-image:url(${image_url})"></div>
+                    <div id="slide_5" class="slide" tal:attributes="style string: background-image:url(${image_url})"></div>
+                    <!--                    La première image doit être copiée à la fin pour une meilleure transition-->
+                    <div id="slide_6" tal:attributes="style string: background-image:url(${image_url})"></div>
+                    </tal:block>
+                </li>
+                <!--                BUTTON-->
+                <tal:block tal:repeat="image_url images_url">
+                    <li class="button"><a title="Slide 1" href="#button_1"></a></li>
+                    <li class="button"><a title="Slide 2" href="#button_2"></a></li>
+                    <li class="button"><a title="Slide 3" href="#button_3"></a></li>
+                    <li class="button"><a title="Slide 4" href="#button_4"></a></li>
+                    <li class="button"><a title="Slide 5" href="#button_5"></a></li>
+                </tal:block>
+                <li class="pagination" id="index"></li>
+                <li class="pagination" id="counter"></li>
+                <li id="start"><a title="Start" href="#button_start"></a></li>
+                <li id="stop"><a title="Stop" href="#button_stop"></a></li>
+            </ul>
+        </section>
         </metal:main>
     </body>
 </html>

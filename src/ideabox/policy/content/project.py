@@ -76,7 +76,7 @@ class ProjectView(view.DefaultView):
                 deposited_date = status.get('time')
             if status.get('review_state') == 'draft' and draft_date == '':
                 draft_date = status.get('time')
-            return [draft_date, deposited_date, project_analysis_date, vote_date, result_analysis_date]
+        return [draft_date, deposited_date, project_analysis_date, vote_date, result_analysis_date]
 
     def generate_selected_time_line(self, state, history):
         selected_date = ''
@@ -98,7 +98,7 @@ class ProjectView(view.DefaultView):
                 study_in_progress_date = status.get('time')
             if status.get('review_state') == 'selected' and selected_date == '':
                 selected_date = status.get('time')
-            return [selected_date, study_in_progress_date, in_progress_date, realized_date]
+        return [selected_date, study_in_progress_date, in_progress_date, realized_date]
 
     def generate_rejected_time_line(self, state, history):
         # Status rejected
@@ -132,7 +132,7 @@ class ProjectView(view.DefaultView):
                 deposited_date = status.get('time')
             if status.get('review_state') == 'draft' and draft_date == '':
                 draft_date = status.get('time')
-            return [draft_date, deposited_date, project_analysis_date, vote_date, result_analysis_date, rejected_date]
+        return [draft_date, deposited_date, project_analysis_date, vote_date, result_analysis_date, rejected_date]
 
     def get_workflow_history(self):
         state = self.get_project_status()

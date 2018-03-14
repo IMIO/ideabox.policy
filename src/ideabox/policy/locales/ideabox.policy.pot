@@ -1,0 +1,366 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2018-03-14 16:27+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: ideabox.policy\n"
+
+#: ../vocabularies.py:39
+msgid "Agriculture et Alimentation"
+msgstr ""
+
+#: ../vocabularies.py:40
+msgid "AmÃ©nager et Ã©quiper les quartiers"
+msgstr ""
+
+#: ../vocabularies.py:25
+msgid "Art, Culture, Patrimoine, Tourisme"
+msgstr ""
+
+#: ../vocabularies.py:41
+msgid "CitoyennetÃ©"
+msgstr ""
+
+#: ../vocabularies.py:42
+msgid "Collaboratif & CrÃ©atif"
+msgstr ""
+
+#: ../vocabularies.py:43
+msgid "Culture"
+msgstr ""
+
+#. Default: "Deposited"
+#: ../content/project.py:162
+msgid "Deposited"
+msgstr ""
+
+#: ../vocabularies.py:26
+msgid "Des espaces verts, des espaces collectifs, des espaces apaisÃ©s"
+msgstr ""
+
+#: ../vocabularies.py:44
+msgid "Divers"
+msgstr ""
+
+#. Default: "Draft"
+#: ../content/project.py:161
+msgid "Draft"
+msgstr ""
+
+#: ../vocabularies.py:45
+msgid "Embellir"
+msgstr ""
+
+#: ../vocabularies.py:46
+msgid "Energie renouvelable et Ã©conomie d'Ã©nergie"
+msgstr ""
+
+#: ../vocabularies.py:47
+msgid "Espaces verts"
+msgstr ""
+
+#: ../vocabularies.py:48
+msgid "EvÃ©nements"
+msgstr ""
+
+#: ../vocabularies.py:27
+msgid "IdÃ©es non attribuÃ©es"
+msgstr ""
+
+#. Default: "In progress"
+#: ../content/project.py:170
+msgid "In progress"
+msgstr ""
+
+#: ../vocabularies.py:28
+msgid "Inclassables"
+msgstr ""
+
+#: ../vocabularies.py:49
+msgid "Inclusif"
+msgstr ""
+
+#: ../vocabularies.py:29
+msgid "Inclusion sociale"
+msgstr ""
+
+#: ../vocabularies.py:50
+msgid "Infrastructures"
+msgstr ""
+
+#: ../configure.zcml:26
+msgid "Installs the ideabox.policy add-on."
+msgstr ""
+
+#: ../vocabularies.py:30
+msgid "La mobilitÃ©"
+msgstr ""
+
+#: ../vocabularies.py:31
+msgid "La transition Ã©nergÃ©tique"
+msgstr ""
+
+#: ../vocabularies.py:32
+msgid "La vÃ©gÃ©talisation et l'agriculture urbaine"
+msgstr ""
+
+#: ../vocabularies.py:51
+msgid "MobilitÃ© Ã©lectrique"
+msgstr ""
+
+#: ../vocabularies.py:52
+msgid "Nouveaux Ã©quipements"
+msgstr ""
+
+#: ../vocabularies.py:53
+msgid "Nouvelles pratiques et nouveaux services"
+msgstr ""
+
+#: ../vocabularies.py:54
+msgid "NumÃ©rique"
+msgstr ""
+
+#: ../vocabularies.py:55
+msgid "Participatif"
+msgstr ""
+
+#: ../vocabularies.py:56
+msgid "Patrimoine"
+msgstr ""
+
+#: ../vocabularies.py:57
+msgid "PiÃ©ton"
+msgstr ""
+
+#: ../vocabularies.py:58
+msgid "Pollution de l'air et sonore"
+msgstr ""
+
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "Previous transition"
+msgstr ""
+
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "Project Workflow"
+msgstr ""
+
+#. Default: "Project analysis"
+#: ../content/project.py:163
+msgid "Project analysis"
+msgstr ""
+
+#: ../vocabularies.py:59
+msgid "Promotion des arts et des artistes"
+msgstr ""
+
+#: ../vocabularies.py:60
+msgid "PropretÃ© et dÃ©chets"
+msgstr ""
+
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "Provides access to workflow history"
+msgstr ""
+
+#. Default: "Realized"
+#: ../content/project.py:171
+msgid "Realized"
+msgstr ""
+
+#. Default: "Rejected"
+#: ../content/project.py:179
+msgid "Rejected"
+msgstr ""
+
+#. Default: "Result analysis"
+#: ../content/project.py:165
+msgid "Result analysis"
+msgstr ""
+
+#. Default: "Selected"
+#: ../content/project.py:168
+msgid "Selected"
+msgstr ""
+
+#: ../vocabularies.py:61
+msgid "Stationnement"
+msgstr ""
+
+#. Default: "Study in progress"
+#: ../content/project.py:169
+msgid "Study in progress"
+msgstr ""
+
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "The ID of the user who performed the last transition"
+msgstr ""
+
+#: ../vocabularies.py:62
+msgid "Tourisme"
+msgstr ""
+
+#: ../vocabularies.py:63
+msgid "Transition Ã©nergÃ©tique"
+msgstr ""
+
+#: ../vocabularies.py:64
+msgid "Transport public"
+msgstr ""
+
+#: ../content/project.py:19
+msgid "Type"
+msgstr ""
+
+#: ../configure.zcml:35
+msgid "Uninstalls the ideabox.policy add-on."
+msgstr ""
+
+#: ../vocabularies.py:33
+msgid "Ville participative, Collaborative et NumÃ©rique"
+msgstr ""
+
+#. Default: "Vote"
+#: ../content/project.py:164
+msgid "Vote"
+msgstr ""
+
+#: ../vocabularies.py:65
+msgid "VÃ©gÃ©talisation et BiodiversitÃ©"
+msgstr ""
+
+#: ../vocabularies.py:66
+msgid "VÃ©lo"
+msgstr ""
+
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "When the previous transition was performed"
+msgstr ""
+
+#. Default: "Accept"
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "accept"
+msgstr ""
+
+#. Default: "Back accepted"
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "back_accepted"
+msgstr ""
+
+#. Default: "Back in progress"
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "back_in_progress"
+msgstr ""
+
+#. Default: "Back in study"
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "back_in_study"
+msgstr ""
+
+#. Default: "Deposit"
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "deposit"
+msgstr ""
+
+#. Default: "Deposited"
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "deposited"
+msgstr ""
+
+#. Default: "Draft"
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "draft"
+msgstr ""
+
+#: ../configure.zcml:26
+msgid "ideabox.policy"
+msgstr ""
+
+#: ../configure.zcml:35
+msgid "ideabox.policy (uninstall)"
+msgstr ""
+
+#. Default: "In progress"
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "in_progress"
+msgstr ""
+
+#. Default: "Progress"
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "progress"
+msgstr ""
+
+#. Default: "Project analysis"
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "project_analysis"
+msgstr ""
+
+#. Default: "Realize"
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "realize"
+msgstr ""
+
+#. Default: "Realized"
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "realized"
+msgstr ""
+
+#. Default: "Reject"
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "reject"
+msgstr ""
+
+#. Default: "Rejected"
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "rejected"
+msgstr ""
+
+#. Default: "Result analysis"
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "result_analysis"
+msgstr ""
+
+#. Default: "Retract"
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "retract"
+msgstr ""
+
+#. Default: "Selected"
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "selected"
+msgstr ""
+
+#. Default: "Study"
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "study"
+msgstr ""
+
+#. Default: "Study in progress"
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "study_in_progress"
+msgstr ""
+
+#. Default: "To be analysed"
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "to_be_analysed"
+msgstr ""
+
+#. Default: "Vote"
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "vote"
+msgstr ""
+
+#. Default: "Vote analysis"
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "vote_analysis"
+msgstr ""

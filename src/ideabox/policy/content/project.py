@@ -41,98 +41,114 @@ class ProjectView(view.DefaultView):
             images_url.append(content.absolute_url)
         return images_url
 
-    def get_workflow_history(self):
+    def get_project_status(self):
+        history = self.get_history_project()
+        return history[0].get('review_state')
+
+    def get_history_project(self):
         history = self.context.workflow_history.values()[0]
         history = list(history)
         history.reverse()
+        return history
 
-        state = history[0].get('review_state')
+    def generate_draft_time_line(self, state, history):
+        draft_date = ''
+        deposited_date = ''
+        project_analysis_date = ''
+        vote_date = ''
+        result_analysis_date = ''
+        for status in history:
+            if status.get('review_state') == 'result_analysis' \
+               and result_analysis_date == '' \
+               and state == 'result_analysis':
+                result_analysis_date = status.get('time')
+            if status.get('review_state') == 'vote' \
+               and vote_date == '' \
+               and state in ['result_analysis', 'vote']:
+                vote_date = status.get('time')
+            if status.get('review_state') == 'project_analysis' \
+               and project_analysis_date == '' \
+               and state in ['result_analysis', 'vote', 'project_analysis']:
+                project_analysis_date = status.get('time')
+            if status.get('review_state') == 'deposited' \
+               and deposited_date == '' \
+               and state in ['result_analysis', 'vote', 'project_analysis', 'deposited']:
+                deposited_date = status.get('time')
+            if status.get('review_state') == 'draft' and draft_date == '':
+                draft_date = status.get('time')
+            return [draft_date, deposited_date, project_analysis_date, vote_date, result_analysis_date]
+
+    def generate_selected_time_line(self, state, history):
+        selected_date = ''
+        study_in_progress_date = ''
+        in_progress_date = ''
+        realized_date = ''
+        for status in history:
+            if status.get('review_state') == 'realized' \
+               and realized_date == '' \
+               and state == 'realized':
+                realized_date = status.get('time')
+            if status.get('review_state') == 'in_progress' \
+               and in_progress_date == '' \
+               and state in ['realized', 'in_progress']:
+                in_progress_date = status.get('time')
+            if status.get('review_state') == 'study_in_progress' \
+               and study_in_progress_date == '' \
+               and state in ['realized', 'in_progress', 'study_in_progress']:
+                study_in_progress_date = status.get('time')
+            if status.get('review_state') == 'selected' and selected_date == '':
+                selected_date = status.get('time')
+            return [selected_date, study_in_progress_date, in_progress_date, realized_date]
+
+    def generate_rejected_time_line(self, state, history):
+        # Status rejected
+        draft_date = ''
+        deposited_date = ''
+        project_analysis_date = ''
+        vote_date = ''
+        result_analysis_date = ''
+        rejected_date = ''
+
+        for status in history:
+            if status.get('review_state') == 'rejected' \
+               and rejected_date == '' \
+               and state == 'result_analysis':
+                rejected_date = status.get('time')
+            if status.get('review_state') == 'result_analysis' \
+               and result_analysis_date == '' \
+               and state in ['rejected', 'result_analysis']:
+                result_analysis_date = status.get('time')
+            if status.get('review_state') == 'vote' \
+               and vote_date == '' \
+               and state in ['rejected', 'result_analysis', 'vote']:
+                vote_date = status.get('time')
+            if status.get('review_state') == 'project_analysis' \
+               and project_analysis_date == '' \
+               and state in ['rejected', 'result_analysis', 'vote', 'project_analysis']:
+                project_analysis_date = status.get('time')
+            if status.get('review_state') == 'deposited' \
+               and deposited_date == '' \
+               and state in ['rejected', 'result_analysis', 'vote', 'project_analysis', 'deposited']:
+                deposited_date = status.get('time')
+            if status.get('review_state') == 'draft' and draft_date == '':
+                draft_date = status.get('time')
+            return [draft_date, deposited_date, project_analysis_date, vote_date, result_analysis_date, rejected_date]
+
+    def get_workflow_history(self):
+        state = self.get_project_status()
+        history = self.get_history_project()
         if state in ['draft', 'deposited', 'project_analysis', 'vote', 'result_analysis']:
-            draft_date = ''
-            deposited_date = ''
-            project_analysis_date = ''
-            vote_date = ''
-            result_analysis_date = ''
-            for status in history:
-                if status.get('review_state') == 'result_analysis' \
-                   and result_analysis_date == '' \
-                   and state == 'result_analysis':
-                    result_analysis_date = status.get('time')
-                if status.get('review_state') == 'vote' \
-                   and vote_date == '' \
-                   and state in ['result_analysis', 'vote']:
-                    vote_date = status.get('time')
-                if status.get('review_state') == 'project_analysis' \
-                   and project_analysis_date == '' \
-                   and state in ['result_analysis', 'vote', 'project_analysis']:
-                    project_analysis_date = status.get('time')
-                if status.get('review_state') == 'deposited' \
-                   and deposited_date == '' \
-                   and state in ['result_analysis', 'vote', 'project_analysis', 'deposited']:
-                    deposited_date = status.get('time')
-                if status.get('review_state') == 'draft' and draft_date == '':
-                    draft_date = status.get('time')
-                time_line = [draft_date, deposited_date, project_analysis_date, vote_date, result_analysis_date]
+            time_line = self.generate_draft_time_line(state, history)
         elif state in ['selected', 'study_in_progress', 'in_progress', 'realized']:
-            selected_date = ''
-            study_in_progress_date = ''
-            in_progress_date = ''
-            realized_date = ''
-            for status in history:
-                if status.get('review_state') == 'realized' \
-                   and realized_date == '' \
-                   and state == 'realized':
-                    realized_date = status.get('time')
-                if status.get('review_state') == 'in_progress' \
-                   and in_progress_date == '' \
-                   and state in ['realized', 'in_progress']:
-                    in_progress_date = status.get('time')
-                if status.get('review_state') == 'study_in_progress' \
-                   and study_in_progress_date == '' \
-                   and state in ['realized', 'in_progress', 'study_in_progress']:
-                    study_in_progress_date = status.get('time')
-                if status.get('review_state') == 'selected' and selected_date == '':
-                    selected_date = status.get('time')
-                time_line = [selected_date, study_in_progress_date, in_progress_date, realized_date]
+            time_line = self.generate_selected_time_line(state, history)
         else:
             # Status rejected
-            draft_date = ''
-            deposited_date = ''
-            project_analysis_date = ''
-            vote_date = ''
-            result_analysis_date = ''
-            rejected_date = ''
-
-            for status in history:
-                if status.get('review_state') == 'rejected' \
-                   and rejected_date == '' \
-                   and state == 'result_analysis':
-                    rejected_date = status.get('time')
-                if status.get('review_state') == 'result_analysis' \
-                   and result_analysis_date == '' \
-                   and state in ['rejected', 'result_analysis']:
-                    result_analysis_date = status.get('time')
-                if status.get('review_state') == 'vote' \
-                   and vote_date == '' \
-                   and state in ['rejected', 'result_analysis', 'vote']:
-                    vote_date = status.get('time')
-                if status.get('review_state') == 'project_analysis' \
-                   and project_analysis_date == '' \
-                   and state in ['rejected', 'result_analysis', 'vote', 'project_analysis']:
-                    project_analysis_date = status.get('time')
-                if status.get('review_state') == 'deposited' \
-                   and deposited_date == '' \
-                   and state in ['rejected', 'result_analysis', 'vote', 'project_analysis', 'deposited']:
-                    deposited_date = status.get('time')
-                if status.get('review_state') == 'draft' and draft_date == '':
-                    draft_date = status.get('time')
-                time_line = [draft_date, deposited_date, project_analysis_date, vote_date, result_analysis_date, rejected_date]
+            time_line = self.generate_rejected_time_line(state, history)
 
         format_time_line = []
         for date_time in time_line:
             if date_time != '':
                 format_time_line.append([date_time.strftime('%d'), date_time.strftime('%b')])
-
             else:
                 format_time_line.append(['', ''])
 

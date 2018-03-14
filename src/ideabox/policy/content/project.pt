@@ -8,45 +8,46 @@
     <body>
         <metal:main fill-slot="main" tal:define="images_url view/get_images_url">
         <h1 tal:content="context/Title"></h1>
-        <div class="timeline">
-            <ol class="timeline-line">
-                <li>
-                    <div class="step">
+        <div id="timeline" class="steps_5">
+            <ol id="timeline-line">
+                <li><div class="step">
                         <div>08</div>
                         <div>Jan.</div>
                     </div>
-                </li>
-                <li>
+                </li><li>
                     <div class="step">
                         <div>22</div>
                         <div>Mars</div>
                     </div>
-                </li>
-                <li>
+                </li><li>
                     <div class="step">
                         <div>14</div>
                         <div>Juin</div>
                     </div>
-                </li>
-                <li class="current">
+                </li><li class="current">
                     <div class="step">
                         <div>01</div>
                         <div>Sept.</div>
                     </div>
-                </li>
-                <li>
+                </li><li>
                     <div class="step">
                         <div>30</div>
                         <div>Déc.</div>
                     </div>
                 </li>
             </ol>
-            <ol class="timeline-text">
-                <li><div>Dépôt des idées</div></li>
-                <li><div>Analyse des idées par la Ville de Liège</div></li>
-                <li><div>Votez pour vos idées préférées!</div></li>
-                <li class="current"><div>Analyse des résultats</div></li>
-                <li><div>On met ensemble les actions prioritaires en oeuvre!</div></li>
+            <ol id="timeline-text">
+                <li>
+                    <div>Dépôt des idées</div>
+                </li><li>
+                    <div>Analyse des idées par la Ville de Liège</div>
+                </li><li>
+                    <div>Votez pour vos idées préférées!</div>
+                </li><li class="current">
+                    <div>Analyse des résultats</div>
+                </li><li>
+                    <div>On met ensemble les actions prioritaires en oeuvre!</div>
+                </li>
             </ol>
         </div>
         <div tal:content="structure here/@@rate-if-you-dare"></div>

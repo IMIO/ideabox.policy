@@ -155,10 +155,7 @@ class ProjectView(view.DefaultView):
         return format_time_line
 
     def get_time_line_title(self):
-        history = self.context.workflow_history.values()[0]
-        history = list(history)
-        history.reverse()
-        state = history[0].get('review_state')
+        state = self.get_project_status()
 
         if state in ['draft', 'deposited', 'project_analysis', 'vote', 'result_analysis']:
             time_line_title = [_(u'draft'),
@@ -184,11 +181,8 @@ class ProjectView(view.DefaultView):
         return time_line_title
 
     def get_current_status(self):
-        history = self.context.workflow_history.values()[0]
-        history = list(history)
-        history.reverse()
+        state = self.get_project_status()
 
-        state = history[0].get('review_state')
         if state == 'draft':
             state = _(u'draft')
         if state == 'deposited':
@@ -211,6 +205,29 @@ class ProjectView(view.DefaultView):
             state = _(u'realized')
 
         return state
+
+    def get_last_step(self):
+        state = self.get_project_status()
+        if state == 'draft':
+            return 0
+        if state == 'deposited':
+            return 1
+        if state == 'project_analysis':
+            return 2
+        if state == 'vote':
+            return 3
+        if state == 'result_analysis':
+            return 4
+        if state == 'rejected':
+            return 5
+        if state == 'selected':
+            return 0
+        if state == 'study_in_progress':
+            return 1
+        if state == 'in_progress':
+            return 2
+        if state == 'realized':
+            return 3
 
     def creator(self):
         return self.context.Creator()

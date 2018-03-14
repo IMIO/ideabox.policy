@@ -1,9 +1,5 @@
 # encoding: utf-8
 
-import argparse
-import csv
-import os
-
 from Zope2.App import startup
 from cioppino.twothumbs import rate
 from ideabox.policy.utils import token_type_recovery
@@ -12,6 +8,10 @@ from plone.i18n.normalizer import urlnormalizer
 from plone.namedfile.file import NamedBlobImage
 from transaction import commit
 from zope.component.hooks import setSite
+
+import argparse
+import csv
+import os
 
 
 def add_project(portal,

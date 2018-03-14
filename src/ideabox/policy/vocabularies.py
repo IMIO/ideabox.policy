@@ -1,10 +1,5 @@
 # encoding: utf-8
-"""
-vocabularies.py
 
-Licensed under the GPL license, see LICENCE.txt for more details.
-Copyright by Affinitic sprl
-"""
 from zope.interface import alsoProvides
 from zope.schema.interfaces import IContextSourceBinder
 from zope.schema.vocabulary import SimpleVocabulary

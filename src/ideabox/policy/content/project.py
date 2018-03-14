@@ -1,19 +1,15 @@
 # -*- coding: utf-8 -*-
-"""
-ideabox.policy
---------------
- Affinitic SPRL
 
-"""
-from zope import schema
-
-from ideabox.policy import _
-from ideabox.policy import vocabularies
+from Products.CMFCore.utils import getToolByName
 from plone.app.textfield import RichText
 from plone.dexterity.browser import view
 from plone.dexterity.content import Container
 from plone.supermodel import model
+from zope import schema
 from zope.interface import implements
+
+from ideabox.policy import _
+from ideabox.policy import vocabularies
 
 
 class IProject(model.Schema):
@@ -199,3 +195,14 @@ class ProjectView(view.DefaultView):
             state = _(u'realized')
 
         return state
+
+    def creator(self):
+        return self.context.Creator()
+
+    def author(self):
+        membership = getToolByName(self.context, 'portal_membership')
+        return membership.getMemberInfo(self.creator())
+
+    def authorname(self):
+        author = self.author()
+        return author and author['fullname'] or self.creator()

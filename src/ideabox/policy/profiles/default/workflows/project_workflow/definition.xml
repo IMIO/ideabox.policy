@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <dc-workflow xmlns:i18n="http://xml.zope.org/namespaces/i18n"
-             i18n:domain="plone"
-             workflow_id="proejct_workflow"
+             i18n:domain=""
+             workflow_id="project_workflow"
              title="Project Workflow"
              description=""
              state_variable="review_state"
@@ -13,8 +13,8 @@
   <permission>Modify portal content</permission>
   <permission>View</permission>
 
-  <state state_id="draft" title="draft" i18n:attributes="">
-    <description i18n:translate="">
+  <state state_id="draft" title="draft" i18n:attributes="draft">
+    <description i18n:translate="draft">
       draft
     </description>
 

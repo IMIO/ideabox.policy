@@ -10,7 +10,7 @@
                 <div>
                     <div class="homepage-bloc-item-title">
                         <a href="">
-                            <h3 tal:content="">
+                            <h3>
                                 titre
                             </h3>
                         </a>
@@ -27,7 +27,7 @@
                 <div>
                     <div class="homepage-bloc-item-title">
                         <a href="">
-                            <h3 tal:content="">
+                            <h3>
                                 titre
                             </h3>
                         </a>
@@ -44,7 +44,7 @@
                 <div>
                     <div class="homepage-bloc-item-title">
                         <a href="">
-                            <h3 tal:content="">
+                            <h3>
                                 titre
                             </h3>
                         </a>
@@ -61,7 +61,7 @@
                 <div>
                     <div class="homepage-bloc-item-title">
                         <a href="">
-                            <h3 tal:content="">
+                            <h3>
                                 titre
                             </h3>
                         </a>
@@ -78,7 +78,7 @@
                 <div>
                     <div class="homepage-bloc-item-title">
                         <a href="">
-                            <h3 tal:content="">
+                            <h3>
                                 titre
                             </h3>
                         </a>
@@ -95,7 +95,7 @@
                 <div>
                     <div class="homepage-bloc-item-title">
                         <a href="">
-                            <h3 tal:content="">
+                            <h3>
                                 titre
                             </h3>
                         </a>
@@ -112,7 +112,7 @@
                 <div>
                     <div class="homepage-bloc-item-title">
                         <a href="">
-                            <h3 tal:content="">
+                            <h3>
                                 titre
                             </h3>
                         </a>

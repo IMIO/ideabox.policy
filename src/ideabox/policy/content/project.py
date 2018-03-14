@@ -198,26 +198,19 @@ class ProjectView(view.DefaultView):
 
     def get_last_step(self):
         state = self.get_project_status()
-        if state == 'draft':
-            return 0
-        if state == 'deposited':
-            return 1
-        if state == 'project_analysis':
-            return 2
-        if state == 'vote':
-            return 3
-        if state == 'result_analysis':
-            return 4
-        if state == 'rejected':
-            return 5
-        if state == 'selected':
-            return 0
-        if state == 'study_in_progress':
-            return 1
-        if state == 'in_progress':
-            return 2
-        if state == 'realized':
-            return 3
+        states = {
+            'draft': 0,
+            'deposited': 1,
+            'project_analysis': 2,
+            'vote': 3,
+            'result_analysis': 4,
+            'rejected': 5,
+            'selected': 0,
+            'study_in_progress': 1,
+            'in_progress': 2,
+            'realized': 0
+        }
+        return states.get(state)
 
     def creator(self):
         return self.context.Creator()

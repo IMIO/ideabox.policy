@@ -158,53 +158,43 @@ class ProjectView(view.DefaultView):
         state = self.get_project_status()
 
         if state in ['draft', 'deposited', 'project_analysis', 'vote', 'result_analysis']:
-            time_line_title = [_(u'draft'),
-                               _(u'deposited'),
-                               _(u'project analysis'),
-                               _(u'vote'),
-                               _(u'result analysis')
+            time_line_title = [_(u'Draft', u'Draft'),
+                               _(u'Deposited', u'Deposited'),
+                               _(u'Project analysis', u'Project analysis'),
+                               _(u'Vote', u'Vote'),
+                               _(u'Result analysis', u'Result analysis')
                                ]
         elif state in ['selected', 'study_in_progress', 'in_progress', 'realized']:
-            time_line_title = [_(u'selected'),
-                               _(u'study in progress'),
-                               _(u'in progress'),
-                               _(u'realized')
+            time_line_title = [_(u'Selected', u'Selected'),
+                               _(u'Study in progress', u'Study in progress'),
+                               _(u'In progress', u'In progress'),
+                               _(u'Realized', u'Realized')
                                ]
         else:
-            time_line_title = [_(u'draft'),
-                               _(u'deposited'),
-                               _(u'project analysis'),
-                               _(u'vote'),
-                               _(u'result analysis'),
-                               _(u'rejected')
+            time_line_title = [_(u'Draft', u'Draft'),
+                               _(u'Deposited', u'Deposited'),
+                               _(u'Project analysis', u'Project analysis'),
+                               _(u'Vote', u'Vote'),
+                               _(u'Result analysis', u'Result analysis'),
+                               _(u'Rejected', u'Rejected')
                                ]
         return time_line_title
 
     def get_current_status(self):
         state = self.get_project_status()
-
-        if state == 'draft':
-            state = _(u'draft')
-        if state == 'deposited':
-            state = _(u'deposited')
-        if state == 'project_analysis':
-            state = _(u'project analysis')
-        if state == 'vote':
-            state = _(u'vote')
-        if state == 'result_analysis':
-            state = _(u'result analysis')
-        if state == 'rejected':
-            state = _(u'rejected')
-        if state == 'selected':
-            state = _(u'selected')
-        if state == 'study_in_progress':
-            state = _(u'study in progress')
-        if state == 'in_progress':
-            state = _(u'in progress')
-        if state == 'realized':
-            state = _(u'realized')
-
-        return state
+        states = {
+            'draft': _(u'Draft', u'Draft'),
+            'deposited': _(u'Deposited', u'Deposited'),
+            'project_analysis': _(u'Project analysis', u'Project analysis'),
+            'vote': _(u'Vote', u'Vote'),
+            'result_analysis': _(u'Result analysis', u'Result analysis'),
+            'rejected': _(u'Rejected', u'Rejected'),
+            'selected': _(u'Selected', u'Selected'),
+            'study_in_progress': _(u'Study in progress', u'Study in progress'),
+            'in_progress': _(u'In progress', u'In progress'),
+            'realized': _(u'Realized', u'Realized')
+        }
+        return states.get(state)
 
     def get_last_step(self):
         state = self.get_project_status()

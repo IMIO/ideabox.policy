@@ -65,34 +65,9 @@
           </div>
         </div>
 
-        <!--SLIDER -->
-        <section id="slider_show">
-            <ul class="slider_content elements_1">
-                <!--                TARGET-->
-                <li id="button_start"></li>
-                <li id="button_stop"></li>
-                <tal:block tal:repeat="image_url images_url">
-                    <li id="button_1"></li>
-                </tal:block>
-
-                <!--                SLIDE WITH ANIMATION-->
-                <li id="slider_images" class="sl_space elements_5">
-                    <tal:block tal:repeat="image_url images_url">
-                    <div id="slide_1" class="slide" tal:attributes="style string: background-image:url(${image_url})"></div>
-                    <!--                    La première image doit être copiée à la fin pour une meilleure transition-->
-                    <div id="slide_2" tal:attributes="style string: background-image:url(${image_url})"></div>
-                    </tal:block>
-                </li>
-                <!--                BUTTON-->
-                <tal:block tal:repeat="image_url images_url">
-                    <li class="button"><a title="Slide 1" href="#button_1"></a></li>
-                </tal:block>
-                <li class="pagination" id="index"></li>
-                <li class="pagination" id="counter"></li>
-                <li id="start"><a title="Start" href="#button_start"></a></li>
-                <li id="stop"><a title="Stop" href="#button_stop"></a></li>
-            </ul>
-        </section>
+        <tal:block tal:repeat="image_url images_url">
+        <div class="img_project" tal:attributes="style string: background-image:url(${image_url})"></div>
+        </tal:block>
         </metal:main>
     </body>
 </html>

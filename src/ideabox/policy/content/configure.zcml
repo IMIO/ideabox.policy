@@ -18,4 +18,16 @@
       factory=".indexer.project_picture"
       />
 
+  <subscriber
+      for="plone.app.contenttypes.interfaces.IImage
+           zope.lifecycleevent.interfaces.IObjectRemovedEvent"
+      handler=".subscriber.project_image_changed"
+      />
+
+  <subscriber
+      for="plone.app.contenttypes.interfaces.IImage
+           zope.lifecycleevent.interfaces.IObjectCreatedEvent"
+      handler=".subscriber.project_image_changed"
+      />
+
 </configure>

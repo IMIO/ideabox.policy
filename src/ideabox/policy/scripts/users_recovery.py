@@ -13,17 +13,18 @@ import password_generator
 
 def add_user(author, mail):
     if len(author) < 3:
-        author = urlnormalizer.normalize(mail[0:3].decode('utf8'), locale='fr')
+        author_id = urlnormalizer.normalize(mail[0:3].decode('utf8'), locale='fr')
     else:
-        author = urlnormalizer.normalize(author.decode('utf8'), locale='fr')
+        author_id = urlnormalizer.normalize(author.decode('utf8'), locale='fr')
     with api.env.adopt_user(username="admin"):
-        if api.user.get(username=author) is None:
+        if api.user.get(username=author_id) is None:
             pwd = password_generator.generate(length=12)
-            api.user.create(
-                username=author,
+            user = api.user.create(
+                username=author_id,
                 email=mail,
-                password=pwd,
+                password=pwd
             )
+            user.setMemberProperties(mapping={"fullname": author})
 
 
 def data_recovery(filename):

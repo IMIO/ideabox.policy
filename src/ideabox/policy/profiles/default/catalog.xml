@@ -1,6 +1,14 @@
 <?xml version="1.0"?>
 <object name="portal_catalog" meta_type="Plone Catalog Tool">
- <index name="project_type" meta_type="FieldIndex">
-  <indexed_attr value="project_type"/>
+
+ <index name="project_theme" meta_type="FieldIndex">
+  <indexed_attr value="project_theme" />
  </index>
+ <column value="project_theme" />
+
+ <index name="project_picture" meta_type="FieldIndex">
+   <indexed_attr value="project_picture" />
+ </index>
+ <column value="project_picture" />
+
 </object>

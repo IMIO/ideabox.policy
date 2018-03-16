@@ -17,7 +17,7 @@ import os
 def add_project(portal,
                 project_id,
                 title,
-                project_type,
+                project_theme,
                 project_body,
                 image_source,
                 project_author,
@@ -34,7 +34,7 @@ def add_project(portal,
                 project = api.content.create(
                     type='Project',
                     title=title,
-                    project_type=project_type,
+                    project_theme=project_theme,
                     body=u'<br>'.join(project_body.decode('utf8').splitlines()),
                     container=container,
                 )
@@ -91,14 +91,14 @@ def data_recovery(filename, image, portal, status):
     for line in reader:
         project_id = line[0]
         project_title = line[2]
-        project_type = line[1]
+        project_theme = line[1]
         project_body = line[18]
         project_author = line[3]
         project_mail = line[4]
         project_like = line[15]
         project_unlike = line[16]
 
-        token_type = token_type_recovery(project_type)
+        token_type = token_type_recovery(project_theme)
 
         if len(project_author) < 3:
             project_author = urlnormalizer.normalize(project_mail[0:3].decode('utf8'), locale='fr')

@@ -65,6 +65,53 @@
           </div>
         </div>
 
+        <div id="facette">
+            <tal:block tal:repeat="image_url images_url">
+            <div class="project">
+                <div class="image" tal:attributes="style string: background-image:url(${image_url})"></div>
+                <div class="texte">
+                    <div class="titre">Catégories</div>
+                    <div class="description">description</div>
+                </div>
+            </div>
+            <div class="project">
+                <div class="image" tal:attributes="style string: background-image:url(${image_url})"></div>
+                <div class="texte">
+                    <div class="titre">titbjbjhbjhbjb nknkjnkn bjhbbbb</div>
+                    <div class="description">descr hjbbj bjhbhjbh bbjb bhbjhbj bjbjbjb  iption</div>
+                </div>
+            </div>
+            <div class="project">
+                <div class="image" tal:attributes="style string: background-image:url(${image_url})"></div>
+                <div class="texte">
+                    <div class="titre">titbjbjhbjhbjb nknbbbhjbjb bbjbre</div>
+                    <div class="description">description</div>
+                </div>
+            </div>
+            <div class="project">
+                <div class="image" tal:attributes="style string: background-image:url(${image_url})"></div>
+                <div class="texte">
+                    <div class="titre">titbjbjhbjhbjb nknkjnkn bjhbbbb hbbjbjbjhbj bbbhjbjb bbjbre</div>
+                    <div class="description">description</div>
+                </div>
+            </div>
+            <div class="project">
+                <div class="image" tal:attributes="style string: background-image:url(${image_url})"></div>
+                <div class="texte">
+                    <div class="titre">titbjbjhbjhbjb nknkjnkn bjhbbbb hbbjbjbjhbj bbbhjbjb bbjbre</div>
+                    <div class="description">description</div>
+                </div>
+            </div>
+            <div class="project">
+                <div class="image" tal:attributes="style string: background-image:url(${image_url})"></div>
+                <div class="texte">
+                    <div class="titre">titbjbjhbjhbe</div>
+                    <div class="description">description bjhb jbj bjhbj bhbjh bjhb jbjhbjh bjhb</div>
+                </div>
+            </div>
+            </tal:block>
+        </div>
+
         <tal:block tal:repeat="image_url images_url">
         <div class="img_project" tal:attributes="style string: background-image:url(${image_url})"></div>
         </tal:block>

@@ -8,21 +8,14 @@
     <body>
         <metal:main fill-slot="main"
                     tal:define="images_url view/get_images_url;
-                                time_line view/get_workflow_history;
-                                time_line_title view/get_time_line_title;
-                                current_state view/get_current_status;
-                                last_step view/get_last_step">
+                                current_state view/review_state;
+                                timeline_states view/timeline_states">
         <h1 tal:content="context/Title"></h1>
 
         <div id="timeline" class="steps_5">
-            <ol id="timeline-line"><tal:block tal:repeat="date time_line"><tal:block tal:define="step_index repeat/date/index"><li tal:attributes="class python: step_index == last_step and 'current' or ''">
-                    <div class="step">
-                      <tal:block tal:repeat="part_date date">
-                        <div tal:content="part_date" />
-                      </tal:block>
-                    </div></li></tal:block></tal:block> </ol>
-
-            <ol id="timeline-text"><tal:block tal:repeat="title time_line_title"><li tal:attributes="class python: current_state == title and 'current' or ''"><div tal:content="title"/></li></tal:block></ol>
+            <ol id="timeline-line"><tal:block tal:repeat="state timeline_states"><li tal:attributes="class python: state['state'] == current_state and 'current' or ''" tal:define="date state/date"
+                ><div class="step"><tal:block condition="date"><div tal:content="python: date.strftime('%d')"></div><div tal:content="python: date.strftime('%b')"></div></tal:block></div></li></tal:block></ol>
+            <ol id="timeline-text"><tal:block tal:repeat="state timeline_states"><li tal:attributes="class python: state['state'] == current_state and 'current' or ''"><div tal:content="state/state" i18n:translate=""></div></li></tal:block></ol>
         </div>
 
         <div tal:content="structure here/@@rate-if-you-dare"></div>

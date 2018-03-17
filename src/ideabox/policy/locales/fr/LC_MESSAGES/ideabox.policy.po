@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-03-14 16:27+0000\n"
+"POT-Creation-Date: 2018-03-17 09:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,8 +12,12 @@ msgstr ""
 "Language-Code: fr\n"
 "Language-Name: French\n"
 "Preferred-Encodings: utf-8 latin1\n"
-"X-Is-Fallback-For: fr-be fr-ca fr-lu fr-mc fr-ch fr-fr\n"
 "Domain: ideabox.policy\n"
+"X-Is-Fallback-For: fr-be fr-ca fr-lu fr-mc fr-ch fr-fr\n"
+
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "Accept"
+msgstr ""
 
 #: ../vocabularies.py:39
 msgid "Agriculture et Alimentation"
@@ -25,6 +29,18 @@ msgstr ""
 
 #: ../vocabularies.py:25
 msgid "Art, Culture, Patrimoine, Tourisme"
+msgstr ""
+
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "Back accepted"
+msgstr ""
+
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "Back in progress"
+msgstr ""
+
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "Back in study"
 msgstr ""
 
 #: ../vocabularies.py:41
@@ -39,10 +55,13 @@ msgstr ""
 msgid "Culture"
 msgstr ""
 
-#. Default: "Deposited"
-#: ../content/project.py:162
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "Deposit"
+msgstr ""
+
+#: ../profiles/default/workflows/project_workflow/definition.xml
 msgid "Deposited"
-msgstr "Dépôt des projets"
+msgstr ""
 
 #: ../vocabularies.py:26
 msgid "Des espaces verts, des espaces collectifs, des espaces apaisÃ©s"
@@ -52,10 +71,9 @@ msgstr ""
 msgid "Divers"
 msgstr ""
 
-#. Default: "Draft"
-#: ../content/project.py:161
+#: ../profiles/default/workflows/project_workflow/definition.xml
 msgid "Draft"
-msgstr "Brouillon"
+msgstr ""
 
 #: ../vocabularies.py:45
 msgid "Embellir"
@@ -73,14 +91,17 @@ msgstr ""
 msgid "EvÃ©nements"
 msgstr ""
 
+#: ../profiles/default/types/Project.xml
+msgid "Ideabox project"
+msgstr ""
+
 #: ../vocabularies.py:27
 msgid "IdÃ©es non attribuÃ©es"
 msgstr ""
 
-#. Default: "In progress"
-#: ../content/project.py:170
+#: ../profiles/default/workflows/project_workflow/definition.xml
 msgid "In progress"
-msgstr "En cours"
+msgstr ""
 
 #: ../vocabularies.py:28
 msgid "Inclassables"
@@ -98,7 +119,7 @@ msgstr ""
 msgid "Infrastructures"
 msgstr ""
 
-#: ../configure.zcml:26
+#: ../configure.zcml:28
 msgid "Installs the ideabox.policy add-on."
 msgstr ""
 
@@ -151,13 +172,24 @@ msgid "Previous transition"
 msgstr ""
 
 #: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "Progress"
+msgstr ""
+
+#: ../profiles/default/types/Project.xml
+msgid "Project"
+msgstr ""
+
+#: ../profiles/default/workflows/project_workflow/definition.xml
 msgid "Project Workflow"
 msgstr ""
 
-#. Default: "Project analysis"
-#: ../content/project.py:163
+#: ../profiles/default/workflows/project_workflow/definition.xml
 msgid "Project analysis"
-msgstr "Analyse des projets"
+msgstr ""
+
+#: ../faceted/configure.zcml:14
+msgid "Projects"
+msgstr ""
 
 #: ../vocabularies.py:59
 msgid "Promotion des arts et des artistes"
@@ -171,37 +203,56 @@ msgstr ""
 msgid "Provides access to workflow history"
 msgstr ""
 
-#. Default: "Realized"
-#: ../content/project.py:171
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "Realize"
+msgstr ""
+
+#: ../profiles/default/workflows/project_workflow/definition.xml
 msgid "Realized"
-msgstr "Réalisé"
+msgstr ""
 
-#. Default: "Rejected"
-#: ../content/project.py:179
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "Reject"
+msgstr ""
+
+#: ../profiles/default/workflows/project_workflow/definition.xml
 msgid "Rejected"
-msgstr "Projet non retenu"
+msgstr ""
 
-#. Default: "Result analysis"
-#: ../content/project.py:165
+#: ../profiles/default/workflows/project_workflow/definition.xml
 msgid "Result analysis"
-msgstr "Analyse des résultats"
+msgstr ""
 
-#. Default: "Selected"
-#: ../content/project.py:168
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "Retract"
+msgstr ""
+
+#: ../profiles/default/workflows/project_workflow/definition.xml
 msgid "Selected"
-msgstr "Projet retenu"
+msgstr ""
 
 #: ../vocabularies.py:61
 msgid "Stationnement"
 msgstr ""
 
-#. Default: "Study in progress"
-#: ../content/project.py:169
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "Study"
+msgstr ""
+
+#: ../profiles/default/workflows/project_workflow/definition.xml
 msgid "Study in progress"
-msgstr "A l’étude"
+msgstr ""
 
 #: ../profiles/default/workflows/project_workflow/definition.xml
 msgid "The ID of the user who performed the last transition"
+msgstr ""
+
+#: ../content/project.py:20
+msgid "Theme"
+msgstr ""
+
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "To be analysed"
 msgstr ""
 
 #: ../vocabularies.py:62
@@ -216,11 +267,7 @@ msgstr ""
 msgid "Transport public"
 msgstr ""
 
-#: ../content/project.py:19
-msgid "Type"
-msgstr ""
-
-#: ../configure.zcml:35
+#: ../configure.zcml:37
 msgid "Uninstalls the ideabox.policy add-on."
 msgstr ""
 
@@ -228,9 +275,12 @@ msgstr ""
 msgid "Ville participative, Collaborative et NumÃ©rique"
 msgstr ""
 
-#. Default: "Vote"
-#: ../content/project.py:164
+#: ../profiles/default/workflows/project_workflow/definition.xml
 msgid "Vote"
+msgstr ""
+
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "Vote analysis"
 msgstr ""
 
 #: ../vocabularies.py:65
@@ -245,120 +295,16 @@ msgstr ""
 msgid "When the previous transition was performed"
 msgstr ""
 
-#. Default: "Accept"
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "accept"
-msgstr "Accepter"
-
-#. Default: "Back accepted"
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "back_accepted"
-msgstr "Retour à accepté"
-
-#. Default: "Back in progress"
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "back_in_progress"
-msgstr "Retour vers le statut 'en cours'"
-
-#. Default: "Back in study"
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "back_in_study"
-msgstr "Retour à l’étude"
-
-#. Default: "Deposit"
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "deposit"
-msgstr "Déposer"
-
-#. Default: "Deposited"
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "deposited"
-msgstr "Dépôt des projets"
-
-#. Default: "Draft"
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "draft"
-msgstr "Brouillon"
-
-#: ../configure.zcml:26
+#: ../configure.zcml:28
 msgid "ideabox.policy"
 msgstr ""
 
-#: ../configure.zcml:35
+#: ../configure.zcml:37
 msgid "ideabox.policy (uninstall)"
-msgstr ""
-
-#. Default: "In progress"
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "in_progress"
-msgstr "En cours"
-
-#. Default: "Progress"
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "progress"
-msgstr "Passer au statut 'en cours'"
-
-#. Default: "Project analysis"
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "project_analysis"
-msgstr "Analyse des projets"
-
-#. Default: "Realize"
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "realize"
-msgstr "Réaliser"
-
-#. Default: "Realized"
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "realized"
-msgstr "Réalisé"
-
-#. Default: "Reject"
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "reject"
-msgstr "Refuser"
-
-#. Default: "Rejected"
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "rejected"
-msgstr "Projet non retenu"
-
-#. Default: "Result analysis"
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "result_analysis"
-msgstr "Analyse des résultats"
-
-#. Default: "Retract"
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "retract"
-msgstr "Rétraction"
-
-#. Default: "Selected"
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "selected"
-msgstr "Projet retenu"
-
-#. Default: "Study"
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "study"
-msgstr "Envoyer à l'étude"
-
-#. Default: "Study in progress"
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "study_in_progress"
-msgstr "A l’étude"
-
-#. Default: "To be analysed"
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "to_be_analysed"
-msgstr "Soumettre à l'analyse"
-
-#. Default: "Vote"
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "vote"
 msgstr ""
 
 #. Default: "Vote analysis"
 #: ../profiles/default/workflows/project_workflow/definition.xml
+#, fuzzy
 msgid "vote_analysis"
 msgstr "soumettre à l'analyse des votes"

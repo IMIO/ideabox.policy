@@ -13,8 +13,8 @@
   <permission>Modify portal content</permission>
   <permission>View</permission>
 
-  <state state_id="draft" title="draft" i18n:attributes="title draft">
-    <description i18n:translate="draft">
+  <state state_id="draft" title="Draft" i18n:attributes="title">
+    <description i18n:translate="">
       Draft
     </description>
 
@@ -40,8 +40,8 @@
     </permission-map>
   </state>
 
-  <state state_id="deposited" title="deposited" i18n:attributes="title deposited">
-    <description i18n:translate="deposited">
+  <state state_id="deposited" title="Deposited" i18n:attributes="title">
+    <description i18n:translate="">
       Deposited
     </description>
 
@@ -66,8 +66,8 @@
     </permission-map>
   </state>
 
-  <state state_id="project_analysis" title="project_analysis" i18n:attributes="title project_analysis">
-    <description i18n:translate="project_analysis">
+  <state state_id="project_analysis" title="Project analysis" i18n:attributes="title">
+    <description i18n:translate="">
       Project analysis
     </description>
 
@@ -92,8 +92,8 @@
     </permission-map>
   </state>
 
-  <state state_id="vote" title="vote" i18n:attributes="title vote">
-    <description i18n:translate="vote">
+  <state state_id="vote" title="Vote" i18n:attributes="title">
+    <description i18n:translate="">
       Vote
     </description>
 
@@ -118,8 +118,8 @@
     </permission-map>
   </state>
 
-  <state state_id="result_analysis" title="result_analysis" i18n:attributes="title result_analysis">
-    <description i18n:translate="result_analysis">
+  <state state_id="result_analysis" title="Result analysis" i18n:attributes="title">
+    <description i18n:translate="">
       Result analysis
     </description>
 
@@ -145,14 +145,12 @@
     </permission-map>
   </state>
 
-  <state state_id="selected" title="selected" i18n:attributes="title selected">
-    <description i18n:translate="selected">
+  <state state_id="selected" title="Selected" i18n:attributes="title">
+    <description i18n:translate="">
       Selected
     </description>
 
     <exit-transition transition_id="study"/>
-    <exit-transition transition_id="progress"/>
-    <exit-transition transition_id="realize"/>
     <exit-transition transition_id="vote_analysis"/>
 
     <permission-map name="Access contents information" acquired="False">
@@ -173,8 +171,8 @@
     </permission-map>
   </state>
 
-  <state state_id="rejected" title="rejected" i18n:attributes="title rejected">
-    <description i18n:translate="rejected">
+  <state state_id="rejected" title="Rejected" i18n:attributes="title">
+    <description i18n:translate="">
       Rejected
     </description>
 
@@ -198,13 +196,12 @@
     </permission-map>
   </state>
 
-  <state state_id="study_in_progress" title="study_in_progress" i18n:attributes="title study_in_progress">
-    <description i18n:translate="study_in_progress">
+  <state state_id="study_in_progress" title="Study in progress" i18n:attributes="title">
+    <description i18n:translate="">
       Study in progress
     </description>
 
     <exit-transition transition_id="progress"/>
-    <exit-transition transition_id="realize"/>
     <exit-transition transition_id="back_accepted"/>
 
     <permission-map name="Access contents information" acquired="False">
@@ -225,8 +222,8 @@
     </permission-map>
   </state>
 
-  <state state_id="in_progress" title="in_progress" i18n:attributes="title in_progress">
-    <description i18n:translate="in_progress">
+  <state state_id="in_progress" title="In progress" i18n:attributes="title">
+    <description i18n:translate="">
       In progress
     </description>
 
@@ -251,8 +248,8 @@
     </permission-map>
   </state>
 
-  <state state_id="realized" title="realized" i18n:attributes="title realized">
-    <description i18n:translate="realized">
+  <state state_id="realized" title="Realized" i18n:attributes="title">
+    <description i18n:translate="">
       Realized
     </description>
 
@@ -278,16 +275,16 @@
 
   <transition transition_id="deposit"
               new_state="deposited"
-              title="deposit"
+              title="Deposit"
               trigger="USER"
               before_script="" after_script=""
-              i18n:attributes="deposit">
-  <description i18n:translate="deposit">
+              i18n:attributes="title">
+  <description i18n:translate="">
      Deposit
   </description>
   <action url="%(content_url)s/content_status_modify?workflow_action=deposit"
           category="workflow"
-          i18n:translate="deposit">Deposit</action>
+          i18n:translate="">Deposit</action>
   <guard>
     <guard-permission>Modify portal content</guard-permission>
   </guard>
@@ -295,16 +292,16 @@
 
   <transition transition_id="retract"
               new_state="draft"
-              title="retract"
+              title="Retract"
               trigger="USER"
               before_script="" after_script=""
-              i18n:attributes="retract">
-  <description i18n:translate="retract">
+              i18n:attributes="title">
+  <description i18n:translate="">
      Retract
   </description>
   <action url="%(content_url)s/content_status_modify?workflow_action=retract"
           category="workflow"
-          i18n:translate="retract">Retract</action>
+          i18n:translate="">Retract</action>
   <guard>
     <guard-permission>Modify portal content</guard-permission>
   </guard>
@@ -312,16 +309,16 @@
 
   <transition transition_id="to_be_analysed"
               new_state="project_analysis"
-              title="to_be_analysed"
+              title="To be analysed"
               trigger="USER"
               before_script="" after_script=""
-              i18n:attributes="to_be_analysed">
-  <description i18n:translate="to_be_analysed">
+              i18n:attributes="title">
+  <description i18n:translate="">
      To be analysed
   </description>
    <action url="%(content_url)s/content_status_modify?workflow_action=to_be_analysed"
         category="workflow"
-        i18n:translate="to_be_analysed">To be analysed</action>
+        i18n:translate="">To be analysed</action>
   <guard>
     <guard-permission>Modify portal content</guard-permission>
   </guard>
@@ -329,16 +326,16 @@
 
   <transition transition_id="vote"
               new_state="vote"
-              title="vote"
+              title="Vote"
               trigger="USER"
               before_script="" after_script=""
-              i18n:attributes="vote">
-  <description i18n:translate="vote">
+              i18n:attributes="title">
+  <description i18n:translate="">
      Vote
   </description>
   <action url="%(content_url)s/content_status_modify?workflow_action=vote"
         category="workflow"
-        i18n:translate="vote">Vote</action>
+        i18n:translate="">Vote</action>
   <guard>
     <guard-permission>Modify portal content</guard-permission>
   </guard>
@@ -346,10 +343,10 @@
 
   <transition transition_id="vote_analysis"
               new_state="result_analysis"
-              title="vote_analysis"
+              title="Vote analysis"
               trigger="USER"
               before_script="" after_script=""
-              i18n:attributes="vote_analysis">
+              i18n:attributes="title">
   <description i18n:translate="vote_analysis">
      Vote analysis
   </description>
@@ -363,16 +360,16 @@
 
   <transition transition_id="accept"
               new_state="selected"
-              title="accept"
+              title="Accept"
               trigger="USER"
               before_script="" after_script=""
-              i18n:attributes="accept">
-  <description i18n:translate="accept">
+              i18n:attributes="title">
+  <description i18n:translate="">
      Accept
   </description>
   <action url="%(content_url)s/content_status_modify?workflow_action=accept"
         category="workflow"
-        i18n:translate="accept">Accept</action>
+        i18n:translate="">Accept</action>
   <guard>
     <guard-permission>Modify portal content</guard-permission>
   </guard>
@@ -380,16 +377,16 @@
 
   <transition transition_id="back_accepted"
               new_state="selected"
-              title="back_accepted"
+              title="Back accepted"
               trigger="USER"
               before_script="" after_script=""
-              i18n:attributes="back_accepted">
-  <description i18n:translate="back_accepted">
+              i18n:attributes="title">
+  <description i18n:translate="">
      Back accepted
   </description>
   <action url="%(content_url)s/content_status_modify?workflow_action=back_accepted"
         category="workflow"
-        i18n:translate="back_accepted">Back accepted</action>
+        i18n:translate="">Back accepted</action>
   <guard>
     <guard-permission>Modify portal content</guard-permission>
   </guard>
@@ -397,16 +394,16 @@
 
   <transition transition_id="reject"
               new_state="rejected"
-              title="reject"
+              title="Reject"
               trigger="USER"
               before_script="" after_script=""
-              i18n:attributes="reject">
-  <description i18n:translate="reject">
+              i18n:attributes="title">
+  <description i18n:translate="">
      Reject
   </description>
   <action url="%(content_url)s/content_status_modify?workflow_action=reject"
         category="workflow"
-        i18n:translate="reject">Reject</action>
+        i18n:translate="">Reject</action>
   <guard>
     <guard-permission>Modify portal content</guard-permission>
   </guard>
@@ -414,16 +411,16 @@
 
   <transition transition_id="study"
               new_state="study_in_progress"
-              title="study"
+              title="Study"
               trigger="USER"
               before_script="" after_script=""
-              i18n:attributes="study">
-  <description i18n:translate="study">
+              i18n:attributes="title">
+  <description i18n:translate="">
      Study
   </description>
   <action url="%(content_url)s/content_status_modify?workflow_action=study"
         category="workflow"
-        i18n:translate="study">Study</action>
+        i18n:translate="">Study</action>
   <guard>
     <guard-permission>Modify portal content</guard-permission>
   </guard>
@@ -431,16 +428,16 @@
 
   <transition transition_id="back_in_study"
               new_state="study_in_progress"
-              title="back_in_study"
+              title="Back in study"
               trigger="USER"
               before_script="" after_script=""
-              i18n:attributes="back">
-  <description i18n:translate="back_in_study">
+              i18n:attributes="title">
+  <description i18n:translate="">
      Back in study
   </description>
   <action url="%(content_url)s/content_status_modify?workflow_action=back_in_study"
         category="workflow"
-        i18n:translate="back_in_study">Back in study</action>
+        i18n:translate="">Back in study</action>
   <guard>
     <guard-permission>Modify portal content</guard-permission>
   </guard>
@@ -448,16 +445,16 @@
 
   <transition transition_id="progress"
               new_state="in_progress"
-              title="progress"
+              title="Progress"
               trigger="USER"
               before_script="" after_script=""
-              i18n:attributes="progress">
-  <description i18n:translate="progress">
+              i18n:attributes="title">
+  <description i18n:translate="">
      Progress
   </description>
   <action url="%(content_url)s/content_status_modify?workflow_action=progress"
         category="workflow"
-        i18n:translate="progress">Progress</action>
+        i18n:translate="">Progress</action>
   <guard>
     <guard-permission>Modify portal content</guard-permission>
   </guard>
@@ -465,16 +462,16 @@
 
   <transition transition_id="back_in_progress"
               new_state="in_progress"
-              title="back_in_progress"
+              title="Back in progress"
               trigger="USER"
               before_script="" after_script=""
-              i18n:attributes="back_in_progress">
-  <description i18n:translate="back_in_progress">
+              i18n:attributes="title">
+  <description i18n:translate="">
      Back in progress
   </description>
   <action url="%(content_url)s/content_status_modify?workflow_action=back_in_progress"
         category="workflow"
-        i18n:translate="back_in_progress">Back in progress</action>
+        i18n:translate="">Back in progress</action>
   <guard>
     <guard-permission>Modify portal content</guard-permission>
   </guard>
@@ -482,16 +479,16 @@
 
   <transition transition_id="realize"
               new_state="realized"
-              title="realize"
+              title="Realize"
               trigger="USER"
               before_script="" after_script=""
-              i18n:attributes="realize">
-  <description i18n:translate="realize">
+              i18n:attributes="title">
+  <description i18n:translate="">
      Realize
   </description>
   <action url="%(content_url)s/content_status_modify?workflow_action=realize"
         category="workflow"
-        i18n:translate="realize">Realize</action>
+        i18n:translate="">Realize</action>
   <guard>
     <guard-permission>Modify portal content</guard-permission>
   </guard>

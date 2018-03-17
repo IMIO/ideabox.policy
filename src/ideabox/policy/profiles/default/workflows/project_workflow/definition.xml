@@ -347,12 +347,12 @@
               trigger="USER"
               before_script="" after_script=""
               i18n:attributes="title">
-  <description i18n:translate="vote_analysis">
+  <description i18n:translate="">
      Vote analysis
   </description>
   <action url="%(content_url)s/content_status_modify?workflow_action=vote_analysis"
         category="workflow"
-        i18n:translate="vote_analysis">Vote analysis</action>
+        i18n:translate="">Vote analysis</action>
   <guard>
     <guard-permission>Modify portal content</guard-permission>
   </guard>

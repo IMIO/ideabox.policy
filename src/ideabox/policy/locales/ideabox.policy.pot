@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-03-17 09:48+0000\n"
+"POT-Creation-Date: 2018-03-17 10:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -303,9 +303,4 @@ msgstr ""
 
 #: ../configure.zcml:37
 msgid "ideabox.policy (uninstall)"
-msgstr ""
-
-#. Default: "Vote analysis"
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "vote_analysis"
 msgstr ""

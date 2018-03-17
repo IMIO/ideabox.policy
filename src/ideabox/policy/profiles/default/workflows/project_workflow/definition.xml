@@ -13,7 +13,7 @@
   <permission>Modify portal content</permission>
   <permission>View</permission>
 
-  <state state_id="draft" title="draft" i18n:attributes="draft">
+  <state state_id="draft" title="draft" i18n:attributes="title draft">
     <description i18n:translate="draft">
       Draft
     </description>
@@ -40,7 +40,7 @@
     </permission-map>
   </state>
 
-  <state state_id="deposited" title="deposited" i18n:attributes="deposited">
+  <state state_id="deposited" title="deposited" i18n:attributes="title deposited">
     <description i18n:translate="deposited">
       Deposited
     </description>
@@ -66,7 +66,7 @@
     </permission-map>
   </state>
 
-  <state state_id="project_analysis" title="project_analysis" i18n:attributes="project_analysis">
+  <state state_id="project_analysis" title="project_analysis" i18n:attributes="title project_analysis">
     <description i18n:translate="project_analysis">
       Project analysis
     </description>
@@ -92,7 +92,7 @@
     </permission-map>
   </state>
 
-  <state state_id="vote" title="vote" i18n:attributes="vote">
+  <state state_id="vote" title="vote" i18n:attributes="title vote">
     <description i18n:translate="vote">
       Vote
     </description>
@@ -118,7 +118,7 @@
     </permission-map>
   </state>
 
-  <state state_id="result_analysis" title="result_analysis" i18n:attributes="result_analysis">
+  <state state_id="result_analysis" title="result_analysis" i18n:attributes="title result_analysis">
     <description i18n:translate="result_analysis">
       Result analysis
     </description>
@@ -145,7 +145,7 @@
     </permission-map>
   </state>
 
-  <state state_id="selected" title="selected" i18n:attributes="selected">
+  <state state_id="selected" title="selected" i18n:attributes="title selected">
     <description i18n:translate="selected">
       Selected
     </description>
@@ -173,7 +173,7 @@
     </permission-map>
   </state>
 
-  <state state_id="rejected" title="rejected" i18n:attributes="rejected">
+  <state state_id="rejected" title="rejected" i18n:attributes="title rejected">
     <description i18n:translate="rejected">
       Rejected
     </description>
@@ -198,7 +198,7 @@
     </permission-map>
   </state>
 
-  <state state_id="study_in_progress" title="study_in_progress" i18n:attributes="study_in_progress">
+  <state state_id="study_in_progress" title="study_in_progress" i18n:attributes="title study_in_progress">
     <description i18n:translate="study_in_progress">
       Study in progress
     </description>
@@ -225,7 +225,7 @@
     </permission-map>
   </state>
 
-  <state state_id="in_progress" title="in_progress" i18n:attributes="in_progress">
+  <state state_id="in_progress" title="in_progress" i18n:attributes="title in_progress">
     <description i18n:translate="in_progress">
       In progress
     </description>
@@ -251,7 +251,7 @@
     </permission-map>
   </state>
 
-  <state state_id="realized" title="realized" i18n:attributes="realized">
+  <state state_id="realized" title="realized" i18n:attributes="title realized">
     <description i18n:translate="realized">
       Realized
     </description>

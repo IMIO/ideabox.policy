@@ -1,4 +1,10 @@
 <?xml version="1.0"?>
 <registry>
-
+  <records interface="plone.app.discussion.interfaces.IDiscussionSettings">
+    <value key="globally_enabled">True</value>
+    <value key="edit_comment_enabled">True</value>
+    <value key="moderation_enabled">True</value>
+    <value key="show_commenter_image">False</value>
+    <value key="anonymous_comments">False</value>
+	</records>
 </registry>

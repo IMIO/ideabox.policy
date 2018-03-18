@@ -50,6 +50,7 @@ setup(
         'plone.app.lockingbehavior',
         'plone.app.referenceablebehavior',
         'plone.app.relationfield',
+        'plone.app.discussion',
         'plone.dexterity',
         'setuptools',
         'z3c.jbot',

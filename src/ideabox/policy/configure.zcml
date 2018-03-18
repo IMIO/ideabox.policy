@@ -13,6 +13,7 @@
   <include package="collective.z3cform.select2" />
   <include package="cioppino.twothumbs" />
   <include package="cpskin.diazotheme.spirit" />
+  <include package="plone.app.discussion" />
 
   <include package=".browser" />
   <include package=".content" />

@@ -10,11 +10,13 @@
   <include file="permissions.zcml" />
   <include file="upgrades.zcml" />
 
-  <include package=".browser" />
-  <include package=".content" />
   <include package="collective.z3cform.select2" />
   <include package="cioppino.twothumbs" />
   <include package="cpskin.diazotheme.spirit" />
+
+  <include package=".browser" />
+  <include package=".content" />
+  <include package=".faceted" />
 
   <genericsetup:registerProfile
       name="default"

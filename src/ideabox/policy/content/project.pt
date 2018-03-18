@@ -40,7 +40,7 @@
           <div class="richTextWidget richtext-field"><p tal:content="context/description"></p></div>
         </div>
 
-        <div id="timeline" class="steps_5" i18n:domain="plone">
+        <div id="timeline" class="steps_5" i18n:domain="plone" tal:condition="view/can_view_timeline">
             <ol id="timeline-line"><tal:block tal:repeat="state timeline_states"><li tal:attributes="class python: state['state'] == current_state and 'current' or ''" tal:define="date state/date"
                 ><div class="step"><tal:block condition="date"><div tal:content="python: date.strftime('%d')"></div><div tal:content="python: date.strftime('%b')"></div></tal:block></div></li></tal:block></ol>
             <ol id="timeline-text"><tal:block tal:repeat="state timeline_states"><li tal:attributes="class python: state['state'] == current_state and 'current' or ''"><div tal:content="state/state" i18n:translate=""></div></li></tal:block></ol>
@@ -49,7 +49,7 @@
         <div tal:content="structure here/@@rate-if-you-dare"></div>
 
         <div class="field">
-          <div id="form-widgets-body" class="richTextWidget richtext-field" tal:content="structure context/body/raw"></div>
+          <div id="form-widgets-body" class="richTextWidget richtext-field" tal:content="structure context/body/raw|context/body"></div>
         </div>
 
         <tal:block tal:repeat="image_url images_url">

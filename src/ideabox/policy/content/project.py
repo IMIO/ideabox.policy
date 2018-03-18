@@ -10,7 +10,6 @@ from zope import schema
 from zope.interface import implements
 
 from ideabox.policy import _
-from ideabox.policy import vocabularies
 
 
 class IProject(model.Schema):
@@ -18,7 +17,7 @@ class IProject(model.Schema):
 
     project_theme = schema.Choice(
         title=_(u"Theme"),
-        source=vocabularies.types,
+        vocabulary=u'ideabox.vocabularies.theme',
         required=True
     )
 

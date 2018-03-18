@@ -41,4 +41,10 @@
       name="ideabox.policy-hiddenprofiles"
       />
 
+  <utility
+      component=".vocabularies.ThemeVocabulary"
+      name="ideabox.vocabularies.theme"
+      provides="zope.schema.interfaces.IVocabularyFactory"
+      />
+
 </configure>

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-03-17 10:01+0000\n"
+"POT-Creation-Date: 2018-03-17 22:19+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,10 +15,6 @@ msgstr ""
 "Domain: ideabox.policy\n"
 "X-Is-Fallback-For: fr-be fr-ca fr-lu fr-mc fr-ch fr-fr\n"
 
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Accept"
-msgstr "Retenir le projet"
-
 #: ../vocabularies.py:39
 msgid "Agriculture et Alimentation"
 msgstr ""
@@ -30,18 +26,6 @@ msgstr ""
 #: ../vocabularies.py:25
 msgid "Art, Culture, Patrimoine, Tourisme"
 msgstr ""
-
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Back accepted"
-msgstr "Retour en projet accepté"
-
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Back in progress"
-msgstr "Retour en cours de réalisation"
-
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Back in study"
-msgstr "Retour à l'étude"
 
 #: ../vocabularies.py:41
 msgid "CitoyennetÃ©"
@@ -55,14 +39,6 @@ msgstr ""
 msgid "Culture"
 msgstr ""
 
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Deposit"
-msgstr "Dépôt du projet"
-
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Deposited"
-msgstr "Dépôt des projets"
-
 #: ../vocabularies.py:26
 msgid "Des espaces verts, des espaces collectifs, des espaces apaisÃ©s"
 msgstr ""
@@ -70,10 +46,6 @@ msgstr ""
 #: ../vocabularies.py:44
 msgid "Divers"
 msgstr ""
-
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Draft"
-msgstr "Brouillon"
 
 #: ../vocabularies.py:45
 msgid "Embellir"
@@ -98,10 +70,6 @@ msgstr ""
 #: ../vocabularies.py:27
 msgid "IdÃ©es non attribuÃ©es"
 msgstr ""
-
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "In progress"
-msgstr "En cours"
 
 #: ../vocabularies.py:28
 msgid "Inclassables"
@@ -167,25 +135,13 @@ msgstr ""
 msgid "Pollution de l'air et sonore"
 msgstr ""
 
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Previous transition"
-msgstr ""
-
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Progress"
-msgstr "En cours de réalisation"
-
 #: ../profiles/default/types/Project.xml
 msgid "Project"
 msgstr "Projet"
 
-#: ../profiles/default/workflows/project_workflow/definition.xml
+#: ../definition.xml
 msgid "Project Workflow"
 msgstr ""
-
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Project analysis"
-msgstr "Analyse des projets"
 
 #: ../faceted/configure.zcml:14
 msgid "Projects"
@@ -199,61 +155,13 @@ msgstr ""
 msgid "PropretÃ© et dÃ©chets"
 msgstr ""
 
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Provides access to workflow history"
-msgstr ""
-
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Realize"
-msgstr "Réalisé"
-
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Realized"
-msgstr "Réalisé"
-
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Reject"
-msgstr "Ne pas retenir le projet"
-
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Rejected"
-msgstr "Projet non retenu"
-
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Result analysis"
-msgstr "Analyse des résultats"
-
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Retract"
-msgstr "Retour"
-
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Selected"
-msgstr "Projet retenu"
-
 #: ../vocabularies.py:61
 msgid "Stationnement"
-msgstr ""
-
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Study"
-msgstr "Soumettre à l'étude"
-
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Study in progress"
-msgstr "A l'étude"
-
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "The ID of the user who performed the last transition"
 msgstr ""
 
 #: ../content/project.py:20
 msgid "Theme"
 msgstr ""
-
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "To be analysed"
-msgstr "Soumettre à l'analyse"
 
 #: ../vocabularies.py:62
 msgid "Tourisme"
@@ -275,14 +183,6 @@ msgstr ""
 msgid "Ville participative, Collaborative et NumÃ©rique"
 msgstr ""
 
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Vote"
-msgstr "Vote"
-
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Vote analysis"
-msgstr "Soumettre à l'analyse des résultats"
-
 #: ../vocabularies.py:65
 msgid "VÃ©gÃ©talisation et BiodiversitÃ©"
 msgstr ""
@@ -291,9 +191,37 @@ msgstr ""
 msgid "VÃ©lo"
 msgstr ""
 
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "When the previous transition was performed"
+#: ../definition.xml
+msgid "accept"
+msgstr "Retenir le projet"
+
+#: ../definition.xml
+msgid "back_accepted"
+msgstr "Retour en projet accepté"
+
+#: ../definition.xml
+msgid "back_in_progress"
+msgstr "Retour en cours de réalisation"
+
+#: ../definition.xml
+msgid "back_in_study"
+msgstr "Retour à l'étude"
+
+#: ../definition.xml
+msgid "back_to_vote"
 msgstr ""
+
+#: ../definition.xml
+msgid "deposit"
+msgstr ""
+
+#: ../definition.xml
+msgid "deposited"
+msgstr "Dépôt des projets"
+
+#: ../definition.xml
+msgid "draft"
+msgstr "Brouillon"
 
 #: ../configure.zcml:28
 msgid "ideabox.policy"
@@ -302,3 +230,67 @@ msgstr ""
 #: ../configure.zcml:37
 msgid "ideabox.policy (uninstall)"
 msgstr ""
+
+#: ../definition.xml
+msgid "in_progress"
+msgstr "En cours"
+
+#: ../definition.xml
+msgid "progress"
+msgstr "En cours de réalisation"
+
+#: ../definition.xml
+msgid "project_analysis"
+msgstr "Analyse des projets"
+
+#: ../definition.xml
+msgid "realize"
+msgstr "Réalisé"
+
+#: ../definition.xml
+msgid "realized"
+msgstr "Réalisé"
+
+#: ../definition.xml
+msgid "reject"
+msgstr "Ne pas retenir le projet"
+
+#: ../definition.xml
+msgid "rejected"
+msgstr "Projet non retenu"
+
+#: ../definition.xml
+msgid "result_analysis"
+msgstr "Analyse des résultats"
+
+#: ../definition.xml
+msgid "retract"
+msgstr ""
+
+#: ../definition.xml
+msgid "selected"
+msgstr "Projet retenu"
+
+#: ../definition.xml
+msgid "study"
+msgstr "Soumettre à l'étude"
+
+#: ../definition.xml
+msgid "study_in_progress"
+msgstr "A l'étude"
+
+#: ../definition.xml
+msgid "to_be_analysed"
+msgstr ""
+
+#: ../definition.xml
+msgid "to_vote"
+msgstr ""
+
+#: ../definition.xml
+msgid "vote"
+msgstr "Vote"
+
+#: ../definition.xml
+msgid "vote_analysis"
+msgstr "Soumettre à l'analyse des résultats"

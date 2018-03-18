@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-03-17 10:01+0000\n"
+"POT-Creation-Date: 2018-03-17 22:19+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,10 +17,6 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: ideabox.policy\n"
 
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Accept"
-msgstr ""
-
 #: ../vocabularies.py:39
 msgid "Agriculture et Alimentation"
 msgstr ""
@@ -31,18 +27,6 @@ msgstr ""
 
 #: ../vocabularies.py:25
 msgid "Art, Culture, Patrimoine, Tourisme"
-msgstr ""
-
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Back accepted"
-msgstr ""
-
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Back in progress"
-msgstr ""
-
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Back in study"
 msgstr ""
 
 #: ../vocabularies.py:41
@@ -57,24 +41,12 @@ msgstr ""
 msgid "Culture"
 msgstr ""
 
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Deposit"
-msgstr ""
-
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Deposited"
-msgstr ""
-
 #: ../vocabularies.py:26
 msgid "Des espaces verts, des espaces collectifs, des espaces apaisÃ©s"
 msgstr ""
 
 #: ../vocabularies.py:44
 msgid "Divers"
-msgstr ""
-
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Draft"
 msgstr ""
 
 #: ../vocabularies.py:45
@@ -99,10 +71,6 @@ msgstr ""
 
 #: ../vocabularies.py:27
 msgid "IdÃ©es non attribuÃ©es"
-msgstr ""
-
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "In progress"
 msgstr ""
 
 #: ../vocabularies.py:28
@@ -169,24 +137,12 @@ msgstr ""
 msgid "Pollution de l'air et sonore"
 msgstr ""
 
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Previous transition"
-msgstr ""
-
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Progress"
-msgstr ""
-
 #: ../profiles/default/types/Project.xml
 msgid "Project"
 msgstr ""
 
-#: ../profiles/default/workflows/project_workflow/definition.xml
+#: ../definition.xml
 msgid "Project Workflow"
-msgstr ""
-
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Project analysis"
 msgstr ""
 
 #: ../faceted/configure.zcml:14
@@ -201,60 +157,12 @@ msgstr ""
 msgid "PropretÃ© et dÃ©chets"
 msgstr ""
 
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Provides access to workflow history"
-msgstr ""
-
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Realize"
-msgstr ""
-
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Realized"
-msgstr ""
-
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Reject"
-msgstr ""
-
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Rejected"
-msgstr ""
-
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Result analysis"
-msgstr ""
-
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Retract"
-msgstr ""
-
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Selected"
-msgstr ""
-
 #: ../vocabularies.py:61
 msgid "Stationnement"
 msgstr ""
 
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Study"
-msgstr ""
-
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Study in progress"
-msgstr ""
-
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "The ID of the user who performed the last transition"
-msgstr ""
-
 #: ../content/project.py:20
 msgid "Theme"
-msgstr ""
-
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "To be analysed"
 msgstr ""
 
 #: ../vocabularies.py:62
@@ -277,14 +185,6 @@ msgstr ""
 msgid "Ville participative, Collaborative et NumÃ©rique"
 msgstr ""
 
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Vote"
-msgstr ""
-
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "Vote analysis"
-msgstr ""
-
 #: ../vocabularies.py:65
 msgid "VÃ©gÃ©talisation et BiodiversitÃ©"
 msgstr ""
@@ -293,8 +193,36 @@ msgstr ""
 msgid "VÃ©lo"
 msgstr ""
 
-#: ../profiles/default/workflows/project_workflow/definition.xml
-msgid "When the previous transition was performed"
+#: ../definition.xml
+msgid "accept"
+msgstr ""
+
+#: ../definition.xml
+msgid "back_accepted"
+msgstr ""
+
+#: ../definition.xml
+msgid "back_in_progress"
+msgstr ""
+
+#: ../definition.xml
+msgid "back_in_study"
+msgstr ""
+
+#: ../definition.xml
+msgid "back_to_vote"
+msgstr ""
+
+#: ../definition.xml
+msgid "deposit"
+msgstr ""
+
+#: ../definition.xml
+msgid "deposited"
+msgstr ""
+
+#: ../definition.xml
+msgid "draft"
 msgstr ""
 
 #: ../configure.zcml:28
@@ -303,4 +231,68 @@ msgstr ""
 
 #: ../configure.zcml:37
 msgid "ideabox.policy (uninstall)"
+msgstr ""
+
+#: ../definition.xml
+msgid "in_progress"
+msgstr ""
+
+#: ../definition.xml
+msgid "progress"
+msgstr ""
+
+#: ../definition.xml
+msgid "project_analysis"
+msgstr ""
+
+#: ../definition.xml
+msgid "realize"
+msgstr ""
+
+#: ../definition.xml
+msgid "realized"
+msgstr ""
+
+#: ../definition.xml
+msgid "reject"
+msgstr ""
+
+#: ../definition.xml
+msgid "rejected"
+msgstr ""
+
+#: ../definition.xml
+msgid "result_analysis"
+msgstr ""
+
+#: ../definition.xml
+msgid "retract"
+msgstr ""
+
+#: ../definition.xml
+msgid "selected"
+msgstr ""
+
+#: ../definition.xml
+msgid "study"
+msgstr ""
+
+#: ../definition.xml
+msgid "study_in_progress"
+msgstr ""
+
+#: ../definition.xml
+msgid "to_be_analysed"
+msgstr ""
+
+#: ../definition.xml
+msgid "to_vote"
+msgstr ""
+
+#: ../definition.xml
+msgid "vote"
+msgstr ""
+
+#: ../definition.xml
+msgid "vote_analysis"
 msgstr ""

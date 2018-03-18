@@ -18,10 +18,10 @@ class HiddenProfiles(object):
 def post_install(context):
     """Post install script"""
     portal = api.portal.get()
-    if portal.get('projects') is None:
+    if portal.get('projets') is None:
             api.content.create(
                 type='Folder',
-                id='projects',
+                id='projets',
                 title='Projets',
                 container=portal
             )

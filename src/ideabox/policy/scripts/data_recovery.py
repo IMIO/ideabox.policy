@@ -24,8 +24,8 @@ def add_project(portal,
                 project_like,
                 project_unlike,
                 project_status):
-    if 'projects' in portal:
-        container = portal['projects']
+    if 'projets' in portal:
+        container = portal['projets']
         with api.env.adopt_user(username='admin'):
             api.user.grant_roles(username=project_author,
                                  roles=['Contributor', ]

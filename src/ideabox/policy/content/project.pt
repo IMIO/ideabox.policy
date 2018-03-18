@@ -26,91 +26,9 @@
         <tal:widget tal:replace="structure widget/@@ploneform-render-widget"/>
         </tal:block>
         </tal:block>
-        <div id="facet_view">
-            <tal:block tal:repeat="image_url images_url">
-<!--            La class "item" doit être incrémentée de 1 à chaque repeat pour que cela puisse fonctionner en ie9 et ie10-->
-            <div class="project item_1">
-                <div class="image" tal:attributes="style string: background-image:url(${image_url})"></div>
-                <div>
-                    <div class="title">Catégories</div>
-                    <div class="description">description</div>
-                </div>
-            </div>
-            <div class="project item_2">
-                <div class="image" tal:attributes="style string: background-image:url(${image_url})"></div>
-                <div>
-                    <div class="title">Catégories</div>
-                    <div class="description">descr hjbbj bjhbhjbh bbjb bhbjhbj bjbjbjb  iption</div>
-                </div>
-            </div>
-            <div class="project item_3">
-                <div class="image" tal:attributes="style string: background-image:url(${image_url})"></div>
-                <div>
-                    <div class="title">Catégories</div>
-                    <div class="description">description</div>
-                </div>
-            </div>
-            <div class="project item_4">
-                <div class="image" tal:attributes="style string: background-image:url(${image_url})"></div>
-                <div>
-                    <div class="title">Catégories</div>
-                    <div class="description">description</div>
-                </div>
-            </div>
-            <div class="project item_5">
-                <div class="image" tal:attributes="style string: background-image:url(${image_url})"></div>
-                <div>
-                    <div class="title">Catégories</div>
-                    <div class="description">description</div>
-                </div>
-            </div>
-            <div class="project item_6">
-                <div class="image" tal:attributes="style string: background-image:url(${image_url})"></div>
-                <div>
-                    <div class="title">Catégories</div>
-                    <div class="description">description bjhb jbj bjhbj bhbjh bjhb jbjhbjh bjhb</div>
-                </div>
-            </div>
-            <div class="project item_7">
-                <div class="image" tal:attributes="style string: background-image:url(${image_url})"></div>
-                <div>
-                    <div class="title">Catégories</div>
-                    <div class="description">description bjhb jbj bjhbj bhbjh bjhb jbjhbjh bjhb</div>
-                </div>
-            </div>
-            <div class="project item_8">
-                <div class="image" tal:attributes="style string: background-image:url(${image_url})"></div>
-                <div>
-                    <div class="title">Catégories</div>
-                    <div class="description">description bjhb jbj bjhbj bhbjh bjhb jbjhbjh bjhb</div>
-                </div>
-            </div>
-            <div class="project item_9">
-                <div class="image" tal:attributes="style string: background-image:url(${image_url})"></div>
-                <div>
-                    <div class="title">Catégories</div>
-                    <div class="description">description</div>
-                </div>
-            </div>
-            <div class="project item_10">
-                <div class="image" tal:attributes="style string: background-image:url(${image_url})"></div>
-                <div>
-                    <div class="title">Catégories</div>
-                    <div class="description">description bjhb jbj bjhbj bhbjh bjhb jbjhbjh bjhb</div>
-                </div>
-            </div>
-            <div class="project item_11">
-                <div class="image" tal:attributes="style string: background-image:url(${image_url})"></div>
-                <div>
-                    <div class="title">Catégories</div>
-                    <div class="description">description bjhb jbj bjhbhb</div>
-                </div>
-            </div>
-            </tal:block>
-        </div>
 
         <tal:block tal:repeat="image_url images_url">
-        <div class="img_project" tal:attributes="style string: background-image:url(${image_url})"></div>
+          <div class="img_project" tal:attributes="style string: background-image:url(${image_url})"></div>
         </tal:block>
         </metal:main>
     </body>

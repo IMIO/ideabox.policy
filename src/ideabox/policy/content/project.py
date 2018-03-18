@@ -56,6 +56,10 @@ class ProjectView(view.DefaultView):
         return api.content.get_state(obj=self.context)
 
     @property
+    def before_selected(self):
+        return self.review_state in self._timeline_states[:4] + ('rejected', )
+
+    @property
     def _workflow_history(self):
         history = [
             {

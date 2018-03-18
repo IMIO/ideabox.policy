@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-03-17 22:19+0000\n"
+"POT-Creation-Date: 2018-03-18 09:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,213 +15,74 @@ msgstr ""
 "Domain: ideabox.policy\n"
 "X-Is-Fallback-For: fr-be fr-ca fr-lu fr-mc fr-ch fr-fr\n"
 
-#: ../vocabularies.py:39
-msgid "Agriculture et Alimentation"
-msgstr ""
-
-#: ../vocabularies.py:40
-msgid "AmÃ©nager et Ã©quiper les quartiers"
-msgstr ""
-
+#. Default: "Art, Culture, Patrimoine, Tourisme"
 #: ../vocabularies.py:25
-msgid "Art, Culture, Patrimoine, Tourisme"
-msgstr ""
+msgid "ACPT"
+msgstr "Art, Culture, Patrimoine, Tourisme"
 
-#: ../vocabularies.py:41
-msgid "CitoyennetÃ©"
-msgstr ""
-
-#: ../vocabularies.py:42
-msgid "Collaboratif & CrÃ©atif"
-msgstr ""
-
-#: ../vocabularies.py:43
-msgid "Culture"
-msgstr ""
-
+#. Default: "Des espaces verts, des espaces collectifs, des espaces apaisés"
 #: ../vocabularies.py:26
-msgid "Des espaces verts, des espaces collectifs, des espaces apaisÃ©s"
-msgstr ""
+msgid "EVCA"
+msgstr "Des espaces verts, des espaces collectifs, des espaces apaisés"
 
-#: ../vocabularies.py:44
-msgid "Divers"
-msgstr ""
+#. Default: "Idées non attribuées"
+#: ../vocabularies.py:27
+msgid "IDNA"
+msgstr "Idées non attribuées"
 
-#: ../vocabularies.py:45
-msgid "Embellir"
-msgstr ""
+#. Default: "Inclassables"
+#: ../vocabularies.py:28
+msgid "INCL"
+msgstr "Inclassables"
 
-#: ../vocabularies.py:46
-msgid "Energie renouvelable et Ã©conomie d'Ã©nergie"
-msgstr ""
-
-#: ../vocabularies.py:47
-msgid "Espaces verts"
-msgstr ""
-
-#: ../vocabularies.py:48
-msgid "EvÃ©nements"
-msgstr ""
+#. Default: "Inclusion sociale"
+#: ../vocabularies.py:29
+msgid "INSO"
+msgstr "Inclusion sociale"
 
 #: ../profiles/default/types/Project.xml
 msgid "Ideabox project"
-msgstr ""
-
-#: ../vocabularies.py:27
-msgid "IdÃ©es non attribuÃ©es"
-msgstr ""
-
-#: ../vocabularies.py:28
-msgid "Inclassables"
-msgstr ""
-
-#: ../vocabularies.py:49
-msgid "Inclusif"
-msgstr ""
-
-#: ../vocabularies.py:29
-msgid "Inclusion sociale"
-msgstr ""
-
-#: ../vocabularies.py:50
-msgid "Infrastructures"
 msgstr ""
 
 #: ../configure.zcml:28
 msgid "Installs the ideabox.policy add-on."
 msgstr ""
 
+#. Default: "La mobilité"
 #: ../vocabularies.py:30
-msgid "La mobilitÃ©"
-msgstr ""
-
-#: ../vocabularies.py:31
-msgid "La transition Ã©nergÃ©tique"
-msgstr ""
-
-#: ../vocabularies.py:32
-msgid "La vÃ©gÃ©talisation et l'agriculture urbaine"
-msgstr ""
-
-#: ../vocabularies.py:51
-msgid "MobilitÃ© Ã©lectrique"
-msgstr ""
-
-#: ../vocabularies.py:52
-msgid "Nouveaux Ã©quipements"
-msgstr ""
-
-#: ../vocabularies.py:53
-msgid "Nouvelles pratiques et nouveaux services"
-msgstr ""
-
-#: ../vocabularies.py:54
-msgid "NumÃ©rique"
-msgstr ""
-
-#: ../vocabularies.py:55
-msgid "Participatif"
-msgstr ""
-
-#: ../vocabularies.py:56
-msgid "Patrimoine"
-msgstr ""
-
-#: ../vocabularies.py:57
-msgid "PiÃ©ton"
-msgstr ""
-
-#: ../vocabularies.py:58
-msgid "Pollution de l'air et sonore"
-msgstr ""
+msgid "MOBI"
+msgstr "La mobilité"
 
 #: ../profiles/default/types/Project.xml
 msgid "Project"
 msgstr "Projet"
 
-#: ../definition.xml
-msgid "Project Workflow"
-msgstr ""
-
 #: ../faceted/configure.zcml:14
 msgid "Projects"
 msgstr "Projets"
 
-#: ../vocabularies.py:59
-msgid "Promotion des arts et des artistes"
-msgstr ""
-
-#: ../vocabularies.py:60
-msgid "PropretÃ© et dÃ©chets"
-msgstr ""
-
-#: ../vocabularies.py:61
-msgid "Stationnement"
-msgstr ""
+#. Default: "La transition énergétique"
+#: ../vocabularies.py:31
+msgid "TREN"
+msgstr "La transition énergétique"
 
 #: ../content/project.py:20
 msgid "Theme"
-msgstr ""
-
-#: ../vocabularies.py:62
-msgid "Tourisme"
-msgstr ""
-
-#: ../vocabularies.py:63
-msgid "Transition Ã©nergÃ©tique"
-msgstr ""
-
-#: ../vocabularies.py:64
-msgid "Transport public"
 msgstr ""
 
 #: ../configure.zcml:37
 msgid "Uninstalls the ideabox.policy add-on."
 msgstr ""
 
+#. Default: "La végétalisation et l'agriculture urbaine"
+#: ../vocabularies.py:32
+msgid "VEAU"
+msgstr "La végétalisation et l'agriculture urbaine"
+
+#. Default: "Ville participative, Collaborative et Numérique"
 #: ../vocabularies.py:33
-msgid "Ville participative, Collaborative et NumÃ©rique"
-msgstr ""
-
-#: ../vocabularies.py:65
-msgid "VÃ©gÃ©talisation et BiodiversitÃ©"
-msgstr ""
-
-#: ../vocabularies.py:66
-msgid "VÃ©lo"
-msgstr ""
-
-#: ../definition.xml
-msgid "accept"
-msgstr "Retenir le projet"
-
-#: ../definition.xml
-msgid "back_accepted"
-msgstr "Retour en projet accepté"
-
-#: ../definition.xml
-msgid "back_in_progress"
-msgstr "Retour en cours de réalisation"
-
-#: ../definition.xml
-msgid "back_in_study"
-msgstr "Retour à l'étude"
-
-#: ../definition.xml
-msgid "back_to_vote"
-msgstr ""
-
-#: ../definition.xml
-msgid "deposit"
-msgstr ""
-
-#: ../definition.xml
-msgid "deposited"
-msgstr "Dépôt des projets"
-
-#: ../definition.xml
-msgid "draft"
-msgstr "Brouillon"
+msgid "VPCN"
+msgstr "Ville participative, Collaborative et Numérique"
 
 #: ../configure.zcml:28
 msgid "ideabox.policy"
@@ -230,67 +91,3 @@ msgstr ""
 #: ../configure.zcml:37
 msgid "ideabox.policy (uninstall)"
 msgstr ""
-
-#: ../definition.xml
-msgid "in_progress"
-msgstr "En cours"
-
-#: ../definition.xml
-msgid "progress"
-msgstr "En cours de réalisation"
-
-#: ../definition.xml
-msgid "project_analysis"
-msgstr "Analyse des projets"
-
-#: ../definition.xml
-msgid "realize"
-msgstr "Réalisé"
-
-#: ../definition.xml
-msgid "realized"
-msgstr "Réalisé"
-
-#: ../definition.xml
-msgid "reject"
-msgstr "Ne pas retenir le projet"
-
-#: ../definition.xml
-msgid "rejected"
-msgstr "Projet non retenu"
-
-#: ../definition.xml
-msgid "result_analysis"
-msgstr "Analyse des résultats"
-
-#: ../definition.xml
-msgid "retract"
-msgstr ""
-
-#: ../definition.xml
-msgid "selected"
-msgstr "Projet retenu"
-
-#: ../definition.xml
-msgid "study"
-msgstr "Soumettre à l'étude"
-
-#: ../definition.xml
-msgid "study_in_progress"
-msgstr "A l'étude"
-
-#: ../definition.xml
-msgid "to_be_analysed"
-msgstr ""
-
-#: ../definition.xml
-msgid "to_vote"
-msgstr ""
-
-#: ../definition.xml
-msgid "vote"
-msgstr "Vote"
-
-#: ../definition.xml
-msgid "vote_analysis"
-msgstr "Soumettre à l'analyse des résultats"

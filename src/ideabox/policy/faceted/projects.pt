@@ -34,7 +34,7 @@
                                  title title">
                 <div class="image" tal:attributes="style string: background:url('${image_url}/@@images/image/project_faceted') center center"></div>
                 <div>
-                  <div class="title" tal:content="brain/project_theme">theme</div>
+                  <div class="title" tal:content="brain/project_theme" i18n:translate="">theme</div>
                   <div class="description" tal:content="title">description</div>
                 </div>
               </a>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <dc-workflow xmlns:i18n="http://xml.zope.org/namespaces/i18n"
-             i18n:domain="ideabox.policy"
+             i18n:domain="plone"
              workflow_id="project_workflow"
              title="Project Workflow"
              description=""
@@ -13,11 +13,7 @@
   <permission>Modify portal content</permission>
   <permission>View</permission>
 
-  <state state_id="draft" title="Draft" i18n:attributes="title">
-    <description i18n:translate="">
-      Draft
-    </description>
-
+  <state state_id="draft" title="draft" i18n:attributes="title">
     <exit-transition transition_id="deposit"/>
 
     <permission-map name="Access contents information" acquired="False">
@@ -40,11 +36,7 @@
     </permission-map>
   </state>
 
-  <state state_id="deposited" title="Deposited" i18n:attributes="title">
-    <description i18n:translate="">
-      Deposited
-    </description>
-
+  <state state_id="deposited" title="deposited" i18n:attributes="title">
     <exit-transition transition_id="to_be_analysed"/>
     <exit-transition transition_id="retract"/>
 
@@ -66,11 +58,7 @@
     </permission-map>
   </state>
 
-  <state state_id="project_analysis" title="Project analysis" i18n:attributes="title">
-    <description i18n:translate="">
-      Project analysis
-    </description>
-
+  <state state_id="project_analysis" title="project_analysis" i18n:attributes="title">
     <exit-transition transition_id="vote"/>
     <exit-transition transition_id="deposit"/>
 
@@ -92,11 +80,7 @@
     </permission-map>
   </state>
 
-  <state state_id="vote" title="Vote" i18n:attributes="title">
-    <description i18n:translate="">
-      Vote
-    </description>
-
+  <state state_id="vote" title="vote" i18n:attributes="title">
     <exit-transition transition_id="vote_analysis"/>
     <exit-transition transition_id="to_be_analysed"/>
 
@@ -118,11 +102,7 @@
     </permission-map>
   </state>
 
-  <state state_id="result_analysis" title="Result analysis" i18n:attributes="title">
-    <description i18n:translate="">
-      Result analysis
-    </description>
-
+  <state state_id="result_analysis" title="result_analysis" i18n:attributes="title">
     <exit-transition transition_id="accept"/>
     <exit-transition transition_id="reject"/>
     <exit-transition transition_id="vote"/>
@@ -145,11 +125,7 @@
     </permission-map>
   </state>
 
-  <state state_id="selected" title="Selected" i18n:attributes="title">
-    <description i18n:translate="">
-      Selected
-    </description>
-
+  <state state_id="selected" title="selected" i18n:attributes="title">
     <exit-transition transition_id="study"/>
     <exit-transition transition_id="vote_analysis"/>
 
@@ -171,11 +147,7 @@
     </permission-map>
   </state>
 
-  <state state_id="rejected" title="Rejected" i18n:attributes="title">
-    <description i18n:translate="">
-      Rejected
-    </description>
-
+  <state state_id="rejected" title="rejected" i18n:attributes="title">
     <exit-transition transition_id="vote_analysis"/>
 
     <permission-map name="Access contents information" acquired="False">
@@ -196,11 +168,7 @@
     </permission-map>
   </state>
 
-  <state state_id="study_in_progress" title="Study in progress" i18n:attributes="title">
-    <description i18n:translate="">
-      Study in progress
-    </description>
-
+  <state state_id="study_in_progress" title="study_in_progress" i18n:attributes="title">
     <exit-transition transition_id="progress"/>
     <exit-transition transition_id="back_accepted"/>
 
@@ -222,11 +190,7 @@
     </permission-map>
   </state>
 
-  <state state_id="in_progress" title="In progress" i18n:attributes="title">
-    <description i18n:translate="">
-      In progress
-    </description>
-
+  <state state_id="in_progress" title="in_progress" i18n:attributes="title">
     <exit-transition transition_id="realize"/>
     <exit-transition transition_id="back_in_study"/>
 
@@ -248,11 +212,7 @@
     </permission-map>
   </state>
 
-  <state state_id="realized" title="Realized" i18n:attributes="title">
-    <description i18n:translate="">
-      Realized
-    </description>
-
+  <state state_id="realized" title="realized" i18n:attributes="title">
     <exit-transition transition_id="back_in_progress"/>
 
     <permission-map name="Access contents information" acquired="False">
@@ -279,9 +239,6 @@
               trigger="USER"
               before_script="" after_script=""
               i18n:attributes="title">
-  <description i18n:translate="">
-     Deposit
-  </description>
   <action url="%(content_url)s/content_status_modify?workflow_action=deposit"
           category="workflow"
           i18n:translate="">Deposit</action>
@@ -296,9 +253,6 @@
               trigger="USER"
               before_script="" after_script=""
               i18n:attributes="title">
-  <description i18n:translate="">
-     Retract
-  </description>
   <action url="%(content_url)s/content_status_modify?workflow_action=retract"
           category="workflow"
           i18n:translate="">Retract</action>
@@ -313,9 +267,6 @@
               trigger="USER"
               before_script="" after_script=""
               i18n:attributes="title">
-  <description i18n:translate="">
-     To be analysed
-  </description>
    <action url="%(content_url)s/content_status_modify?workflow_action=to_be_analysed"
         category="workflow"
         i18n:translate="">To be analysed</action>
@@ -330,9 +281,6 @@
               trigger="USER"
               before_script="" after_script=""
               i18n:attributes="title">
-  <description i18n:translate="">
-     Vote
-  </description>
   <action url="%(content_url)s/content_status_modify?workflow_action=vote"
         category="workflow"
         i18n:translate="">Vote</action>
@@ -347,9 +295,6 @@
               trigger="USER"
               before_script="" after_script=""
               i18n:attributes="title">
-  <description i18n:translate="">
-     Vote analysis
-  </description>
   <action url="%(content_url)s/content_status_modify?workflow_action=vote_analysis"
         category="workflow"
         i18n:translate="">Vote analysis</action>
@@ -364,9 +309,6 @@
               trigger="USER"
               before_script="" after_script=""
               i18n:attributes="title">
-  <description i18n:translate="">
-     Accept
-  </description>
   <action url="%(content_url)s/content_status_modify?workflow_action=accept"
         category="workflow"
         i18n:translate="">Accept</action>
@@ -381,9 +323,6 @@
               trigger="USER"
               before_script="" after_script=""
               i18n:attributes="title">
-  <description i18n:translate="">
-     Back accepted
-  </description>
   <action url="%(content_url)s/content_status_modify?workflow_action=back_accepted"
         category="workflow"
         i18n:translate="">Back accepted</action>
@@ -398,9 +337,6 @@
               trigger="USER"
               before_script="" after_script=""
               i18n:attributes="title">
-  <description i18n:translate="">
-     Reject
-  </description>
   <action url="%(content_url)s/content_status_modify?workflow_action=reject"
         category="workflow"
         i18n:translate="">Reject</action>
@@ -415,9 +351,6 @@
               trigger="USER"
               before_script="" after_script=""
               i18n:attributes="title">
-  <description i18n:translate="">
-     Study
-  </description>
   <action url="%(content_url)s/content_status_modify?workflow_action=study"
         category="workflow"
         i18n:translate="">Study</action>
@@ -432,9 +365,6 @@
               trigger="USER"
               before_script="" after_script=""
               i18n:attributes="title">
-  <description i18n:translate="">
-     Back in study
-  </description>
   <action url="%(content_url)s/content_status_modify?workflow_action=back_in_study"
         category="workflow"
         i18n:translate="">Back in study</action>
@@ -449,9 +379,6 @@
               trigger="USER"
               before_script="" after_script=""
               i18n:attributes="title">
-  <description i18n:translate="">
-     Progress
-  </description>
   <action url="%(content_url)s/content_status_modify?workflow_action=progress"
         category="workflow"
         i18n:translate="">Progress</action>
@@ -466,9 +393,6 @@
               trigger="USER"
               before_script="" after_script=""
               i18n:attributes="title">
-  <description i18n:translate="">
-     Back in progress
-  </description>
   <action url="%(content_url)s/content_status_modify?workflow_action=back_in_progress"
         category="workflow"
         i18n:translate="">Back in progress</action>
@@ -483,9 +407,6 @@
               trigger="USER"
               before_script="" after_script=""
               i18n:attributes="title">
-  <description i18n:translate="">
-     Realize
-  </description>
   <action url="%(content_url)s/content_status_modify?workflow_action=realize"
         category="workflow"
         i18n:translate="">Realize</action>

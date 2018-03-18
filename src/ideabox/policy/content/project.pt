@@ -46,7 +46,7 @@
             <ol id="timeline-text"><tal:block tal:repeat="state timeline_states"><li tal:attributes="class python: state['state'] == current_state and 'current' or ''"><div tal:content="state/state" i18n:translate=""></div></li></tal:block></ol>
         </div>
 
-        <div tal:content="structure here/@@rate-if-you-dare"></div>
+        <div tal:content="structure here/@@rating"></div>
 
         <div class="field">
           <div id="form-widgets-body" class="richTextWidget richtext-field" tal:content="structure context/body/raw|context/body"></div>

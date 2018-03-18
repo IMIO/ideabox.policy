@@ -18,4 +18,11 @@
       directory="static"
       />
 
+  <browser:page
+    for="ideabox.policy.content.project.IProject"
+    name="rating"
+    permission="zope2.View"
+    class=".rating.ProjectRatingView"
+    />
+
 </configure>

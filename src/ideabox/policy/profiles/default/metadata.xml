@@ -8,5 +8,7 @@
     <dependency>profile-eea.facetednavigation:default</dependency>
     <dependency>profile-collective.z3cform.select2:default</dependency>
     <dependency>profile-plone.app.discussion:default</dependency>
+    <dependency>profile-cpskin.policy:default</dependency>
+    <dependency>profile-cpskin.diazotheme.spirit:default</dependency>
   </dependencies>
 </metadata>

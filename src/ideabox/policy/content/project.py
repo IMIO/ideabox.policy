@@ -85,11 +85,13 @@ class ProjectView(view.DefaultView):
         second_timeline_states = self._timeline_states[4:]
         selected_states = (self.review_state in first_timeline_states and
                            first_timeline_states or second_timeline_states)
-        states = [{'state': e, 'date': ''} for e in selected_states]
+        states = [{'state': e, 'date': '', 'class': u'unfinished'}
+                  for e in selected_states]
         for line in history:
             state = [s for s in states if s['state'] == line['state']]
             if len(state) == 1:
                 state[0]['date'] = line['date']
+                state[0]['class'] = u'finished'
         return states
 
     def creator(self):

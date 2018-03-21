@@ -76,18 +76,25 @@ class ProjectView(view.DefaultView):
     def can_view_timeline(self):
         if self.review_state is 'rejected':
             return False
-        return self.review_state in self._timeline_states + ('selected', )
+        return self.review_state in self._timeline_states
 
     @property
     def timeline_states(self):
         history = self._workflow_history
+        current_state = self.review_state
         first_timeline_states = self._timeline_states[:4]
         second_timeline_states = self._timeline_states[4:]
         selected_states = (self.review_state in first_timeline_states and
                            first_timeline_states or second_timeline_states)
         states = [{'state': e, 'date': '', 'class': u'unfinished'}
                   for e in selected_states]
+        idx = current_state in self._timeline_states \
+            and self._timeline_states.index(current_state) or 0
         for line in history:
+            # Ensure that next steps that were completed in the past is not
+            # displayed
+            if line['order'] > idx:
+                break
             state = [s for s in states if s['state'] == line['state']]
             if len(state) == 1:
                 state[0]['date'] = line['date']

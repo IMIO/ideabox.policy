@@ -54,9 +54,30 @@
 
         <div id="text_with_button">
             <ul id="button">
-                <li><a href="#text_description" class="current" rel="no-refresh" onClick="$('#button li a').removeClass('current'); $(this).addClass('current')">Description</a></li>
-                <li><a href="#text_news" class="" rel="no-refresh" onClick="$('#button li a').removeClass('current'); $(this).addClass('current')">Actualités</a></li>
-                <li><a href="#text_comment" class="" rel="no-refresh" onClick="$('#button li a').removeClass('current'); $(this).addClass('current')">Description</a></li>
+                <li>
+                    <a href="#text_description" class="current" rel="no-refresh"
+                        onClick="$('#button li a').removeClass('current');
+                        $(this).addClass('current');
+                        foo(22); return false;">
+                        Description
+                    </a>
+                </li>
+                <li>
+                    <a href="#text_news" class="" rel="no-refresh"
+                        onClick="$('#button li a').removeClass('current');
+                        $(this).addClass('current');
+                        foo(22); return false;">
+                        Actualités
+                    </a>
+                </li>
+                <li>
+                    <a href="#text_comment" class="" rel="no-refresh"
+                        onClick="$('#button li a').removeClass('current');
+                        $(this).addClass('current');
+                        foo(22); return false;">
+                        Commentaires
+                    </a>
+                </li>
             </ul>
             <ul id="text">
                 <li id="text_description" class="anchor"></li>

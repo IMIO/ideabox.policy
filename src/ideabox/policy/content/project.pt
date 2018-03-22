@@ -52,6 +52,28 @@
           <div id="form-widgets-body" class="richTextWidget richtext-field" tal:content="structure context/body/raw|context/body"></div>
         </div>
 
+        <div id="text_with_button">
+            <ul id="button">
+                <li><a href="#text_description" class="current" rel="no-refresh" onClick="$('#button li a').removeClass('current'); $(this).addClass('current')">Description</a></li>
+                <li><a href="#text_news" class="" rel="no-refresh" onClick="$('#button li a').removeClass('current'); $(this).addClass('current')">Actualités</a></li>
+                <li><a href="#text_comment" class="" rel="no-refresh" onClick="$('#button li a').removeClass('current'); $(this).addClass('current')">Description</a></li>
+            </ul>
+            <ul id="text">
+                <li id="text_description" class="anchor"></li>
+                <li class="text_description">
+                    Quis est qui C. Fabrici, M'. Curi non cum caritate aliqua benevola memoriam usurpet, quos numquam viderit? quis autem est, qui Tarquinium Superbum, qui Sp. Cassium, Sp. Maelium non oderit?
+                </li>
+                <li id="text_news" class="anchor"></li>
+                <li class="text_news">
+                    Sed cautela nimia in peiores haeserat plagas, ut narrabimus postea, aemulis consarcinantibus insidias graves apud Constantium, cetera medium principem sed siquid auribus eius huius modi quivis infudisset ignotus, acerbum et inplacabilem et in hoc causarum titulo dissimilem sui.
+                </li>
+                <li id="text_comment" class="anchor"></li>
+                <li class="text_comment">
+                    Nihil est enim virtute amabilius, nihil quod magis adliciat ad diligendum, quippe cum propter virtutem et probitatem etiam eos, quos numquam vidimus, quodam modo diligamus.
+                </li>
+            </ul>
+        </div>
+
         <tal:block tal:repeat="image_url images_url">
           <div class="img_project" tal:attributes="style string: background-image:url(${image_url})"></div>
         </tal:block>

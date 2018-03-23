@@ -39,9 +39,17 @@ def add_project(portal,
                     body=u'<br>'.join(project_body.decode('utf8').splitlines()),
                     container=container,
                 )
-                file_path = os.path.join(image_source, project_id + '.jpg')
+                file_path = os.path.join(image_source, '{0}.jpg'.format(project_id))
                 if os.path.isfile(file_path):
-                    add_image_from_file(project, project_id + '.jpg', image_source)
+                    add_image_from_file(project, '{0}.jpg'.format(project_id), image_source)
+
+                file_path = os.path.join(image_source, '{0}.png'.format(project_id))
+                if os.path.isfile(file_path):
+                    add_image_from_file(project, '{0}.png'.format(project_id), image_source)
+
+                file_path = os.path.join(image_source, '{0}.gif'.format(project_id))
+                if os.path.isfile(file_path):
+                    add_image_from_file(project, '{0}.gif'.format(project_id), image_source)
 
         rate.setupAnnotations(project)
         if project_like:

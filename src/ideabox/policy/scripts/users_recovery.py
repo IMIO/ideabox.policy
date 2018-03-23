@@ -18,11 +18,11 @@ def add_user(author, mail):
         author_id = urlnormalizer.normalize(author.decode('utf8'), locale='fr')
     with api.env.adopt_user(username="admin"):
         if api.user.get(username=author_id) is None:
-            pwd = password_generator.generate(length=12)
+            pwd = password_generator.generate(length=20)
             user = api.user.create(
                 username=author_id,
                 email=mail,
-                password=pwd
+                password='{0}1.'.format(pwd)
             )
             user.setMemberProperties(mapping={"fullname": author})
 

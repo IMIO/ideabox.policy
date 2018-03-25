@@ -11,6 +11,7 @@
     template="projects.pt"
     title="Projects"
     permission="zope2.View"
+    class=".projects.ProjectsView"
     />
 
 </configure>

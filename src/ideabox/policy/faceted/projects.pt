@@ -9,15 +9,18 @@
   <metal:content-core fill-slot="content-core">
     <metal:block define-macro="content-core">
       <div tal:define="
+        self nocall:context/@@faceted-project;
         folderContents folderContents | python:context.getFolderContents();
+        folderContents python:self.random_sort(folderContents);
         Batch python:modules['Products.CMFPlone'].Batch;
         b_start python:request.get('b_start', 0);
-        batch python:isinstance(folderContents, Batch) and folderContents or Batch(folderContents, 100, int(b_start), orphan=2);">
+        batch python:isinstance(folderContents, Batch) and folderContents or Batch(folderContents, 100, int(b_start), orphan=2);
+        sorted_batch python:self.sort_items(batch)">
 
         <div metal:use-macro="context/batch_macros/macros/navigation" />
 
         <div id="project_facet_view" class="eea-preview-items">
-          <tal:entries repeat="brain batch">
+          <tal:entries repeat="brain sorted_batch">
             <tal:block define="idx python:repeat['brain'].index + 1">
             <div class="" tal:attributes="class string:project item_${idx}"
                 tal:define="portal_type brain/portal_type;

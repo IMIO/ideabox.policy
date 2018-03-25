@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-03-18 09:50+0000\n"
+"POT-Creation-Date: 2018-03-25 16:28+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -44,7 +44,7 @@ msgstr "Inclusion sociale"
 msgid "Ideabox project"
 msgstr ""
 
-#: ../configure.zcml:28
+#: ../configure.zcml:30
 msgid "Installs the ideabox.policy add-on."
 msgstr ""
 
@@ -53,11 +53,15 @@ msgstr ""
 msgid "MOBI"
 msgstr "La mobilité"
 
+#: ../content/project.pt:82
+msgid "No news to display"
+msgstr "Aucune actualités pour le moment."
+
 #: ../profiles/default/types/Project.xml
 msgid "Project"
 msgstr "Projet"
 
-#: ../faceted/configure.zcml:14
+#: ../faceted/configure.zcml:15
 msgid "Projects"
 msgstr "Projets"
 
@@ -66,11 +70,11 @@ msgstr "Projets"
 msgid "TREN"
 msgstr "La transition énergétique"
 
-#: ../content/project.py:20
+#: ../content/project.py:19
 msgid "Theme"
 msgstr ""
 
-#: ../configure.zcml:37
+#: ../configure.zcml:39
 msgid "Uninstalls the ideabox.policy add-on."
 msgstr ""
 
@@ -84,10 +88,10 @@ msgstr "La végétalisation et l'agriculture urbaine"
 msgid "VPCN"
 msgstr "Ville participative, Collaborative et Numérique"
 
-#: ../configure.zcml:28
+#: ../configure.zcml:30
 msgid "ideabox.policy"
 msgstr ""
 
-#: ../configure.zcml:37
+#: ../configure.zcml:39
 msgid "ideabox.policy (uninstall)"
 msgstr ""

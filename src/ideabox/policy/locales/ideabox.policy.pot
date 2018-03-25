@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-03-18 09:50+0000\n"
+"POT-Creation-Date: 2018-03-25 16:28+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,7 +46,7 @@ msgstr ""
 msgid "Ideabox project"
 msgstr ""
 
-#: ../configure.zcml:28
+#: ../configure.zcml:30
 msgid "Installs the ideabox.policy add-on."
 msgstr ""
 
@@ -55,11 +55,15 @@ msgstr ""
 msgid "MOBI"
 msgstr ""
 
+#: ../content/project.pt:82
+msgid "No news to display"
+msgstr ""
+
 #: ../profiles/default/types/Project.xml
 msgid "Project"
 msgstr ""
 
-#: ../faceted/configure.zcml:14
+#: ../faceted/configure.zcml:15
 msgid "Projects"
 msgstr ""
 
@@ -68,11 +72,11 @@ msgstr ""
 msgid "TREN"
 msgstr ""
 
-#: ../content/project.py:20
+#: ../content/project.py:19
 msgid "Theme"
 msgstr ""
 
-#: ../configure.zcml:37
+#: ../configure.zcml:39
 msgid "Uninstalls the ideabox.policy add-on."
 msgstr ""
 
@@ -86,10 +90,10 @@ msgstr ""
 msgid "VPCN"
 msgstr ""
 
-#: ../configure.zcml:28
+#: ../configure.zcml:30
 msgid "ideabox.policy"
 msgstr ""
 
-#: ../configure.zcml:37
+#: ../configure.zcml:39
 msgid "ideabox.policy (uninstall)"
 msgstr ""

@@ -34,6 +34,7 @@ def add_project(container,
             body=u'<br>'.join(project_body.decode('utf8').splitlines()),
             container=container,
             original_author=project_author,
+            original_id=project_id,
         )
         for ext in img_extensions:
             filename = '{0}.{1}'.format(project_id, ext)

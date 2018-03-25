@@ -15,7 +15,7 @@ import os
 from ideabox.policy.utils import token_type_recovery
 
 
-def add_project(portal,
+def add_project(container,
                 project_id,
                 title,
                 project_theme,
@@ -25,53 +25,51 @@ def add_project(portal,
                 project_like,
                 project_unlike,
                 project_status):
-    if 'projets' in portal:
-        img_extensions = ('jpg', 'png', 'gif')
-        container = portal['projets']
-        with api.env.adopt_user(username='admin'):
-            api.user.grant_roles(
-                username=project_author,
-                roles=['Contributor', ]
+    img_extensions = ('jpg', 'png', 'gif')
+    with api.env.adopt_user(username='admin'):
+        api.user.grant_roles(
+            username=project_author,
+            roles=['Contributor', ]
+        )
+        with api.env.adopt_user(username=project_author):
+            project = api.content.create(
+                type='Project',
+                title=title,
+                project_theme=project_theme,
+                body=u'<br>'.join(project_body.decode('utf8').splitlines()),
+                container=container,
             )
-            with api.env.adopt_user(username=project_author):
-                project = api.content.create(
-                    type='Project',
-                    title=title,
-                    project_theme=project_theme,
-                    body=u'<br>'.join(project_body.decode('utf8').splitlines()),
-                    container=container,
-                )
-                for ext in img_extensions:
-                    filename = '{0}.{1}'.format(project_id, ext)
-                    img_path = os.path.join(image_source, filename)
-                    if os.path.exists(img_path):
-                        add_image_from_file(project, filename, image_source)
-                        break
+            for ext in img_extensions:
+                filename = '{0}.{1}'.format(project_id, ext)
+                img_path = os.path.join(image_source, filename)
+                if os.path.exists(img_path):
+                    add_image_from_file(project, filename, image_source)
+                    break
 
-        rate.setupAnnotations(project)
-        if project_like:
-            for x in range(0, int(project_like)):
-                rate.loveIt(project, 'userimportp' + str(x))
-        if project_unlike:
-            for x in range(0, int(project_unlike)):
-                rate.hateIt(project, 'userimportn' + str(x))
+    rate.setupAnnotations(project)
+    if project_like:
+        for x in range(0, int(project_like)):
+            rate.loveIt(project, 'userimportp' + str(x))
+    if project_unlike:
+        for x in range(0, int(project_unlike)):
+            rate.hateIt(project, 'userimportn' + str(x))
 
-        with api.env.adopt_user(username='admin'):
-            if project_status in ['selected', 'rejected']:
-                api.content.transition(obj=project, transition='deposit')
-                api.content.transition(obj=project, transition='to_be_analysed')
-                api.content.transition(obj=project, transition='vote')
-                api.content.transition(obj=project, transition='vote_analysis')
-                if project_status == 'selected':
-                    api.content.transition(obj=project, transition='accept')
-                else:
-                    api.content.transition(obj=project, transition='reject')
+    with api.env.adopt_user(username='admin'):
+        if project_status in ['selected', 'rejected']:
+            api.content.transition(obj=project, transition='deposit')
+            api.content.transition(obj=project, transition='to_be_analysed')
+            api.content.transition(obj=project, transition='vote')
+            api.content.transition(obj=project, transition='vote_analysis')
+            if project_status == 'selected':
+                api.content.transition(obj=project, transition='accept')
+            else:
+                api.content.transition(obj=project, transition='reject')
 
-        with api.env.adopt_user(username='admin'):
-            api.user.revoke_roles(
-                username=project_author,
-                roles=['Contributor', ],
-            )
+    with api.env.adopt_user(username='admin'):
+        api.user.revoke_roles(
+            username=project_author,
+            roles=['Contributor', ],
+        )
 
 
 def add_image_from_file(container, file_name, source):
@@ -93,7 +91,7 @@ def add_image_from_file(container, file_name, source):
         image.reindexObject()
 
 
-def data_recovery(filename, image, portal, status):
+def data_recovery(filename, image, container, status):
     csv_file = open(filename, 'rb')
     reader = csv.reader(csv_file, delimiter=";")
     reader.next()
@@ -121,7 +119,7 @@ def data_recovery(filename, image, portal, status):
             )
 
         add_project(
-            portal,
+            container,
             project_id,
             project_title,
             token_type,
@@ -130,9 +128,18 @@ def data_recovery(filename, image, portal, status):
             project_author,
             project_like,
             project_unlike,
-            status
+            status,
         )
         print project_title
+
+
+def follow_path(portal, path):
+    element = portal
+    for id in path.split('/'):
+        if id not in portal:
+            raise ValueError('The id {0} does not exist'.format(id))
+        element = portal[id]
+    return element
 
 
 def main(app):
@@ -144,13 +151,16 @@ def main(app):
     parser.add_argument('img', help='localisation of pictures')
     parser.add_argument('name', help='Name of plone site')
     parser.add_argument('status', help='status of types')
+    parser.add_argument('--path', dest='path', default='projets',
+                        help='creation path')
     args = parser.parse_args()
 
     setSite(app[args.name])
     portal = app[args.name]
+    container = follow_path(portal, args.path)
 
     if args.csv and args.img:
-        data_recovery(args.csv, args.img, portal, args.status)
+        data_recovery(args.csv, args.img, container, args.status)
         commit()
 
 

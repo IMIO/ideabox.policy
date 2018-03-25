@@ -127,9 +127,9 @@ def data_recovery(filename, image, container, status):
 def follow_path(portal, path):
     element = portal
     for id in path.split('/'):
-        if id not in portal:
+        if id not in element:
             raise ValueError('The id {0} does not exist'.format(id))
-        element = portal[id]
+        element = element[id]
     return element
 
 

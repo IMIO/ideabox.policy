@@ -76,76 +76,38 @@
                   </tal:block>
                 </li>
                 <li class="text_news">
-                  <div id="">
-                      <div id="project_facet_view" class="news">
-                          <tal:block tal:repeat="image_url images_url">
-                          <!--            La class "item" doit être incrémentée de 1 à chaque repeat pour que cela puisse fonctionner en ie9 et ie10-->
-                          <a href="#">
-                          <div class="project item_1">
-                              <div class="image" tal:attributes="style string: background-image:url(${image_url})"></div>
+                    <div id="project_facet_view" class="news"
+                         tal:define="news view/get_news">
+                        <tal:if condition="not: news">
+                          <p i18n:translate="">No news to display</p>
+                        </tal:if>
+                        <tal:block condition="news"
+                                   repeat="element news">
+                          <a href="" title=""
+                             tal:attributes="href element/getURL;
+                                             title element/Title"
+                             tal:define="idx python:repeat['element'].index + 1;
+                                         img_url string:${element/getURL}/@@images/image/project_faceted">
+                            <div class=""
+                                 tal:attributes="class string:project item_${idx}">
+                              <div class="image"
+                                   tal:attributes="style string:background-image:url('${img_url}')"></div>
                               <div>
-                                  <div class="date_project">02 janvier 2018</div>
-                                  <div class="title">Catégories</div>
-                                  <div class="description">description</div>
+                                <div class="date_project"
+                                     tal:define="date python: element.created > element.effective and element.created or element.effective">
+                                  <span tal:replace="python: date.asdatetime().strftime('%d/%m/%Y')"></span>
+                                </div>
+                                <div class="title"
+                                     tal:content="element/Title">title</div>
+                                <div class="description"
+                                     tal:content="element/Description">description</div>
                               </div>
-                          </div>
+                            </div>
                           </a>
-                          <a href="#">
-                          <div class="project item_2">
-                              <div class="image" tal:attributes="style string: background-image:url(${image_url})"></div>
-                              <div>
-                                  <div class="date_project">02 janvier 2018</div>
-                                  <div class="title">Catégories</div>
-                                  <div class="description">descr hjbbj bjhbhjbh bbjb bhbjhbj bjbjbjb  iption</div>
-                              </div>
-                          </div>
-                          </a>
-                          <a href="#">
-                          <div class="project item_3">
-                              <div class="image" tal:attributes="style string: background-image:url(${image_url})"></div>
-                              <div>
-                                  <div class="date_project">02 janvier 2018</div>
-                                  <div class="title">Catégories</div>
-                                  <div class="description">description</div>
-                              </div>
-                          </div>
-                          </a>
-                          <a href="#">
-                          <div class="project item_4">
-                              <div class="image" tal:attributes="style string: background-image:url(${image_url})"></div>
-                              <div>
-                                  <div class="date_project">02 janvier 2018</div>
-                                  <div class="title">Catégories</div>
-                                  <div class="description">description</div>
-                              </div>
-                          </div>
-                          </a>
-                          <a href="#">
-                          <div class="project item_5">
-                              <div class="image" tal:attributes="style string: background-image:url(${image_url})"></div>
-                              <div>
-                                  <div class="date_project">02 janvier 2018</div>
-                                  <div class="title">Catégories</div>
-                                  <div class="description">description</div>
-                              </div>
-                          </div>
-                          </a>
-                          <a href="#">
-                          <div class="project item_6">
-                              <div class="image" tal:attributes="style string: background-image:url(${image_url})"></div>
-                              <div>
-                                  <div class="date_project">02 janvier 2018</div>
-                                  <div class="title">Catégories</div>
-                                  <div class="description">description bjhb jbj bjhbj bhbjh bjhb jbjhbjh bjhb</div>
-                              </div>
-                          </div>
-                          </a>
-                          </tal:block>
-                      </div>
-                  </div>
+                        </tal:block>
+                    </div>
                 </li>
                 <li class="text_comment">
-                    Nihil est enim virtute amabilius, nihil quod magis adliciat ad diligendum, quippe cum propter virtutem et probitatem etiam eos, quos numquam vidimus, quodam modo diligamus.
                 </li>
             </ul>
         </div>

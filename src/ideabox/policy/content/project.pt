@@ -20,15 +20,21 @@
                      tal:condition="creator_short_form">
         <tal:name tal:define="creator_long_form string:?author=${creator_short_form};
                               creator_is_openid python:'/' in creator_short_form;
-                              creator_id python:(creator_short_form, creator_long_form)[creator_is_openid];">
+                              creator_id python:(creator_short_form, creator_long_form)[creator_is_openid];
+                              anonymous view/anonymous">
           <span class="documentAuthor">
             <tal:i18n i18n:translate="label_by_author">
             by
+            <tal:block condition="anonymous">
+            <span tal:content="view/authorname" i18n:name="author"></span>
+            </tal:block>
+            <tal:block condition="not: anonymous">
             <a href="#"
                tal:attributes="href string:${context/@@plone_portal_state/navigation_root_url}/author/${creator_id}"
                tal:content="view/authorname"
                tal:omit-tag="python:view.author() is None"
                i18n:name="author">Roland Barthes</a>
+            </tal:block>
             </tal:i18n>
           </span>
         </tal:name>

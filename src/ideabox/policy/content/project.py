@@ -101,8 +101,12 @@ class ProjectView(view.DefaultView):
                 state[0]['class'] = u'finished'
         return states
 
+    @property
+    def anonymous(self):
+        return api.user.is_anonymous()
+
     def creator(self):
-        return self.context.Creator()
+        return getattr(self.context, 'original_author', self.context.Creator())
 
     def author(self):
         membership = getToolByName(self.context, 'portal_membership')

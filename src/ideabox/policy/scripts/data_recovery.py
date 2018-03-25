@@ -27,24 +27,20 @@ def add_project(container,
                 project_status):
     img_extensions = ('jpg', 'png', 'gif')
     with api.env.adopt_user(username='admin'):
-        api.user.grant_roles(
-            username=project_author,
-            roles=['Contributor', ]
+        project = api.content.create(
+            type='Project',
+            title=title,
+            project_theme=project_theme,
+            body=u'<br>'.join(project_body.decode('utf8').splitlines()),
+            container=container,
+            original_author=project_author,
         )
-        with api.env.adopt_user(username=project_author):
-            project = api.content.create(
-                type='Project',
-                title=title,
-                project_theme=project_theme,
-                body=u'<br>'.join(project_body.decode('utf8').splitlines()),
-                container=container,
-            )
-            for ext in img_extensions:
-                filename = '{0}.{1}'.format(project_id, ext)
-                img_path = os.path.join(image_source, filename)
-                if os.path.exists(img_path):
-                    add_image_from_file(project, filename, image_source)
-                    break
+        for ext in img_extensions:
+            filename = '{0}.{1}'.format(project_id, ext)
+            img_path = os.path.join(image_source, filename)
+            if os.path.exists(img_path):
+                add_image_from_file(project, filename, image_source)
+                break
 
     rate.setupAnnotations(project)
     if project_like:
@@ -64,12 +60,6 @@ def add_project(container,
                 api.content.transition(obj=project, transition='accept')
             else:
                 api.content.transition(obj=project, transition='reject')
-
-    with api.env.adopt_user(username='admin'):
-        api.user.revoke_roles(
-            username=project_author,
-            roles=['Contributor', ],
-        )
 
 
 def add_image_from_file(container, file_name, source):

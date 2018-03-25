@@ -19,12 +19,25 @@ def post_install(context):
     """Post install script"""
     portal = api.portal.get()
     if portal.get('projets') is None:
-            api.content.create(
-                type='Folder',
-                id='projets',
-                title='Projets',
-                container=portal
-            )
+        api.content.create(
+            type='Folder',
+            id='projets',
+            title='Projets',
+            container=portal,
+        )
+    if portal.get('plus-dinfos') is None:
+        folder = api.content.create(
+            type='Folder',
+            id='plus-dinfos',
+            title=u"Plus d'infos",
+            container=portal,
+        )
+        api.content.create(
+            type='Folder',
+            id='edition-2017',
+            title=u"Edition 2017",
+            container=folder,
+        )
 
 
 def uninstall(context):

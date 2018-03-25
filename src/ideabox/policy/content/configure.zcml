@@ -30,4 +30,10 @@
       handler=".subscriber.project_image_changed"
       />
 
+  <subscriber
+      for="ideabox.policy.content.project.IProject
+           zope.lifecycleevent.interfaces.IObjectCreatedEvent"
+      handler=".subscriber.project_added"
+      />
+
 </configure>

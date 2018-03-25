@@ -8,3 +8,7 @@ def project_image_changed(obj, event):
         return
     if IProject.providedBy(obj.aq_parent):
         obj.aq_parent.reindexObject(idxs=['project_picture'])
+
+
+def project_added(obj, event):
+    obj.allow_discussion = True

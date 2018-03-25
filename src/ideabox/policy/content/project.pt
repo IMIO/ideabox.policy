@@ -115,8 +115,9 @@
         <script type="text/javascript">
             $("#text_with_button").each(function(){
                 $(this).find("li").removeClass("current");
-                id = window.location.hash;
-                if (id != ''){
+                var id = window.location.hash;
+                var ids = ['#text_description', '#text_news', '#text_comment'];
+                if (id != '' && ids.includes(id)){
                     $(id).addClass("current");
                     $("." + id.substring(1)).addClass("current");
                 }else{

@@ -126,11 +126,17 @@
                 }
                 $("#text_with_button #button li").click(function() {
                     $("#text_with_button").find("li").removeClass("current");
-                    id = $(this).attr("id");
+                    var id = $(this).attr("id");
                     history.pushState(null, null, "#" + id);
                     $(this).addClass("current");
                     $("#text_with_button #text ." + id).addClass("current");
                 });
+            });
+            jQuery(document).ready(function($) {
+                // XXX This should be replaced by a diazo rule
+                $('#viewlet-below-content .discussion').appendTo('li.text_comment');
+                $('#viewlet-below-content #commenting').appendTo('li.text_comment');
+                $('#viewlet-below-content .reply:first').appendTo('li.text_comment');
             });
         </script>
 

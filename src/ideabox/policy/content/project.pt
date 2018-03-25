@@ -54,10 +54,6 @@
 
         <div tal:content="structure here/@@rating"></div>
 
-        <div class="field">
-          <div id="form-widgets-body" class="richTextWidget richtext-field" tal:content="structure context/body/raw|context/body"></div>
-        </div>
-
         <div id="text_with_button">
             <ul id="button">
                 <li id="text_description" class="">
@@ -72,10 +68,81 @@
             </ul>
             <ul id="text">
                 <li class="text_description">
-                    Quis est qui C. Fabrici, M'. Curi non cum caritate aliqua benevola memoriam usurpet, quos numquam viderit? quis autem est, qui Tarquinium Superbum, qui Sp. Cassium, Sp. Maelium non oderit?
+                  <div class="field">
+                    <div id="form-widgets-body" class="richTextWidget richtext-field" tal:content="structure context/body/raw|context/body"></div>
+                  </div>
+                  <tal:block tal:repeat="image_url images_url">
+                    <div class="img_project" tal:attributes="style string: background-image:url(${image_url})"></div>
+                  </tal:block>
                 </li>
                 <li class="text_news">
-                    Sed cautela nimia in peiores haeserat plagas, ut narrabimus postea, aemulis consarcinantibus insidias graves apud Constantium, cetera medium principem sed siquid auribus eius huius modi quivis infudisset ignotus, acerbum et inplacabilem et in hoc causarum titulo dissimilem sui.
+                  <div id="">
+                      <div id="project_facet_view" class="news">
+                          <tal:block tal:repeat="image_url images_url">
+                          <!--            La class "item" doit être incrémentée de 1 à chaque repeat pour que cela puisse fonctionner en ie9 et ie10-->
+                          <a href="#">
+                          <div class="project item_1">
+                              <div class="image" tal:attributes="style string: background-image:url(${image_url})"></div>
+                              <div>
+                                  <div class="date_project">02 janvier 2018</div>
+                                  <div class="title">Catégories</div>
+                                  <div class="description">description</div>
+                              </div>
+                          </div>
+                          </a>
+                          <a href="#">
+                          <div class="project item_2">
+                              <div class="image" tal:attributes="style string: background-image:url(${image_url})"></div>
+                              <div>
+                                  <div class="date_project">02 janvier 2018</div>
+                                  <div class="title">Catégories</div>
+                                  <div class="description">descr hjbbj bjhbhjbh bbjb bhbjhbj bjbjbjb  iption</div>
+                              </div>
+                          </div>
+                          </a>
+                          <a href="#">
+                          <div class="project item_3">
+                              <div class="image" tal:attributes="style string: background-image:url(${image_url})"></div>
+                              <div>
+                                  <div class="date_project">02 janvier 2018</div>
+                                  <div class="title">Catégories</div>
+                                  <div class="description">description</div>
+                              </div>
+                          </div>
+                          </a>
+                          <a href="#">
+                          <div class="project item_4">
+                              <div class="image" tal:attributes="style string: background-image:url(${image_url})"></div>
+                              <div>
+                                  <div class="date_project">02 janvier 2018</div>
+                                  <div class="title">Catégories</div>
+                                  <div class="description">description</div>
+                              </div>
+                          </div>
+                          </a>
+                          <a href="#">
+                          <div class="project item_5">
+                              <div class="image" tal:attributes="style string: background-image:url(${image_url})"></div>
+                              <div>
+                                  <div class="date_project">02 janvier 2018</div>
+                                  <div class="title">Catégories</div>
+                                  <div class="description">description</div>
+                              </div>
+                          </div>
+                          </a>
+                          <a href="#">
+                          <div class="project item_6">
+                              <div class="image" tal:attributes="style string: background-image:url(${image_url})"></div>
+                              <div>
+                                  <div class="date_project">02 janvier 2018</div>
+                                  <div class="title">Catégories</div>
+                                  <div class="description">description bjhb jbj bjhbj bhbjh bjhb jbjhbjh bjhb</div>
+                              </div>
+                          </div>
+                          </a>
+                          </tal:block>
+                      </div>
+                  </div>
                 </li>
                 <li class="text_comment">
                     Nihil est enim virtute amabilius, nihil quod magis adliciat ad diligendum, quippe cum propter virtutem et probitatem etiam eos, quos numquam vidimus, quodam modo diligamus.
@@ -104,68 +171,6 @@
             });
         </script>
 
-        <div id="">
-            <div id="project_facet_view" class="news">
-                <tal:block tal:repeat="image_url images_url">
-                <!--            La class "item" doit être incrémentée de 1 à chaque repeat pour que cela puisse fonctionner en ie9 et ie10-->
-                <div class="project item_1">
-                    <div class="image" tal:attributes="style string: background-image:url(${image_url})"></div>
-                    <div>
-                        <div class="date_project">02 janvier 2018</div>
-                        <div class="title">Catégories</div>
-                        <div class="description">description</div>
-                    </div>
-                </div>
-                <div class="project item_2">
-                    <div class="image" tal:attributes="style string: background-image:url(${image_url})"></div>
-                    <div>
-                        <div class="date_project">02 janvier 2018</div>
-                        <div class="title">Catégories</div>
-                        <div class="description">descr hjbbj bjhbhjbh bbjb bhbjhbj bjbjbjb  iption</div>
-                    </div>
-                </div>
-                <div class="project item_3">
-                    <div class="image" tal:attributes="style string: background-image:url(${image_url})"></div>
-                    <div>
-                        <div class="date_project">02 janvier 2018</div>
-                        <div class="title">Catégories</div>
-                        <div class="description">description</div>
-                    </div>
-                </div>
-                <div class="project item_4">
-                    <div class="image" tal:attributes="style string: background-image:url(${image_url})"></div>
-                    <div>
-                        <div class="date_project">02 janvier 2018</div>
-                        <div class="title">Catégories</div>
-                        <div class="description">description</div>
-                    </div>
-                </div>
-                <div class="project item_5">
-                    <div class="image" tal:attributes="style string: background-image:url(${image_url})"></div>
-                    <div>
-                        <div class="date_project">02 janvier 2018</div>
-                        <div class="title">Catégories</div>
-                        <div class="description">description</div>
-                    </div>
-                </div>
-                <div class="project item_6">
-                    <div class="image" tal:attributes="style string: background-image:url(${image_url})"></div>
-                    <div>
-                        <div class="date_project">02 janvier 2018</div>
-                        <div class="title">Catégories</div>
-                        <div class="description">description bjhb jbj bjhbj bhbjh bjhb jbjhbjh bjhb</div>
-                    </div>
-                </div>
-                </tal:block>
-            </div>
-        </div>
-
-
-
-
-        <tal:block tal:repeat="image_url images_url">
-          <div class="img_project" tal:attributes="style string: background-image:url(${image_url})"></div>
-        </tal:block>
         </metal:main>
     </body>
 </html>

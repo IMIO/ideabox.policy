@@ -26,11 +26,13 @@ def add_project(portal,
                 project_unlike,
                 project_status):
     if 'projets' in portal:
+        img_extensions = ('jpg', 'png', 'gif')
         container = portal['projets']
         with api.env.adopt_user(username='admin'):
-            api.user.grant_roles(username=project_author,
-                                 roles=['Contributor', ]
-                                 )
+            api.user.grant_roles(
+                username=project_author,
+                roles=['Contributor', ]
+            )
             with api.env.adopt_user(username=project_author):
                 project = api.content.create(
                     type='Project',
@@ -39,17 +41,12 @@ def add_project(portal,
                     body=u'<br>'.join(project_body.decode('utf8').splitlines()),
                     container=container,
                 )
-                file_path = os.path.join(image_source, '{0}.jpg'.format(project_id))
-                if os.path.isfile(file_path):
-                    add_image_from_file(project, '{0}.jpg'.format(project_id), image_source)
-
-                file_path = os.path.join(image_source, '{0}.png'.format(project_id))
-                if os.path.isfile(file_path):
-                    add_image_from_file(project, '{0}.png'.format(project_id), image_source)
-
-                file_path = os.path.join(image_source, '{0}.gif'.format(project_id))
-                if os.path.isfile(file_path):
-                    add_image_from_file(project, '{0}.gif'.format(project_id), image_source)
+                for ext in img_extensions:
+                    filename = '{0}.{1}'.format(project_id, ext)
+                    img_path = os.path.join(image_source, filename)
+                    if os.path.exists(img_path):
+                        add_image_from_file(project, filename, image_source)
+                        break
 
         rate.setupAnnotations(project)
         if project_like:
@@ -71,9 +68,10 @@ def add_project(portal,
                     api.content.transition(obj=project, transition='reject')
 
         with api.env.adopt_user(username='admin'):
-            api.user.revoke_roles(username=project_author,
-                                  roles=['Contributor', ]
-                                  )
+            api.user.revoke_roles(
+                username=project_author,
+                roles=['Contributor', ],
+            )
 
 
 def add_image_from_file(container, file_name, source):
@@ -84,11 +82,13 @@ def add_image_from_file(container, file_name, source):
             data=open(file_path, 'r').read(),
             filename=unicode(file_name)
         )
-        image = api.content.create(type='Image',
-                                   title=file_name,
-                                   image=named_blob_image,
-                                   container=container,
-                                   language='fr')
+        image = api.content.create(
+            type='Image',
+            title=file_name,
+            image=named_blob_image,
+            container=container,
+            language='fr',
+        )
         image.setTitle(file_name)
         image.reindexObject()
 
@@ -110,9 +110,15 @@ def data_recovery(filename, image, portal, status):
         token_type = token_type_recovery(project_theme)
 
         if len(project_author) < 3:
-            project_author = urlnormalizer.normalize(project_mail[0:3].decode('utf8'), locale='fr')
+            project_author = urlnormalizer.normalize(
+                project_mail[0:3].decode('utf8'),
+                locale='fr',
+            )
         else:
-            project_author = urlnormalizer.normalize(project_author.decode('utf8'), locale='fr')
+            project_author = urlnormalizer.normalize(
+                project_author.decode('utf8'),
+                locale='fr',
+            )
 
         add_project(
             portal,

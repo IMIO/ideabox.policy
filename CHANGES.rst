@@ -5,7 +5,29 @@ Changelog
 1.0a3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Randomize the order of items in projects faceted view
+  [mpeeters]
+
+- Always allow discussion on projects (78 minutes ago)
+  [mpeeters]
+
+- Invert theme and title in projects faceted view
+  [mpeeters]
+
+- Fix background for projects in faceted view
+  [mpeeters]
+
+- Improve project import script
+  [mpeeters]
+
+- Add tabs on project view
+  [amariscal, mpeeters]
+
+- Handle `.png` and `.gif` in project import script
+  [vpiret]
+
+- Improve timeline design
+  [amariscal, mpeeters]
 
 
 1.0a2 (2018-03-18)

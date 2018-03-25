@@ -28,11 +28,11 @@
                                url brain/getURL|string:#;
                                view_url python:(url and useView and url + '/view') or url;
                                image_id brain/project_picture|string:;
-                               image_url python:image_id and view_url + '/' + image_id or 'http://localhost:8080/Plone/banner/nimportequoi3.jpg'">
+                               image_url python:image_id and view_url + '/' + image_id or ''">
               <a href="" title=""
                  tal:attributes="href view_url;
                                  title title">
-                <div class="image" tal:attributes="style string: background:url('${image_url}/@@images/image/project_faceted') center center"></div>
+                <div class="image" tal:attributes="style string: background-image:url('${image_url}/@@images/image/project_faceted')"></div>
                 <div>
                   <div class="title" tal:content="brain/project_theme" i18n:translate="">theme</div>
                   <div class="description" tal:content="title">description</div>

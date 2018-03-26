@@ -9,4 +9,5 @@ from ideabox.policy.content.project import IProject
 def project_picture(obj):
     images = obj.listFolderContents(contentFilter={'portal_type': 'Image'})
     if images:
+        obj.image = images[0].image
         return images[0].id

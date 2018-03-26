@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-03-25 16:28+0000\n"
+"POT-Creation-Date: 2018-03-26 15:52+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,6 +27,10 @@ msgstr ""
 msgid "EVCA"
 msgstr ""
 
+#: ../content/project.pt:56
+msgid "Edit timeline dates"
+msgstr ""
+
 #. Default: "Idées non attribuées"
 #: ../vocabularies.py:27
 msgid "IDNA"
@@ -46,7 +50,7 @@ msgstr ""
 msgid "Ideabox project"
 msgstr ""
 
-#: ../configure.zcml:30
+#: ../configure.zcml:31
 msgid "Installs the ideabox.policy add-on."
 msgstr ""
 
@@ -55,7 +59,7 @@ msgstr ""
 msgid "MOBI"
 msgstr ""
 
-#: ../content/project.pt:82
+#: ../content/project.pt:88
 msgid "No news to display"
 msgstr ""
 
@@ -67,6 +71,10 @@ msgstr ""
 msgid "Projects"
 msgstr ""
 
+#: ../browser/workflow.py:78
+msgid "Save"
+msgstr ""
+
 #. Default: "La transition énergétique"
 #: ../vocabularies.py:31
 msgid "TREN"
@@ -76,7 +84,7 @@ msgstr ""
 msgid "Theme"
 msgstr ""
 
-#: ../configure.zcml:39
+#: ../configure.zcml:40
 msgid "Uninstalls the ideabox.policy add-on."
 msgstr ""
 
@@ -90,10 +98,10 @@ msgstr ""
 msgid "VPCN"
 msgstr ""
 
-#: ../configure.zcml:30
+#: ../configure.zcml:31
 msgid "ideabox.policy"
 msgstr ""
 
-#: ../configure.zcml:39
+#: ../configure.zcml:40
 msgid "ideabox.policy (uninstall)"
 msgstr ""

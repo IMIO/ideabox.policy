@@ -25,4 +25,22 @@
     class=".rating.ProjectRatingView"
     />
 
+  <browser:page
+    for="ideabox.policy.content.project.IProject"
+    name="workflow-edit"
+    permission="cmf.ModifyPortalContent"
+    class=".workflow.WorkflowEditView"
+    />
+
+  <adapter
+    for="ideabox.policy.content.project.IProject
+         zope.interface.Interface
+         ideabox.policy.browser.workflow.IWorkflowForm
+         zope.interface.Interface
+         zope.interface.Interface"
+    provides="z3c.form.interfaces.IValue"
+    name="default"
+    factory=".workflow.WorkflowDataProvider"
+    />
+
 </configure>

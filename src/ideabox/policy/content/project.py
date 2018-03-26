@@ -44,6 +44,13 @@ class ProjectView(view.DefaultView):
     )
 
     @property
+    def can_edit(self):
+        return api.user.has_permission(
+            'cmf.ModifyPortalContent',
+            obj=self.context,
+        )
+
+    @property
     def get_images_url(self):
         contents = self.context.listFolderContents(contentFilter={"portal_type": "Image"})
         images_url = []

@@ -14,6 +14,7 @@
   <include package="cioppino.twothumbs" />
   <include package="cpskin.diazotheme.spirit" />
   <include package="cpskin.policy" />
+  <include package="cpskin.core" />
   <include package="plone.app.discussion" />
 
   <include package=".browser" />

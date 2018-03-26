@@ -27,7 +27,7 @@ msgstr "Des espaces verts, des espaces collectifs, des espaces apaisés"
 
 #: ../content/project.pt:56
 msgid "Edit timeline dates"
-msgstr ""
+msgstr "Modifier les dates de la ligne du temps"
 
 #. Default: "Idées non attribuées"
 #: ../vocabularies.py:27
@@ -71,7 +71,7 @@ msgstr "Projets"
 
 #: ../browser/workflow.py:78
 msgid "Save"
-msgstr ""
+msgstr "Enregistrer"
 
 #. Default: "La transition énergétique"
 #: ../vocabularies.py:31

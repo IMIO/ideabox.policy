@@ -51,11 +51,11 @@
             <ol id="timeline-line"><tal:block tal:repeat="state timeline_states"><li tal:attributes="class python: state['state'] == current_state and 'current' or state['class']" tal:define="date state/date"
                 ><div class="step"><tal:block condition="date"><div tal:content="python: date.strftime('%d')"></div><div tal:content="python: date.strftime('%b')"></div></tal:block></div></li></tal:block></ol>
             <ol id="timeline-text"><tal:block tal:repeat="state timeline_states"><li tal:attributes="class python: state['state'] == current_state and 'current' or state['class']"><div tal:content="state/state" i18n:translate=""></div></li></tal:block></ol>
-        </div>
-        <div tal:condition="view/can_edit">
-          <a href=""
-             tal:attributes="href string:${context/absolute_url}/@@workflow-edit"
-             i18n:translate="">Edit timeline dates</a>
+          <div tal:condition="view/can_edit">
+            <a href=""
+               tal:attributes="href string:${context/absolute_url}/@@workflow-edit"
+               i18n:translate="">Edit timeline dates</a>
+          </div>
         </div>
 
         <div tal:content="structure here/@@rating"></div>

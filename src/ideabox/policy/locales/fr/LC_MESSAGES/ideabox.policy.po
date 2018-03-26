@@ -59,7 +59,7 @@ msgstr "La mobilité"
 
 #: ../content/project.pt:88
 msgid "No news to display"
-msgstr "Aucune actualités pour le moment."
+msgstr "Aucune actualité pour le moment."
 
 #: ../profiles/default/types/Project.xml
 msgid "Project"

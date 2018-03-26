@@ -59,11 +59,12 @@ class ProjectView(view.DefaultView):
         return images_url
 
     def get_news(self):
-        return reversed(api.content.find(
+        return api.content.find(
             context=self.context,
             portal_type='News Item',
             sort_on='Date',
-        ))
+            sort_order='descending',
+        )
 
     @property
     def review_state(self):

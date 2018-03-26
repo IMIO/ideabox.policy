@@ -5,7 +5,18 @@ Changelog
 1.0a4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add a view to edit workflow dates
+  [mpeeters]
+
+- Allow more states for social viewlet
+  [mpeeters]
+
+- Update project template to include `plone.abovecontenttile`
+  and `plone.belowcontenttile` viewlet managers
+  [mpeeters]
+
+- Store the image reference on the project for sliders
+  [mpeeters]
 
 
 1.0a3 (2018-03-25)

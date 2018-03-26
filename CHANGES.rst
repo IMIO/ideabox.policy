@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0a4 (unreleased)
+1.0a4 (2018-03-26)
 ------------------
 
 - Add a view to edit workflow dates

@@ -44,13 +44,13 @@ class ReviewStateVocabularyFactory(object):
         values = [
             {'draft': PMF('draft')},
             {'deposited': PMF('deposited')},
-            {'projectPMFanalysis': PMF('projectPMFanalysis')},
+            {'project_analysis': PMF('project_analysis')},
             {'vote': PMF('vote')},
-            {'resultPMFanalysis': PMF('resultPMFanalysis')},
+            {'result_analysis': PMF('result_analysis')},
             {'selected': PMF('selected')},
             {'rejected': PMF('rejected')},
-            {'studyPMFinPMFprogress': PMF('studyPMFinPMFprogress')},
-            {'inPMFprogress': PMF('inPMFprogress')},
+            {'study_in_progress': PMF('study_in_progress')},
+            {'in_progress': PMF('in_progress')},
             {'realized': PMF('realized')},
         ]
         return dict_list_2_vocabulary(values)

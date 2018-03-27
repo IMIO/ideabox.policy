@@ -5,7 +5,17 @@ Changelog
 1.0a5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add a view for the projects summary
+  [mpeeters]
+
+- Add more transitions in project workflow to be more explicit
+  [mpeeters]
+
+- Add a vocabulary for project states
+  [mpeeters]
+
+- Improve project view
+  [mpeeters]
 
 
 1.0a4 (2018-03-26)

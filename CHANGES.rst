@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0a5 (unreleased)
+1.0a5 (2018-03-27)
 ------------------
 
 - Add a view for the projects summary

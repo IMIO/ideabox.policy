@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-03-27 09:24+0000\n"
+"POT-Creation-Date: 2018-03-27 12:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -71,8 +71,16 @@ msgstr ""
 msgid "Projects"
 msgstr ""
 
+#: ../browser/templates/project_summary.pt:5
+msgid "Projects in progression"
+msgstr ""
+
 #: ../browser/workflow.py:78
 msgid "Save"
+msgstr ""
+
+#: ../browser/project.py:21
+msgid "Setting up"
 msgstr ""
 
 #. Default: "La transition énergétique"
@@ -98,10 +106,18 @@ msgstr ""
 msgid "VPCN"
 msgstr ""
 
+#: ../browser/project.py:16
+msgid "diagnose and analysis"
+msgstr ""
+
 #: ../configure.zcml:31
 msgid "ideabox.policy"
 msgstr ""
 
 #: ../configure.zcml:40
 msgid "ideabox.policy (uninstall)"
+msgstr ""
+
+#: ../browser/templates/project_summary.pt:23
+msgid "projets"
 msgstr ""

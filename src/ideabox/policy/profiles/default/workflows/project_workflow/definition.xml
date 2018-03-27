@@ -60,7 +60,7 @@
 
   <state state_id="project_analysis" title="project_analysis" i18n:attributes="title">
     <exit-transition transition_id="vote"/>
-    <exit-transition transition_id="deposit"/>
+    <exit-transition transition_id="back_deposit"/>
 
     <permission-map name="Access contents information" acquired="False">
       <permission-role>Anonymous</permission-role>
@@ -82,7 +82,7 @@
 
   <state state_id="vote" title="vote" i18n:attributes="title">
     <exit-transition transition_id="vote_analysis"/>
-    <exit-transition transition_id="to_be_analysed"/>
+    <exit-transition transition_id="back_to_be_analysed"/>
 
     <permission-map name="Access contents information" acquired="False">
       <permission-role>Anonymous</permission-role>
@@ -105,7 +105,7 @@
   <state state_id="result_analysis" title="result_analysis" i18n:attributes="title">
     <exit-transition transition_id="accept"/>
     <exit-transition transition_id="reject"/>
-    <exit-transition transition_id="vote"/>
+    <exit-transition transition_id="back_to_vote"/>
 
     <permission-map name="Access contents information" acquired="False">
       <permission-role>Anonymous</permission-role>
@@ -127,7 +127,7 @@
 
   <state state_id="selected" title="selected" i18n:attributes="title">
     <exit-transition transition_id="study"/>
-    <exit-transition transition_id="vote_analysis"/>
+    <exit-transition transition_id="back_vote_analysis"/>
 
     <permission-map name="Access contents information" acquired="False">
       <permission-role>Anonymous</permission-role>
@@ -148,7 +148,7 @@
   </state>
 
   <state state_id="rejected" title="rejected" i18n:attributes="title">
-    <exit-transition transition_id="vote_analysis"/>
+    <exit-transition transition_id="back_vote_analysis"/>
 
     <permission-map name="Access contents information" acquired="False">
       <permission-role>Anonymous</permission-role>
@@ -247,6 +247,20 @@
   </guard>
   </transition>
 
+  <transition transition_id="back_deposit"
+              new_state="deposited"
+              title="Back to deposit"
+              trigger="USER"
+              before_script="" after_script=""
+              i18n:attributes="title">
+  <action url="%(content_url)s/content_status_modify?workflow_action=back_deposit"
+          category="workflow"
+          i18n:translate="">Back to deposit</action>
+  <guard>
+    <guard-permission>Modify portal content</guard-permission>
+  </guard>
+  </transition>
+
   <transition transition_id="retract"
               new_state="draft"
               title="Retract"
@@ -275,6 +289,20 @@
   </guard>
   </transition>
 
+  <transition transition_id="back_to_be_analysed"
+              new_state="project_analysis"
+              title="Back to be analysed"
+              trigger="USER"
+              before_script="" after_script=""
+              i18n:attributes="title">
+   <action url="%(content_url)s/content_status_modify?workflow_action=back_to_be_analysed"
+        category="workflow"
+        i18n:translate="">Back to be analysed</action>
+  <guard>
+    <guard-permission>Modify portal content</guard-permission>
+  </guard>
+  </transition>
+
   <transition transition_id="vote"
               new_state="vote"
               title="Vote"
@@ -289,6 +317,20 @@
   </guard>
   </transition>
 
+  <transition transition_id="back_to_vote"
+              new_state="vote"
+              title="Back to vote"
+              trigger="USER"
+              before_script="" after_script=""
+              i18n:attributes="title">
+  <action url="%(content_url)s/content_status_modify?workflow_action=back_to_vote"
+        category="workflow"
+        i18n:translate="">Back to vote</action>
+  <guard>
+    <guard-permission>Modify portal content</guard-permission>
+  </guard>
+  </transition>
+
   <transition transition_id="vote_analysis"
               new_state="result_analysis"
               title="Vote analysis"
@@ -298,6 +340,20 @@
   <action url="%(content_url)s/content_status_modify?workflow_action=vote_analysis"
         category="workflow"
         i18n:translate="">Vote analysis</action>
+  <guard>
+    <guard-permission>Modify portal content</guard-permission>
+  </guard>
+  </transition>
+
+  <transition transition_id="back_vote_analysis"
+              new_state="result_analysis"
+              title="Back to vote analysis"
+              trigger="USER"
+              before_script="" after_script=""
+              i18n:attributes="title">
+  <action url="%(content_url)s/content_status_modify?workflow_action=back_vote_analysis"
+        category="workflow"
+        i18n:translate="">Back to vote analysis</action>
   <guard>
     <guard-permission>Modify portal content</guard-permission>
   </guard>

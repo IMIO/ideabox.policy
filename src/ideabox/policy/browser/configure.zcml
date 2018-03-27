@@ -19,6 +19,14 @@
       />
 
   <browser:page
+    for="*"
+    name="project_summary"
+    permission="zope2.View"
+    class=".project.SummaryView"
+    template="templates/project_summary.pt"
+    />
+
+  <browser:page
     for="ideabox.policy.content.project.IProject"
     name="rating"
     permission="zope2.View"

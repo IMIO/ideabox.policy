@@ -1,0 +1,33 @@
+<div i18n:domain="ideabox.policy"
+     tal:define="summary view/get_summary">
+    <div class="homepage-titre-rss">
+        <h2>
+            <a class="homepage-title" href="projets" i18n:translate="">Projects in progression</a>
+        </h2>
+    </div>
+    <div class="homepage-results">
+        <ul class="homepage-standard-results">
+            <tal:while repeat="line summary">
+            <li class="homepage-bloc-item"
+                tal:condition="line/count">
+                <div>
+                    <div class="homepage-bloc-item-title"
+                         i18n:domain="plone">
+                        <a href=""
+                           tal:attributes="href string:projets#c6=${line/state}">
+                            <h3 i18n:translate="" tal:content="line/state">titre</h3>
+                        </a>
+                    </div>
+                    <div class="homepage-bloc-item-more">
+                      <a href=""
+                         tal:attributes="href string:projets#c6=${line/state}"><tal:block content="line/count">10</tal:block> <tal:block i18n:translate="">projets</tal:block></a>
+                    </div>
+                </div>
+                <div class="homepage-bloc-item-description" tal:content="line/description">
+                    description
+                </div>
+            </li>
+            </tal:while>
+        </ul>
+    </div>
+</div>

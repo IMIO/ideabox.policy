@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-03-26 15:52+0000\n"
+"POT-Creation-Date: 2018-03-27 09:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,12 +16,12 @@ msgstr ""
 "X-Is-Fallback-For: fr-be fr-ca fr-lu fr-mc fr-ch fr-fr\n"
 
 #. Default: "Art, Culture, Patrimoine, Tourisme"
-#: ../vocabularies.py:25
+#: ../vocabularies.py:26
 msgid "ACPT"
 msgstr "Art, Culture, Patrimoine, Tourisme"
 
 #. Default: "Des espaces verts, des espaces collectifs, des espaces apaisés"
-#: ../vocabularies.py:26
+#: ../vocabularies.py:27
 msgid "EVCA"
 msgstr "Des espaces verts, des espaces collectifs, des espaces apaisés"
 
@@ -30,17 +30,17 @@ msgid "Edit timeline dates"
 msgstr "Modifier les dates de la ligne du temps"
 
 #. Default: "Idées non attribuées"
-#: ../vocabularies.py:27
+#: ../vocabularies.py:28
 msgid "IDNA"
 msgstr "Idées non attribuées"
 
 #. Default: "Inclassables"
-#: ../vocabularies.py:28
+#: ../vocabularies.py:29
 msgid "INCL"
 msgstr "Inclassables"
 
 #. Default: "Inclusion sociale"
-#: ../vocabularies.py:29
+#: ../vocabularies.py:30
 msgid "INSO"
 msgstr "Inclusion sociale"
 
@@ -53,11 +53,11 @@ msgid "Installs the ideabox.policy add-on."
 msgstr ""
 
 #. Default: "La mobilité"
-#: ../vocabularies.py:30
+#: ../vocabularies.py:31
 msgid "MOBI"
 msgstr "La mobilité"
 
-#: ../content/project.pt:88
+#: ../content/project.pt:89
 msgid "No news to display"
 msgstr "Aucune actualité pour le moment."
 
@@ -74,7 +74,7 @@ msgid "Save"
 msgstr "Enregistrer"
 
 #. Default: "La transition énergétique"
-#: ../vocabularies.py:31
+#: ../vocabularies.py:32
 msgid "TREN"
 msgstr "La transition énergétique"
 
@@ -87,12 +87,12 @@ msgid "Uninstalls the ideabox.policy add-on."
 msgstr ""
 
 #. Default: "La végétalisation et l'agriculture urbaine"
-#: ../vocabularies.py:32
+#: ../vocabularies.py:33
 msgid "VEAU"
 msgstr "La végétalisation et l'agriculture urbaine"
 
 #. Default: "Ville participative, Collaborative et Numérique"
-#: ../vocabularies.py:33
+#: ../vocabularies.py:34
 msgid "VPCN"
 msgstr "Ville participative, Collaborative et Numérique"
 

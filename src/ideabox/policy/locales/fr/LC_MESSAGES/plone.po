@@ -32,6 +32,22 @@ msgid "Back in study"
 msgstr "Retour à l'étude"
 
 #: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "Back to be analysed"
+msgstr ""
+
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "Back to deposit"
+msgstr ""
+
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "Back to vote"
+msgstr ""
+
+#: ../profiles/default/workflows/project_workflow/definition.xml
+msgid "Back to vote analysis"
+msgstr ""
+
+#: ../profiles/default/workflows/project_workflow/definition.xml
 msgid "Deposit"
 msgstr "Dépôt du projet"
 

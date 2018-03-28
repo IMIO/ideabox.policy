@@ -55,6 +55,7 @@ setup(
         'plone.dexterity',
         'setuptools',
         'z3c.jbot',
+        'pas.plugins.imio',
     ],
     extras_require={
         'test': [

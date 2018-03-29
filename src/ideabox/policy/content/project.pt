@@ -59,7 +59,9 @@
           </div>
         </div>
 
+        <tal:if condition="view/can_view_rating">
         <div tal:content="structure here/@@rating"></div>
+        </tal:if>
 
         <div id="text_with_button">
             <ul id="button">

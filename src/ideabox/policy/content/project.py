@@ -42,6 +42,13 @@ class ProjectView(view.DefaultView):
         'in_progress',
         'realized',
     )
+    _rating_states = (
+        'deposited',
+        'project_analysis',
+        'vote',
+        'result_analysis',
+        'rejected',
+    )
 
     @property
     def can_edit(self):
@@ -92,6 +99,10 @@ class ProjectView(view.DefaultView):
         if self.review_state is 'rejected':
             return False
         return self.review_state in self._timeline_states
+
+    @property
+    def can_view_rating(self):
+        return self.review_state in self._rating_states
 
     @property
     def timeline_states(self):

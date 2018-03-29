@@ -5,7 +5,8 @@ Changelog
 1.0a8 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Remove the dependency on `pas.plugins.imio` for the moment
+  [mpeeters]
 
 
 1.0a7 (2018-03-29)

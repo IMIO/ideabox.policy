@@ -63,12 +63,13 @@
         <div tal:content="structure here/@@rating"></div>
         </tal:if>
 
-        <div id="text_with_button">
+        <div id="text_with_button"
+             tal:define="news view/get_news">
             <ul id="button">
                 <li id="text_description" class="">
                     Description
                 </li>
-                <li id="text_news" class="">
+                <li id="text_news" class="" tal:condition="news">
                     Actualités
                 </li>
                 <li id="text_comment" class="">
@@ -84,14 +85,9 @@
                     <div class="img_project" tal:attributes="style string: background-image:url(${image_url})"></div>
                   </tal:block>
                 </li>
-                <li class="text_news">
-                    <div id="project_facet_view" class="news"
-                         tal:define="news view/get_news">
-                        <tal:if condition="not: news">
-                          <p i18n:translate="">No news to display</p>
-                        </tal:if>
-                        <tal:block condition="news"
-                                   repeat="element news">
+                <li class="text_news" tal:condition="news">
+                    <div id="project_facet_view" class="news">
+                        <tal:block repeat="element news">
                           <a href="" title=""
                              tal:attributes="href element/getURL;
                                              title element/Title"

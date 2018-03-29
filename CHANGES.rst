@@ -5,7 +5,11 @@ Changelog
 1.0a7 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Do not display the news tab when there is no news
+  [mpeeters]
+
+- Do not display the votes on selected projects
+  [mpeeters]
 
 
 1.0a6 (2018-03-28)

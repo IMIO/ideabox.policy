@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0a7 (unreleased)
+1.0a7 (2018-03-29)
 ------------------
 
 - Do not display the news tab when there is no news

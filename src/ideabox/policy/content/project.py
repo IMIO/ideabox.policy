@@ -55,6 +55,7 @@ class ProjectView(view.DefaultView):
         return api.user.has_permission(
             'cmf.ModifyPortalContent',
             obj=self.context,
+            user=api.user.get_current(),
         )
 
     @property

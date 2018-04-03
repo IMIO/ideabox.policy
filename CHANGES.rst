@@ -5,7 +5,8 @@ Changelog
 1.0a8 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Test permissions on the current user
+  [mpeeters]
 
 
 1.0a7 (2018-03-29)

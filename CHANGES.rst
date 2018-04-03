@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0a8 (unreleased)
+1.0a8 (2018-04-03)
 ------------------
 
 - Test permissions on the current user

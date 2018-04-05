@@ -56,6 +56,7 @@ setup(
         'setuptools',
         'z3c.jbot',
         'pas.plugins.imio',
+        'collective.behavior.richdescription',
     ],
     extras_require={
         'test': [

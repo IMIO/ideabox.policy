@@ -84,7 +84,7 @@ msgstr "La transition énergétique"
 
 #: ../browser/project.py:52
 msgid "The 7 main themes"
-msgstr ""
+msgstr "Les 7 thématiques prioritaires"
 
 #: ../content/project.py:19
 msgid "Theme"

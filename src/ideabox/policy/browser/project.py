@@ -2,26 +2,36 @@
 
 from Products.Five import BrowserView
 from plone import api
+from zope.component import getUtility
+from zope.schema.interfaces import IVocabularyFactory
 
 from ideabox.policy import _
 
 
-class SummaryView(BrowserView):
+class SummaryProgressionView(BrowserView):
+
+    @property
+    def title(self):
+        return _('Projects in progression')
+
+    @property
+    def filter_widget(self):
+        return 'c6'
 
     def get_summary(self):
         return (
             {
-                'state': 'study_in_progress',
+                'title': 'study_in_progress',
                 'count': self.count('study_in_progress'),
                 'description': _(u'diagnose and analysis'),
             },
             {
-                'state': 'in_progress',
+                'title': 'in_progress',
                 'count': self.count('in_progress'),
                 'description': _(u'Setting up'),
             },
             {
-                'state': 'realized',
+                'title': 'realized',
                 'count': self.count('realized'),
                 'description': None,
             },
@@ -32,4 +42,34 @@ class SummaryView(BrowserView):
             context=self.context,
             portal_type='Project',
             review_state=state,
+        ))
+
+
+class SummaryThemeView(BrowserView):
+
+    @property
+    def title(self):
+        return _('The 7 main themes')
+
+    @property
+    def filter_widget(self):
+        return 'c1'
+
+    def get_summary(self):
+        voc = getUtility(
+            IVocabularyFactory,
+            name='ideabox.vocabularies.theme',
+        )(self.context)
+        return [
+            {'title': t.title,
+             'count': self.count(t.token),
+             'description': None}
+            for t in voc
+        ]
+
+    def count(self, theme):
+        return len(api.content.find(
+            context=self.context.get('projets', self.context),
+            portal_type='Project',
+            project_theme=theme,
         ))

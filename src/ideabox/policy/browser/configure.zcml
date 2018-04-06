@@ -20,9 +20,17 @@
 
   <browser:page
     for="*"
-    name="project_summary"
+    name="project_progression_summary"
     permission="zope2.View"
-    class=".project.SummaryView"
+    class=".project.SummaryProgressionView"
+    template="templates/project_summary.pt"
+    />
+
+  <browser:page
+    for="*"
+    name="project_theme_summary"
+    permission="zope2.View"
+    class=".project.SummaryThemeView"
     template="templates/project_summary.pt"
     />
 

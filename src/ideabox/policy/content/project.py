@@ -97,6 +97,7 @@ class ProjectView(view.DefaultView):
 
     @property
     def can_view_timeline(self):
+        return False  # Temporarily fix as requested
         if self.review_state is 'rejected':
             return False
         return self.review_state in self._timeline_states

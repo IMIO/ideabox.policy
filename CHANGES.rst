@@ -5,7 +5,14 @@ Changelog
 1.0a9 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add a summary view by theme
+  [mpeeters]
+
+- Hide the timeline on projects
+  [mpeeters]
+
+- Add collective.behavior.richdescription to the package dependencies
+  [mpeeters]
 
 
 1.0a8 (2018-04-03)

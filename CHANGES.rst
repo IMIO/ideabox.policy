@@ -5,6 +5,9 @@ Changelog
 1.0a9 (unreleased)
 ------------------
 
+- Add default image on project faceted view
+  [mpeeters]
+
 - Add a summary view by theme
   [mpeeters]
 

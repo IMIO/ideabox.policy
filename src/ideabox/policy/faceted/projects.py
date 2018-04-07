@@ -4,6 +4,7 @@ from Products.Five import BrowserView
 from datetime import datetime
 from hashlib import md5
 from operator import attrgetter
+from plone import api
 from random import shuffle
 
 
@@ -40,3 +41,9 @@ class ProjectsView(BrowserView):
             self.request.get('HTTP_USER_AGENT', now.strftime('%m%Y')),
             now.strftime('%d'),
         )).hexdigest()
+
+    @property
+    def default_image(self):
+        return '{0}/project_default.jpg'.format(
+            api.portal.get().absolute_url(),
+        )

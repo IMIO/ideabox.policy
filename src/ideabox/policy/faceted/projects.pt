@@ -10,6 +10,7 @@
     <metal:block define-macro="content-core">
       <div tal:define="
         self nocall:context/@@faceted-project;
+        default_image self/default_image;
         folderContents folderContents | python:context.getFolderContents();
         folderContents python:self.random_sort(folderContents);
         Batch python:modules['Products.CMFPlone'].Batch;
@@ -31,11 +32,11 @@
                                url brain/getURL|string:#;
                                view_url python:(url and useView and url + '/view') or url;
                                image_id brain/project_picture|string:;
-                               image_url python:image_id and view_url + '/' + image_id or ''">
+                               image_url python:image_id and view_url + '/' + image_id + '/@@images/image/project_faceted' or default_image">
               <a href="" title=""
                  tal:attributes="href view_url;
                                  title title">
-                <div class="image" tal:attributes="style string: background-image:url('${image_url}/@@images/image/project_faceted')"></div>
+                <div class="image" tal:attributes="style string: background-image:url('${image_url}')"></div>
                 <div>
                   <div class="title" tal:content="title">title</div>
                   <div class="description" tal:content="brain/project_theme" i18n:translate="">theme</div>

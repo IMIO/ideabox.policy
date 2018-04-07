@@ -3,3 +3,4 @@ graft docs
 include *.rst
 include *.GPL
 global-exclude *.pyc
+global-exclude *.pyo

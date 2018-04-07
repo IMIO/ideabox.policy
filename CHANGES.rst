@@ -2,8 +2,8 @@ Changelog
 =========
 
 
-1.0a9 (unreleased)
-------------------
+1.0 (2018-04-07)
+----------------
 
 - Add default image on project faceted view
   [mpeeters]

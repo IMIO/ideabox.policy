@@ -2,8 +2,6 @@
 
 from Products.Five import BrowserView
 from plone import api
-from zope.component import getUtility
-from zope.schema.interfaces import IVocabularyFactory
 
 from ideabox.policy import _
 
@@ -56,15 +54,11 @@ class SummaryThemeView(BrowserView):
         return 'c1'
 
     def get_summary(self):
-        voc = getUtility(
-            IVocabularyFactory,
-            name='ideabox.vocabularies.theme',
-        )(self.context)
         return [
             {'title': t.title,
-             'count': self.count(t.token),
+             'count': self.count(t.remoteUrl[-4:]),
              'description': None}
-            for t in voc
+            for t in api.portal.get()['projets']['par-theme'].listFolderContents()
         ]
 
     def count(self, theme):

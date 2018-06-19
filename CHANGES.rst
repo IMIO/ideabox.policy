@@ -5,7 +5,8 @@ Changelog
 1.0.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Sort links by priority
+  [vpiret]
 
 
 1.0.1 (2018-04-07)

@@ -11,21 +11,20 @@
             <tal:while repeat="line summary">
             <li class="homepage-bloc-item"
                 tal:condition="line/count">
+            <a href=""
+               tal:attributes="href string:projets#${filter_widget}=${line/title}">
                 <div>
                     <div class="homepage-bloc-item-title">
-                        <a href=""
-                           tal:attributes="href string:projets#${filter_widget}=${line/title}">
                             <h4 i18n:translate="" tal:content="line/title">titre</h4>
-                        </a>
                     </div>
                     <div class="homepage-bloc-item-more">
-                      <a href=""
-                         tal:attributes="href string:projets#${filter_widget}=${line/title}"><tal:block content="line/count">10</tal:block> <tal:block i18n:translate="">projets</tal:block></a>
+                      <tal:block content="line/count">10</tal:block> <tal:block i18n:translate="">projets</tal:block>
                     </div>
                 </div>
                 <div class="homepage-bloc-item-description" tal:content="line/description">
                     description
                 </div>
+            </a>
             </li>
             </tal:while>
         </ul>

@@ -5,6 +5,9 @@ Changelog
 1.0.2 (unreleased)
 ------------------
 
+- Change link on element of homepage
+  [Aurore]
+
 - Sort links by priority
   [vpiret]
 

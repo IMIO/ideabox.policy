@@ -43,6 +43,7 @@ setup(
         'collective.z3cform.select2',
         'cpskin.diazotheme.spirit',
         'cpskin.policy',
+        'imio.gdpr',
         'password-generator',
         'plone.api',
         'plone.api',

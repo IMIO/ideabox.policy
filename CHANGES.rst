@@ -5,6 +5,9 @@ Changelog
 1.0.2 (unreleased)
 ------------------
 
+- Add `imio.gdpr` to the dependencies
+  [mpeeters]
+
 - Change link on element of homepage
   [Aurore]
 

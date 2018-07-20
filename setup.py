@@ -58,6 +58,7 @@ setup(
         'z3c.jbot',
         'pas.plugins.imio',
         'collective.behavior.richdescription',
+        'collective.excelexport',
     ],
     extras_require={
         'test': [

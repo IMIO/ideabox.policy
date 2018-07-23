@@ -5,7 +5,8 @@ Changelog
 1.0.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix project summary view
+  [vpiret]
 
 
 1.0.2 (2018-07-16)

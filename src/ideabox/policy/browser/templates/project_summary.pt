@@ -12,7 +12,7 @@
             <li class="homepage-bloc-item"
                 tal:condition="line/count">
             <a href=""
-               tal:attributes="href string:projets#${filter_widget}=${line/title}">
+               tal:attributes="href string:projets#${filter_widget}=${line/code}">
                 <div>
                     <div class="homepage-bloc-item-title">
                             <h4 i18n:translate="" tal:content="line/title">titre</h4>

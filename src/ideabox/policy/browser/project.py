@@ -57,7 +57,8 @@ class SummaryThemeView(BrowserView):
         return [
             {'title': t.title,
              'count': self.count(t.remoteUrl[-4:]),
-             'description': None}
+             'description': None,
+             'code':t.remoteUrl[-4:]}
             for t in api.portal.get()['projets']['par-theme'].listFolderContents()
         ]
 

@@ -14,8 +14,6 @@
         <h1 tal:content="context/Title"></h1>
         <div tal:replace="structure provider:plone.belowcontenttitle" />
 
-
-        <div tal:replace="structure provider:plone.belowcontentbody" />
         <div class="documentByLine"
              id="plone-document-byline"
              tal:condition="view/before_selected"
@@ -119,6 +117,7 @@
                 </li>
             </ul>
         </div>
+        <div tal:replace="structure provider:plone.belowcontentbody" />
 
         <script type="text/javascript">
             $("#text_with_button").each(function(){

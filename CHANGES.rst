@@ -8,6 +8,12 @@ Changelog
 - Fix project summary view
   [vpiret]
 
+- Fix templates for showing map
+  [vpiret, mpeeters]
+
+- add dependency export excel
+  [vpiret]
+
 
 1.0.2 (2018-07-16)
 ------------------

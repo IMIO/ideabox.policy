@@ -59,4 +59,13 @@
     factory=".workflow.WorkflowDataProvider"
     />
 
+  <browser:page
+    name="project_submission"
+    for="*"
+    class=".project_submission.ProjectSubmissionView"
+    template="templates/project_submission.pt"
+    permission="zope2.View"
+    layer="ideabox.policy.interfaces.IIdeaboxPolicyLayer"
+    />
+
 </configure>

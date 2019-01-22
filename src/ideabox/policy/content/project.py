@@ -3,6 +3,7 @@
 from Products.CMFCore.utils import getToolByName
 from plone import api
 from plone.app.textfield import RichText
+from plone.autoform import directives as form
 from plone.dexterity.browser import view
 from plone.dexterity.content import Container
 from plone.supermodel import model
@@ -22,8 +23,14 @@ class IProject(model.Schema):
     )
 
     body = RichText(
-        title=u"Contenu",
+        title=_(u"Content"),
         required=True,
+    )
+
+    form.mode(original_author='hidden')
+    original_author = schema.TextLine(
+        title=_(u"Original author"),
+        required=False,
     )
 
 

@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2019-01-22 10:48+0000\n"
+"POT-Creation-Date: 2019-01-22 14:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -71,7 +71,7 @@ msgstr ""
 msgid "Project"
 msgstr ""
 
-#: ../form/project_submission.py:15
+#: ../form/project_submission.py:22
 msgid "Project image"
 msgstr ""
 
@@ -87,7 +87,7 @@ msgstr ""
 msgid "Save"
 msgstr ""
 
-#: ../form/project_submission.py:32
+#: ../form/project_submission.py:69
 msgid "Send"
 msgstr ""
 
@@ -106,6 +106,10 @@ msgstr ""
 
 #: ../content/project.py:20
 msgid "Theme"
+msgstr ""
+
+#: ../form/project_submission.py:17
+msgid "Title"
 msgstr ""
 
 #: ../configure.zcml:42

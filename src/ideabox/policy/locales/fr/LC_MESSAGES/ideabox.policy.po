@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2019-01-22 10:48+0000\n"
+"POT-Creation-Date: 2019-01-22 14:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -69,7 +69,7 @@ msgstr "Auteur original"
 msgid "Project"
 msgstr "Projet"
 
-#: ../form/project_submission.py:15
+#: ../form/project_submission.py:22
 msgid "Project image"
 msgstr "Image du projet"
 
@@ -85,7 +85,7 @@ msgstr "Des projets en évolution"
 msgid "Save"
 msgstr "Enregistrer"
 
-#: ../form/project_submission.py:32
+#: ../form/project_submission.py:69
 msgid "Send"
 msgstr "Envoyer"
 
@@ -105,6 +105,10 @@ msgstr "Les 7 thématiques prioritaires"
 #: ../content/project.py:20
 msgid "Theme"
 msgstr "Thème"
+
+#: ../form/project_submission.py:17
+msgid "Title"
+msgstr "Titre"
 
 #: ../configure.zcml:42
 msgid "Uninstalls the ideabox.policy add-on."

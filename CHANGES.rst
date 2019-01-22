@@ -5,7 +5,8 @@ Changelog
 1.0.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add project_submission form for connected users
+  [vpiret]
 
 
 1.0.3 (2018-07-23)

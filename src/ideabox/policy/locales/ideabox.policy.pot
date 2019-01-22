@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-04-06 14:42+0000\n"
+"POT-Creation-Date: 2019-01-22 10:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,12 +22,16 @@ msgstr ""
 msgid "ACPT"
 msgstr ""
 
+#: ../content/project.py:26
+msgid "Content"
+msgstr ""
+
 #. Default: "Des espaces verts, des espaces collectifs, des espaces apaisés"
 #: ../vocabularies.py:27
 msgid "EVCA"
 msgstr ""
 
-#: ../content/project.pt:56
+#: ../content/project.pt:57
 msgid "Edit timeline dates"
 msgstr ""
 
@@ -50,7 +54,7 @@ msgstr ""
 msgid "Ideabox project"
 msgstr ""
 
-#: ../configure.zcml:32
+#: ../configure.zcml:33
 msgid "Installs the ideabox.policy add-on."
 msgstr ""
 
@@ -59,15 +63,23 @@ msgstr ""
 msgid "MOBI"
 msgstr ""
 
+#: ../content/project.py:32
+msgid "Original author"
+msgstr ""
+
 #: ../profiles/default/types/Project.xml
 msgid "Project"
+msgstr ""
+
+#: ../form/project_submission.py:15
+msgid "Project image"
 msgstr ""
 
 #: ../faceted/configure.zcml:15
 msgid "Projects"
 msgstr ""
 
-#: ../browser/project.py:15
+#: ../browser/project.py:13
 msgid "Projects in progression"
 msgstr ""
 
@@ -75,7 +87,11 @@ msgstr ""
 msgid "Save"
 msgstr ""
 
-#: ../browser/project.py:31
+#: ../form/project_submission.py:32
+msgid "Send"
+msgstr ""
+
+#: ../browser/project.py:29
 msgid "Setting up"
 msgstr ""
 
@@ -84,15 +100,15 @@ msgstr ""
 msgid "TREN"
 msgstr ""
 
-#: ../browser/project.py:52
+#: ../browser/project.py:50
 msgid "The 7 main themes"
 msgstr ""
 
-#: ../content/project.py:19
+#: ../content/project.py:20
 msgid "Theme"
 msgstr ""
 
-#: ../configure.zcml:41
+#: ../configure.zcml:42
 msgid "Uninstalls the ideabox.policy add-on."
 msgstr ""
 
@@ -106,18 +122,18 @@ msgstr ""
 msgid "VPCN"
 msgstr ""
 
-#: ../browser/project.py:26
+#: ../browser/project.py:24
 msgid "diagnose and analysis"
 msgstr ""
 
-#: ../configure.zcml:32
+#: ../configure.zcml:33
 msgid "ideabox.policy"
 msgstr ""
 
-#: ../configure.zcml:41
+#: ../configure.zcml:42
 msgid "ideabox.policy (uninstall)"
 msgstr ""
 
-#: ../browser/templates/project_summary.pt:23
+#: ../browser/templates/project_summary.pt:21
 msgid "projets"
 msgstr ""

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-04-06 14:42+0000\n"
+"POT-Creation-Date: 2019-01-22 10:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,12 +20,16 @@ msgstr ""
 msgid "ACPT"
 msgstr "Art, Culture, Patrimoine, Tourisme"
 
+#: ../content/project.py:26
+msgid "Content"
+msgstr "Contenu"
+
 #. Default: "Des espaces verts, des espaces collectifs, des espaces apaisés"
 #: ../vocabularies.py:27
 msgid "EVCA"
 msgstr "Des espaces verts, des espaces collectifs, des espaces apaisés"
 
-#: ../content/project.pt:56
+#: ../content/project.pt:57
 msgid "Edit timeline dates"
 msgstr "Modifier les dates de la ligne du temps"
 
@@ -48,7 +52,7 @@ msgstr "Inclusion sociale"
 msgid "Ideabox project"
 msgstr ""
 
-#: ../configure.zcml:32
+#: ../configure.zcml:33
 msgid "Installs the ideabox.policy add-on."
 msgstr ""
 
@@ -57,15 +61,23 @@ msgstr ""
 msgid "MOBI"
 msgstr "La mobilité"
 
+#: ../content/project.py:32
+msgid "Original author"
+msgstr "Auteur original"
+
 #: ../profiles/default/types/Project.xml
 msgid "Project"
 msgstr "Projet"
+
+#: ../form/project_submission.py:15
+msgid "Project image"
+msgstr "Image du projet"
 
 #: ../faceted/configure.zcml:15
 msgid "Projects"
 msgstr "Projets"
 
-#: ../browser/project.py:15
+#: ../browser/project.py:13
 msgid "Projects in progression"
 msgstr "Des projets en évolution"
 
@@ -73,7 +85,11 @@ msgstr "Des projets en évolution"
 msgid "Save"
 msgstr "Enregistrer"
 
-#: ../browser/project.py:31
+#: ../form/project_submission.py:32
+msgid "Send"
+msgstr "Envoyer"
+
+#: ../browser/project.py:29
 msgid "Setting up"
 msgstr "Mise en place"
 
@@ -82,15 +98,15 @@ msgstr "Mise en place"
 msgid "TREN"
 msgstr "La transition énergétique"
 
-#: ../browser/project.py:52
+#: ../browser/project.py:50
 msgid "The 7 main themes"
 msgstr "Les 7 thématiques prioritaires"
 
-#: ../content/project.py:19
+#: ../content/project.py:20
 msgid "Theme"
-msgstr ""
+msgstr "Thème"
 
-#: ../configure.zcml:41
+#: ../configure.zcml:42
 msgid "Uninstalls the ideabox.policy add-on."
 msgstr ""
 
@@ -104,18 +120,18 @@ msgstr "La végétalisation et l'agriculture urbaine"
 msgid "VPCN"
 msgstr "Ville participative, Collaborative et Numérique"
 
-#: ../browser/project.py:26
+#: ../browser/project.py:24
 msgid "diagnose and analysis"
 msgstr "Diagnostic et analyse"
 
-#: ../configure.zcml:32
+#: ../configure.zcml:33
 msgid "ideabox.policy"
 msgstr ""
 
-#: ../configure.zcml:41
+#: ../configure.zcml:42
 msgid "ideabox.policy (uninstall)"
 msgstr ""
 
-#: ../browser/templates/project_summary.pt:23
+#: ../browser/templates/project_summary.pt:21
 msgid "projets"
 msgstr "projets"

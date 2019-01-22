@@ -7,9 +7,11 @@ from ideabox.policy.content.project import IProject
 from ideabox.policy.utils import execute_under_admin
 from plone import api
 from plone.namedfile.field import NamedBlobImage
+from plone.registry.interfaces import IRegistry
 from z3c.form import button
 from z3c.form.interfaces import HIDDEN_MODE
 from zope import schema
+from zope.component import getUtility
 
 
 class IProjectSubmission(IProject):
@@ -45,7 +47,10 @@ class ProjectSubmissionForm(z3c.form.form.Form):
             api.user.get_current().getProperty('fullname')
 
     def send_request(self, data):
-        container = api.portal.get().projets
+        registry = getUtility(IRegistry)
+        portal_url = api.portal.get().absolute_url_path()
+        folder = registry.get('ideabox.new.project.folder')
+        container = api.content.get(path="{0}/{1}".format(portal_url, folder))
 
         project_obj = execute_under_admin(
             container,
@@ -65,6 +70,7 @@ class ProjectSubmissionForm(z3c.form.form.Form):
                 image=data['project_image'],
                 container=project_obj
             )
+        self.request.response.redirect("{0}/{1}/{2}".format(portal_url, folder, project_obj.id))
 
     @button.buttonAndHandler(_(u'Send'), name='send')
     def handleApply(self, action):

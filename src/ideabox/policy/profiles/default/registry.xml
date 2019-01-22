@@ -28,4 +28,11 @@
         <element>realized</element>
       </value>
   </record>
+  <record name="ideabox.new.project.folder" i18n:domain="ideabox.policy">
+    <field type="plone.registry.field.TextLine">
+      <title i18n:translate="">new project submission folder</title>
+      <required>True</required>
+    </field>
+    <value>projets</value>
+  </record>
 </registry>

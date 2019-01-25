@@ -35,4 +35,40 @@
     </field>
     <value>projets</value>
   </record>
+
+  <record name="ideabox.vocabulary.district"
+          i18n:domain="ideabox.policy">
+      <field type="plone.registry.field.Dict">
+          <title i18n:translate="">District vocabulary values</title>
+          <key_type type="plone.registry.field.TextLine" />
+          <value_type type="plone.registry.field.TextLine" />
+      </field>
+      <value>
+        <element key="cle1">valeur1</element>
+        <element key="cle2">valeur2</element>
+        <element key="cle3">valeur3</element>
+        <element key="cle4">valeur4</element>
+      </value>
+  </record>
+
+  <record name="ideabox.vocabulary.theme"
+          i18n:domain="ideabox.policy">
+      <field type="plone.registry.field.Dict">
+          <title i18n:translate="">Theme vocabulary values</title>
+          <key_type type="plone.registry.field.TextLine" />
+          <value_type type="plone.registry.field.TextLine" />
+      </field>
+      <value>
+        <element key="ACPT">Art, Culture, Patrimoine, Tourisme</element>
+        <element key="EVCA">Des espaces verts, des espaces collectifs, des espaces apaisés</element>
+        <element key="IDNA">Idées non attribuées</element>
+        <element key="INCL">Inclassables</element>
+        <element key="INSO">Inclusion sociale</element>
+        <element key="MOBI">La mobilité</element>
+        <element key="TREN">La transition énergétique</element>
+        <element key="VEAU">La végétalisation et l'agriculture urbaine</element>
+        <element key="VPCN">Ville participative, Collaborative et Numérique</element>
+      </value>
+  </record>
+
 </registry>

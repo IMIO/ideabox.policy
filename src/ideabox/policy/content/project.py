@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+from collective.z3cform.select2.widget.widget import MultiSelect2FieldWidget
 from Products.CMFCore.utils import getToolByName
 from plone import api
 from plone.app.textfield import RichText
@@ -16,10 +16,24 @@ from ideabox.policy import _
 class IProject(model.Schema):
     """IProject"""
 
-    project_theme = schema.Choice(
+    form.widget(project_theme=MultiSelect2FieldWidget)
+    project_theme = schema.List(
         title=_(u"Theme"),
-        vocabulary=u'ideabox.vocabularies.theme',
-        required=True
+        value_type=schema.Choice(
+            title=_(u"Theme"),
+            vocabulary=u'ideabox.vocabularies.theme'
+        ),
+        required=True,
+    )
+
+    form.widget(project_district=MultiSelect2FieldWidget)
+    project_district = schema.List(
+        title=_(u"District"),
+        value_type=schema.Choice(
+            title=_(u"District"),
+            vocabulary=u'ideabox.vocabularies.district'
+        ),
+        required=True,
     )
 
     body = RichText(

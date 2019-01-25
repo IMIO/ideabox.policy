@@ -2,7 +2,8 @@
 
 from zope.schema.vocabulary import SimpleVocabulary
 from Products.CMFPlone import PloneMessageFactory as PMF
-
+from plone.registry.interfaces import IRegistry
+from zope.component import getUtility
 from ideabox.policy import _
 
 
@@ -23,15 +24,21 @@ def dict_list_2_vocabulary(dict_list):
 class ThemeVocabularyFactory(object):
 
     def __call__(self, context):
-        values = [{'ACPT': _('ACPT', u'Art, Culture, Patrimoine, Tourisme')},
-                  {'EVCA': _('EVCA', u'Des espaces verts, des espaces collectifs, des espaces apaisés')},
-                  {'IDNA': _('IDNA', u'Idées non attribuées')},
-                  {'INCL': _('INCL', u'Inclassables')},
-                  {'INSO': _('INSO', u'Inclusion sociale')},
-                  {'MOBI': _('MOBI', u'La mobilité')},
-                  {'TREN': _('TREN', u'La transition énergétique')},
-                  {'VEAU': _('VEAU', u"La végétalisation et l'agriculture urbaine")},
-                  {'VPCN': _('VPCN', u'Ville participative, Collaborative et Numérique')}]
+        registry = getUtility(IRegistry)
+        dict_value = registry.get('ideabox.vocabulary.theme')
+        values = []
+        for key in dict_value:
+            val = {key: dict_value[key]}
+            values.append(val)
+        # values = [{'ACPT': _('ACPT', u'Art, Culture, Patrimoine, Tourisme')},
+        #           {'EVCA': _('EVCA', u'Des espaces verts, des espaces collectifs, des espaces apaisés')},
+        #           {'IDNA': _('IDNA', u'Idées non attribuées')},
+        #           {'INCL': _('INCL', u'Inclassables')},
+        #           {'INSO': _('INSO', u'Inclusion sociale')},
+        #           {'MOBI': _('MOBI', u'La mobilité')},
+        #           {'TREN': _('TREN', u'La transition énergétique')},
+        #           {'VEAU': _('VEAU', u"La végétalisation et l'agriculture urbaine")},
+        #           {'VPCN': _('VPCN', u'Ville participative, Collaborative et Numérique')}]
         return dict_list_2_vocabulary(values)
 
 
@@ -57,3 +64,18 @@ class ReviewStateVocabularyFactory(object):
 
 
 ReviewStateVocabulary = ReviewStateVocabularyFactory()
+
+
+class DistrictVocabularyFactory(object):
+
+    def __call__(self, context):
+        registry = getUtility(IRegistry)
+        dict_value = registry.get('ideabox.vocabulary.district')
+        values = []
+        for key in dict_value:
+            val = {key: dict_value[key]}
+            values.append(val)
+        return dict_list_2_vocabulary(values)
+
+
+DistrictVocabulary = DistrictVocabularyFactory()

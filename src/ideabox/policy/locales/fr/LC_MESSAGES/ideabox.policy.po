@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2019-01-22 14:17+0000\n"
+"POT-Creation-Date: 2019-01-25 09:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,38 +15,21 @@ msgstr ""
 "Domain: ideabox.policy\n"
 "X-Is-Fallback-For: fr-be fr-ca fr-lu fr-mc fr-ch fr-fr\n"
 
-#. Default: "Art, Culture, Patrimoine, Tourisme"
-#: ../vocabularies.py:26
-msgid "ACPT"
-msgstr "Art, Culture, Patrimoine, Tourisme"
-
-#: ../content/project.py:26
+#: ../content/project.py:40
 msgid "Content"
 msgstr "Contenu"
 
-#. Default: "Des espaces verts, des espaces collectifs, des espaces apaisés"
-#: ../vocabularies.py:27
-msgid "EVCA"
-msgstr "Des espaces verts, des espaces collectifs, des espaces apaisés"
+#: ../content/project.py:31
+msgid "District"
+msgstr "Quartier"
+
+#: ../profiles/default/registry.xml
+msgid "District vocabulary values"
+msgstr "Valeurs du vocabulaire pour les quartiers"
 
 #: ../content/project.pt:57
 msgid "Edit timeline dates"
 msgstr "Modifier les dates de la ligne du temps"
-
-#. Default: "Idées non attribuées"
-#: ../vocabularies.py:28
-msgid "IDNA"
-msgstr "Idées non attribuées"
-
-#. Default: "Inclassables"
-#: ../vocabularies.py:29
-msgid "INCL"
-msgstr "Inclassables"
-
-#. Default: "Inclusion sociale"
-#: ../vocabularies.py:30
-msgid "INSO"
-msgstr "Inclusion sociale"
 
 #: ../profiles/default/types/Project.xml
 msgid "Ideabox project"
@@ -56,12 +39,7 @@ msgstr ""
 msgid "Installs the ideabox.policy add-on."
 msgstr ""
 
-#. Default: "La mobilité"
-#: ../vocabularies.py:31
-msgid "MOBI"
-msgstr "La mobilité"
-
-#: ../content/project.py:32
+#: ../content/project.py:46
 msgid "Original author"
 msgstr "Auteur original"
 
@@ -69,7 +47,7 @@ msgstr "Auteur original"
 msgid "Project"
 msgstr "Projet"
 
-#: ../form/project_submission.py:22
+#: ../form/project_submission.py:24
 msgid "Project image"
 msgstr "Image du projet"
 
@@ -85,7 +63,7 @@ msgstr "Des projets en évolution"
 msgid "Save"
 msgstr "Enregistrer"
 
-#: ../form/project_submission.py:69
+#: ../form/project_submission.py:75
 msgid "Send"
 msgstr "Envoyer"
 
@@ -93,36 +71,25 @@ msgstr "Envoyer"
 msgid "Setting up"
 msgstr "Mise en place"
 
-#. Default: "La transition énergétique"
-#: ../vocabularies.py:32
-msgid "TREN"
-msgstr "La transition énergétique"
-
 #: ../browser/project.py:50
 msgid "The 7 main themes"
 msgstr "Les 7 thématiques prioritaires"
 
-#: ../content/project.py:20
+#: ../content/project.py:21
 msgid "Theme"
 msgstr "Thème"
 
-#: ../form/project_submission.py:17
+#: ../profiles/default/registry.xml
+msgid "Theme vocabulary values"
+msgstr "Valeurs du vocabulaire pour les thèmes"
+
+#: ../form/project_submission.py:19
 msgid "Title"
 msgstr "Titre"
 
 #: ../configure.zcml:42
 msgid "Uninstalls the ideabox.policy add-on."
 msgstr ""
-
-#. Default: "La végétalisation et l'agriculture urbaine"
-#: ../vocabularies.py:33
-msgid "VEAU"
-msgstr "La végétalisation et l'agriculture urbaine"
-
-#. Default: "Ville participative, Collaborative et Numérique"
-#: ../vocabularies.py:34
-msgid "VPCN"
-msgstr "Ville participative, Collaborative et Numérique"
 
 #: ../browser/project.py:24
 msgid "diagnose and analysis"
@@ -135,6 +102,10 @@ msgstr ""
 #: ../configure.zcml:42
 msgid "ideabox.policy (uninstall)"
 msgstr ""
+
+#: ../profiles/default/registry.xml
+msgid "new project submission folder"
+msgstr "Dossier pour les nouveaux projets proposés"
 
 #: ../browser/templates/project_summary.pt:21
 msgid "projets"

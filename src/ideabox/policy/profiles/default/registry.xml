@@ -7,27 +7,6 @@
     <value key="show_commenter_image">False</value>
     <value key="anonymous_comments">False</value>
 	</records>
-  <record name="cpskin.core.social.allowed_states"
-          i18n:domain="cpskin">
-      <field type="plone.registry.field.List">
-          <title i18n:translate="">Allowed states for social viewlet</title>
-          <key_type type="plone.registry.field.TextLine" />
-          <value_type type="plone.registry.field.TextLine" />
-      </field>
-      <value>
-        <element>published_and_shown</element>
-        <element>published_and_hidden</element>
-        <element>deposited</element>
-        <element>project_analysis</element>
-        <element>vote</element>
-        <element>result_analysis</element>
-        <element>selected</element>
-        <element>rejected</element>
-        <element>study_in_progress</element>
-        <element>in_progress</element>
-        <element>realized</element>
-      </value>
-  </record>
   <record name="ideabox.new.project.folder" i18n:domain="ideabox.policy">
     <field type="plone.registry.field.TextLine">
       <title i18n:translate="">new project submission folder</title>

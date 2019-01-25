@@ -5,6 +5,9 @@ Changelog
 1.0.4 (unreleased)
 ------------------
 
+- Upgrade project fields
+  [vpiret]
+
 - Add project_submission form for connected users
   [vpiret]
 

@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.0a1 (unreleased)
+2.0a1 (2019-01-28)
 ------------------
 
 - Removal of cpskin dependencies for Plone 5 transition

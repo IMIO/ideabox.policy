@@ -2,8 +2,11 @@ Changelog
 =========
 
 
-1.0.4 (unreleased)
+2.0a1 (unreleased)
 ------------------
+
+- Removal of cpskin dependencies for Plone 5 transition
+  [daggelpop]
 
 - Upgrade project fields
   [vpiret]

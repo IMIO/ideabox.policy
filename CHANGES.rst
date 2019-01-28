@@ -5,6 +5,9 @@ Changelog
 2.0a3 (unreleased)
 ------------------
 
+- Fix buildout for travis
+  [vpiret]
+
 - Add user menu for personal information
   [vpiret]
 

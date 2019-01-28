@@ -11,6 +11,7 @@ from zope import schema
 from zope.interface import implements
 
 from ideabox.policy import _
+from ideabox.policy import vocabularies
 
 
 class IProject(model.Schema):
@@ -81,7 +82,9 @@ class ProjectView(view.DefaultView):
 
     @property
     def get_images_url(self):
-        contents = self.context.listFolderContents(contentFilter={"portal_type": "Image"})
+        contents = self.context.listFolderContents(
+            contentFilter={"portal_type": "Image"}
+        )
         images_url = []
         for content in contents:
             images_url.append(content.absolute_url())
@@ -164,3 +167,13 @@ class ProjectView(view.DefaultView):
     def authorname(self):
         author = self.author()
         return author and author['fullname'] or self.creator()
+
+    def get_project_theme(self):
+        vocabulary = vocabularies.ThemeVocabulary(None)
+        values = []
+        for token in self.context.project_theme:
+            values.append(
+                [e.title for e in vocabulary.by_value.values()
+                 if e.token == token][0]
+            )
+        return ', '.join(values)

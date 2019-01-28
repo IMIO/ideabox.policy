@@ -5,7 +5,8 @@ Changelog
 2.0a2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix project for plone 5
+  [vpiret]
 
 
 2.0a1 (2019-01-28)

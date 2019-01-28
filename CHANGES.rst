@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.0a2 (unreleased)
+2.0a2 (2019-01-28)
 ------------------
 
 - Fix project for plone 5

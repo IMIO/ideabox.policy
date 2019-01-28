@@ -5,7 +5,8 @@ Changelog
 2.0a3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add user menu for personal information
+  [vpiret]
 
 
 2.0a2 (2019-01-28)

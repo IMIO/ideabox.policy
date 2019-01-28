@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<object name="portal_actions" meta_type="Plone Actions Tool"
+        xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+  <object name="user_menu" meta_type="CMF Action Category">
+    <object name="personal-information" meta_type="CMF Action" i18n:domain="ideabox.policy">
+      <property name="title" i18n:translate="">Personal information</property>
+      <property name="description" i18n:translate="">Personal information for connected user</property>
+      <property name="url_expr">string:${portal_url}/@@personal-information</property>
+      <property name="icon_expr"></property>
+      <property name="available_expr">python:member is not None</property>
+      <property name="permissions">
+        <element value="View"/>
+      </property>
+      <property name="visible">True</property>
+    </object>
+    <object name="logout" meta_type="CMF Action" i18n:domain="plone">
+      <property name="title" i18n:translate="">Log out</property>
+      <property name="description" i18n:translate=""></property>
+      <property name="url_expr">string:${globals_view/navigationRootUrl}/logout</property>
+      <property name="icon_expr"></property>
+      <property name="available_expr">python:member is not None</property>
+      <property name="permissions">
+        <element value="View"/>
+      </property>
+      <property name="visible">True</property>
+    </object>
+  </object>
+</object>

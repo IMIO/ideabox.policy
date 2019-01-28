@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2019-01-25 09:05+0000\n"
+"POT-Creation-Date: 2019-01-28 14:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: ideabox.policy\n"
 
-#: ../content/project.py:40
+#: ../content/project.py:41
 msgid "Content"
 msgstr ""
 
-#: ../content/project.py:31
+#: ../content/project.py:32
 msgid "District"
 msgstr ""
 
@@ -29,7 +29,7 @@ msgstr ""
 msgid "District vocabulary values"
 msgstr ""
 
-#: ../content/project.pt:57
+#: ../content/project.pt:56
 msgid "Edit timeline dates"
 msgstr ""
 
@@ -37,12 +37,20 @@ msgstr ""
 msgid "Ideabox project"
 msgstr ""
 
-#: ../configure.zcml:33
+#: ../configure.zcml:30
 msgid "Installs the ideabox.policy add-on."
 msgstr ""
 
-#: ../content/project.py:46
+#: ../content/project.py:47
 msgid "Original author"
+msgstr ""
+
+#: ../profiles/default/actions.xml
+msgid "Personal information"
+msgstr ""
+
+#: ../profiles/default/actions.xml
+msgid "Personal information for connected user"
 msgstr ""
 
 #: ../profiles/default/types/Project.xml
@@ -77,7 +85,7 @@ msgstr ""
 msgid "The 7 main themes"
 msgstr ""
 
-#: ../content/project.py:21
+#: ../content/project.py:22
 msgid "Theme"
 msgstr ""
 
@@ -89,19 +97,23 @@ msgstr ""
 msgid "Title"
 msgstr ""
 
-#: ../configure.zcml:42
+#: ../configure.zcml:39
 msgid "Uninstalls the ideabox.policy add-on."
+msgstr ""
+
+#: ../browser/templates/user_menu.pt:1
+msgid "User menu"
 msgstr ""
 
 #: ../browser/project.py:24
 msgid "diagnose and analysis"
 msgstr ""
 
-#: ../configure.zcml:33
+#: ../configure.zcml:30
 msgid "ideabox.policy"
 msgstr ""
 
-#: ../configure.zcml:42
+#: ../configure.zcml:39
 msgid "ideabox.policy (uninstall)"
 msgstr ""
 

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2019-01-25 09:05+0000\n"
+"POT-Creation-Date: 2019-01-28 14:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,11 +15,11 @@ msgstr ""
 "Domain: ideabox.policy\n"
 "X-Is-Fallback-For: fr-be fr-ca fr-lu fr-mc fr-ch fr-fr\n"
 
-#: ../content/project.py:40
+#: ../content/project.py:41
 msgid "Content"
 msgstr "Contenu"
 
-#: ../content/project.py:31
+#: ../content/project.py:32
 msgid "District"
 msgstr "Quartier"
 
@@ -27,7 +27,7 @@ msgstr "Quartier"
 msgid "District vocabulary values"
 msgstr "Valeurs du vocabulaire pour les quartiers"
 
-#: ../content/project.pt:57
+#: ../content/project.pt:56
 msgid "Edit timeline dates"
 msgstr "Modifier les dates de la ligne du temps"
 
@@ -35,13 +35,21 @@ msgstr "Modifier les dates de la ligne du temps"
 msgid "Ideabox project"
 msgstr ""
 
-#: ../configure.zcml:33
+#: ../configure.zcml:30
 msgid "Installs the ideabox.policy add-on."
 msgstr ""
 
-#: ../content/project.py:46
+#: ../content/project.py:47
 msgid "Original author"
 msgstr "Auteur original"
+
+#: ../profiles/default/actions.xml
+msgid "Personal information"
+msgstr "Informations personnelles"
+
+#: ../profiles/default/actions.xml
+msgid "Personal information for connected user"
+msgstr "Informations personnelles pour un utilisateur connecté"
 
 #: ../profiles/default/types/Project.xml
 msgid "Project"
@@ -75,7 +83,7 @@ msgstr "Mise en place"
 msgid "The 7 main themes"
 msgstr "Les 7 thématiques prioritaires"
 
-#: ../content/project.py:21
+#: ../content/project.py:22
 msgid "Theme"
 msgstr "Thème"
 
@@ -87,19 +95,23 @@ msgstr "Valeurs du vocabulaire pour les thèmes"
 msgid "Title"
 msgstr "Titre"
 
-#: ../configure.zcml:42
+#: ../configure.zcml:39
 msgid "Uninstalls the ideabox.policy add-on."
 msgstr ""
+
+#: ../browser/templates/user_menu.pt:1
+msgid "User menu"
+msgstr "Menu utilisateur"
 
 #: ../browser/project.py:24
 msgid "diagnose and analysis"
 msgstr "Diagnostic et analyse"
 
-#: ../configure.zcml:33
+#: ../configure.zcml:30
 msgid "ideabox.policy"
 msgstr ""
 
-#: ../configure.zcml:42
+#: ../configure.zcml:39
 msgid "ideabox.policy (uninstall)"
 msgstr ""
 

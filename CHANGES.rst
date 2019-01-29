@@ -5,6 +5,9 @@ Changelog
 2.0a3 (unreleased)
 ------------------
 
+- Add collective.editablemenu on dependencies
+  [vpiret]
+
 - Fix buildout for travis
   [vpiret]
 

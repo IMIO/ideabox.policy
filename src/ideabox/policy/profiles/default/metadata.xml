@@ -8,5 +8,6 @@
     <dependency>profile-eea.facetednavigation:default</dependency>
     <dependency>profile-collective.z3cform.select2:default</dependency>
     <dependency>profile-plone.app.discussion:default</dependency>
+    <dependency>profile-collective.editablemenu:default</dependency>
   </dependencies>
 </metadata>

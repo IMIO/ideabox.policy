@@ -15,6 +15,7 @@
   <include package="cioppino.twothumbs" />
   <include package="plone.app.discussion" />
   <include package="imio.gdpr" />
+  <include package="collective.editablemenu" />
 
   <include package=".browser" />
   <include package=".content" />

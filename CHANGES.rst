@@ -5,6 +5,9 @@ Changelog
 2.0a3 (unreleased)
 ------------------
 
+- Add transition for project submission
+  [vpiret]
+
 - Add collective.editablemenu on dependencies
   [vpiret]
 

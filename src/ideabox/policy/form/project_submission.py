@@ -1,4 +1,4 @@
-# encoding: utf-8
+# -*- coding: utf-8 -*-
 import z3c.form
 import zope.interface
 
@@ -61,6 +61,7 @@ class ProjectSubmissionForm(z3c.form.form.Form):
             body=data['body'].output,
             container=container,
             original_author=data['original_author'])
+        api.content.transition(obj=project_obj, transition='deposit')
         if data['project_image']:
             execute_under_admin(
                 project_obj,
@@ -70,7 +71,8 @@ class ProjectSubmissionForm(z3c.form.form.Form):
                 image=data['project_image'],
                 container=project_obj
             )
-        self.request.response.redirect("{0}/{1}/{2}".format(portal_url, folder, project_obj.id))
+        self.request.response.redirect(
+            "{0}/{1}/{2}".format(portal_url, folder, project_obj.id))
 
     @button.buttonAndHandler(_(u'Send'), name='send')
     def handleApply(self, action):

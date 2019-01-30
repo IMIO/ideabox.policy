@@ -5,6 +5,9 @@ Changelog
 2.0a3 (unreleased)
 ------------------
 
+- Add collective.behavior.banner to the package dependencies
+  [mpeeters]
+
 - Add transition for project submission
   [vpiret]
 

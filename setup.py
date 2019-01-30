@@ -56,6 +56,7 @@ setup(
         'collective.behavior.richdescription',
         'collective.excelexport',
         'collective.editablemenu',
+        'collective.behavior.banner',
     ],
     extras_require={
         'test': [

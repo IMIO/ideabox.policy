@@ -16,7 +16,7 @@
   <include package="plone.app.discussion" />
   <include package="imio.gdpr" />
   <include package="collective.editablemenu" />
-  <include pacakge="collective.behavior.banner" />
+  <include package="collective.behavior.banner" />
 
   <include package=".browser" />
   <include package=".content" />

@@ -5,6 +5,9 @@ Changelog
 2.0a3 (unreleased)
 ------------------
 
+- Add test robot for project submission
+  [vpiret]
+
 - Add collective.behavior.banner to the package dependencies
   [mpeeters]
 

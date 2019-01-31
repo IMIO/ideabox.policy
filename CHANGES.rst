@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.0a3 (unreleased)
+2.0a3 (2019-01-31)
 ------------------
 
 - Add test robot for project submission

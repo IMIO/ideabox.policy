@@ -1,0 +1,21 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:i18n="http://namespaces.zope.org/i18n">
+
+    <include package="plone.app.mosaic" />
+
+    <plone:tile
+        name="ideabox.policy.tile.tiles"
+        title="Add lasted projects"
+        description="A tile which displays a collection of news"
+        add_permission="cmf.ModifyPortalContent"
+        class=".tiles.ProjectsTile"
+        for="*"
+        permission="zope.Public"
+        schema=".tiles.IProjectsTile"
+        template="templates/tile_projects.pt"
+        />
+
+</configure>

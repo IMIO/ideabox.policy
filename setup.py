@@ -57,6 +57,7 @@ setup(
         'collective.excelexport',
         'collective.editablemenu',
         'collective.behavior.banner',
+        'plone.app.mosaic',
     ],
     extras_require={
         'test': [

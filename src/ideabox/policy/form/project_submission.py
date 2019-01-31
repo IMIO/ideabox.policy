@@ -2,6 +2,7 @@
 import z3c.form
 import zope.interface
 
+from collective.z3cform.select2.widget.widget import MultiSelect2FieldWidget
 from ideabox.policy import _
 from ideabox.policy.content.project import IProject
 from ideabox.policy.utils import execute_under_admin
@@ -32,10 +33,13 @@ class ProjectSubmissionForm(z3c.form.form.Form):
     fields = z3c.form.field.Fields(IProjectSubmission).select(
         'title',
         'project_theme',
+        'project_district',
         'body',
         'project_image',
         'original_author',
     )
+    fields['project_theme'].widgetFactory = MultiSelect2FieldWidget
+    fields['project_district'].widgetFactory = MultiSelect2FieldWidget
 
     fields['original_author'].mode = HIDDEN_MODE
 

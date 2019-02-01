@@ -5,7 +5,8 @@ Changelog
 2.0a4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Configure beahavior banner
+  [vpiret]
 
 
 2.0a3 (2019-01-31)

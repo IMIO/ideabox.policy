@@ -2,6 +2,8 @@
 
 from Products.CMFPlone.interfaces import INonInstallable
 from plone import api
+from plone.registry.interfaces import IRegistry
+from zope.component import getUtility
 from zope.interface import implementer
 
 
@@ -38,6 +40,19 @@ def post_install(context):
             title=u"Edition 2017",
             container=folder,
         )
+
+    registry = getUtility(IRegistry)
+    allowed_sizes = registry.get('plone.allowed_sizes')
+    allowed_sizes.append("banner 1920:610")
+
+    api.portal.set_registry_record(
+        'collective.behavior.banner.browser.controlpanel.IBannerSettingsSchema.banner_scale',  # noqa
+        u'banner'
+    )
+    api.portal.set_registry_record(
+        'collective.behavior.banner.browser.controlpanel.IBannerSettingsSchema.types',  # noqa
+        ['Folder', 'Document']
+    )
 
 
 def uninstall(context):

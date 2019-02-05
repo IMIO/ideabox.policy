@@ -49,10 +49,6 @@ def post_install(context):
         'collective.behavior.banner.browser.controlpanel.IBannerSettingsSchema.banner_scale',  # noqa
         u'banner'
     )
-    api.portal.set_registry_record(
-        'collective.behavior.banner.browser.controlpanel.IBannerSettingsSchema.types',  # noqa
-        ['Folder', 'Document']
-    )
 
 
 def uninstall(context):

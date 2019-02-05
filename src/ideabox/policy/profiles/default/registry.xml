@@ -70,5 +70,5 @@
         <value key="rich_text">false</value>
         <value key="weight">10</value>
     </records>
-
+  <records interface="ideabox.policy.browser.controlpanel.IIdeaBoxSettingsSchema" />
 </registry>

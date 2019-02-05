@@ -77,4 +77,10 @@
       layer="ideabox.policy.interfaces.IIdeaboxPolicyLayer"
       />
 
+  <browser:page
+    name="ideabox_settings"
+    for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+    class=".controlpanel.IdeaBoxSettingsControlPanel"
+    permission="cmf.ManagePortal"
+  />
 </configure>

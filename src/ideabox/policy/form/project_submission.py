@@ -13,6 +13,7 @@ from z3c.form import button
 from z3c.form.interfaces import HIDDEN_MODE
 from zope import schema
 from zope.component import getUtility
+from zope.i18n import translate
 
 
 class IProjectSubmission(IProject):
@@ -50,6 +51,28 @@ class ProjectSubmissionForm(z3c.form.form.Form):
         self.widgets['original_author'].value = \
             api.user.get_current().getProperty('fullname')
 
+    def send_mail(self, data):
+        lang = api.portal.get_current_language()[:2]
+        rec_email = api.portal.get_registry_record(
+            'ideabox.policy.browser.controlpanel.IIdeaBoxSettingsSchema.project_manger_email'  # noqa
+        )
+        # TODO
+        # body = translate(
+        #     _(u"email_body_project_submission",
+        #       default=u"""""",
+        #       mapping={}
+        #       ),
+        #     target_language=lang,
+        # )
+        # api.portal.send_email(
+        #     recipient=rec_email,
+        #     subject=translate(
+        #         _(u"New project submission"),
+        #         target_language=lang,
+        #     ),
+        #     body=body,
+        # )
+
     def send_request(self, data):
         registry = getUtility(IRegistry)
         portal_url = api.portal.get().absolute_url_path()
@@ -77,6 +100,8 @@ class ProjectSubmissionForm(z3c.form.form.Form):
             )
         self.request.response.redirect(
             "{0}/{1}/{2}".format(portal_url, folder, project_obj.id))
+
+        self.send_mail(data)
 
     @button.buttonAndHandler(_(u'Send'), name='send')
     def handleApply(self, action):

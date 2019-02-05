@@ -5,6 +5,9 @@ Changelog
 2.0a4 (unreleased)
 ------------------
 
+- Send mail on project submission
+  [vpiret]
+
 - Add behavior banner on Folder and Page
   [vpiret]
 

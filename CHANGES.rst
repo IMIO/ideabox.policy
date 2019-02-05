@@ -5,6 +5,9 @@ Changelog
 2.0a4 (unreleased)
 ------------------
 
+- Add behavior banner on Folder and Page
+  [vpiret]
+
 - Add rating on faceted view
   [vpiret]
 

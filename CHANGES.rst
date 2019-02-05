@@ -5,6 +5,9 @@ Changelog
 2.0a4 (unreleased)
 ------------------
 
+- Add rating on faceted view
+  [vpiret]
+
 - Configure beahavior banner
   [vpiret]
 

@@ -6,6 +6,7 @@ from hashlib import md5
 from operator import attrgetter
 from plone import api
 from random import shuffle
+from ideabox.policy.utils import can_view_rating
 
 
 class ProjectsView(BrowserView):
@@ -47,3 +48,6 @@ class ProjectsView(BrowserView):
         return '{0}/project_default.jpg'.format(
             api.portal.get().absolute_url(),
         )
+
+    def rating(self, context):
+        return can_view_rating(context)

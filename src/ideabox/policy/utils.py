@@ -1,9 +1,10 @@
-# encoding: utf-8
+# -*- coding: utf-8 -*-
 
 from AccessControl import getSecurityManager
 from AccessControl.SecurityManagement import newSecurityManager
 from AccessControl.SecurityManagement import setSecurityManager
 from AccessControl.User import UnrestrictedUser as BaseUnrestrictedUser
+from plone import api
 from ideabox.policy import vocabularies
 from zope.i18n import translate
 
@@ -45,3 +46,18 @@ def execute_under_admin(portal, function, *args, **kwargs):
     finally:
         # Restore the old security manager
         setSecurityManager(sm)
+
+
+def review_state(context):
+    return api.content.get_state(obj=context)
+
+
+def can_view_rating(context):
+    _rating_states = (
+        'deposited',
+        'project_analysis',
+        'vote',
+        'result_analysis',
+        'rejected',
+    )
+    return review_state(context) in _rating_states

@@ -17,6 +17,7 @@
   <include package="imio.gdpr" />
   <include package="collective.editablemenu" />
   <include package="collective.behavior.banner" />
+  <include package="iaweb.mosaic" />
 
   <include package=".browser" />
   <include package=".content" />

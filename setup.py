@@ -58,6 +58,7 @@ setup(
         'collective.editablemenu',
         'collective.behavior.banner',
         'plone.app.mosaic',
+        'iaweb.mosaic',
     ],
     extras_require={
         'test': [

@@ -5,6 +5,12 @@ Changelog
 2.0a4 (unreleased)
 ------------------
 
+- Fix tile for projects
+  [mpeeters]
+
+- Add iaweb.mosaic to the package dependencies
+  [mpeeters]
+
 - Send mail on project submission
   [vpiret]
 

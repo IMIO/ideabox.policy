@@ -59,6 +59,7 @@ setup(
         'collective.behavior.banner',
         'plone.app.mosaic',
         'iaweb.mosaic',
+        'ideabox.diazotheme.spirit',
     ],
     extras_require={
         'test': [

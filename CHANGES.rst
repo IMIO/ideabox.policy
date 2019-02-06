@@ -5,6 +5,9 @@ Changelog
 2.0a4 (unreleased)
 ------------------
 
+- Add ideabox.diazotheme.spirit to the package dependencies
+  [Aurore]
+
 - Fix tile for projects
   [mpeeters]
 

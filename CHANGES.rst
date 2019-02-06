@@ -5,6 +5,9 @@ Changelog
 2.0a4 (unreleased)
 ------------------
 
+- Upgrade members data schema
+  [vpiret]
+
 - Add ideabox.diazotheme.spirit to the package dependencies
   [Aurore]
 

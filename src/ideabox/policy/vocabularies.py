@@ -1,4 +1,4 @@
-# encoding: utf-8
+# -*- coding: utf-8 -*-
 
 from zope.schema.vocabulary import SimpleVocabulary
 from Products.CMFPlone import PloneMessageFactory as PMF
@@ -79,3 +79,29 @@ class DistrictVocabularyFactory(object):
 
 
 DistrictVocabulary = DistrictVocabularyFactory()
+
+
+class GenderVocabularyFactory(object):
+    def __call__(self, context):
+        values = [
+            {'MALE': _('MALE', u'Male')},
+            {'FEMALE': _('FEMALE', u'Female')}]
+        return dict_list_2_vocabulary(values)
+
+
+GenderVocabulary = GenderVocabularyFactory()
+
+
+class ZipCodeVocabularyFactory(object):
+
+    def __call__(self, context):
+        registry = getUtility(IRegistry)
+        dict_value = registry.get('ideabox.vocabulary.zip_code')
+        values = []
+        for key in dict_value:
+            val = {key: dict_value[key]}
+            values.append(val)
+        return dict_list_2_vocabulary(values)
+
+
+ZipCodeVocabulary = ZipCodeVocabularyFactory()

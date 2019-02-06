@@ -65,4 +65,26 @@
       provides="zope.schema.interfaces.IVocabularyFactory"
       />
 
+  <utility
+      component=".vocabularies.GenderVocabulary"
+      name="ideabox.vocabularies.gender"
+      provides="zope.schema.interfaces.IVocabularyFactory"
+      />
+
+  <utility
+      component=".vocabularies.ZipCodeVocabulary"
+      name="ideabox.vocabularies.zip_code"
+      provides="zope.schema.interfaces.IVocabularyFactory"
+      />
+
+  <adapter
+    factory=".userdataschema.UserDataPanelExtender"
+    provides="plone.z3cform.fieldsets.interfaces.IFormExtender"/>
+
+  <adapter
+    provides=".userdataschema.IEnhancedUserDataSchema"
+    for="plone.app.layout.navigation.interfaces.INavigationRoot"
+    factory=".adapters.EnhancedUserDataSchemaAdapter"
+  />
+
 </configure>

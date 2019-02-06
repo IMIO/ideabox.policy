@@ -71,4 +71,22 @@
       <value key="weight">10</value>
   </records>
   <records interface="ideabox.policy.browser.controlpanel.IIdeaBoxSettingsSchema" />
+
+  <record name="ideabox.vocabulary.zip_code"
+          i18n:domain="ideabox.policy">
+      <field type="plone.registry.field.Dict">
+          <title i18n:translate="">Zip code vocabulary values</title>
+          <key_type type="plone.registry.field.TextLine" />
+          <value_type type="plone.registry.field.TextLine" />
+      </field>
+      <value>
+        <element key="4000">4000</element>
+        <element key="4020">4020</element>
+        <element key="4030">4030</element>
+        <element key="4031">4031</element>
+        <element key="4032">4032</element>
+        <element key="Other">Other</element>
+
+      </value>
+  </record>
 </registry>

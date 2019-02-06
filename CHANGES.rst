@@ -5,6 +5,9 @@ Changelog
 2.0a4 (unreleased)
 ------------------
 
+- Fix project for export data
+  [vpiret]
+
 - Upgrade members data schema
   [vpiret]
 

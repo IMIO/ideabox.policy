@@ -3,6 +3,7 @@ from collective.z3cform.select2.widget.widget import MultiSelect2FieldWidget
 from Products.CMFCore.utils import getToolByName
 from plone import api
 from plone.app.textfield import RichText
+from plone.app.z3cform.widget import RichTextFieldWidget
 from plone.autoform import directives as form
 from plone.dexterity.browser import view
 from plone.dexterity.content import Container
@@ -41,6 +42,8 @@ class IProject(model.Schema):
         title=_(u"Content"),
         required=True,
     )
+    form.widget('body', RichTextFieldWidget)
+    model.primary('body')
 
     form.mode(original_author='hidden')
     original_author = schema.TextLine(

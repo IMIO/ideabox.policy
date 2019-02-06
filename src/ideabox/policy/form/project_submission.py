@@ -78,17 +78,20 @@ class ProjectSubmissionForm(z3c.form.form.Form):
         portal_url = api.portal.get().absolute_url_path()
         folder = registry.get('ideabox.new.project.folder')
         container = api.content.get(path="{0}/{1}".format(portal_url, folder))
-
         project_obj = execute_under_admin(
             container,
             api.content.create,
             type='Project',
             title=data['title'],
             project_theme=data['project_theme'],
-            body=data['body'].output,
+            body=data['body'],
             container=container,
-            original_author=data['original_author'])
-        api.content.transition(obj=project_obj, transition='deposit')
+            original_author=api.user.get_current().id)
+        execute_under_admin(
+            container,
+            api.content.transition,
+            obj=project_obj,
+            transition='deposit')
         if data['project_image']:
             execute_under_admin(
                 project_obj,
@@ -101,7 +104,7 @@ class ProjectSubmissionForm(z3c.form.form.Form):
         self.request.response.redirect(
             "{0}/{1}/{2}".format(portal_url, folder, project_obj.id))
 
-        self.send_mail(data)
+        # self.send_mail(data)
 
     @button.buttonAndHandler(_(u'Send'), name='send')
     def handleApply(self, action):

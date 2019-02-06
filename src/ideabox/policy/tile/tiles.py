@@ -12,8 +12,7 @@ class IProjectsTile(Schema):
     limit = schema.Int(
         title=_(u'Limit'),
         description=_(u'Limit projects'),
-        required=False,
-        default=100,
+        required=True,
         min=1,
     )
 

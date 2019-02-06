@@ -7,9 +7,9 @@
     <include package="plone.app.mosaic" />
 
     <plone:tile
-        name="ideabox.policy.tile.tiles"
-        title="Add lasted projects"
-        description="A tile which displays a collection of news"
+        name="ideabox.policy.projects"
+        title="latest projects"
+        description="A tile which displays the latest submitted projects"
         add_permission="cmf.ModifyPortalContent"
         class=".tiles.ProjectsTile"
         for="*"

@@ -5,6 +5,9 @@ Changelog
 2.0a4 (unreleased)
 ------------------
 
+- Add default faceted configuration for projects
+  [vpiret]
+
 - Fix project for export data
   [vpiret]
 

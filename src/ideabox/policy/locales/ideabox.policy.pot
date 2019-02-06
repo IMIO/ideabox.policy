@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2019-01-28 14:23+0000\n"
+"POT-Creation-Date: 2019-02-06 10:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,14 @@ msgstr ""
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: ideabox.policy\n"
+
+#: ../browser/controlpanel.py:33
+msgid ""
+msgstr ""
+
+#: ../userdataschema.py:35
+msgid "Birthdate"
+msgstr ""
 
 #: ../content/project.py:41
 msgid "Content"
@@ -33,12 +41,50 @@ msgstr ""
 msgid "Edit timeline dates"
 msgstr ""
 
+#: ../browser/controlpanel.py:24
+msgid "Email address of the project manager"
+msgstr ""
+
+#. Default: "Female"
+#: ../vocabularies.py:88
+msgid "FEMALE"
+msgstr ""
+
+#: ../userdataschema.py:24
+msgid "First name"
+msgstr ""
+
+#: ../userdataschema.py:29
+msgid "Gender"
+msgstr ""
+
+#: ../profiles/default/controlpanel.xml
+msgid "Ideabox Settings"
+msgstr ""
+
 #: ../profiles/default/types/Project.xml
 msgid "Ideabox project"
 msgstr ""
 
-#: ../configure.zcml:30
+#: ../configure.zcml:34
 msgid "Installs the ideabox.policy add-on."
+msgstr ""
+
+#: ../userdataschema.py:19
+msgid "Last name"
+msgstr ""
+
+#: ../tile/tiles.py:13
+msgid "Limit"
+msgstr ""
+
+#: ../tile/tiles.py:14
+msgid "Limit projects"
+msgstr ""
+
+#. Default: "Male"
+#: ../vocabularies.py:87
+msgid "MALE"
 msgstr ""
 
 #: ../content/project.py:47
@@ -57,7 +103,7 @@ msgstr ""
 msgid "Project"
 msgstr ""
 
-#: ../form/project_submission.py:24
+#: ../form/project_submission.py:26
 msgid "Project image"
 msgstr ""
 
@@ -73,7 +119,7 @@ msgstr ""
 msgid "Save"
 msgstr ""
 
-#: ../form/project_submission.py:75
+#: ../form/project_submission.py:106
 msgid "Send"
 msgstr ""
 
@@ -93,11 +139,11 @@ msgstr ""
 msgid "Theme vocabulary values"
 msgstr ""
 
-#: ../form/project_submission.py:19
+#: ../form/project_submission.py:21
 msgid "Title"
 msgstr ""
 
-#: ../configure.zcml:39
+#: ../configure.zcml:43
 msgid "Uninstalls the ideabox.policy add-on."
 msgstr ""
 
@@ -105,15 +151,23 @@ msgstr ""
 msgid "User menu"
 msgstr ""
 
+#: ../userdataschema.py:40
+msgid "Zip code"
+msgstr ""
+
+#: ../profiles/default/registry.xml
+msgid "Zip code vocabulary values"
+msgstr ""
+
 #: ../browser/project.py:24
 msgid "diagnose and analysis"
 msgstr ""
 
-#: ../configure.zcml:30
+#: ../configure.zcml:34
 msgid "ideabox.policy"
 msgstr ""
 
-#: ../configure.zcml:39
+#: ../configure.zcml:43
 msgid "ideabox.policy (uninstall)"
 msgstr ""
 

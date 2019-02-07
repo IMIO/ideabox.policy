@@ -16,7 +16,7 @@ class IProjectsTile(Schema):
         title=_(u'Limit'),
         description=_(u'Limit projects'),
         required=False,
-        default=9
+        default=10,
         min=1,
     )
 
@@ -32,7 +32,11 @@ class ProjectsTile(Tile):
     def contents(self):
         limit = self.data["limit"]
         catalog = api.portal.get_tool('portal_catalog')
-        results = catalog.searchResults(portal_type='Project')[:limit]
+        results = catalog.searchResults(
+            portal_type='Project',
+            sort_on='created',
+            sort_order='reverse',
+        )[:limit]
         return results
 
     def get_images(self, project):

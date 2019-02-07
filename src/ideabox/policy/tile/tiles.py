@@ -1,9 +1,12 @@
 # encoding: utf-8
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from plone import api
 from plone.app.standardtiles import PloneMessageFactory as _
 from plone.supermodel.model import Schema
 from plone.tiles import Tile
 from zope import schema
+from plone.registry.interfaces import IRegistry
+from zope.component import getUtility
 
 
 class IProjectsTile(Schema):
@@ -27,4 +30,21 @@ class ProjectsTile(Tile):
         return self.template()
 
     def contents(self):
-        return ''
+        limit = self.data["limit"]
+        catalog = api.portal.get_tool('portal_catalog')
+        results = catalog.searchResults(portal_type='Project')[:limit]
+        return results
+
+    def get_images(self, project):
+        results = project.getObject().listFolderContents(contentFilter={"portal_type": "Image"})
+        if results:
+            return results[0]
+        return None
+
+    def get_theme(self, project):
+        results = []
+        registry = getUtility(IRegistry)
+        dict_value = registry.get('ideabox.vocabulary.theme')
+        for theme in project.project_theme:
+            results.append(dict_value[theme])
+        return results

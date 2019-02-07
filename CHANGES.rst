@@ -5,6 +5,9 @@ Changelog
 2.0a4 (unreleased)
 ------------------
 
+- Adapt tile for projects
+  [Aurore]
+
 - Add default faceted configuration for projects
   [vpiret]
 

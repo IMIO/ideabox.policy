@@ -5,7 +5,37 @@
       xmlns:tal="http://xml.zope.org/namespaces/tal"
       xmlns:metal="http://xml.zope.org/namespaces/metal">
     <body>
-        <section tal:content="view/contents">
+        <section tal:define="projects view/contents">
+            <h1>Les derniers projets déposés</h1>
+            <div id="project_facet_view"
+                 class="eea-preview-items">
+                <tal:block repeat="element projects">
+                <div tal:define="idx python:repeat['element'].index + 1;"
+                     tal:attributes="class string:project item_${idx}">
+                    <a href="" title=""
+                               tal:attributes="href element/getURL;
+                               title element/Title"
+                               tal:define="img python:view.get_images(element);
+                               themes python:view.get_theme(element)">
+                        <div class="image"
+                             tal:condition="img"
+                             tal:define="img_url img/absolute_url||None"
+                             tal:attributes="style string:background-image:url(${img_url})"></div>
+                        <div class="image no-background"
+                             tal:condition="not:img"></div>
+                        <div>
+                            <div class="title"
+                                 tal:content="element/Title">title</div>
+                            <div class="description">
+                                <tal:repeat tal:repeat="theme themes">
+                                <span tal:content="theme"></span>
+                                </tal:repeat>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                </tal:block>
+            </div>
         </section>
     </body>
 </html>

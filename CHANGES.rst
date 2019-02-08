@@ -5,6 +5,9 @@ Changelog
 2.0a4 (unreleased)
 ------------------
 
+- Adapt template for menu user
+  [Aurore]
+
 - Adapt tile for projects
   [Aurore]
 

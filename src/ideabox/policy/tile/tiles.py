@@ -1,12 +1,11 @@
 # encoding: utf-8
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from ideabox.policy import _
+from ideabox.policy.utils import can_view_rating
 from plone import api
-from plone.app.standardtiles import PloneMessageFactory as _
 from plone.supermodel.model import Schema
 from plone.tiles import Tile
 from zope import schema
-from plone.registry.interfaces import IRegistry
-from zope.component import getUtility
 
 
 class IProjectsTile(Schema):
@@ -31,24 +30,23 @@ class ProjectsTile(Tile):
 
     def contents(self):
         limit = self.data["limit"]
-        catalog = api.portal.get_tool('portal_catalog')
-        results = catalog.searchResults(
+        return api.content.find(
             portal_type='Project',
             sort_on='created',
             sort_order='reverse',
         )[:limit]
-        return results
 
-    def get_images(self, project):
-        results = project.getObject().listFolderContents(contentFilter={"portal_type": "Image"})
-        if results:
-            return results[0]
-        return None
+    def get_theme(self, key):
+        if not hasattr(self, '_themes'):
+            registry_key = 'ideabox.vocabulary.theme'
+            self._themes = api.portal.get_registry_record(registry_key)
+        return self._themes.get(key, '')
 
-    def get_theme(self, project):
-        results = []
-        registry = getUtility(IRegistry)
-        dict_value = registry.get('ideabox.vocabulary.theme')
-        for theme in project.project_theme:
-            results.append(dict_value[theme])
-        return results
+    @property
+    def default_image(self):
+        return '{0}/project_default.jpg'.format(
+            api.portal.get().absolute_url(),
+        )
+
+    def rating(self, context):
+        return can_view_rating(context)

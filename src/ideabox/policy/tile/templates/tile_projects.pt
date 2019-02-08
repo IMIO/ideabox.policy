@@ -5,33 +5,32 @@
       xmlns:tal="http://xml.zope.org/namespaces/tal"
       xmlns:metal="http://xml.zope.org/namespaces/metal">
     <body>
-        <section tal:define="projects view/contents">
+        <section tal:define="projects view/contents;
+                             default_image view/default_image">
             <h1>Les derniers projets déposés</h1>
             <div id="project_facet_view"
                  class="eea-preview-items">
-                <tal:block repeat="element projects">
-                <div tal:define="idx python:repeat['element'].index + 1;"
+                <tal:block repeat="brain projects">
+                <div tal:define="idx python:repeat['brain'].index + 1;
+                                 title brain/pretty_title_or_id|string:;
+                                 view_url brain/getURL|string:#;
+                                 image_id brain/project_picture|string:;
+                                 obj brain/getObject;
+                                 image_url python:image_id and view_url + '/' + image_id + '/@@images/image/project_faceted' or default_image"
                      tal:attributes="class string:project item_${idx}">
+
                     <a href="" title=""
-                               tal:attributes="href element/getURL;
-                               title element/Title"
-                               tal:define="img python:view.get_images(element);
-                               themes python:view.get_theme(element)">
-                        <div class="image"
-                             tal:condition="img"
-                             tal:define="img_url img/absolute_url||None"
-                             tal:attributes="style string:background-image:url(${img_url})"></div>
-                        <div class="image no-background"
-                             tal:condition="not:img"></div>
-                        <div>
-                            <div class="title"
-                                 tal:content="element/Title">title</div>
-                            <div class="description">
-                                <tal:repeat tal:repeat="theme themes">
-                                <span tal:content="theme"></span>
-                                </tal:repeat>
-                            </div>
-                        </div>
+                       tal:attributes="href view_url;
+                                       title title">
+                      <div tal:condition="python: view.rating(obj)" tal:content="structure obj/@@rating"></div>
+                      <div class="image" tal:attributes="style string: background-image:url('${image_url}')"></div>
+                      <div>
+                        <div class="title" tal:content="title">title</div>
+                        <div class="description"><tal:block repeat="theme brain/project_theme">
+                          <span tal:content="python: view.get_theme(theme)">theme</span>
+                          <tal:if condition="not: python: repeat['theme'].end"> / </tal:if>
+                        </tal:block></div>
+                      </div>
                     </a>
                 </div>
                 </tal:block>

@@ -5,6 +5,9 @@ Changelog
 2.0a4 (unreleased)
 ------------------
 
+- Adapt the tile for the latest projects
+  [mpeeters]
+
 - Adapt the display of project themes in faceted view
   [mpeeters]
 

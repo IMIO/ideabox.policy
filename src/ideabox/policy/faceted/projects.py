@@ -51,3 +51,9 @@ class ProjectsView(BrowserView):
 
     def rating(self, context):
         return can_view_rating(context)
+
+    def get_theme(self, key):
+        if not hasattr(self, '_themes'):
+            registry_key = 'ideabox.vocabulary.theme'
+            self._themes = api.portal.get_registry_record(registry_key)
+        return self._themes.get(key, '')

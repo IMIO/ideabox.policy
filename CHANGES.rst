@@ -5,6 +5,9 @@ Changelog
 2.0a4 (unreleased)
 ------------------
 
+- Adapt the display of project themes in faceted view
+  [mpeeters]
+
 - Fix the registration of new allowed sizes
   [mpeeters]
 

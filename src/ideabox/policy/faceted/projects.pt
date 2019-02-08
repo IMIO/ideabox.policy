@@ -43,7 +43,10 @@
                 <div class="image" tal:attributes="style string: background-image:url('${image_url}')"></div>
                 <div>
                   <div class="title" tal:content="title">title</div>
-                  <div class="description" tal:content="brain/project_theme" i18n:translate="">theme</div>
+                  <div class="description"><tal:block repeat="theme brain/project_theme">
+                    <span tal:content="python: self.get_theme(theme)">theme</span>
+                    <tal:if condition="not: python: repeat['theme'].end"> / </tal:if>
+                  </tal:block></div>
                 </div>
               </a>
               </tal:block>

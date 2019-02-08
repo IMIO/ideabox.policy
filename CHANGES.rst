@@ -5,6 +5,9 @@ Changelog
 2.0a4 (unreleased)
 ------------------
 
+- Fix the registration of new allowed sizes
+  [mpeeters]
+
 - Add the `project_faceted` scale on install
   [mpeeters]
 

@@ -52,7 +52,13 @@ def post_install(context):
 
     registry = getUtility(IRegistry)
     allowed_sizes = registry.get('plone.allowed_sizes')
-    allowed_sizes.append("banner 1920:610")
+    scales = (
+        'banner 1920:610',
+        'project_faceted 450:300',
+    )
+    for scale in scales:
+        if scale not in allowed_sizes:
+            allowed_sizes.append(scale)
 
     api.portal.set_registry_record(
         'collective.behavior.banner.browser.controlpanel.IBannerSettingsSchema.banner_scale',  # noqa

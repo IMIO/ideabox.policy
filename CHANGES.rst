@@ -5,6 +5,9 @@ Changelog
 2.0a4 (unreleased)
 ------------------
 
+- Add the `project_faceted` scale on install
+  [mpeeters]
+
 - Adapt template for menu user
   [Aurore]
 

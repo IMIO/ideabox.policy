@@ -5,6 +5,9 @@ Changelog
 2.0a4 (unreleased)
 ------------------
 
+- Fix CSRF issue with comments auto enabled
+  [mpeeters]
+
 - Adapt the tile for the latest projects
   [mpeeters]
 

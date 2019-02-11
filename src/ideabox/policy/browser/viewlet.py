@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from plone import api
 from plone.app.layout.viewlets import ViewletBase
 from zope.component import getMultiAdapter
 
@@ -15,3 +16,7 @@ class UserMenuViewlet(ViewletBase):
 
         actions = context_state.actions('user_menu')
         return actions
+
+    def user_name(self):
+        user = api.user.get_current()
+        return user

@@ -68,19 +68,20 @@
     layer="ideabox.policy.interfaces.IIdeaboxPolicyLayer"
     />
 
-    <browser:viewlet
-      for="*"
-      name="viewlet.user_menu"
-      manager="plone.app.layout.viewlets.interfaces.IPortalTop"
-      class=".viewlet.UserMenuViewlet"
-      permission="zope.Public"
-      layer="ideabox.policy.interfaces.IIdeaboxPolicyLayer"
-      />
+  <browser:viewlet
+    for="*"
+    name="viewlet.user_menu"
+    manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+    class=".viewlet.UserMenuViewlet"
+    permission="zope.Public"
+    layer="ideabox.policy.interfaces.IIdeaboxPolicyLayer"
+    />
 
   <browser:page
     name="ideabox_settings"
     for="Products.CMFPlone.interfaces.IPloneSiteRoot"
     class=".controlpanel.IdeaBoxSettingsControlPanel"
     permission="cmf.ManagePortal"
-  />
+    />
+
 </configure>

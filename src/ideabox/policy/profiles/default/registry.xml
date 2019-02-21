@@ -38,15 +38,33 @@
           <value_type type="plone.registry.field.TextLine" />
       </field>
       <value>
-        <element key="ACPT">Art, Culture, Patrimoine, Tourisme</element>
-        <element key="EVCA">Des espaces verts, des espaces collectifs, des espaces apaisés</element>
-        <element key="IDNA">Idées non attribuées</element>
-        <element key="INCL">Inclassables</element>
-        <element key="INSO">Inclusion sociale</element>
-        <element key="MOBI">La mobilité</element>
-        <element key="TREN">La transition énergétique</element>
-        <element key="VEAU">La végétalisation et l'agriculture urbaine</element>
-        <element key="VPCN">Ville participative, Collaborative et Numérique</element>
+        <element key="LOGE">Logement</element>
+        <element key="MOBI">Mobilité</element>
+        <element key="SECU">Sécurité</element>
+        <element key="TRCL">Transition climatique</element>
+        <element key="PROP">Propreté</element>
+        <element key="CAVI">Cadre de vie et urbanisme</element>
+        <element key="ENJE">Enfance et jeunesse</element>
+        <element key="SENI">Seniors</element>
+        <element key="HAND">Personnes souffrant de handicap</element>
+        <element key="PROX">Proximité</element>
+        <element key="POSO">Politique sociale</element>
+        <element key="ENSE">Enseignement</element>
+        <element key="CUPA">Culture et patrimoine</element>
+        <element key="SPOR">Sport</element>
+        <element key="INTE">Interculturalité</element>
+        <element key="EECO">Emploi, économie et commerce</element>
+        <element key="TOUR">Tourisme</element>
+        <element key="NUME">Numérique</element>
+        <element key="INTL">International</element>
+        <element key="PART">Participation</element>
+        <element key="BIAN">Bien-être animal</element>
+        <element key="FINA">Finances</element>
+        <element key="ETCI">État civil</element>
+        <element key="LPAU">Lutte contre la pauvreté</element>
+        <element key="AGUR">Agriculture urbaine</element>
+        <element key="SANT">Santé</element>
+        <element key="AUTR">Autre(s)</element>
       </value>
   </record>
 

@@ -23,7 +23,7 @@ class IProjectsTile(Schema):
 class ProjectsTile(Tile):
     """A tile that displays a listing of content items"""
 
-    template = ViewPageTemplateFile('templates/tile_projects.pt')
+    template = ViewPageTemplateFile('templates/projects.pt')
 
     def __call__(self):
         return self.template()

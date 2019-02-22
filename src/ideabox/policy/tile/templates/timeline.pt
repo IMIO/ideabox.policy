@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="en"
+      lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal">
+    <body>
+        <section>
+            <h1>Ligne du temps</h1>
+            <div id="timeline2">
+                <ol id="timeline-line2">
+                    <li class="">
+                        <div class="step">
+                            <div>04</div><div>mai</div>
+                        </div>
+                        <div class="texte">Dépôt</div>
+                    </li>
+                    <li class="">
+                        <div class="step">
+                            <div>04</div><div>mai</div>
+                        </div>
+                        <div class="texte">Acceptation</div>
+                    </li>
+                    <li class="current">
+                        <div class="step">
+                            <div>04</div><div>mai</div>
+                        </div>
+                        <div class="texte">Courant</div>
+                    </li>
+                    <li class="">
+                        <div class="step">
+                            <div>04</div><div>mai</div>
+                        </div>
+                        <div class="texte">Futur</div>
+                    </li>
+                </ol>
+            </div>
+            <div id="timeline" class="steps_5">
+                <ol id="timeline-line">
+                    <li class="">
+                        <div class="step">
+                            <div>04</div><div>mai</div>
+                        </div>
+                    </li>
+                    <li class="">
+                        <div class="step">
+                            <div>04</div><div>mai</div>
+                        </div>
+                    </li>
+                    <li class="current">
+                        <div class="step">
+                            <div>04</div><div>mai</div>
+                        </div>
+                    </li>
+                    <li class="">
+                        <div class="step">
+                            <div>04</div><div>mai</div>
+                        </div>
+                    </li>
+                </ol>
+                <ol id="timeline-text">
+                    <li>
+                        <div>Dépôt</div>
+                    </li>
+                    <li>
+                        <div>Acceptation</div>
+                    </li>
+                    <li>
+                        <div>Courant</div>
+                    </li>
+                    <li>
+                        <div>Futur</div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+    </body>
+</html>

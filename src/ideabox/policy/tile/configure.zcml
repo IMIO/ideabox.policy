@@ -11,11 +11,23 @@
         title="latest projects"
         description="A tile which displays the latest submitted projects"
         add_permission="cmf.ModifyPortalContent"
-        class=".tiles.ProjectsTile"
+        class=".projects.ProjectsTile"
         for="*"
         permission="zope.Public"
-        schema=".tiles.IProjectsTile"
-        template="templates/tile_projects.pt"
+        schema=".projects.IProjectsTile"
+        template="templates/projects.pt"
+        />
+
+    <plone:tile
+        name="ideabox.policy.timeline"
+        title="Timeline"
+        description="A tile which displays the timeline of projects"
+        add_permission="cmf.ModifyPortalContent"
+        class=".timeline.TimelineTile"
+        for="*"
+        permission="zope.Public"
+        schema=".timeline.ITimelineTile"
+        template="templates/timeline.pt"
         />
 
 </configure>

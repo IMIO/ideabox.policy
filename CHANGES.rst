@@ -5,6 +5,15 @@ Changelog
 2.0a4 (unreleased)
 ------------------
 
+- Update the default rating states
+  [mpeeters]
+
+- Update the themes
+  [mpeeters]
+
+- Add timeline tile and rename file
+  [amariscal]
+
 - Fix CSRF issue with comments auto enabled
   [mpeeters]
 

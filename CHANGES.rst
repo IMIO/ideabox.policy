@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.0a4 (unreleased)
+2.0a4 (2019-02-23)
 ------------------
 
 - Update the default rating states

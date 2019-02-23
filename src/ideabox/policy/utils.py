@@ -54,8 +54,6 @@ def review_state(context):
 
 def can_view_rating(context):
     _rating_states = (
-        'deposited',
-        'project_analysis',
         'vote',
         'result_analysis',
         'rejected',

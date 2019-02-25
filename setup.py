@@ -60,6 +60,7 @@ setup(
         'plone.app.mosaic',
         'iaweb.mosaic',
         'ideabox.diazotheme.spirit',
+        'pas.plugins.imio'
     ],
     extras_require={
         'test': [

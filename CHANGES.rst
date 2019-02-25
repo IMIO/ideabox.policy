@@ -5,7 +5,8 @@ Changelog
 2.0a5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add pas.plugins.imio dependency.
+  [bsuttor]
 
 
 2.0a4 (2019-02-23)

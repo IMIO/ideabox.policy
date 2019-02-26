@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.0a5 (unreleased)
+2.0a5 (2019-02-26)
 ------------------
 
 - Add pas.plugins.imio dependency.

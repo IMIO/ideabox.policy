@@ -5,6 +5,9 @@ Changelog
 2.0a6 (unreleased)
 ------------------
 
+- Set the default values for the menu
+  [mpeeters]
+
 - Add Products.PasswordStrength and imio.gdpr to the dependencies
   [mpeeters]
 

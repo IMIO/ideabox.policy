@@ -7,6 +7,7 @@ from plone.dexterity.interfaces import IDexterityFTI
 from zope.component import queryUtility
 from zope.interface import implementer
 
+import json
 import os
 
 
@@ -62,6 +63,36 @@ def post_install(context):
     api.portal.set_registry_record(
         'collective.behavior.banner.browser.controlpanel.IBannerSettingsSchema.banner_scale',  # noqa
         u'banner'
+    )
+
+    menu = {
+        '/': [
+            {
+                'navigation_folder': '/projets',
+                'simple_link': '/projets',
+                'tab_title': 'Projets',
+                'additional_columns': '',
+                'condition': 'python: True',
+            },
+            {
+                'navigation_folder': '',
+                'simple_link': '/participer',
+                'tab_title': 'Participer',
+                'additional_columns': '',
+                'condition': 'python: True',
+            },
+            {
+                'navigation_folder': '/plus-dinfos',
+                'simple_link': '/plus-dinfos',
+                'tab_title': "Plus d'infos",
+                'additional_columns': '',
+                'condition': 'python: True',
+            }
+        ],
+    }
+    api.portal.set_registry_record(
+        'collective.editablemenu.browser.interfaces.IEditableMenuSettings.menu_tabs_json',  # noqa
+        unicode(json.dumps(menu)),
     )
 
 

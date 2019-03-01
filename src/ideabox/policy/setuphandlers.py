@@ -4,6 +4,11 @@ from Products.CMFPlone.interfaces import INonInstallable
 from eea.facetednavigation.layout.layout import FacetedLayout
 from plone import api
 from plone.dexterity.interfaces import IDexterityFTI
+from plone.portlets.constants import CONTEXT_CATEGORY
+from plone.portlets.interfaces import ILocalPortletAssignmentManager
+from plone.portlets.interfaces import IPortletManager
+from zope.component import getMultiAdapter
+from zope.component import getUtility
 from zope.component import queryUtility
 from zope.interface import implementer
 
@@ -36,6 +41,7 @@ def post_install(context):
         _activate_faceted_navigation(project, True, '/faceted/config/projets.xml')
         project_layout = FacetedLayout(project)
         project_layout.update_layout(layout='faceted-project')
+        _disable_portlets(project)
     if portal.get('participer') is None:
         participate = api.content.create(
             type='Folder',
@@ -43,6 +49,7 @@ def post_install(context):
             title='Participer',
             container=portal,
         )
+        _disable_portlets(participate)
     if portal.get('plus-dinfos') is None:
         infos = api.content.create(
             type='Folder',
@@ -50,6 +57,7 @@ def post_install(context):
             title=u"Plus d'infos",
             container=portal,
         )
+        _disable_portlets(infos, disabled=('plone.rightcolumn', ))
 
     add_behavior(
         'Collection',
@@ -61,6 +69,7 @@ def post_install(context):
             True,
             '/faceted/config/news.xml',
         )
+        _disable_portlets(portal['news'])
         # XXX to be implemented
         # news_layout = FacetedLayout(project)
         # news_layout.update_layout(layout='faceted-news')
@@ -131,6 +140,13 @@ def _activate_faceted_navigation(context, configuration=False, path=None):
         context.unrestrictedTraverse('@@faceted_exportimport').import_xml(
             import_file=open(os.path.dirname(__file__) + path)
         )
+
+
+def _disable_portlets(context, disabled=('plone.leftcolumn', 'plone.rightcolumn')):
+    for name in disabled:
+        manager = getUtility(IPortletManager, name=name)
+        blacklist = getMultiAdapter((context, manager), ILocalPortletAssignmentManager)
+        blacklist.setBlacklistStatus(CONTEXT_CATEGORY, True)
 
 
 def uninstall(context):

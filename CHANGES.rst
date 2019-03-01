@@ -5,6 +5,9 @@ Changelog
 2.0a6 (unreleased)
 ------------------
 
+- Update the default contents on install
+  [mpeeters]
+
 - Add the faceted navigation for news
   [mpeeters]
 

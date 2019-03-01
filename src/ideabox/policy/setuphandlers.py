@@ -36,18 +36,20 @@ def post_install(context):
         _activate_faceted_navigation(project, True, '/faceted/config/projets.xml')
         project_layout = FacetedLayout(project)
         project_layout.update_layout(layout='faceted-project')
+    if portal.get('participer') is None:
+        participate = api.content.create(
+            type='Folder',
+            id='participer',
+            title='Participer',
+            container=portal,
+        )
     if portal.get('plus-dinfos') is None:
-        folder = api.content.create(
+        infos = api.content.create(
             type='Folder',
             id='plus-dinfos',
             title=u"Plus d'infos",
             container=portal,
         )
-        api.content.create(
-            type='Folder',
-            id='edition-2017',
-            title=u"Edition 2017",
-            container=folder,
 
     add_behavior(
         'Collection',

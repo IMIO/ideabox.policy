@@ -5,6 +5,9 @@ Changelog
 2.0a6 (unreleased)
 ------------------
 
+- Auto publish default contents
+  [mpeeters]
+
 - Deactivate the portlets columns on some contents
   [mpeeters]
 

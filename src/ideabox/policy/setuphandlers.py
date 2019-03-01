@@ -42,6 +42,7 @@ def post_install(context):
         project_layout = FacetedLayout(project)
         project_layout.update_layout(layout='faceted-project')
         _disable_portlets(project)
+        _publish(project)
     if portal.get('participer') is None:
         participate = api.content.create(
             type='Folder',
@@ -50,6 +51,7 @@ def post_install(context):
             container=portal,
         )
         _disable_portlets(participate)
+        _publish(participate)
     if portal.get('plus-dinfos') is None:
         infos = api.content.create(
             type='Folder',
@@ -58,6 +60,7 @@ def post_install(context):
             container=portal,
         )
         _disable_portlets(infos, disabled=('plone.rightcolumn', ))
+        _publish(infos)
 
     add_behavior(
         'Collection',
@@ -147,6 +150,11 @@ def _disable_portlets(context, disabled=('plone.leftcolumn', 'plone.rightcolumn'
         manager = getUtility(IPortletManager, name=name)
         blacklist = getMultiAdapter((context, manager), ILocalPortletAssignmentManager)
         blacklist.setBlacklistStatus(CONTEXT_CATEGORY, True)
+
+
+def _publish(obj):
+    if api.content.get_state(obj) != 'published':
+        api.content.transition(obj, transition='publish')
 
 
 def uninstall(context):

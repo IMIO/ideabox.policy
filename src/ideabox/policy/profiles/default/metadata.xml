@@ -12,5 +12,7 @@
     <dependency>profile-collective.behavior.banner:default</dependency>
     <dependency>profile-iaweb.mosaic:default</dependency>
     <dependency>profile-ideabox.diazotheme.spirit:default</dependency>
+    <dependency>profile-imio.gdpr:default</dependency>
+    <dependency>profile-Products.PasswordStrength:default</dependency>
   </dependencies>
 </metadata>

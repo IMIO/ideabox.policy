@@ -5,6 +5,9 @@ Changelog
 2.0a6 (unreleased)
 ------------------
 
+- Add Products.PasswordStrength and imio.gdpr to the dependencies
+  [mpeeters]
+
 - Activate the subscription for users
   [mpeeters]
 

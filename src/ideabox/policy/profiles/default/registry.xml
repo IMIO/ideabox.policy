@@ -25,6 +25,10 @@
     <value>True</value>
   </record>
 
+  <record name="imio.gdpr.interfaces.IGDPRSettings.is_text_ready">
+    <value>True</value>
+  </record>
+
   <record name="ideabox.vocabulary.district"
           i18n:domain="ideabox.policy">
       <field type="plone.registry.field.Dict">

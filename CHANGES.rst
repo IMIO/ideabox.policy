@@ -5,7 +5,8 @@ Changelog
 2.0a6 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Activate the subscription for users
+  [mpeeters]
 
 
 2.0a5 (2019-02-26)

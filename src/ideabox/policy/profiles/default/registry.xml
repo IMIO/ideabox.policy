@@ -15,6 +15,16 @@
     <value>projets</value>
   </record>
 
+  <record name="plone.enable_user_pwd_choice">
+    <value>True</value>
+  </record>
+  <record name="plone.use_email_as_login">
+    <value>True</value>
+  </record>
+  <record name="plone.enable_self_reg">
+    <value>True</value>
+  </record>
+
   <record name="ideabox.vocabulary.district"
           i18n:domain="ideabox.policy">
       <field type="plone.registry.field.Dict">

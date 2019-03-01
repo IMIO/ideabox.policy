@@ -1,19 +1,9 @@
 <?xml version="1.0"?>
 <object name="projets" meta_type="Dexterity Container">
  <criteria>
-  <criterion name="c5">
-   <property name="widget">text</property>
-   <property name="title">search</property>
-   <property name="index">Title</property>
-   <property name="onlyallelements">False</property>
-   <property name="wildcard">True</property>
-   <property name="position">top</property>
-   <property name="section">default</property>
-   <property name="hidden">False</property>
-  </criterion>
   <criterion name="c4">
    <property name="widget">select</property>
-   <property name="title">Par thématique</property>
+   <property name="title">Thème</property>
    <property name="index">project_theme</property>
    <property name="vocabulary">ideabox.vocabularies.theme</property>
    <property name="catalog"></property>
@@ -24,6 +14,16 @@
    <property name="sortcountable">False</property>
    <property name="hidezerocount">False</property>
    <property name="sortreversed">False</property>
+  </criterion>
+  <criterion name="c5">
+   <property name="widget">text</property>
+   <property name="title">Titre</property>
+   <property name="index">Title</property>
+   <property name="onlyallelements">False</property>
+   <property name="wildcard">True</property>
+   <property name="position">top</property>
+   <property name="section">default</property>
+   <property name="hidden">False</property>
   </criterion>
   <criterion name="c3">
    <property name="widget">criteria</property>

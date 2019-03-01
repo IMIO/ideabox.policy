@@ -5,8 +5,7 @@ Changelog
 2.0a6 (unreleased)
 ------------------
 
-- Change title of field to faceted
-  [amariscal]
+- Nothing changed yet.
 
 
 2.0a5 (2019-02-26)

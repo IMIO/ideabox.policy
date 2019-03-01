@@ -5,6 +5,9 @@ Changelog
 2.0a6 (unreleased)
 ------------------
 
+- Add the faceted navigation for news
+  [mpeeters]
+
 - Set the default values for the menu
   [mpeeters]
 

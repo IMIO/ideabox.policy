@@ -33,7 +33,7 @@ def post_install(context):
         )
         api.content.transition(obj=project, transition='publish')
         add_behavior('Folder', 'eea.facetednavigation.subtypes.interfaces.IPossibleFacetedNavigable')
-        _activate_dashboard_navigation(project, True, '/faceted/config/projets.xml')
+        _activate_faceted_navigation(project, True, '/faceted/config/projets.xml')
         project_layout = FacetedLayout(project)
         project_layout.update_layout(layout='faceted-project')
     if portal.get('plus-dinfos') is None:
@@ -48,7 +48,20 @@ def post_install(context):
             id='edition-2017',
             title=u"Edition 2017",
             container=folder,
+
+    add_behavior(
+        'Collection',
+        'eea.facetednavigation.subtypes.interfaces.IPossibleFacetedNavigable',
+    )
+    if 'news' in portal:
+        _activate_faceted_navigation(
+            portal['news']['aggregator'],
+            True,
+            '/faceted/config/news.xml',
         )
+        # XXX to be implemented
+        # news_layout = FacetedLayout(project)
+        # news_layout.update_layout(layout='faceted-news')
 
     allowed_sizes = api.portal.get_registry_record('plone.allowed_sizes')
     scales = (
@@ -107,7 +120,7 @@ def add_behavior(type_name, behavior_name):
     fti._updateProperty('behaviors', tuple(behaviors))
 
 
-def _activate_dashboard_navigation(context, configuration=False, path=None):
+def _activate_faceted_navigation(context, configuration=False, path=None):
     subtyper = context.restrictedTraverse('@@faceted_subtyper')
     if subtyper.is_faceted:
         return

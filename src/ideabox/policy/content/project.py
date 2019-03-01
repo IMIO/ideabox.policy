@@ -23,7 +23,7 @@ class IProject(model.Schema):
         title=_(u"Theme"),
         value_type=schema.Choice(
             title=_(u"Theme"),
-            vocabulary=u'ideabox.vocabularies.theme'
+            vocabulary=u'collective.taxonomy.theme'
         ),
         required=True,
     )
@@ -33,9 +33,9 @@ class IProject(model.Schema):
         title=_(u"District"),
         value_type=schema.Choice(
             title=_(u"District"),
-            vocabulary=u'ideabox.vocabularies.district'
+            vocabulary=u'collective.taxonomy.district'
         ),
-        required=True,
+        required=False,
     )
 
     body = RichText(

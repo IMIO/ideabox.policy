@@ -25,20 +25,7 @@ class ThemeVocabularyFactory(object):
 
     def __call__(self, context):
         registry = getUtility(IRegistry)
-        dict_value = registry.get('ideabox.vocabulary.theme')
-        values = []
-        for key in dict_value:
-            val = {key: dict_value[key]}
-            values.append(val)
-        # values = [{'ACPT': _('ACPT', u'Art, Culture, Patrimoine, Tourisme')},
-        #           {'EVCA': _('EVCA', u'Des espaces verts, des espaces collectifs, des espaces apaisés')},
-        #           {'IDNA': _('IDNA', u'Idées non attribuées')},
-        #           {'INCL': _('INCL', u'Inclassables')},
-        #           {'INSO': _('INSO', u'Inclusion sociale')},
-        #           {'MOBI': _('MOBI', u'La mobilité')},
-        #           {'TREN': _('TREN', u'La transition énergétique')},
-        #           {'VEAU': _('VEAU', u"La végétalisation et l'agriculture urbaine")},
-        #           {'VPCN': _('VPCN', u'Ville participative, Collaborative et Numérique')}]
+        values = registry.get('ideabox.vocabulary.theme')
         return dict_list_2_vocabulary(values)
 
 
@@ -70,11 +57,7 @@ class DistrictVocabularyFactory(object):
 
     def __call__(self, context):
         registry = getUtility(IRegistry)
-        dict_value = registry.get('ideabox.vocabulary.district')
-        values = []
-        for key in dict_value:
-            val = {key: dict_value[key]}
-            values.append(val)
+        values = registry.get('ideabox.vocabulary.district')
         return dict_list_2_vocabulary(values)
 
 

@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
 
+from collective.taxonomy.exportimport import TaxonomyImportExportAdapter
+from collective.taxonomy.factory import registerTaxonomy
+from collective.taxonomy.interfaces import ITaxonomy
 from Products.CMFPlone.interfaces import INonInstallable
 from eea.facetednavigation.layout.layout import FacetedLayout
 from plone import api
@@ -7,10 +10,15 @@ from plone.dexterity.interfaces import IDexterityFTI
 from plone.portlets.constants import CONTEXT_CATEGORY
 from plone.portlets.interfaces import ILocalPortletAssignmentManager
 from plone.portlets.interfaces import IPortletManager
+from zope.i18n import translate
+from zope.i18n.interfaces import ITranslationDomain
 from zope.component import getMultiAdapter
 from zope.component import getUtility
 from zope.component import queryUtility
 from zope.interface import implementer
+from zope.schema.interfaces import IVocabularyFactory
+
+from ideabox.policy import _
 
 import json
 import os
@@ -121,6 +129,71 @@ def post_install(context):
         'collective.editablemenu.browser.interfaces.IEditableMenuSettings.menu_tabs_json',  # noqa
         unicode(json.dumps(menu)),
     )
+
+    add_taxonomies()
+
+
+def add_taxonomies():
+    current_lang = api.portal.get_current_language()[:2]
+
+    data_theme = {
+        'taxonomy': 'theme',
+        'field_title': translate(_('Theme'), target_language=current_lang),
+        'field_description': '',
+        'default_language': 'fr',
+        'filename': 'taxonomy-settings-theme.xml',
+    }
+
+    data_district = {
+        'taxonomy': 'district',
+        'field_title': translate(_('District'), target_language=current_lang),
+        'field_description': '',
+        'default_language': 'fr',
+        'filename': 'taxonomy-settings-district.xml',
+    }
+
+    portal = api.portal.get()
+    sm = portal.getSiteManager()
+    theme_item = 'collective.taxonomy.theme'
+    district_item = 'collective.taxonomy.district'
+    utility_theme = sm.queryUtility(ITaxonomy, name=theme_item)
+    utility_district = sm.queryUtility(ITaxonomy, name=district_item)
+
+    if utility_theme and utility_district:
+        return
+
+    create_taxonomy_object(data_theme, portal)
+    create_taxonomy_object(data_district, portal)
+
+    # remove taxonomy test
+    item = 'collective.taxonomy.test'
+    utility = sm.queryUtility(ITaxonomy, name=item)
+    if utility:
+        utility.unregisterBehavior()
+        sm.unregisterUtility(utility, ITaxonomy, name=item)
+        sm.unregisterUtility(utility, IVocabularyFactory, name=item)
+        sm.unregisterUtility(utility, ITranslationDomain, name=item)
+
+
+def create_taxonomy_object(data_tax, portal):
+    taxonomy = registerTaxonomy(
+        api.portal.get(),
+        name=data_tax['taxonomy'],
+        title=data_tax['field_title'],
+        description=data_tax['field_description'],
+        default_language=data_tax['default_language']
+    )
+
+    adapter = TaxonomyImportExportAdapter(portal)
+    data_path = os.path.join(os.path.dirname(__file__), 'data')
+    file_path = os.path.join(data_path, data_tax['filename'])
+    data = open(file_path, 'r').read(),
+    import_file = data[0]
+    adapter.importDocument(taxonomy, import_file)
+
+    del data_tax['taxonomy']
+    del data_tax['filename']
+    taxonomy.registerBehavior(**data_tax)
 
 
 def add_behavior(type_name, behavior_name):

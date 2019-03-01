@@ -61,7 +61,8 @@ setup(
         'plone.app.mosaic',
         'iaweb.mosaic',
         'ideabox.diazotheme.spirit',
-        'pas.plugins.imio'
+        'pas.plugins.imio',
+        'collective.taxonomy',
     ],
     extras_require={
         'test': [

@@ -14,5 +14,6 @@
     <dependency>profile-ideabox.diazotheme.spirit:default</dependency>
     <dependency>profile-imio.gdpr:default</dependency>
     <dependency>profile-Products.PasswordStrength:default</dependency>
+    <dependency>profile-collective.taxonomy:default</dependency>
   </dependencies>
 </metadata>

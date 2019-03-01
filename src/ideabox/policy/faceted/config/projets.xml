@@ -15,7 +15,7 @@
    <property name="widget">select</property>
    <property name="title">Thème</property>
    <property name="index">project_theme</property>
-   <property name="vocabulary">ideabox.vocabularies.theme</property>
+   <property name="vocabulary">collective.taxonomy.theme</property>
    <property name="catalog"></property>
    <property name="position">top</property>
    <property name="section">default</property>

@@ -6,7 +6,7 @@ Changelog
 ------------------
 
 - Add taxonomies and configuration
-  [vpiret]
+  [vpiret, mpeeters]
 
 - Auto publish default contents
   [mpeeters]

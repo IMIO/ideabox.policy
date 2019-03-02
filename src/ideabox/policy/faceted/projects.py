@@ -3,10 +3,12 @@
 from Products.Five import BrowserView
 from datetime import datetime
 from hashlib import md5
+from ideabox.policy.utils import can_view_rating
 from operator import attrgetter
 from plone import api
 from random import shuffle
-from ideabox.policy.utils import can_view_rating
+from zope.component import getUtility
+from zope.schema.interfaces import IVocabularyFactory
 
 
 class ProjectsView(BrowserView):
@@ -54,6 +56,9 @@ class ProjectsView(BrowserView):
 
     def get_theme(self, key):
         if not hasattr(self, '_themes'):
-            registry_key = 'ideabox.vocabulary.theme'
-            self._themes = api.portal.get_registry_record(registry_key)
-        return self._themes.get(key, '')
+            factory = getUtility(IVocabularyFactory, 'collective.taxonomy.theme')
+            self._themes = factory(self.context)
+        try:
+            return self._themes.getTerm(key).title
+        except KeyError:
+            return ''

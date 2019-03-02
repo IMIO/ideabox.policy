@@ -51,20 +51,8 @@
       />
 
   <utility
-      component=".vocabularies.ThemeVocabulary"
-      name="ideabox.vocabularies.theme"
-      provides="zope.schema.interfaces.IVocabularyFactory"
-      />
-
-  <utility
       component=".vocabularies.ReviewStateVocabulary"
       name="ideabox.vocabularies.review_states"
-      provides="zope.schema.interfaces.IVocabularyFactory"
-      />
-
-  <utility
-      component=".vocabularies.DistrictVocabulary"
-      name="ideabox.vocabularies.district"
       provides="zope.schema.interfaces.IVocabularyFactory"
       />
 

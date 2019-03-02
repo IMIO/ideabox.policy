@@ -21,17 +21,6 @@ def dict_list_2_vocabulary(dict_list):
     return SimpleVocabulary(terms)
 
 
-class ThemeVocabularyFactory(object):
-
-    def __call__(self, context):
-        registry = getUtility(IRegistry)
-        values = registry.get('ideabox.vocabulary.theme')
-        return dict_list_2_vocabulary(values)
-
-
-ThemeVocabulary = ThemeVocabularyFactory()
-
-
 class ReviewStateVocabularyFactory(object):
 
     def __call__(self, context):
@@ -51,17 +40,6 @@ class ReviewStateVocabularyFactory(object):
 
 
 ReviewStateVocabulary = ReviewStateVocabularyFactory()
-
-
-class DistrictVocabularyFactory(object):
-
-    def __call__(self, context):
-        registry = getUtility(IRegistry)
-        values = registry.get('ideabox.vocabulary.district')
-        return dict_list_2_vocabulary(values)
-
-
-DistrictVocabulary = DistrictVocabularyFactory()
 
 
 class GenderVocabularyFactory(object):

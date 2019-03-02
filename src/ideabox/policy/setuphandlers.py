@@ -36,6 +36,7 @@ class HiddenProfiles(object):
 
 def post_install(context):
     """Post install script"""
+    add_taxonomies()
     portal = api.portal.get()
     if portal.get('projets') is None:
         project = api.content.create(
@@ -129,8 +130,6 @@ def post_install(context):
         'collective.editablemenu.browser.interfaces.IEditableMenuSettings.menu_tabs_json',  # noqa
         unicode(json.dumps(menu)),
     )
-
-    add_taxonomies()
 
 
 def add_taxonomies():

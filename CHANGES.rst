@@ -5,6 +5,9 @@ Changelog
 2.0a6 (unreleased)
 ------------------
 
+- Add taxonomies and configuration
+  [vpiret]
+
 - Auto publish default contents
   [mpeeters]
 
@@ -25,6 +28,9 @@ Changelog
 
 - Activate the subscription for users
   [mpeeters]
+
+- Add portal-footer
+  [amariscal]
 
 
 2.0a5 (2019-02-26)

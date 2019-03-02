@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2019-02-06 10:38+0000\n"
+"POT-Creation-Date: 2019-03-02 10:19+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,11 +25,12 @@ msgstr ""
 msgid "Birthdate"
 msgstr ""
 
-#: ../content/project.py:41
+#: ../content/project.py:42
 msgid "Content"
 msgstr ""
 
-#: ../content/project.py:32
+#: ../content/project.py:33
+#: ../setuphandlers.py:149
 msgid "District"
 msgstr ""
 
@@ -46,7 +47,7 @@ msgid "Email address of the project manager"
 msgstr ""
 
 #. Default: "Female"
-#: ../vocabularies.py:88
+#: ../vocabularies.py:71
 msgid "FEMALE"
 msgstr ""
 
@@ -66,7 +67,7 @@ msgstr ""
 msgid "Ideabox project"
 msgstr ""
 
-#: ../configure.zcml:34
+#: ../configure.zcml:39
 msgid "Installs the ideabox.policy add-on."
 msgstr ""
 
@@ -74,20 +75,20 @@ msgstr ""
 msgid "Last name"
 msgstr ""
 
-#: ../tile/tiles.py:13
+#: ../tile/projects.py:15
 msgid "Limit"
 msgstr ""
 
-#: ../tile/tiles.py:14
+#: ../tile/projects.py:16
 msgid "Limit projects"
 msgstr ""
 
 #. Default: "Male"
-#: ../vocabularies.py:87
+#: ../vocabularies.py:70
 msgid "MALE"
 msgstr ""
 
-#: ../content/project.py:47
+#: ../content/project.py:50
 msgid "Original author"
 msgstr ""
 
@@ -119,7 +120,7 @@ msgstr ""
 msgid "Save"
 msgstr ""
 
-#: ../form/project_submission.py:106
+#: ../form/project_submission.py:109
 msgid "Send"
 msgstr ""
 
@@ -131,7 +132,8 @@ msgstr ""
 msgid "The 7 main themes"
 msgstr ""
 
-#: ../content/project.py:22
+#: ../content/project.py:23
+#: ../setuphandlers.py:141
 msgid "Theme"
 msgstr ""
 
@@ -143,12 +145,8 @@ msgstr ""
 msgid "Title"
 msgstr ""
 
-#: ../configure.zcml:43
+#: ../configure.zcml:48
 msgid "Uninstalls the ideabox.policy add-on."
-msgstr ""
-
-#: ../browser/templates/user_menu.pt:1
-msgid "User menu"
 msgstr ""
 
 #: ../userdataschema.py:40
@@ -163,11 +161,11 @@ msgstr ""
 msgid "diagnose and analysis"
 msgstr ""
 
-#: ../configure.zcml:34
+#: ../configure.zcml:39
 msgid "ideabox.policy"
 msgstr ""
 
-#: ../configure.zcml:43
+#: ../configure.zcml:48
 msgid "ideabox.policy (uninstall)"
 msgstr ""
 

@@ -62,14 +62,5 @@
    <property name="maxitems">5</property>
    <property name="sortreversed">True</property>
   </criterion>
-  <criterion name="c2">
-   <property name="widget">sorting</property>
-   <property name="title">Sort on</property>
-   <property name="vocabulary"></property>
-   <property name="default">effective(reverse)</property>
-   <property name="position">right</property>
-   <property name="section">default</property>
-   <property name="hidden">True</property>
-  </criterion>
  </criteria>
 </object>

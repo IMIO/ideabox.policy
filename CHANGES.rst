@@ -5,6 +5,9 @@ Changelog
 2.0a6 (unreleased)
 ------------------
 
+- Use the extended user schema for subscription
+  [mpeeters]
+
 - Add taxonomies and configuration
   [vpiret, mpeeters]
 

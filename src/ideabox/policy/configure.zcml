@@ -70,12 +70,18 @@
 
   <adapter
     factory=".userdataschema.UserDataPanelExtender"
-    provides="plone.z3cform.fieldsets.interfaces.IFormExtender"/>
+    provides="plone.z3cform.fieldsets.interfaces.IFormExtender"
+    />
+
+  <adapter
+    factory=".userdataschema.RegistrationPanelExtender"
+    provides="plone.z3cform.fieldsets.interfaces.IFormExtender"
+    />
 
   <adapter
     provides=".userdataschema.IEnhancedUserDataSchema"
     for="plone.app.layout.navigation.interfaces.INavigationRoot"
     factory=".adapters.EnhancedUserDataSchemaAdapter"
-  />
+    />
 
 </configure>

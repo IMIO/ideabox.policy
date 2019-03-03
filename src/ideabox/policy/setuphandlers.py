@@ -82,9 +82,8 @@ def post_install(context):
             '/faceted/config/news.xml',
         )
         _disable_portlets(portal['news'])
-        # XXX to be implemented
-        # news_layout = FacetedLayout(project)
-        # news_layout.update_layout(layout='faceted-news')
+        news_layout = FacetedLayout(portal['news']['aggregator'])
+        news_layout.update_layout(layout='faceted-news')
 
     allowed_sizes = api.portal.get_registry_record('plone.allowed_sizes')
     scales = (

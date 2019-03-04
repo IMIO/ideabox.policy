@@ -15,7 +15,7 @@ msgstr ""
 "Domain: ideabox.policy\n"
 "X-Is-Fallback-For: fr-be fr-ca fr-lu fr-mc fr-ch fr-fr\n"
 
-#: ../userdataschema.py:35
+#: ../userdataschema.py:36
 msgid "Birthdate"
 msgstr "Date de naissance"
 
@@ -24,32 +24,28 @@ msgid "Content"
 msgstr "Contenu"
 
 #: ../content/project.py:33
-#: ../setuphandlers.py:149
+#: ../setuphandlers.py:147
 msgid "District"
 msgstr "Quartier"
-
-#: ../profiles/default/registry.xml
-msgid "District vocabulary values"
-msgstr "Valeurs du vocabulaire pour les quartiers"
 
 #: ../content/project.pt:56
 msgid "Edit timeline dates"
 msgstr "Modifier les dates de la ligne du temps"
 
-#: ../browser/controlpanel.py:24
+#: ../browser/controlpanel.py:15
 msgid "Email address of the project manager"
 msgstr "Adresse e-mail du responsable des projets"
 
 #. Default: "Female"
-#: ../vocabularies.py:71
+#: ../vocabularies.py:49
 msgid "FEMALE"
 msgstr "Femme"
 
-#: ../userdataschema.py:24
+#: ../userdataschema.py:25
 msgid "First name"
 msgstr "Prénom"
 
-#: ../userdataschema.py:29
+#: ../userdataschema.py:30
 msgid "Gender"
 msgstr "Sexe"
 
@@ -61,26 +57,38 @@ msgstr "Paramètres Ideabox"
 msgid "Ideabox project"
 msgstr ""
 
-#: ../configure.zcml:39
+#: ../browser/controlpanel.py:16
+msgid "If there are multiple email addresses, separate them with semicolons"
+msgstr "Si il y a plusieurs adresse email à renseigner séparez les par des points-virgules"
+
+#: ../configure.zcml:37
 msgid "Installs the ideabox.policy add-on."
 msgstr ""
 
-#: ../userdataschema.py:19
+#: ../userdataschema.py:20
 msgid "Last name"
 msgstr "Nom"
 
-#: ../tile/projects.py:15
+#: ../tile/projects.py:17
 msgid "Limit"
 msgstr "Limite"
 
-#: ../tile/projects.py:16
+#: ../tile/projects.py:18
 msgid "Limit projects"
 msgstr "Limite d'élément affiché"
 
 #. Default: "Male"
-#: ../vocabularies.py:70
+#: ../vocabularies.py:48
 msgid "MALE"
 msgstr "Homme"
+
+#: ../form/project_submission.py:76
+msgid "New project submission"
+msgstr "Soumission d'un nouveau projet"
+
+#: ../faceted/configure.zcml:23
+msgid "News"
+msgstr "Actualités"
 
 #: ../content/project.py:50
 msgid "Original author"
@@ -114,7 +122,7 @@ msgstr "Des projets en évolution"
 msgid "Save"
 msgstr "Enregistrer"
 
-#: ../form/project_submission.py:109
+#: ../form/project_submission.py:116
 msgid "Send"
 msgstr "Envoyer"
 
@@ -127,23 +135,19 @@ msgid "The 7 main themes"
 msgstr "Les 7 thématiques prioritaires"
 
 #: ../content/project.py:23
-#: ../setuphandlers.py:141
+#: ../setuphandlers.py:139
 msgid "Theme"
 msgstr "Thème"
-
-#: ../profiles/default/registry.xml
-msgid "Theme vocabulary values"
-msgstr "Valeurs du vocabulaire pour les thèmes"
 
 #: ../form/project_submission.py:21
 msgid "Title"
 msgstr "Titre"
 
-#: ../configure.zcml:48
+#: ../configure.zcml:46
 msgid "Uninstalls the ideabox.policy add-on."
 msgstr ""
 
-#: ../userdataschema.py:40
+#: ../userdataschema.py:41
 msgid "Zip code"
 msgstr "Code postal"
 
@@ -155,11 +159,16 @@ msgstr ""
 msgid "diagnose and analysis"
 msgstr "Diagnostic et analyse"
 
-#: ../configure.zcml:39
+#. Default: "A new project has been created you can access it at the following url:\n              ${url}\n              "
+#: ../form/project_submission.py:62
+msgid "email_body_project_submission"
+msgstr "Un nouveau projet a été créé vous pouvez y accéder à l'url suivante :\n              ${url}\n              "
+
+#: ../configure.zcml:37
 msgid "ideabox.policy"
 msgstr ""
 
-#: ../configure.zcml:48
+#: ../configure.zcml:46
 msgid "ideabox.policy (uninstall)"
 msgstr ""
 

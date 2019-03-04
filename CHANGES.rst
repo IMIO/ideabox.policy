@@ -7,6 +7,8 @@ Changelog
 
 - Change permission for show toolbar
   [amariscal]
+- Correctly get the themes in latest projects tile
+  [mpeeters]
 
 - Use the extended user schema for subscription
   [mpeeters]

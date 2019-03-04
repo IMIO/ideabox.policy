@@ -6,6 +6,8 @@ from plone import api
 from plone.supermodel.model import Schema
 from plone.tiles import Tile
 from zope import schema
+from zope.component import getUtility
+from zope.schema.interfaces import IVocabularyFactory
 
 
 class IProjectsTile(Schema):
@@ -38,9 +40,12 @@ class ProjectsTile(Tile):
 
     def get_theme(self, key):
         if not hasattr(self, '_themes'):
-            registry_key = 'ideabox.vocabulary.theme'
-            self._themes = api.portal.get_registry_record(registry_key)
-        return self._themes.get(key, '')
+            factory = getUtility(IVocabularyFactory, 'collective.taxonomy.theme')
+            self._themes = factory(self.context)
+        try:
+            return self._themes.getTerm(key).title
+        except KeyError:
+            return ''
 
     @property
     def default_image(self):

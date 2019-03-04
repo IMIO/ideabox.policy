@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.0a6 (unreleased)
+2.0a6 (2019-03-04)
 ------------------
 
 - Change permission for show toolbar

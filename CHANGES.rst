@@ -5,6 +5,12 @@ Changelog
 2.0a7 (unreleased)
 ------------------
 
+- Fix theme vocabulary on project view
+  [mpeeters]
+
+- Remove ratings from states before voting
+  [mpeeters]
+
 - Add new translation
   [vpiret]
 

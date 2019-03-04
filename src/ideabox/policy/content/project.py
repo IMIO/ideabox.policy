@@ -68,8 +68,6 @@ class ProjectView(view.DefaultView):
         'realized',
     )
     _rating_states = (
-        'deposited',
-        'project_analysis',
         'vote',
         'result_analysis',
         'rejected',

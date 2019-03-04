@@ -5,6 +5,9 @@ Changelog
 2.0a6 (unreleased)
 ------------------
 
+- Change permission for show toolbar
+  [amariscal]
+
 - Use the extended user schema for subscription
   [mpeeters]
 

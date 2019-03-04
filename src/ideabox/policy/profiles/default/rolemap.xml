@@ -1,7 +1,14 @@
 <?xml version="1.0"?>
 <rolemap>
-  <permissions>
-  <!-- -*- extra stuff goes here -*- -->
-
-  </permissions>
+    <permissions>
+        <permission name="Show Toolbar"
+            acquire="False">
+            <role name="Manager"/>
+            <role name="Site Administrator"/>
+            <role name="Owner"/>
+            <role name="Reviewer" />
+            <role name="Editor" />
+            <role name="Contributor" />
+        </permission>
+    </permissions>
 </rolemap>

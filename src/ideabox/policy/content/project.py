@@ -10,9 +10,11 @@ from plone.dexterity.content import Container
 from plone.supermodel import model
 from zope import schema
 from zope.interface import implements
+from zope.component import getUtility
+from zope.schema.interfaces import IVocabularyFactory
+from zope.i18n import translate
 
 from ideabox.policy import _
-from ideabox.policy import vocabularies
 
 
 class IProject(model.Schema):
@@ -170,11 +172,17 @@ class ProjectView(view.DefaultView):
         return author and author['fullname'] or self.creator()
 
     def get_project_theme(self):
-        vocabulary = vocabularies.ThemeVocabulary(None)
+        factory = getUtility(IVocabularyFactory, 'collective.taxonomy.theme')
+        vocabulary = factory(self.context)
         values = []
         for token in self.context.project_theme:
-            values.append(
-                [e.title for e in vocabulary.by_value.values()
-                 if e.token == token][0]
-            )
+            try:
+                values.append(
+                    translate(
+                        vocabulary.getTerm(token).title,
+                        context=self.context,
+                    ),
+                )
+            except KeyError:
+                continue
         return ', '.join(values)

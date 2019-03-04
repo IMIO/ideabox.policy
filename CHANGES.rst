@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.0a7 (unreleased)
+2.0a7 (2019-03-04)
 ------------------
 
 - Fix theme vocabulary on project view

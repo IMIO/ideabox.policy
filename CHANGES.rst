@@ -5,7 +5,11 @@ Changelog
 2.0a7 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add new translation
+  [vpiret]
+
+- Send email on new project submission
+  [vpiret]
 
 
 2.0a6 (2019-03-04)

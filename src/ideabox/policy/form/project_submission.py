@@ -51,31 +51,38 @@ class ProjectSubmissionForm(z3c.form.form.Form):
         self.widgets['original_author'].value = \
             api.user.get_current().getProperty('fullname')
 
-    def send_mail(self, data):
+    def send_mail(self, url):
         lang = api.portal.get_current_language()[:2]
         rec_email = api.portal.get_registry_record(
             'ideabox.policy.browser.controlpanel.IIdeaBoxSettingsSchema.project_manger_email'  # noqa
         )
-        # TODO
-        # body = translate(
-        #     _(u"email_body_project_submission",
-        #       default=u"""""",
-        #       mapping={}
-        #       ),
-        #     target_language=lang,
-        # )
-        # api.portal.send_email(
-        #     recipient=rec_email,
-        #     subject=translate(
-        #         _(u"New project submission"),
-        #         target_language=lang,
-        #     ),
-        #     body=body,
-        # )
+        list_mail = rec_email.split(';')
+
+        body = translate(
+            _(u"email_body_project_submission",
+              default=u"""A new project has been created you can access it at the following url:
+              ${url}
+              """,
+              mapping={
+                  u"url": url,
+              }
+              ),
+            target_language=lang,
+        )
+        for mail in list_mail:
+            api.portal.send_email(
+                recipient=mail,
+                subject=translate(
+                    _(u"New project submission"),
+                    target_language=lang,
+                ),
+                body=body,
+            )
 
     def send_request(self, data):
         registry = getUtility(IRegistry)
         portal_url = api.portal.get().absolute_url_path()
+        url = api.portal.get().absolute_url()
         folder = registry.get('ideabox.new.project.folder')
         container = api.content.get(path="{0}/{1}".format(portal_url, folder))
         project_obj = execute_under_admin(
@@ -104,7 +111,7 @@ class ProjectSubmissionForm(z3c.form.form.Form):
         self.request.response.redirect(
             "{0}/{1}/{2}".format(portal_url, folder, project_obj.id))
 
-        # self.send_mail(data)
+        self.send_mail("{0}/{1}/{2}".format(url, folder, project_obj.id))
 
     @button.buttonAndHandler(_(u'Send'), name='send')
     def handleApply(self, action):

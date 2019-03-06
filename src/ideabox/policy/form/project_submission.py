@@ -1,19 +1,22 @@
 # -*- coding: utf-8 -*-
-import z3c.form
-import zope.interface
 
 from collective.z3cform.select2.widget.widget import MultiSelect2FieldWidget
 from ideabox.policy import _
+from ideabox.policy import logger
 from ideabox.policy.content.project import IProject
 from ideabox.policy.utils import execute_under_admin
 from plone import api
 from plone.namedfile.field import NamedBlobImage
 from plone.registry.interfaces import IRegistry
 from z3c.form import button
+from z3c.form.field import Fields
+from z3c.form.form import Form
 from z3c.form.interfaces import HIDDEN_MODE
+from z3c.form.interfaces import IFieldsForm
 from zope import schema
 from zope.component import getUtility
 from zope.i18n import translate
+from zope.interface import implements
 
 
 class IProjectSubmission(IProject):
@@ -28,10 +31,10 @@ class IProjectSubmission(IProject):
     )
 
 
-class ProjectSubmissionForm(z3c.form.form.Form):
+class ProjectSubmissionForm(Form):
 
-    zope.interface.implements(z3c.form.interfaces.IFieldsForm)
-    fields = z3c.form.field.Fields(IProjectSubmission).select(
+    implements(IFieldsForm)
+    fields = Fields(IProjectSubmission).select(
         'title',
         'project_theme',
         'project_district',
@@ -53,10 +56,15 @@ class ProjectSubmissionForm(z3c.form.form.Form):
 
     def send_mail(self, url):
         lang = api.portal.get_current_language()[:2]
-        rec_email = api.portal.get_registry_record(
-            'ideabox.policy.browser.controlpanel.IIdeaBoxSettingsSchema.project_manger_email'  # noqa
+        email = api.portal.get_registry_record(
+            'ideabox.policy.browser.controlpanel.IIdeaBoxSettingsSchema.project_manger_email',  # noqa
+            default=None,
         )
-        list_mail = rec_email.split(';')
+        if email is None:
+            logger.warn('missing email for project submission notification')
+            return
+
+        list_mail = email.split(';')
 
         body = translate(
             _(u"email_body_project_submission",

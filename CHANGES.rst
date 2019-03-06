@@ -5,7 +5,8 @@ Changelog
 2.0a8 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Avoid an error if the notification email is not defined
+  [mpeeters]
 
 
 2.0a7 (2019-03-04)

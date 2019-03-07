@@ -5,6 +5,9 @@ Changelog
 2.0a8 (unreleased)
 ------------------
 
+- Add a permission to protect project submission
+  [mpeeters]
+
 - Avoid an error if the notification email is not defined
   [mpeeters]
 

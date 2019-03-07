@@ -64,7 +64,7 @@
     for="*"
     class=".project_submission.ProjectSubmissionView"
     template="templates/project_submission.pt"
-    permission="zope2.View"
+    permission="ideabox.ProposeProject"
     layer="ideabox.policy.interfaces.IIdeaboxPolicyLayer"
     />
 

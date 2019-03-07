@@ -9,7 +9,7 @@
   <browser:page
     for="Products.CMFCore.interfaces.ISiteRoot"
     name="project_submission_form"
-    permission="zope2.View"
+    permission="ideabox.ProposeProject"
     class=".project_submission.ProjectSubmissionForm"/>
 
 </configure>

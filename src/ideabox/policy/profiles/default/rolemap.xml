@@ -9,6 +9,13 @@
             <role name="Reviewer" />
             <role name="Editor" />
             <role name="Contributor" />
+          </permission>
+
+        <permission name="Ideabox: Propose a project"
+                    acquire="False">
+          <role name="Manager" />
+          <role name="Site Administrator" />
+          <role name="Authenticated" />
         </permission>
     </permissions>
 </rolemap>

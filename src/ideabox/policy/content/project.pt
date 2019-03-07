@@ -24,15 +24,7 @@
                                   creator_id python:(creator_short_form, creator_long_form)[creator_is_openid];
                                   anonymous view/anonymous">
               <span class="documentAuthor">
-                <tal:i18n i18n:translate="label_by_author" tal:condition="anonymous">
-                  by
-                  <a href="#"
-                     tal:attributes="href string:${context/@@plone_portal_state/navigation_root_url}/author/${creator_id}"
-                     tal:content="view/authorname"
-                     tal:omit-tag="python:view.author() is None"
-                     i18n:name="author">Roland Barthes</a>
-                </tal:i18n>
-                <tal:i18n i18n:translate="label_by_author" tal:condition="not: anonymous">
+                <tal:i18n i18n:translate="label_by_author">
                   by
                   <span tal:content="view/authorname" i18n:name="author"></span>
                 </tal:i18n>

@@ -5,6 +5,9 @@ Changelog
 2.0a8 (unreleased)
 ------------------
 
+- Fix the display of authors names
+  [mpeeters]
+
 - Add a permission to protect project submission
   [mpeeters]
 

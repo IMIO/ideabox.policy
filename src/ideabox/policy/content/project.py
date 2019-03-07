@@ -164,11 +164,15 @@ class ProjectView(view.DefaultView):
         return getattr(self.context, 'original_author', self.context.Creator())
 
     def author(self):
-        membership = getToolByName(self.context, 'portal_membership')
-        return membership.getMemberInfo(self.creator())
+        return api.user.get(self.creator())
 
     def authorname(self):
         author = self.author()
+        if author:
+            return '{0} {1}'.format(
+                author.getProperty('first_name'),
+                author.getProperty('last_name'),
+            )
         return author and author['fullname'] or self.creator()
 
     def get_project_theme(self):

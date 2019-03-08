@@ -5,6 +5,9 @@ Changelog
 2.0a8 (unreleased)
 ------------------
 
+- Fix banner image size
+  [mpeeters]
+
 - Fix the display of authors names
   [mpeeters]
 

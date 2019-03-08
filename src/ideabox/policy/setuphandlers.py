@@ -87,7 +87,7 @@ def post_install(context):
 
     allowed_sizes = api.portal.get_registry_record('plone.allowed_sizes')
     scales = (
-        u'banner 1920:610',
+        u'banner 1920:800',
         u'project_faceted 450:300',
     )
     for scale in scales:

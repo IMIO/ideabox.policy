@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.0a8 (unreleased)
+2.0a8 (2019-03-09)
 ------------------
 
 - Fix banner image size

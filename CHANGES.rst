@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.0a9 (unreleased)
+2.0a9 (2019-03-09)
 ------------------
 
 - Simplify creation of project objects during submission

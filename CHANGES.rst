@@ -5,7 +5,8 @@ Changelog
 2.0a9 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix typo in control panel values
+  [mpeeters]
 
 
 2.0a8 (2019-03-09)

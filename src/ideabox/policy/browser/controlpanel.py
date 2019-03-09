@@ -11,7 +11,7 @@ class InvalidEmailError(schema.ValidationError):
 
 class IIdeaBoxSettingsSchema(Interface):
 
-    project_manger_email = schema.TextLine(
+    project_manager_email = schema.TextLine(
         title=_(u'Email address of the project manager'),
         description=_(u'If there are multiple email addresses, separate them with semicolons'),  # noqa
     )

@@ -5,6 +5,9 @@ Changelog
 2.0a9 (unreleased)
 ------------------
 
+- Simplify creation of project objects during submission
+  [mpeeters]
+
 - Fix typo in control panel values
   [mpeeters]
 

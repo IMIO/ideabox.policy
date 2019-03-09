@@ -89,10 +89,10 @@ class ProjectSubmissionForm(Form):
 
     def send_request(self, data):
         registry = getUtility(IRegistry)
-        portal_url = api.portal.get().absolute_url_path()
-        url = api.portal.get().absolute_url()
         folder = registry.get('ideabox.new.project.folder')
-        container = api.content.get(path="{0}/{1}".format(portal_url, folder))
+        if not folder.startswith('/'):
+            folder = '/{0}'.format(folder)
+        container = api.content.get(path=folder)
         project_obj = execute_under_admin(
             container,
             api.content.create,
@@ -116,10 +116,8 @@ class ProjectSubmissionForm(Form):
                 image=data['project_image'],
                 container=project_obj
             )
-        self.request.response.redirect(
-            "{0}/{1}/{2}".format(portal_url, folder, project_obj.id))
-
-        self.send_mail("{0}/{1}/{2}".format(url, folder, project_obj.id))
+        self.request.response.redirect(project_obj.absolute_url())
+        self.send_mail(project_obj.absolute_url())
 
     @button.buttonAndHandler(_(u'Send'), name='send')
     def handleApply(self, action):

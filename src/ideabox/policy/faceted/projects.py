@@ -13,12 +13,7 @@ from zope.schema.interfaces import IVocabularyFactory
 
 class ProjectsView(BrowserView):
 
-    _keys = {
-        0: 'UID',
-        1: 'Title',
-        2: 'created',
-        3: 'modified',
-    }
+    _keys = {0: "UID", 1: "Title", 2: "created", 3: "modified"}
 
     @property
     def random_sort_key(self):
@@ -27,8 +22,7 @@ class ProjectsView(BrowserView):
 
     def random_sort(self, elements):
         elements._sequence = sorted(
-            elements._sequence,
-            key=attrgetter(self.random_sort_key),
+            elements._sequence, key=attrgetter(self.random_sort_key)
         )
         return elements
 
@@ -40,25 +34,25 @@ class ProjectsView(BrowserView):
     @property
     def random_key(self):
         now = datetime.now()
-        return md5(u'{0}-{1}'.format(
-            self.request.get('HTTP_USER_AGENT', now.strftime('%m%Y')),
-            now.strftime('%d'),
-        )).hexdigest()
+        return md5(
+            u"{0}-{1}".format(
+                self.request.get("HTTP_USER_AGENT", now.strftime("%m%Y")),
+                now.strftime("%d"),
+            )
+        ).hexdigest()
 
     @property
     def default_image(self):
-        return '{0}/project_default.jpg'.format(
-            api.portal.get().absolute_url(),
-        )
+        return "{0}/project_default.jpg".format(api.portal.get().absolute_url())
 
     def rating(self, context):
         return can_view_rating(context)
 
     def get_theme(self, key):
-        if not hasattr(self, '_themes'):
-            factory = getUtility(IVocabularyFactory, 'collective.taxonomy.theme')
+        if not hasattr(self, "_themes"):
+            factory = getUtility(IVocabularyFactory, "collective.taxonomy.theme")
             self._themes = factory(self.context)
         try:
             return self._themes.getTerm(key).title
         except KeyError:
-            return ''
+            return ""

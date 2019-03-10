@@ -6,10 +6,10 @@ from zope.globalrequest import getRequest
 
 
 def project_image_changed(obj, event):
-    if hasattr(obj, 'aq_parent') is False:
+    if hasattr(obj, "aq_parent") is False:
         return
     if IProject.providedBy(obj.aq_parent):
-        obj.aq_parent.reindexObject(idxs=['project_picture'])
+        obj.aq_parent.reindexObject(idxs=["project_picture"])
 
 
 def project_added(obj, event):

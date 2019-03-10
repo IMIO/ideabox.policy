@@ -24,8 +24,7 @@ class IProject(model.Schema):
     project_theme = schema.List(
         title=_(u"Theme"),
         value_type=schema.Choice(
-            title=_(u"Theme"),
-            vocabulary=u'collective.taxonomy.theme'
+            title=_(u"Theme"), vocabulary=u"collective.taxonomy.theme"
         ),
         required=True,
     )
@@ -34,24 +33,17 @@ class IProject(model.Schema):
     project_district = schema.List(
         title=_(u"District"),
         value_type=schema.Choice(
-            title=_(u"District"),
-            vocabulary=u'collective.taxonomy.district'
+            title=_(u"District"), vocabulary=u"collective.taxonomy.district"
         ),
         required=False,
     )
 
-    body = RichText(
-        title=_(u"Content"),
-        required=True,
-    )
-    form.widget('body', RichTextFieldWidget)
-    model.primary('body')
+    body = RichText(title=_(u"Content"), required=True)
+    form.widget("body", RichTextFieldWidget)
+    model.primary("body")
 
-    form.mode(original_author='hidden')
-    original_author = schema.TextLine(
-        title=_(u"Original author"),
-        required=False,
-    )
+    form.mode(original_author="hidden")
+    original_author = schema.TextLine(title=_(u"Original author"), required=False)
 
 
 class Project(Container):
@@ -61,26 +53,20 @@ class Project(Container):
 class ProjectView(view.DefaultView):
 
     _timeline_states = (
-        'deposited',
-        'project_analysis',
-        'vote',
-        'result_analysis',
-        'study_in_progress',
-        'in_progress',
-        'realized',
+        "deposited",
+        "project_analysis",
+        "vote",
+        "result_analysis",
+        "study_in_progress",
+        "in_progress",
+        "realized",
     )
-    _rating_states = (
-        'vote',
-        'result_analysis',
-        'rejected',
-    )
+    _rating_states = ("vote", "result_analysis", "rejected")
 
     @property
     def can_edit(self):
         return api.user.has_permission(
-            'cmf.ModifyPortalContent',
-            obj=self.context,
-            user=api.user.get_current(),
+            "cmf.ModifyPortalContent", obj=self.context, user=api.user.get_current()
         )
 
     @property
@@ -96,9 +82,9 @@ class ProjectView(view.DefaultView):
     def get_news(self):
         return api.content.find(
             context=self.context,
-            portal_type='News Item',
-            sort_on='Date',
-            sort_order='descending',
+            portal_type="News Item",
+            sort_on="Date",
+            sort_order="descending",
         )
 
     @property
@@ -107,25 +93,25 @@ class ProjectView(view.DefaultView):
 
     @property
     def before_selected(self):
-        return self.review_state in self._timeline_states[:4] + ('rejected', )
+        return self.review_state in self._timeline_states[:4] + ("rejected",)
 
     @property
     def _workflow_history(self):
         history = [
             {
-                'order': self._timeline_states.index(l.get('review_state')),
-                'state': l.get('review_state'),
-                'date': l.get('time'),
+                "order": self._timeline_states.index(l.get("review_state")),
+                "state": l.get("review_state"),
+                "date": l.get("time"),
             }
             for l in self.context.workflow_history.values()[0]
-            if l.get('review_state') in self._timeline_states
+            if l.get("review_state") in self._timeline_states
         ]
-        return sorted(history, key=lambda x: x['order'])
+        return sorted(history, key=lambda x: x["order"])
 
     @property
     def can_view_timeline(self):
         return False  # Temporarily fix as requested
-        if self.review_state is 'rejected':
+        if self.review_state is "rejected":
             return False
         return self.review_state in self._timeline_states
 
@@ -139,21 +125,28 @@ class ProjectView(view.DefaultView):
         current_state = self.review_state
         first_timeline_states = self._timeline_states[:4]
         second_timeline_states = self._timeline_states[4:]
-        selected_states = (self.review_state in first_timeline_states and
-                           first_timeline_states or second_timeline_states)
-        states = [{'state': e, 'date': '', 'class': u'unfinished'}
-                  for e in selected_states]
-        idx = current_state in self._timeline_states \
-            and self._timeline_states.index(current_state) or 0
+        selected_states = (
+            self.review_state in first_timeline_states
+            and first_timeline_states
+            or second_timeline_states
+        )
+        states = [
+            {"state": e, "date": "", "class": u"unfinished"} for e in selected_states
+        ]
+        idx = (
+            current_state in self._timeline_states
+            and self._timeline_states.index(current_state)
+            or 0
+        )
         for line in history:
             # Ensure that next steps that were completed in the past is not
             # displayed
-            if line['order'] > idx:
+            if line["order"] > idx:
                 break
-            state = [s for s in states if s['state'] == line['state']]
+            state = [s for s in states if s["state"] == line["state"]]
             if len(state) == 1:
-                state[0]['date'] = line['date']
-                state[0]['class'] = u'finished'
+                state[0]["date"] = line["date"]
+                state[0]["class"] = u"finished"
         return states
 
     @property
@@ -161,7 +154,7 @@ class ProjectView(view.DefaultView):
         return api.user.is_anonymous()
 
     def creator(self):
-        return getattr(self.context, 'original_author', self.context.Creator())
+        return getattr(self.context, "original_author", self.context.Creator())
 
     def author(self):
         return api.user.get(self.creator())
@@ -169,24 +162,20 @@ class ProjectView(view.DefaultView):
     def authorname(self):
         author = self.author()
         if author:
-            return '{0} {1}'.format(
-                author.getProperty('first_name'),
-                author.getProperty('last_name'),
+            return "{0} {1}".format(
+                author.getProperty("first_name"), author.getProperty("last_name")
             )
-        return author and author['fullname'] or self.creator()
+        return author and author["fullname"] or self.creator()
 
     def get_project_theme(self):
-        factory = getUtility(IVocabularyFactory, 'collective.taxonomy.theme')
+        factory = getUtility(IVocabularyFactory, "collective.taxonomy.theme")
         vocabulary = factory(self.context)
         values = []
         for token in self.context.project_theme:
             try:
                 values.append(
-                    translate(
-                        vocabulary.getTerm(token).title,
-                        context=self.context,
-                    ),
+                    translate(vocabulary.getTerm(token).title, context=self.context)
                 )
             except KeyError:
                 continue
-        return ', '.join(values)
+        return ", ".join(values)

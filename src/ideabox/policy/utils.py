@@ -10,10 +10,11 @@ from zope.i18n import translate
 
 
 def token_type_recovery(value):
-    value = value.decode('utf8')
+    value = value.decode("utf8")
     vocabulary = vocabularies.ThemeVocabulary(None)
-    return [e.token for e in vocabulary.by_value.values()
-            if translate(e.title) == value][0]
+    return [
+        e.token for e in vocabulary.by_value.values() if translate(e.title) == value
+    ][0]
 
 
 class UnrestrictedUser(BaseUnrestrictedUser):
@@ -31,15 +32,12 @@ def execute_under_admin(portal, function, *args, **kwargs):
     sm = getSecurityManager()
     try:
         try:
-            tmp_user = UnrestrictedUser(
-                'admin', '', [''], ''
-            )
+            tmp_user = UnrestrictedUser("admin", "", [""], "")
             # Wrap the user in the acquisition context of the portal
             tmp_user = tmp_user.__of__(portal.acl_users)
             newSecurityManager(None, tmp_user)
             # Call the function
             return function(*args, **kwargs)
-
         except:
             # If special exception handlers are needed, run them here
             raise
@@ -53,9 +51,5 @@ def review_state(context):
 
 
 def can_view_rating(context):
-    _rating_states = (
-        'vote',
-        'result_analysis',
-        'rejected',
-    )
+    _rating_states = ("vote", "result_analysis", "rejected")
     return review_state(context) in _rating_states

@@ -5,7 +5,8 @@ Changelog
 2.0a10 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Use Black python formatter
+  [mpeeters]
 
 
 2.0a9 (2019-03-09)

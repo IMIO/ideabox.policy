@@ -6,10 +6,8 @@ from plone import api
 
 
 class ProjectRatingView(LikeWidgetView):
-    index = ViewPageTemplateFile('templates/rating.pt')
-    _allowed_states = (
-        'vote',
-    )
+    index = ViewPageTemplateFile("templates/rating.pt")
+    _allowed_states = ("vote",)
 
     @property
     def is_available(self):

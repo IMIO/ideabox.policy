@@ -23,7 +23,6 @@ class IWorkflowForm(Interface):
 
 
 class WorkflowDataProvider(object):
-
     def get(self):
         return self.values.get(self.field.__name__, NO_VALUE)
 
@@ -36,8 +35,10 @@ class WorkflowDataProvider(object):
 
     @property
     def values(self):
-        return {l.get('review_state'): l.get('time').asdatetime()
-                for l in self.form.context.workflow_history.values()[0]}
+        return {
+            l.get("review_state"): l.get("time").asdatetime()
+            for l in self.form.context.workflow_history.values()[0]
+        }
 
 
 class WorkflowHistoryForm(Form):
@@ -45,15 +46,15 @@ class WorkflowHistoryForm(Form):
     ignoreContext = True
 
     _states = (
-        'deposited',
-        'project_analysis',
-        'vote',
-        'result_analysis',
-        'selected',
-        'rejected',
-        'study_in_progress',
-        'in_progress',
-        'realized',
+        "deposited",
+        "project_analysis",
+        "vote",
+        "result_analysis",
+        "selected",
+        "rejected",
+        "study_in_progress",
+        "in_progress",
+        "realized",
     )
 
     @property
@@ -62,32 +63,33 @@ class WorkflowHistoryForm(Form):
 
     def update(self):
         current_state = api.content.get_state(obj=self.context)
-        states = self._states[:self._states.index(current_state) + 1]
+        states = self._states[: self._states.index(current_state) + 1]
         for idx, state in enumerate(states):
             self.fields += Fields(
                 InterfaceClass(
-                    'IWorkflowHistory{0}',
-                    attrs={state: schema.Date(
-                        title=translate(state, domain='plone'),
-                        required=True,
-                    ) for l in self.workflow if l.get('review_state') == state},
+                    "IWorkflowHistory{0}",
+                    attrs={
+                        state: schema.Date(
+                            title=translate(state, domain="plone"), required=True
+                        )
+                        for l in self.workflow
+                        if l.get("review_state") == state
+                    },
                 )
             )
         super(WorkflowHistoryForm, self).update()
 
-    @button.buttonAndHandler(_(u'Save'), name='save')
+    @button.buttonAndHandler(_(u"Save"), name="save")
     def handleApply(self, action):
         data, errors = self.extractData()
         workflow_history = self.context.workflow_history
         for line in workflow_history.values()[0]:
-            state = line.get('review_state')
+            state = line.get("review_state")
             if state in data:
-                line['time'] = DateTime(
-                    datetime.combine(data[state], datetime.min.time()),
+                line["time"] = DateTime(
+                    datetime.combine(data[state], datetime.min.time())
                 )
-        self.context.workflow_history = PersistentMapping(
-            workflow_history.items(),
-        )
+        self.context.workflow_history = PersistentMapping(workflow_history.items())
         self.request.response.redirect(self.context.absolute_url())
 
 

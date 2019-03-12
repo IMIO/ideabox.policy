@@ -26,6 +26,7 @@
   <include package=".faceted" />
   <include package=".tile" />
   <include package=".viewlets" />
+  <include package=".export" />
 
   <genericsetup:registerProfile
       name="default"

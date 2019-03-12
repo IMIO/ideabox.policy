@@ -1,0 +1,23 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope">
+
+  <adapter factory=".export.FullTextFieldRenderer"
+           provides="collective.excelexport.interfaces.IExportable" />
+
+  <adapter factory=".export.FullRichTextFieldRenderer"
+           provides="collective.excelexport.interfaces.IExportable" />
+
+
+  <adapter factory=".export.ProjectExportablesFactory"
+             provides="collective.excelexport.interfaces.IExportableFactory"
+             name="project" />
+
+  <adapter factory=".export.RatingRenderer"
+           provides=".interfaces.IExtendedProjectExportable"
+           name="rating" />
+
+  <adapter factory=".export.VotersListRenderer"
+           provides=".interfaces.IExtendedProjectExportable"
+           name="votersList" />
+
+</configure>

@@ -16,6 +16,7 @@ from zope.component import getAdapters
 from zope.interface import Interface
 from zope.schema.interfaces import IText
 from zope.annotation.interfaces import IAnnotations
+from ideabox.policy import _
 
 
 class FullTextFieldRenderer(TextFieldRenderer):
@@ -66,7 +67,7 @@ class ExtendedRenderer(BaseFieldRenderer):
 
 
 class RatingRenderer(ExtendedRenderer):
-    name = "Rating"
+    name = _(u"Rating")
 
     def render_value(self, obj):
         annotations = IAnnotations(obj)
@@ -74,7 +75,7 @@ class RatingRenderer(ExtendedRenderer):
 
 
 class VotersListRenderer(ExtendedRenderer):
-    name = "voters list"
+    name = _(u"Voters list")
 
     def render_value(self, obj):
         annotations = IAnnotations(obj)
@@ -82,3 +83,59 @@ class VotersListRenderer(ExtendedRenderer):
         for voter in annotations["cioppino.twothumbs.yays"]:
             voters.append(voter)
         return voters
+
+
+class UserIdRenderer(ExtendedRenderer):
+    name = _(u"User ID")
+
+    def render_value(self, obj):
+        return obj.getProperty("id")
+
+
+class UserLastNameRenderer(ExtendedRenderer):
+    name = _(u"Last name")
+
+    def render_value(self, obj):
+        return obj.getProperty("last_name")
+
+
+class UserFirstNameRenderer(ExtendedRenderer):
+    name = _(u"First name")
+
+    def render_value(self, obj):
+        return obj.getProperty("first_name")
+
+
+class UserGenderRenderer(ExtendedRenderer):
+    name = _(u"Gender")
+
+    def render_value(self, obj):
+        return obj.getProperty("gender")
+
+
+class UserBirthdateRenderer(ExtendedRenderer):
+    name = _(u"Birthdate")
+
+    def render_value(self, obj):
+        return obj.getProperty("birthdate")
+
+
+class UserZipCodeRenderer(ExtendedRenderer):
+    name = _(u"Zip code")
+
+    def render_value(self, obj):
+        return obj.getProperty("zip_code")
+
+
+class UserVotesRenderer(ExtendedRenderer):
+    name = _(u"Votes")
+
+    def render_value(self, obj):
+        projects = []
+        userid = obj.getProperty("id")
+        portal = api.portal.get()["projets"]
+        for project in api.content.find(context=portal, portal_type="Project"):
+            annotations = IAnnotations(project.getObject())
+            if userid in annotations["cioppino.twothumbs.yays"]:
+                projects.append(project.Title)
+        return projects

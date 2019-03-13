@@ -5,6 +5,9 @@ Changelog
 2.0a10 (unreleased)
 -------------------
 
+- Add export projects and users
+  [vpiret]
+
 - Use Black python formatter
   [mpeeters]
 

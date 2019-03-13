@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2019-03-04 11:02+0000\n"
+"POT-Creation-Date: 2019-03-13 11:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,24 +17,25 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: ideabox.policy\n"
 
-#: ../browser/controlpanel.py:24
+#: ../browser/controlpanel.py:26
 msgid ""
 msgstr ""
 
-#: ../userdataschema.py:36
+#: ../export/export.py:117
+#: ../userdataschema.py:26
 msgid "Birthdate"
 msgstr ""
 
-#: ../content/project.py:42
+#: ../content/project.py:41
 msgid "Content"
 msgstr ""
 
-#: ../content/project.py:33
-#: ../setuphandlers.py:147
+#: ../content/project.py:34
+#: ../setuphandlers.py:132
 msgid "District"
 msgstr ""
 
-#: ../content/project.pt:56
+#: ../content/project.pt:47
 msgid "Edit timeline dates"
 msgstr ""
 
@@ -43,15 +44,17 @@ msgid "Email address of the project manager"
 msgstr ""
 
 #. Default: "Female"
-#: ../vocabularies.py:49
+#: ../vocabularies.py:45
 msgid "FEMALE"
 msgstr ""
 
-#: ../userdataschema.py:25
+#: ../export/export.py:103
+#: ../userdataschema.py:20
 msgid "First name"
 msgstr ""
 
-#: ../userdataschema.py:30
+#: ../export/export.py:110
+#: ../userdataschema.py:23
 msgid "Gender"
 msgstr ""
 
@@ -67,28 +70,29 @@ msgstr ""
 msgid "If there are multiple email addresses, separate them with semicolons"
 msgstr ""
 
-#: ../configure.zcml:37
+#: ../configure.zcml:38
 msgid "Installs the ideabox.policy add-on."
 msgstr ""
 
-#: ../userdataschema.py:20
+#: ../export/export.py:96
+#: ../userdataschema.py:18
 msgid "Last name"
 msgstr ""
 
-#: ../tile/projects.py:17
+#: ../tile/projects.py:18
 msgid "Limit"
 msgstr ""
 
-#: ../tile/projects.py:18
+#: ../tile/projects.py:19
 msgid "Limit projects"
 msgstr ""
 
 #. Default: "Male"
-#: ../vocabularies.py:48
+#: ../vocabularies.py:45
 msgid "MALE"
 msgstr ""
 
-#: ../form/project_submission.py:76
+#: ../form/project_submission.py:77
 msgid "New project submission"
 msgstr ""
 
@@ -96,7 +100,7 @@ msgstr ""
 msgid "News"
 msgstr ""
 
-#: ../content/project.py:50
+#: ../content/project.py:46
 msgid "Original author"
 msgstr ""
 
@@ -112,7 +116,7 @@ msgstr ""
 msgid "Project"
 msgstr ""
 
-#: ../form/project_submission.py:26
+#: ../form/project_submission.py:25
 msgid "Project image"
 msgstr ""
 
@@ -120,40 +124,57 @@ msgstr ""
 msgid "Projects"
 msgstr ""
 
-#: ../browser/project.py:13
+#: ../browser/project.py:12
 msgid "Projects in progression"
 msgstr ""
 
-#: ../browser/workflow.py:78
+#: ../export/export.py:70
+msgid "Rating"
+msgstr ""
+
+#: ../browser/workflow.py:82
 msgid "Save"
 msgstr ""
 
-#: ../form/project_submission.py:116
+#: ../form/project_submission.py:112
 msgid "Send"
 msgstr ""
 
-#: ../browser/project.py:29
+#: ../browser/project.py:28
 msgid "Setting up"
 msgstr ""
 
-#: ../browser/project.py:50
+#: ../browser/project.py:44
 msgid "The 7 main themes"
 msgstr ""
 
-#: ../content/project.py:23
-#: ../setuphandlers.py:139
+#: ../content/project.py:25
+#: ../setuphandlers.py:124
 msgid "Theme"
 msgstr ""
 
-#: ../form/project_submission.py:21
+#: ../form/project_submission.py:23
 msgid "Title"
 msgstr ""
 
-#: ../configure.zcml:46
+#: ../configure.zcml:47
 msgid "Uninstalls the ideabox.policy add-on."
 msgstr ""
 
-#: ../userdataschema.py:41
+#: ../export/export.py:89
+msgid "User ID"
+msgstr ""
+
+#: ../export/export.py:78
+msgid "Voters list"
+msgstr ""
+
+#: ../export/export.py:131
+msgid "Votes"
+msgstr ""
+
+#: ../export/export.py:124
+#: ../userdataschema.py:29
 msgid "Zip code"
 msgstr ""
 
@@ -161,20 +182,20 @@ msgstr ""
 msgid "Zip code vocabulary values"
 msgstr ""
 
-#: ../browser/project.py:24
+#: ../browser/project.py:23
 msgid "diagnose and analysis"
 msgstr ""
 
 #. Default: "A new project has been created you can access it at the following url:\n              ${url}\n              "
-#: ../form/project_submission.py:62
+#: ../form/project_submission.py:65
 msgid "email_body_project_submission"
 msgstr ""
 
-#: ../configure.zcml:37
+#: ../configure.zcml:38
 msgid "ideabox.policy"
 msgstr ""
 
-#: ../configure.zcml:46
+#: ../configure.zcml:47
 msgid "ideabox.policy (uninstall)"
 msgstr ""
 

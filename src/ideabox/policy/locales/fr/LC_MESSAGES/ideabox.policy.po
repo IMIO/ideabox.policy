@@ -24,10 +24,17 @@ msgstr "Date de naissance"
 msgid "Content"
 msgstr "Contenu"
 
-#: ../content/project.py:34
 #: ../setuphandlers.py:132
 msgid "District"
 msgstr "Quartier"
+
+#: ../content/project.py:34
+msgid "District(s) concerned"
+msgstr "Quartier(s) concerné(s)"
+
+#: ../content/project.py:25
+msgid "Domain(s) concerned"
+msgstr "Domaine(s) concerné(s)"
 
 #: ../content/project.pt:47
 msgid "Edit timeline dates"
@@ -142,7 +149,6 @@ msgstr "Mise en place"
 msgid "The 7 main themes"
 msgstr "Les 7 thématiques prioritaires"
 
-#: ../content/project.py:25
 #: ../setuphandlers.py:124
 msgid "Theme"
 msgstr "Thème"

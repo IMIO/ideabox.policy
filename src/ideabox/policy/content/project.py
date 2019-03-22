@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 from collective.z3cform.select2.widget.widget import MultiSelect2FieldWidget
-from Products.CMFCore.utils import getToolByName
 from plone import api
 from plone.app.textfield import RichText
 from plone.app.z3cform.widget import RichTextFieldWidget
@@ -22,20 +21,21 @@ class IProject(model.Schema):
 
     form.widget(project_theme=MultiSelect2FieldWidget)
     project_theme = schema.List(
-        title=_(u"Theme"),
+        title=_(u"Domain(s) concerned"),
         value_type=schema.Choice(
-            title=_(u"Theme"), vocabulary=u"collective.taxonomy.theme"
+            title=_(u"Domain(s) concerned"), vocabulary=u"collective.taxonomy.theme"
         ),
         required=True,
     )
 
     form.widget(project_district=MultiSelect2FieldWidget)
     project_district = schema.List(
-        title=_(u"District"),
+        title=_(u"District(s) concerned"),
         value_type=schema.Choice(
-            title=_(u"District"), vocabulary=u"collective.taxonomy.district"
+            title=_(u"District(s) concerned"),
+            vocabulary=u"collective.taxonomy.district",
         ),
-        required=False,
+        required=True,
     )
 
     body = RichText(title=_(u"Content"), required=True)
@@ -111,7 +111,7 @@ class ProjectView(view.DefaultView):
     @property
     def can_view_timeline(self):
         return False  # Temporarily fix as requested
-        if self.review_state is "rejected":
+        if self.review_state == "rejected":
             return False
         return self.review_state in self._timeline_states
 

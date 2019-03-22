@@ -5,6 +5,12 @@ Changelog
 2.0a10 (unreleased)
 -------------------
 
+- Update zip code vocabulary
+  [vpiret]
+
+- Change title field project
+  [vpiret]
+
 - Add export projects and users
   [vpiret]
 

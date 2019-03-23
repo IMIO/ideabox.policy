@@ -5,6 +5,9 @@ Changelog
 2.0a10 (unreleased)
 -------------------
 
+- Update fields titles and requirements
+  [vpiret]
+
 - Update zip code vocabulary
   [vpiret]
 

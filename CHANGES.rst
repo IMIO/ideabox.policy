@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.0a10 (unreleased)
+2.0a10 (2019-03-23)
 -------------------
 
 - Update fields titles and requirements

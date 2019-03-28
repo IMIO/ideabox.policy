@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.0a12 (unreleased)
+2.0a12 (2019-03-28)
 -------------------
 
 - Remove pas.plugins.imio since WC will not be available for the first release

@@ -5,6 +5,9 @@ Changelog
 2.0a12 (unreleased)
 -------------------
 
+- Remove pas.plugins.imio since WC will not be available for the first release
+  [mpeeters]
+
 - Add legal informations under the project submission form
   [mpeeters]
 

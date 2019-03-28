@@ -5,6 +5,9 @@ Changelog
 2.0a11 (unreleased)
 -------------------
 
+- adapte SearchableText for adding body project
+  [vpiret]
+
 - Upgrade faceted config for project
   [vpiret]
 

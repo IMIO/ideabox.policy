@@ -36,4 +36,6 @@
       handler=".subscriber.project_added"
       />
 
+  <adapter name="SearchableText" factory=".project.searchabletext_project"/>
+
 </configure>

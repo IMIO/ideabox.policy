@@ -1,17 +1,21 @@
 # -*- coding: utf-8 -*-
+from Products.CMFPlone.utils import getToolByName
+from Products.CMFPlone.utils import safe_unicode
 from collective.z3cform.select2.widget.widget import MultiSelect2FieldWidget
 from plone import api
 from plone.app.textfield import RichText
+from plone.app.textfield.value import IRichTextValue
 from plone.app.z3cform.widget import RichTextFieldWidget
 from plone.autoform import directives as form
 from plone.dexterity.browser import view
 from plone.dexterity.content import Container
+from plone.indexer.decorator import indexer
 from plone.supermodel import model
 from zope import schema
-from zope.interface import implements
 from zope.component import getUtility
-from zope.schema.interfaces import IVocabularyFactory
 from zope.i18n import translate
+from zope.interface import implements
+from zope.schema.interfaces import IVocabularyFactory
 
 from ideabox.policy import _
 
@@ -192,3 +196,29 @@ class ProjectView(view.DefaultView):
             except KeyError:
                 continue
         return ", ".join(values)
+
+
+@indexer(IProject)
+def searchabletext_project(object, **kw):
+    result = []
+
+    fields = ["title", "description", "body", "original_author"]
+    for field_name in fields:
+        value = getattr(object, field_name, None)
+        if type(value) is unicode:
+            text = safe_unicode(value).encode("utf-8")
+            result.append(text)
+        elif IRichTextValue.providedBy(value):
+            transforms = getToolByName(object, "portal_transforms")
+            text = (
+                transforms.convertTo(
+                    "text/plain",
+                    safe_unicode(value.raw).encode("utf-8"),
+                    mimetype=value.mimeType,
+                )
+                .getData()
+                .strip()
+            )
+            result.append(text)
+
+    return " ".join(result)

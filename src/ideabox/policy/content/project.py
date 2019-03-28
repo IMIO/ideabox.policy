@@ -219,6 +219,6 @@ def searchabletext_project(object, **kw):
                 .getData()
                 .strip()
             )
-            result.append(text)
+            result.append(text.encode('utf8'))
 
     return " ".join(result)

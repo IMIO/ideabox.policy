@@ -5,6 +5,9 @@ Changelog
 2.0a12 (unreleased)
 -------------------
 
+- Fix an erreor during project indexing
+  [mpeeters]
+
 - Add button to projects tile
   [Aurore]
 

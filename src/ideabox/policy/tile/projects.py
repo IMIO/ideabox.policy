@@ -37,6 +37,12 @@ class ProjectsTile(Tile):
             portal_type="Project", sort_on="created", sort_order="reverse"
         )[:limit]
 
+    def folder_projects(self):
+        folder = api.content.find(portal_type="Folder", id="projets")
+        if len(folder) == 1:
+            return folder[0].getURL()
+        return False
+
     def get_theme(self, key):
         if not hasattr(self, "_themes"):
             factory = getUtility(IVocabularyFactory, "collective.taxonomy.theme")

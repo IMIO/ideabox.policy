@@ -35,6 +35,9 @@
                 </div>
                 </tal:block>
             </div>
+                <div class="align-right">
+                  <a class="voir-tout" href="" tal:attributes="href view/folder_projects" tal:condition="view/folder_projects">Voir tout</a>
+                </div>
         </section>
     </body>
 </html>

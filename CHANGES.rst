@@ -5,6 +5,9 @@ Changelog
 2.0a12 (unreleased)
 -------------------
 
+- Add button to projects tile
+  [Aurore]
+
 - Adapt timeline tile
   [Aurore]
 

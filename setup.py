@@ -52,7 +52,6 @@ setup(
         "iaweb.mosaic",
         "ideabox.diazotheme.spirit",
         "imio.gdpr",
-        "pas.plugins.imio",
         "password-generator",
         "plone.api",
         "plone.app.contenttypes",

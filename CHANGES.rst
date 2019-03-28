@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.0a11 (unreleased)
+2.0a11 (2019-03-28)
 -------------------
 
 - adapte SearchableText for adding body project

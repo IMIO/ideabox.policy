@@ -5,6 +5,9 @@ Changelog
 2.0a11 (unreleased)
 -------------------
 
+- Upgrade faceted config for project
+  [vpiret]
+
 - Fix district on project submision
   [vpiret]
 

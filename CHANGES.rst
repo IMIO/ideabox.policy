@@ -5,7 +5,8 @@ Changelog
 2.0a11 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Fix district on project submision
+  [vpiret]
 
 
 2.0a10 (2019-03-23)

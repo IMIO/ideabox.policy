@@ -33,6 +33,7 @@
           </tal:creator>
         </div>
         <p class="theme discreet" tal:content="view/get_project_theme"></p>
+        <p class="theme discreet" tal:content="view/get_project_district"></p>
 
         <div class="field" tal:condition="context/description">
           <div class="richTextWidget richtext-field"><p tal:content="context/description"></p></div>

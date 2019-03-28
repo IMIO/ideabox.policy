@@ -179,3 +179,16 @@ class ProjectView(view.DefaultView):
             except KeyError:
                 continue
         return ", ".join(values)
+
+    def get_project_district(self):
+        factory = getUtility(IVocabularyFactory, "collective.taxonomy.district")
+        vocabulary = factory(self.context)
+        values = []
+        for token in self.context.project_district:
+            try:
+                values.append(
+                    translate(vocabulary.getTerm(token).title, context=self.context)
+                )
+            except KeyError:
+                continue
+        return ", ".join(values)

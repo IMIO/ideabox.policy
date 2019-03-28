@@ -52,7 +52,7 @@ class ProjectSubmissionForm(Form):
     def send_mail(self, url):
         lang = api.portal.get_current_language()[:2]
         email = api.portal.get_registry_record(
-            "ideabox.policy.browser.controlpanel.IIdeaBoxSettingsSchema.project_manager_email",  # noqa
+            "ideabox.policy.browser.controlpanel.IIdeaBoxSettingsSchema.project_manager_email",
             default=None,
         )
         if email is None:
@@ -90,6 +90,7 @@ class ProjectSubmissionForm(Form):
             type="Project",
             title=data["title"],
             project_theme=data["project_theme"],
+            project_district=data["project_district"],
             body=data["body"],
             container=container,
             original_author=api.user.get_current().id,

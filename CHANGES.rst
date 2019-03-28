@@ -5,6 +5,9 @@ Changelog
 2.0a12 (unreleased)
 -------------------
 
+- Add legal informations under the project submission form
+  [mpeeters]
+
 - Fix an error during project indexing
   [mpeeters]
 

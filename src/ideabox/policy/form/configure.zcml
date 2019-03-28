@@ -10,6 +10,7 @@
     for="Products.CMFCore.interfaces.ISiteRoot"
     name="project_submission_form"
     permission="ideabox.ProposeProject"
-    class=".project_submission.ProjectSubmissionForm"/>
+    class=".project_submission.ProjectSubmissionForm"
+    />
 
 </configure>

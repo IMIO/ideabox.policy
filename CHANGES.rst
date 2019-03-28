@@ -5,7 +5,8 @@ Changelog
 2.0a12 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Adapt timeline tile
+  [Aurore]
 
 
 2.0a11 (2019-03-28)

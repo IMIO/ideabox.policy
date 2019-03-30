@@ -5,6 +5,9 @@ Changelog
 2.0a13 (unreleased)
 -------------------
 
+- The user firstname is now optional
+  [mpeeters]
+
 - Fix control panel form name
   [mpeeters]
 

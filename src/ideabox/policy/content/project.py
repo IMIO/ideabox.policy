@@ -166,9 +166,8 @@ class ProjectView(view.DefaultView):
     def authorname(self):
         author = self.author()
         if author:
-            return "{0} {1}".format(
-                author.getProperty("first_name"), author.getProperty("last_name")
-            )
+            infos = [author.getProperty("first_name"), author.getProperty("last_name")]
+            return " ".join([i for i in infos if i])
         return author and author["fullname"] or self.creator()
 
     def get_project_theme(self):

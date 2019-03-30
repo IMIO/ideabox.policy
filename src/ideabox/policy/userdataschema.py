@@ -17,7 +17,7 @@ class IEnhancedUserDataSchema(model.Schema):
 
     last_name = schema.TextLine(title=_(u"Last name"), required=True)
 
-    first_name = schema.TextLine(title=_(u"First name"), required=True)
+    first_name = schema.TextLine(title=_(u"First name"), required=False)
 
     gender = schema.Choice(
         title=_(u"Gender"), required=True, vocabulary=u"ideabox.vocabularies.gender"

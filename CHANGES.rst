@@ -5,6 +5,9 @@ Changelog
 2.0a13 (unreleased)
 -------------------
 
+- Rename the lastname title to include institution
+  [mpeeters]
+
 - The user firstname is now optional
   [mpeeters]
 

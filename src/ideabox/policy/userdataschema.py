@@ -15,7 +15,7 @@ from zope.publisher.interfaces.browser import IDefaultBrowserLayer
 
 class IEnhancedUserDataSchema(model.Schema):
 
-    last_name = schema.TextLine(title=_(u"Last name"), required=True)
+    last_name = schema.TextLine(title=_(u"Last name or institution"), required=True)
 
     first_name = schema.TextLine(title=_(u"First name"), required=False)
 

@@ -11,4 +11,9 @@
  </index>
  <column value="project_picture" />
 
+ <index name="project_district" meta_type="KeywordIndex">
+  <indexed_attr value="project_district" />
+ </index>
+ <column value="project_district" />
+
 </object>

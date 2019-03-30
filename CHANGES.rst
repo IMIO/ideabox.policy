@@ -5,7 +5,8 @@ Changelog
 2.0a13 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Fix project district filter on faceted navigation
+  [mpeeters]
 
 
 2.0a12 (2019-03-28)

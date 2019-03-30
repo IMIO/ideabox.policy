@@ -15,5 +15,6 @@
     <dependency>profile-imio.gdpr:default</dependency>
     <dependency>profile-Products.PasswordStrength:default</dependency>
     <dependency>profile-collective.taxonomy:default</dependency>
+    <dependency>profile-collective.disclaimer:default</dependency>
   </dependencies>
 </metadata>

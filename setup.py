@@ -47,6 +47,7 @@ setup(
         "collective.behavior.richdescription",
         "collective.editablemenu",
         "collective.excelexport",
+        "collective.disclaimer",
         "collective.taxonomy",
         "collective.z3cform.select2",
         "iaweb.mosaic",

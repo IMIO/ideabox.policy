@@ -5,6 +5,9 @@ Changelog
 2.0a13 (unreleased)
 -------------------
 
+- Add collective.disclaimer to the package dependencies
+  [mpeeters]
+
 - Add `I am` user field
   [mpeeters]
 

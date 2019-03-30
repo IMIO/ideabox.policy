@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
-from plone.app.registry.browser import controlpanel
+
 from ideabox.policy import _
+from plone.app.registry.browser import controlpanel
 from zope import schema
 from zope.interface import Interface
 
@@ -22,7 +23,7 @@ class IIdeaBoxSettingsSchema(Interface):
 class IdeaBoxSettingsEditForm(controlpanel.RegistryEditForm):
 
     schema = IIdeaBoxSettingsSchema
-    label = _(u"Email address of the project manager")
+    label = _(u"Configuration for ideabox product")
     description = _(u"")
 
     def updateFields(self):

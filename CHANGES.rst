@@ -5,6 +5,9 @@ Changelog
 2.0a13 (unreleased)
 -------------------
 
+- Fix control panel form name
+  [mpeeters]
+
 - Fix project district filter on faceted navigation
   [mpeeters]
 

@@ -29,6 +29,10 @@ class IEnhancedUserDataSchema(model.Schema):
         title=_(u"Zip code"), required=True, vocabulary=u"ideabox.vocabularies.zip_code"
     )
 
+    iam = schema.Choice(
+        title=_(u"I am"), required=True, vocabulary=u"ideabox.vocabularies.iam",
+    )
+
 
 class UserDataPanelExtender(extensible.FormExtender):
     adapts(Interface, IDefaultBrowserLayer, UserDataPanel)

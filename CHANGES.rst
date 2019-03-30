@@ -5,6 +5,9 @@ Changelog
 2.0a13 (unreleased)
 -------------------
 
+- Add `I am` user field
+  [mpeeters]
+
 - Rename the lastname title to include institution
   [mpeeters]
 

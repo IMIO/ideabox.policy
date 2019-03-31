@@ -20,7 +20,11 @@ msgstr ""
 msgid "Birthdate"
 msgstr "Date de naissance"
 
-#: ../content/project.py:41
+#: ../browser/controlpanel.py:26
+msgid "Configuration for ideabox product"
+msgstr ""
+
+#: ../content/project.py:45
 msgid "Content"
 msgstr "Contenu"
 
@@ -28,19 +32,24 @@ msgstr "Contenu"
 msgid "District"
 msgstr "Quartier"
 
-#: ../content/project.py:34
+#: ../content/project.py:37
 msgid "District(s) concerned"
 msgstr "Quartier(s) concerné(s)"
 
-#: ../content/project.py:25
+#: ../content/project.py:28
 msgid "Domain(s) concerned"
 msgstr "Domaine(s) concerné(s)"
 
-#: ../content/project.pt:47
+#. Default: "Employee"
+#: ../vocabularies.py:72
+msgid "EMPLOYEE"
+msgstr ""
+
+#: ../content/project.pt:48
 msgid "Edit timeline dates"
 msgstr "Modifier les dates de la ligne du temps"
 
-#: ../browser/controlpanel.py:15
+#: ../browser/controlpanel.py:16
 msgid "Email address of the project manager"
 msgstr "Adresse e-mail du responsable des projets"
 
@@ -48,6 +57,11 @@ msgstr "Adresse e-mail du responsable des projets"
 #: ../vocabularies.py:45
 msgid "FEMALE"
 msgstr "Femme"
+
+#. Default: "Freelance"
+#: ../vocabularies.py:75
+msgid "FREELANCE"
+msgstr ""
 
 #: ../export/export.py:103
 #: ../userdataschema.py:20
@@ -59,15 +73,27 @@ msgstr "Prénom"
 msgid "Gender"
 msgstr "Sexe"
 
+#: ../userdataschema.py:33
+msgid "I am"
+msgstr ""
+
 #: ../profiles/default/controlpanel.xml
 msgid "Ideabox Settings"
 msgstr "Paramètres Ideabox"
+
+#: ../browser/configure.zcml:104
+msgid "Ideabox Standard view"
+msgstr ""
+
+#: ../browser/configure.zcml:98
+msgid "Ideabox Summary view"
+msgstr ""
 
 #: ../profiles/default/types/Project.xml
 msgid "Ideabox project"
 msgstr ""
 
-#: ../browser/controlpanel.py:16
+#: ../browser/controlpanel.py:17
 msgid "If there are multiple email addresses, separate them with semicolons"
 msgstr "Si il y a plusieurs adresse email à renseigner séparez les par des points-virgules"
 
@@ -75,10 +101,18 @@ msgstr "Si il y a plusieurs adresse email à renseigner séparez les par des poi
 msgid "Installs the ideabox.policy add-on."
 msgstr ""
 
+#. Default: "Liberal Profession"
+#: ../vocabularies.py:74
+msgid "LIBERAL_PROFESSION"
+msgstr ""
+
 #: ../export/export.py:96
-#: ../userdataschema.py:18
 msgid "Last name"
 msgstr "Nom"
+
+#: ../userdataschema.py:18
+msgid "Last name or institution"
+msgstr ""
 
 #: ../tile/projects.py:18
 msgid "Limit"
@@ -93,6 +127,11 @@ msgstr "Limite d'élément affiché"
 msgid "MALE"
 msgstr "Homme"
 
+#. Default: "Manager"
+#: ../vocabularies.py:73
+msgid "MANAGER"
+msgstr ""
+
 #: ../form/project_submission.py:77
 msgid "New project submission"
 msgstr "Soumission d'un nouveau projet"
@@ -101,7 +140,12 @@ msgstr "Soumission d'un nouveau projet"
 msgid "News"
 msgstr "Actualités"
 
-#: ../content/project.py:46
+#. Default: "Other"
+#: ../vocabularies.py:78
+msgid "OTHER"
+msgstr ""
+
+#: ../content/project.py:50
 msgid "Original author"
 msgstr "Auteur original"
 
@@ -129,21 +173,35 @@ msgstr "Projets"
 msgid "Projects in progression"
 msgstr "Des projets en évolution"
 
+#. Default: "Retired"
+#: ../vocabularies.py:77
+msgid "RETIRED"
+msgstr ""
+
 #: ../export/export.py:70
 msgid "Rating"
 msgstr "Vote"
+
+#. Default: "Student"
+#: ../vocabularies.py:70
+msgid "STUDENT"
+msgstr ""
 
 #: ../browser/workflow.py:82
 msgid "Save"
 msgstr "Enregistrer"
 
-#: ../form/project_submission.py:112
+#: ../form/project_submission.py:113
 msgid "Send"
 msgstr "Envoyer"
 
 #: ../browser/project.py:28
 msgid "Setting up"
 msgstr "Mise en place"
+
+#: ../tile/timeline.py:13
+msgid "Steps for timeline"
+msgstr ""
 
 #: ../browser/project.py:44
 msgid "The 7 main themes"
@@ -156,6 +214,15 @@ msgstr "Thème"
 #: ../form/project_submission.py:23
 msgid "Title"
 msgstr "Titre"
+
+#: ../tile/timeline.py:14
+msgid "Title; Date; Link"
+msgstr ""
+
+#. Default: "Unemployed"
+#: ../vocabularies.py:76
+msgid "UNEMPLOYED"
+msgstr ""
 
 #: ../configure.zcml:47
 msgid "Uninstalls the ideabox.policy add-on."
@@ -172,6 +239,11 @@ msgstr "Liste des votants"
 #: ../export/export.py:131
 msgid "Votes"
 msgstr "Votes"
+
+#. Default: "Worker"
+#: ../vocabularies.py:71
+msgid "WORKER"
+msgstr ""
 
 #: ../export/export.py:124
 #: ../userdataschema.py:29

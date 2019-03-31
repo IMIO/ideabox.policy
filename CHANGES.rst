@@ -5,6 +5,9 @@ Changelog
 2.0a13 (unreleased)
 -------------------
 
+- Do not display elements that are excluded from navigation on summary and listing views
+  [mpeeters]
+
 - Add collective.disclaimer to the package dependencies
   [mpeeters]
 

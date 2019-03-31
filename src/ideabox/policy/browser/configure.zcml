@@ -84,4 +84,25 @@
     permission="cmf.ManagePortal"
     />
 
+  <configure package="plone.app.contenttypes.browser">
+    <browser:pages
+        for="plone.dexterity.interfaces.IDexterityContainer"
+        class="ideabox.policy.browser.folder.FolderView"
+        layer="ideabox.policy.interfaces.IIdeaboxPolicyLayer"
+        permission="zope2.View">
+      <browser:page
+          name="summary_view"
+          template="templates/listing_summary.pt"
+          menu="plone_displayviews"
+          title="Ideabox Summary view"
+          />
+      <browser:page
+          name="listing_view"
+          template="templates/listing.pt"
+          menu="plone_displayviews"
+          title="Ideabox Standard view"
+          />
+    </browser:pages>
+  </configure>
+
 </configure>

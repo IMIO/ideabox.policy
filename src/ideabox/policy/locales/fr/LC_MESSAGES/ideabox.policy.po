@@ -43,7 +43,7 @@ msgstr "Domaine(s) concerné(s)"
 #. Default: "Employee"
 #: ../vocabularies.py:72
 msgid "EMPLOYEE"
-msgstr ""
+msgstr "Employé·e"
 
 #: ../content/project.pt:48
 msgid "Edit timeline dates"
@@ -61,7 +61,7 @@ msgstr "Femme"
 #. Default: "Freelance"
 #: ../vocabularies.py:75
 msgid "FREELANCE"
-msgstr ""
+msgstr "Indépendant·e"
 
 #: ../export/export.py:103
 #: ../userdataschema.py:20
@@ -75,7 +75,7 @@ msgstr "Sexe"
 
 #: ../userdataschema.py:33
 msgid "I am"
-msgstr ""
+msgstr "Je suis"
 
 #: ../profiles/default/controlpanel.xml
 msgid "Ideabox Settings"
@@ -83,11 +83,11 @@ msgstr "Paramètres Ideabox"
 
 #: ../browser/configure.zcml:104
 msgid "Ideabox Standard view"
-msgstr ""
+msgstr "Vue standard"
 
 #: ../browser/configure.zcml:98
 msgid "Ideabox Summary view"
-msgstr ""
+msgstr "Vue sommaire"
 
 #: ../profiles/default/types/Project.xml
 msgid "Ideabox project"
@@ -104,7 +104,7 @@ msgstr ""
 #. Default: "Liberal Profession"
 #: ../vocabularies.py:74
 msgid "LIBERAL_PROFESSION"
-msgstr ""
+msgstr "Profession libérale"
 
 #: ../export/export.py:96
 msgid "Last name"
@@ -112,7 +112,7 @@ msgstr "Nom"
 
 #: ../userdataschema.py:18
 msgid "Last name or institution"
-msgstr ""
+msgstr "Nom ou institution"
 
 #: ../tile/projects.py:18
 msgid "Limit"
@@ -130,7 +130,7 @@ msgstr "Homme"
 #. Default: "Manager"
 #: ../vocabularies.py:73
 msgid "MANAGER"
-msgstr ""
+msgstr "Cadre"
 
 #: ../form/project_submission.py:77
 msgid "New project submission"
@@ -143,7 +143,7 @@ msgstr "Actualités"
 #. Default: "Other"
 #: ../vocabularies.py:78
 msgid "OTHER"
-msgstr ""
+msgstr "Autre"
 
 #: ../content/project.py:50
 msgid "Original author"
@@ -176,7 +176,7 @@ msgstr "Des projets en évolution"
 #. Default: "Retired"
 #: ../vocabularies.py:77
 msgid "RETIRED"
-msgstr ""
+msgstr "Pensionné·e"
 
 #: ../export/export.py:70
 msgid "Rating"
@@ -185,7 +185,7 @@ msgstr "Vote"
 #. Default: "Student"
 #: ../vocabularies.py:70
 msgid "STUDENT"
-msgstr ""
+msgstr "Étudiant·e"
 
 #: ../browser/workflow.py:82
 msgid "Save"
@@ -201,7 +201,7 @@ msgstr "Mise en place"
 
 #: ../tile/timeline.py:13
 msgid "Steps for timeline"
-msgstr ""
+msgstr "Etapes pour la ligne du temps"
 
 #: ../browser/project.py:44
 msgid "The 7 main themes"
@@ -217,12 +217,12 @@ msgstr "Titre"
 
 #: ../tile/timeline.py:14
 msgid "Title; Date; Link"
-msgstr ""
+msgstr "Titre; Date; Lien"
 
 #. Default: "Unemployed"
 #: ../vocabularies.py:76
 msgid "UNEMPLOYED"
-msgstr ""
+msgstr "Sans emploi"
 
 #: ../configure.zcml:47
 msgid "Uninstalls the ideabox.policy add-on."
@@ -243,7 +243,7 @@ msgstr "Votes"
 #. Default: "Worker"
 #: ../vocabularies.py:71
 msgid "WORKER"
-msgstr ""
+msgstr "Ouvrier·ère"
 
 #: ../export/export.py:124
 #: ../userdataschema.py:29

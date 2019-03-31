@@ -2,8 +2,8 @@ Changelog
 =========
 
 
-2.0a13 (unreleased)
--------------------
+2.0b1 (2019-03-31)
+------------------
 
 - Do not display elements that are excluded from navigation on summary and listing views
   [mpeeters]

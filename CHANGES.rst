@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.0b3 (unreleased)
+2.0b3 (2019-04-01)
 ------------------
 
 - Revert removing pas.plugins.imio from package dependencies

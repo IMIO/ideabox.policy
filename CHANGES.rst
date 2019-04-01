@@ -5,7 +5,8 @@ Changelog
 2.0b3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Revert removing pas.plugins.imio from package dependencies
+  [mpeeters]
 
 
 2.0b2 (2019-04-01)

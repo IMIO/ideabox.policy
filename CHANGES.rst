@@ -5,7 +5,7 @@ Changelog
 2.0b2 (unreleased)
 ------------------
 
-- Upgade ima vocabulary
+- Upgade i am vocabulary
   [vpiret]
 
 

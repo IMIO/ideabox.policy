@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2019-03-31 15:39+0000\n"
+"POT-Creation-Date: 2019-04-01 07:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,11 +46,6 @@ msgstr ""
 msgid "Domain(s) concerned"
 msgstr ""
 
-#. Default: "Employee"
-#: ../vocabularies.py:72
-msgid "EMPLOYEE"
-msgstr ""
-
 #: ../content/project.pt:48
 msgid "Edit timeline dates"
 msgstr ""
@@ -64,11 +59,6 @@ msgstr ""
 msgid "FEMALE"
 msgstr ""
 
-#. Default: "Freelance"
-#: ../vocabularies.py:75
-msgid "FREELANCE"
-msgstr ""
-
 #: ../export/export.py:103
 #: ../userdataschema.py:20
 msgid "First name"
@@ -79,6 +69,7 @@ msgstr ""
 msgid "Gender"
 msgstr ""
 
+#: ../setuphandlers.py:140
 #: ../userdataschema.py:33
 msgid "I am"
 msgstr ""
@@ -107,11 +98,6 @@ msgstr ""
 msgid "Installs the ideabox.policy add-on."
 msgstr ""
 
-#. Default: "Liberal Profession"
-#: ../vocabularies.py:74
-msgid "LIBERAL_PROFESSION"
-msgstr ""
-
 #: ../export/export.py:96
 msgid "Last name"
 msgstr ""
@@ -133,22 +119,12 @@ msgstr ""
 msgid "MALE"
 msgstr ""
 
-#. Default: "Manager"
-#: ../vocabularies.py:73
-msgid "MANAGER"
-msgstr ""
-
 #: ../form/project_submission.py:77
 msgid "New project submission"
 msgstr ""
 
 #: ../faceted/configure.zcml:23
 msgid "News"
-msgstr ""
-
-#. Default: "Other"
-#: ../vocabularies.py:78
-msgid "OTHER"
 msgstr ""
 
 #: ../content/project.py:50
@@ -179,18 +155,8 @@ msgstr ""
 msgid "Projects in progression"
 msgstr ""
 
-#. Default: "Retired"
-#: ../vocabularies.py:77
-msgid "RETIRED"
-msgstr ""
-
 #: ../export/export.py:70
 msgid "Rating"
-msgstr ""
-
-#. Default: "Student"
-#: ../vocabularies.py:70
-msgid "STUDENT"
 msgstr ""
 
 #: ../browser/workflow.py:82
@@ -225,11 +191,6 @@ msgstr ""
 msgid "Title; Date; Link"
 msgstr ""
 
-#. Default: "Unemployed"
-#: ../vocabularies.py:76
-msgid "UNEMPLOYED"
-msgstr ""
-
 #: ../configure.zcml:47
 msgid "Uninstalls the ideabox.policy add-on."
 msgstr ""
@@ -244,11 +205,6 @@ msgstr ""
 
 #: ../export/export.py:131
 msgid "Votes"
-msgstr ""
-
-#. Default: "Worker"
-#: ../vocabularies.py:71
-msgid "WORKER"
 msgstr ""
 
 #: ../export/export.py:124

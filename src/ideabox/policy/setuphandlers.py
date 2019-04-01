@@ -81,7 +81,7 @@ def post_install(context):
     api.portal.set_registry_record("plone.allowed_sizes", allowed_sizes)
 
     api.portal.set_registry_record(
-        "collective.behavior.banner.browser.controlpanel.IBannerSettingsSchema.banner_scale",  # noqa
+        "collective.behavior.banner.browser.controlpanel.IBannerSettingsSchema.banner_scale",
         u"banner",
     )
 
@@ -111,7 +111,7 @@ def post_install(context):
         ]
     }
     api.portal.set_registry_record(
-        "collective.editablemenu.browser.interfaces.IEditableMenuSettings.menu_tabs_json",  # noqa
+        "collective.editablemenu.browser.interfaces.IEditableMenuSettings.menu_tabs_json",
         unicode(json.dumps(menu)),
     )
 
@@ -135,18 +135,29 @@ def add_taxonomies():
         "filename": "taxonomy-settings-district.xml",
     }
 
+    data_iam = {
+        "taxonomy": "iam",
+        "field_title": translate(_("I am"), target_language=current_lang),
+        "field_description": "",
+        "default_language": "fr",
+        "filename": "taxonomy-settings-iam.xml",
+    }
+
     portal = api.portal.get()
     sm = portal.getSiteManager()
     theme_item = "collective.taxonomy.theme"
     district_item = "collective.taxonomy.district"
+    iam_item = "collective.taxonomy.iam"
     utility_theme = sm.queryUtility(ITaxonomy, name=theme_item)
     utility_district = sm.queryUtility(ITaxonomy, name=district_item)
+    utility_iam = sm.queryUtility(ITaxonomy, name=iam_item)
 
-    if utility_theme and utility_district:
+    if utility_theme and utility_district and utility_iam:
         return
 
     create_taxonomy_object(data_theme, portal)
     create_taxonomy_object(data_district, portal)
+    create_taxonomy_object(data_iam, portal)
 
     # remove taxonomy test
     item = "collective.taxonomy.test"

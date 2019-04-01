@@ -69,12 +69,6 @@
       provides="zope.schema.interfaces.IVocabularyFactory"
       />
 
-  <utility
-      component=".vocabularies.IAmVocabulary"
-      name="ideabox.vocabularies.iam"
-      provides="zope.schema.interfaces.IVocabularyFactory"
-      />
-
   <adapter
     factory=".userdataschema.UserDataPanelExtender"
     provides="plone.z3cform.fieldsets.interfaces.IFormExtender"

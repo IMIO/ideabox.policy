@@ -30,7 +30,7 @@ class IEnhancedUserDataSchema(model.Schema):
     )
 
     iam = schema.Choice(
-        title=_(u"I am"), required=True, vocabulary=u"ideabox.vocabularies.iam",
+        title=_(u"I am"), required=True, vocabulary=u"collective.taxonomy.iam",
     )
 
 

@@ -61,23 +61,3 @@ class ZipCodeVocabularyFactory(object):
 
 
 ZipCodeVocabulary = ZipCodeVocabularyFactory()
-
-
-class IAmVocabularyFactory(object):
-    def __call__(self, context):
-        return dict_list_2_vocabulary(
-            [
-                {"STUDENT": _("STUDENT", u"Student")},
-                {"WORKER": _("WORKER", u"Worker")},
-                {"EMPLOYEE": _("EMPLOYEE", u"Employee")},
-                {"MANAGER": _("MANAGER", u"Manager")},
-                {"LIBERAL_PROFESSION": _("LIBERAL_PROFESSION", u"Liberal Profession")},
-                {"FREELANCE": _("FREELANCE", u"Freelance")},
-                {"UNEMPLOYED": _("UNEMPLOYED", u"Unemployed")},
-                {"RETIRED": _("RETIRED", u"Retired")},
-                {"OTHER": _("OTHER", u"Other")},
-            ]
-        )
-
-
-IAmVocabulary = IAmVocabularyFactory()

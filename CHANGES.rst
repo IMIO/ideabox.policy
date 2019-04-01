@@ -16,6 +16,8 @@ Changelog
 
 - Add a default image for project view
   [mpeeters]
+- Implement project_encoding
+  [vpiret]
 
 
 2.0b3 (2019-04-01)

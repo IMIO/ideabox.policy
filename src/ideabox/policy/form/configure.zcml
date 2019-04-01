@@ -13,4 +13,11 @@
     class=".project_submission.ProjectSubmissionForm"
     />
 
+  <browser:page
+    for="*"
+    name="project_encoding"
+    permission="cmf.ModifyPortalContent"
+    class=".project_encoding.ProjectEncodingForm"
+    />
+
 </configure>

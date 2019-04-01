@@ -28,6 +28,7 @@
   <include package=".tile" />
   <include package=".viewlets" />
   <include package=".export" />
+  <include package=".form" />
 
   <genericsetup:registerProfile
       name="default"

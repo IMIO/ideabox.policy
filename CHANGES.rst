@@ -5,7 +5,8 @@ Changelog
 2.0b2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Upgade ima vocabulary
+  [vpiret]
 
 
 2.0b1 (2019-03-31)

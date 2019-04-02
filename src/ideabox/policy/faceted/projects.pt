@@ -11,11 +11,11 @@
       <div tal:define="
         self nocall:context/@@faceted-project;
         default_image self/default_image;
-        folderContents folderContents | python:context.getFolderContents();
+        folderContents python:context.getFolderContents();
         folderContents python:self.random_sort(folderContents);
         Batch python:modules['Products.CMFPlone'].Batch;
         b_start python:request.get('b_start', 0);
-        batch python:isinstance(folderContents, Batch) and folderContents or Batch(folderContents, 100, int(b_start), orphan=2);
+        batch python:isinstance(folderContents, Batch) and folderContents or Batch(folderContents, 9, int(b_start), orphan=0);
         sorted_batch python:self.sort_items(batch)">
 
         <div metal:use-macro="context/batch_macros/macros/navigation" />

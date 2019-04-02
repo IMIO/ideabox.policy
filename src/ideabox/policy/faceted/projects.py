@@ -21,8 +21,8 @@ class ProjectsView(BrowserView):
         return self._keys[key % len(self._keys)]
 
     def random_sort(self, elements):
-        elements._sequence = sorted(
-            elements._sequence, key=attrgetter(self.random_sort_key)
+        elements = sorted(
+            elements, key=attrgetter(self.random_sort_key)
         )
         return elements
 

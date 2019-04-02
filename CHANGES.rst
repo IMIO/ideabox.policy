@@ -5,7 +5,8 @@ Changelog
 2.0b5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix project faceted navigation
+  [mpeeters]
 
 
 2.0b4 (2019-04-02)

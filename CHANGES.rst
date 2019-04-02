@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.0b5 (unreleased)
+2.0b5 (2019-04-02)
 ------------------
 
 - Fix project faceted navigation

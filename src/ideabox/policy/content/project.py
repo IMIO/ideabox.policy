@@ -77,8 +77,8 @@ class ProjectView(view.DefaultView):
     def default_image(self):
         """Try to find the default image for the project, return `None` otherwise"""
         portal = api.portal.get()
-        if 'project_default_large.jpg' in portal:
-            return portal['project_default_large.jpg'].absolute_url()
+        if "project_default_large.jpg" in portal:
+            return portal["project_default_large.jpg"].absolute_url()
 
     @property
     def get_images_url(self):
@@ -229,6 +229,6 @@ def searchabletext_project(object, **kw):
                 .getData()
                 .strip()
             )
-            result.append(text.encode('utf8'))
+            result.append(text.encode("utf8"))
 
     return " ".join(result)

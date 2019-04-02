@@ -5,6 +5,9 @@ Changelog
 2.0b4 (unreleased)
 ------------------
 
+- Add the missing `evenement` scale
+  [mpeeters]
+
 - Add a default image for project view
   [mpeeters]
 

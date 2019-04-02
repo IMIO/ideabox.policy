@@ -74,7 +74,7 @@ def post_install(context):
         news_layout.update_layout(layout="faceted-news")
 
     allowed_sizes = api.portal.get_registry_record("plone.allowed_sizes")
-    scales = (u"banner 1920:800", u"project_faceted 450:300")
+    scales = (u"banner 1920:800", u"project_faceted 450:300", u"evenement 300:300")
     for scale in scales:
         if scale not in allowed_sizes:
             allowed_sizes.append(scale)

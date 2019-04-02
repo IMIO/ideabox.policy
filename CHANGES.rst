@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.0b4 (unreleased)
+2.0b4 (2019-04-02)
 ------------------
 
 - Fix project_encoding

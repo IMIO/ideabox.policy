@@ -5,6 +5,12 @@ Changelog
 2.0b4 (unreleased)
 ------------------
 
+- Fix project workflow
+  [vpiret]
+
+- Implement project_encoding
+  [vpiret]
+
 - Add a faceted view for events
   [mpeeters]
 
@@ -16,11 +22,6 @@ Changelog
 
 - Add a default image for project view
   [mpeeters]
-- Fix project workflow
-  [vpiret]
-
-- Implement project_encoding
-  [vpiret]
 
 
 2.0b3 (2019-04-01)

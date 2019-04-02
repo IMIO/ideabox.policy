@@ -20,6 +20,7 @@
   <include package="collective.behavior.banner" />
   <include package="iaweb.mosaic" />
   <include package="Products.PasswordStrength" />
+  <include package="plone.app.imagecropping" />
 
   <include package=".browser" />
   <include package=".content" />

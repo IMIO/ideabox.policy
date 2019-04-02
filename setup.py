@@ -59,6 +59,7 @@ setup(
         "plone.app.contenttypes",
         "plone.app.dexterity",
         "plone.app.discussion",
+        "plone.app.imagecropping",
         "plone.app.lockingbehavior",
         "plone.app.mosaic",
         "plone.app.referenceablebehavior",

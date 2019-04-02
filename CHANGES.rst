@@ -5,6 +5,9 @@ Changelog
 2.0b4 (unreleased)
 ------------------
 
+- Add plone.app.imagecropping to the package dependencies
+  [mpeeters]
+
 - Add the missing `evenement` scale
   [mpeeters]
 

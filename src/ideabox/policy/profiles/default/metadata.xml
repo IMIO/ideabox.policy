@@ -16,5 +16,6 @@
     <dependency>profile-Products.PasswordStrength:default</dependency>
     <dependency>profile-collective.taxonomy:default</dependency>
     <dependency>profile-collective.disclaimer:default</dependency>
+    <dependency>profile-plone.app.imagecropping:default</dependency>
   </dependencies>
 </metadata>

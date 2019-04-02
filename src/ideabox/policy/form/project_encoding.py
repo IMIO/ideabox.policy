@@ -3,21 +3,22 @@ import hashlib
 import time
 import password_generator
 
-from plone import api
 from collective.z3cform.select2.widget.widget import MultiSelect2FieldWidget
-from ideabox.policy import _
-from ideabox.policy.form.project_submission import IProjectSubmission
-from ideabox.policy.userdataschema import IEnhancedUserDataSchema
+from plone import api
 from plone import schema
+from plone.i18n.normalizer.interfaces import IIDNormalizer
+from plone.registry.interfaces import IRegistry
 from z3c.form import button
 from z3c.form.browser.radio import RadioFieldWidget
 from z3c.form.field import Fields
 from z3c.form.form import Form
 from z3c.form.interfaces import IFieldsForm
-from zope.interface import implements
 from zope.component import getUtility
-from plone.i18n.normalizer.interfaces import IIDNormalizer
-from plone.registry.interfaces import IRegistry
+from zope.interface import implements
+
+from ideabox.policy import _
+from ideabox.policy.form.project_submission import IProjectSubmission
+from ideabox.policy.userdataschema import IEnhancedUserDataSchema
 from ideabox.policy.utils import execute_under_admin
 
 
@@ -44,7 +45,7 @@ class ProjectEncodingForm(Form):
 
     def create_user(self, data):
         if data["mail"]:
-            existing_user = api.user.get(userid=data["mail"])
+            existing_user = api.user.get(userid=data["mail"].lower())
             if existing_user:
                 self.update_user(existing_user, data)
                 return existing_user
@@ -58,7 +59,7 @@ class ProjectEncodingForm(Form):
         )
         if not data["mail"]:
             normalizer = getUtility(IIDNormalizer)
-            mail = "{0}_{1}_{2}@liege2025.com".format(
+            mail = "{0}_{1}_{2}@liege2025.be".format(
                 normalizer.normalize(data["title"]),
                 data["last_name"],
                 hashlib.md5(str(time.time())).hexdigest()[:4],
@@ -67,7 +68,7 @@ class ProjectEncodingForm(Form):
             mail = data["mail"]
 
         return api.user.create(
-            email=mail,
+            email=mail.lower(),
             password="@1aA{0}".format(password_generator.generate()),
             properties=properties,
         )

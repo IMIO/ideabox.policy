@@ -44,9 +44,21 @@ msgstr "Domaine(s) concerné(s)"
 msgid "Edit timeline dates"
 msgstr "Modifier les dates de la ligne du temps"
 
+#: ../form/project_encoding.py:26
+msgid "Email"
+msgstr ""
+
 #: ../browser/controlpanel.py:16
 msgid "Email address of the project manager"
 msgstr "Adresse e-mail du responsable des projets"
+
+#: ../profiles/default/actions.xml
+msgid "Encoding project with user"
+msgstr ""
+
+#: ../faceted/configure.zcml:31
+msgid "Events"
+msgstr "Événements"
 
 #. Default: "Female"
 #: ../vocabularies.py:45
@@ -88,7 +100,7 @@ msgstr ""
 msgid "If there are multiple email addresses, separate them with semicolons"
 msgstr "Si il y a plusieurs adresse email à renseigner séparez les par des points-virgules"
 
-#: ../configure.zcml:38
+#: ../configure.zcml:40
 msgid "Installs the ideabox.policy add-on."
 msgstr ""
 
@@ -137,6 +149,11 @@ msgstr "Informations personnelles pour un utilisateur connecté"
 msgid "Project"
 msgstr "Projet"
 
+#: ../form/project_encoding.py:30
+#: ../profiles/default/actions.xml
+msgid "Project encoding"
+msgstr "Encoder un projet"
+
 #: ../form/project_submission.py:25
 msgid "Project image"
 msgstr "Image du projet"
@@ -157,6 +174,7 @@ msgstr "Vote"
 msgid "Save"
 msgstr "Enregistrer"
 
+#: ../form/project_encoding.py:126
 #: ../form/project_submission.py:113
 msgid "Send"
 msgstr "Envoyer"
@@ -185,7 +203,7 @@ msgstr "Titre"
 msgid "Title; Date; Link"
 msgstr "Titre; Date; Lien"
 
-#: ../configure.zcml:47
+#: ../configure.zcml:49
 msgid "Uninstalls the ideabox.policy add-on."
 msgstr ""
 
@@ -222,11 +240,11 @@ msgstr ""
 "              ${url}\n"
 "              "
 
-#: ../configure.zcml:38
+#: ../configure.zcml:40
 msgid "ideabox.policy"
 msgstr ""
 
-#: ../configure.zcml:47
+#: ../configure.zcml:49
 msgid "ideabox.policy (uninstall)"
 msgstr ""
 

@@ -5,6 +5,9 @@ Changelog
 2.0b4 (unreleased)
 ------------------
 
+- Fix project_encoding
+  [vpiret]
+
 - Fix project workflow
   [vpiret]
 

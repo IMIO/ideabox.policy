@@ -22,4 +22,12 @@
     class=".news.NewsView"
     />
 
+  <faceted:view
+    name="faceted-events"
+    template="events.pt"
+    title="Events"
+    permission="zope2.View"
+    class=".events.EventsView"
+    />
+
 </configure>

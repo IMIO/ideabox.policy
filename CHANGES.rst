@@ -5,6 +5,9 @@ Changelog
 2.0b4 (unreleased)
 ------------------
 
+- Add a faceted view for events
+  [mpeeters]
+
 - Add plone.app.imagecropping to the package dependencies
   [mpeeters]
 

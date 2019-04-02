@@ -5,7 +5,8 @@ Changelog
 2.0b4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add a default image for project view
+  [mpeeters]
 
 
 2.0b3 (2019-04-01)

@@ -74,6 +74,13 @@ class ProjectView(view.DefaultView):
         )
 
     @property
+    def default_image(self):
+        """Try to find the default image for the project, return `None` otherwise"""
+        portal = api.portal.get()
+        if 'project_default_large.jpg' in portal:
+            return portal['project_default_large.jpg'].absolute_url()
+
+    @property
     def get_images_url(self):
         contents = self.context.listFolderContents(
             contentFilter={"portal_type": "Image"}
@@ -81,6 +88,10 @@ class ProjectView(view.DefaultView):
         images_url = []
         for content in contents:
             images_url.append(content.absolute_url())
+        if not images_url:
+            default_image = self.default_image
+            if default_image is not None:
+                images_url.append(default_image)
         return images_url
 
     def get_news(self):

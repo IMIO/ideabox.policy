@@ -16,6 +16,9 @@ Changelog
 
 - Add a default image for project view
   [mpeeters]
+- Fix project workflow
+  [vpiret]
+
 - Implement project_encoding
   [vpiret]
 

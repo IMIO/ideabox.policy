@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.0b6 (unreleased)
+2.0b6 (2019-04-03)
 ------------------
 
 - Add Products.BeakerSessionDataManager

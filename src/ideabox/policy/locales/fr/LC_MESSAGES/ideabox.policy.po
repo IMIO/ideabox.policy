@@ -181,7 +181,7 @@ msgstr "Image du projet"
 
 #: ../browser/templates/project_submission.pt:12
 msgid "Project submission is currently disabled"
-msgstr "La soumission de projet est actuellement désactivé"
+msgstr "La soumission de projet est actuellement désactivée"
 
 #: ../faceted/configure.zcml:15
 msgid "Projects"

@@ -5,6 +5,9 @@ Changelog
 2.0b6 (unreleased)
 ------------------
 
+- Add enable / disable project submission
+  [vpiret]
+
 - Remove description field on project
   [mpeeters]
 

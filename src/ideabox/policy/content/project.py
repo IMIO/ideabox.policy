@@ -16,12 +16,15 @@ from zope.component import getUtility
 from zope.i18n import translate
 from zope.interface import implements
 from zope.schema.interfaces import IVocabularyFactory
+from plone.app.dexterity import _ as DXMF
 
 from ideabox.policy import _
 
 
 class IProject(model.Schema):
     """IProject"""
+
+    title = schema.TextLine(title=DXMF(u"label_title", default=u"Title"), required=True)
 
     form.widget(project_theme=MultiSelect2FieldWidget)
     project_theme = schema.List(

@@ -5,6 +5,9 @@ Changelog
 2.0b6 (unreleased)
 ------------------
 
+- Remove description field on project
+  [mpeeters]
+
 - Add permission for export projects and users
   [vpiret]
 

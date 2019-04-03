@@ -21,6 +21,7 @@
   <include package="iaweb.mosaic" />
   <include package="Products.PasswordStrength" />
   <include package="plone.app.imagecropping" />
+  <include package="Products.BeakerSessionDataManager" />
 
   <include package=".browser" />
   <include package=".content" />

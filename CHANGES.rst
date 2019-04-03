@@ -5,6 +5,9 @@ Changelog
 2.0b6 (unreleased)
 ------------------
 
+- Add Products.BeakerSessionDataManager
+  [mpeeters]
+
 - Add enable / disable project submission
   [vpiret]
 

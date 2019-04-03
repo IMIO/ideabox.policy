@@ -16,6 +16,10 @@ from zope.component import getAdapters
 from zope.interface import Interface
 from zope.schema.interfaces import IText
 from zope.annotation.interfaces import IAnnotations
+from zope.component import getUtility
+from zope.schema.interfaces import IVocabularyFactory
+from zope.i18n import translate
+
 from ideabox.policy import _
 
 
@@ -71,7 +75,10 @@ class RatingRenderer(ExtendedRenderer):
 
     def render_value(self, obj):
         annotations = IAnnotations(obj)
-        return len(annotations["cioppino.twothumbs.yays"])
+        vote = annotations.get("cioppino.twothumbs.yays")
+        if vote:
+            return len(annotations["cioppino.twothumbs.yays"])
+        return 0
 
 
 class VotersListRenderer(ExtendedRenderer):
@@ -80,8 +87,10 @@ class VotersListRenderer(ExtendedRenderer):
     def render_value(self, obj):
         annotations = IAnnotations(obj)
         voters = []
-        for voter in annotations["cioppino.twothumbs.yays"]:
-            voters.append(voter)
+        vote = annotations.get("cioppino.twothumbs.yays")
+        if vote:
+            for voter in annotations["cioppino.twothumbs.yays"]:
+                voters.append(voter)
         return voters
 
 
@@ -110,14 +119,39 @@ class UserGenderRenderer(ExtendedRenderer):
     name = _(u"Gender")
 
     def render_value(self, obj):
-        return obj.getProperty("gender")
+        factory = getUtility(IVocabularyFactory, "ideabox.vocabularies.gender")
+        vocabulary = factory(self.context)
+        return translate(
+            vocabulary.getTerm(obj.getProperty("gender")).title,
+            target_language=api.portal.get_current_language(),
+        )
 
 
 class UserBirthdateRenderer(ExtendedRenderer):
     name = _(u"Birthdate")
 
+    def render_collection_entry(self, obj, value):
+        return value.strftime("%d/%m/%Y")
+
+    def render_style(self, obj, base_style):
+        base_style.num_format_str = "dd/mm/yyyy"
+        return base_style
+
     def render_value(self, obj):
-        return obj.getProperty("birthdate")
+        value = obj.getProperty("birthdate")
+        return self.render_collection_entry(obj, value)
+
+
+class UserIamRenderer(ExtendedRenderer):
+    name = _(u"I am")
+
+    def render_value(self, obj):
+        factory = getUtility(IVocabularyFactory, "collective.taxonomy.iam")
+        vocabulary = factory(self.context)
+        return translate(
+            vocabulary.getTerm(obj.getProperty("iam")).title,
+            target_language=api.portal.get_current_language(),
+        )
 
 
 class UserZipCodeRenderer(ExtendedRenderer):
@@ -136,6 +170,8 @@ class UserVotesRenderer(ExtendedRenderer):
         portal = api.portal.get()["projets"]
         for project in api.content.find(context=portal, portal_type="Project"):
             annotations = IAnnotations(project.getObject())
-            if userid in annotations["cioppino.twothumbs.yays"]:
-                projects.append(project.Title)
+            vote = annotations.get("cioppino.twothumbs.yays")
+            if vote:
+                if userid in annotations["cioppino.twothumbs.yays"]:
+                    projects.append(project.Title)
         return projects

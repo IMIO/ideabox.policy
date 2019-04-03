@@ -44,6 +44,10 @@
            provides=".interfaces.IUsersExportable"
            name="birthdate" />
 
+  <adapter factory=".export.UserIamRenderer"
+           provides=".interfaces.IUsersExportable"
+           name="iam" />
+
   <adapter factory=".export.UserZipCodeRenderer"
            provides=".interfaces.IUsersExportable"
            name="zip_code" />

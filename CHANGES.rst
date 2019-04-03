@@ -5,7 +5,8 @@ Changelog
 2.0b6 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix the excel export and appends the "I am" field
+  [vpiret]
 
 
 2.0b5 (2019-04-02)

@@ -27,6 +27,48 @@
   </object>
 
   <object name="user" meta_type="CMF Action Category">
+  <object name="export_users" meta_type="CMF Action" i18n:domain="ideabox.policy" insert-before="*">
+   <property name="title" i18n:translate="">Export users</property>
+   <property name="description" i18n:translate="">Export users with their votes</property>
+   <property name="url_expr">string:${portal_url}/@@collective.excelexport?excelexport.policy=users</property>
+   <property name="icon_expr"></property>
+   <property name="available_expr"></property>
+   <property name="permissions">
+    <element value="Manage portal"/>
+   </property>
+   <property name="visible">True</property>
+  </object>
+ </object>
+
+  <object name="user" meta_type="CMF Action Category">
+  <object name="export_projects" meta_type="CMF Action" i18n:domain="ideabox.policy" insert-before="*">
+   <property name="title" i18n:translate="">Export project</property>
+   <property name="description" i18n:translate="">Export projects with votes</property>
+   <property name="url_expr">string:${portal_url}/projets/@@collective.excelexport</property>
+   <property name="icon_expr"></property>
+   <property name="available_expr"></property>
+   <property name="permissions">
+    <element value="Change local roles"/>
+   </property>
+   <property name="visible">True</property>
+  </object>
+ </object>
+
+  <object name="user" meta_type="CMF Action Category">
+  <object name="export_users" meta_type="CMF Action" i18n:domain="ideabox.policy" insert-before="*">
+   <property name="title" i18n:translate="">Export users</property>
+   <property name="description" i18n:translate="">Export users with their votes</property>
+   <property name="url_expr">string:${portal_url}/@@collective.excelexport?excelexport.policy=users</property>
+   <property name="icon_expr"></property>
+   <property name="available_expr"></property>
+   <property name="permissions">
+    <element value="Change local roles"/>
+   </property>
+   <property name="visible">True</property>
+  </object>
+ </object>
+
+  <object name="user" meta_type="CMF Action Category">
   <object name="project_encoding" meta_type="CMF Action" i18n:domain="ideabox.policy" insert-before="*">
    <property name="title" i18n:translate="">Project encoding</property>
    <property name="description" i18n:translate="">Encoding project with user</property>

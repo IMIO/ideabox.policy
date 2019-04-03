@@ -5,6 +5,9 @@ Changelog
 2.0b6 (unreleased)
 ------------------
 
+- Add action user for excel export
+  [vpiret]
+
 - Fix the excel export and appends the "I am" field
   [vpiret]
 

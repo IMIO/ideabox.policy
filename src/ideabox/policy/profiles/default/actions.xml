@@ -42,13 +42,13 @@
 
   <object name="user" meta_type="CMF Action Category">
   <object name="export_projects" meta_type="CMF Action" i18n:domain="ideabox.policy" insert-before="*">
-   <property name="title" i18n:translate="">Export project</property>
+   <property name="title" i18n:translate="">Export projects</property>
    <property name="description" i18n:translate="">Export projects with votes</property>
    <property name="url_expr">string:${portal_url}/projets/@@collective.excelexport</property>
    <property name="icon_expr"></property>
    <property name="available_expr"></property>
    <property name="permissions">
-    <element value="Change local roles"/>
+    <element value="Ideabox: Export projects and users"/>
    </property>
    <property name="visible">True</property>
   </object>
@@ -62,7 +62,7 @@
    <property name="icon_expr"></property>
    <property name="available_expr"></property>
    <property name="permissions">
-    <element value="Change local roles"/>
+    <element value="Ideabox: Export projects and users"/>
    </property>
    <property name="visible">True</property>
   </object>

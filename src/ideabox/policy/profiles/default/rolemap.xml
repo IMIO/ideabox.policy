@@ -17,5 +17,11 @@
           <role name="Site Administrator" />
           <role name="Authenticated" />
         </permission>
+
+        <permission name="Ideabox: Export projects and users"
+                    acquire="False">
+          <role name="Manager" />
+          <role name="Site Administrator" />
+        </permission>
     </permissions>
 </rolemap>

@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2019-04-02 11:13+0000\n"
+"POT-Creation-Date: 2019-04-03 11:49+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,7 +21,7 @@ msgstr ""
 msgid ""
 msgstr ""
 
-#: ../export/export.py:117
+#: ../export/export.py:131
 #: ../userdataschema.py:26
 msgid "Birthdate"
 msgstr ""
@@ -66,21 +66,38 @@ msgstr ""
 msgid "Events"
 msgstr ""
 
+#: ../profiles/default/actions.xml
+msgid "Export projects"
+msgstr ""
+
+#: ../profiles/default/actions.xml
+msgid "Export projects with votes"
+msgstr ""
+
+#: ../profiles/default/actions.xml
+msgid "Export users"
+msgstr ""
+
+#: ../profiles/default/actions.xml
+msgid "Export users with their votes"
+msgstr ""
+
 #. Default: "Female"
 #: ../vocabularies.py:45
 msgid "FEMALE"
 msgstr ""
 
-#: ../export/export.py:103
+#: ../export/export.py:112
 #: ../userdataschema.py:20
 msgid "First name"
 msgstr ""
 
-#: ../export/export.py:110
+#: ../export/export.py:119
 #: ../userdataschema.py:23
 msgid "Gender"
 msgstr ""
 
+#: ../export/export.py:146
 #: ../setuphandlers.py:140
 #: ../userdataschema.py:33
 msgid "I am"
@@ -110,7 +127,7 @@ msgstr ""
 msgid "Installs the ideabox.policy add-on."
 msgstr ""
 
-#: ../export/export.py:96
+#: ../export/export.py:105
 msgid "Last name"
 msgstr ""
 
@@ -172,7 +189,7 @@ msgstr ""
 msgid "Projects in progression"
 msgstr ""
 
-#: ../export/export.py:70
+#: ../export/export.py:74
 msgid "Rating"
 msgstr ""
 
@@ -213,19 +230,19 @@ msgstr ""
 msgid "Uninstalls the ideabox.policy add-on."
 msgstr ""
 
-#: ../export/export.py:89
+#: ../export/export.py:98
 msgid "User ID"
 msgstr ""
 
-#: ../export/export.py:78
+#: ../export/export.py:85
 msgid "Voters list"
 msgstr ""
 
-#: ../export/export.py:131
+#: ../export/export.py:165
 msgid "Votes"
 msgstr ""
 
-#: ../export/export.py:124
+#: ../export/export.py:158
 #: ../userdataschema.py:29
 msgid "Zip code"
 msgstr ""

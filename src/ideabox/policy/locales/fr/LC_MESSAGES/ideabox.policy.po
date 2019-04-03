@@ -15,7 +15,7 @@ msgstr ""
 "Domain: ideabox.policy\n"
 "X-Is-Fallback-For: fr-be fr-ca fr-lu fr-mc fr-ch fr-fr\n"
 
-#: ../export/export.py:117
+#: ../export/export.py:131
 #: ../userdataschema.py:26
 msgid "Birthdate"
 msgstr "Date de naissance"
@@ -60,21 +60,38 @@ msgstr ""
 msgid "Events"
 msgstr "Événements"
 
+#: ../profiles/default/actions.xml
+msgid "Export projects"
+msgstr "Export des projets"
+
+#: ../profiles/default/actions.xml
+msgid "Export projects with votes"
+msgstr "Export les projets avec les votes"
+
+#: ../profiles/default/actions.xml
+msgid "Export users"
+msgstr "Export des utilisateurs"
+
+#: ../profiles/default/actions.xml
+msgid "Export users with their votes"
+msgstr "Export les utilisateurs avec leurs votes"
+
 #. Default: "Female"
 #: ../vocabularies.py:45
 msgid "FEMALE"
 msgstr "Femme"
 
-#: ../export/export.py:103
+#: ../export/export.py:112
 #: ../userdataschema.py:20
 msgid "First name"
 msgstr "Prénom"
 
-#: ../export/export.py:110
+#: ../export/export.py:119
 #: ../userdataschema.py:23
 msgid "Gender"
 msgstr "Sexe"
 
+#: ../export/export.py:146
 #: ../setuphandlers.py:140
 #: ../userdataschema.py:33
 msgid "I am"
@@ -104,7 +121,7 @@ msgstr "Si il y a plusieurs adresse email à renseigner séparez les par des poi
 msgid "Installs the ideabox.policy add-on."
 msgstr ""
 
-#: ../export/export.py:96
+#: ../export/export.py:105
 msgid "Last name"
 msgstr "Nom"
 
@@ -166,7 +183,7 @@ msgstr "Projets"
 msgid "Projects in progression"
 msgstr "Des projets en évolution"
 
-#: ../export/export.py:70
+#: ../export/export.py:74
 msgid "Rating"
 msgstr "Vote"
 
@@ -207,19 +224,19 @@ msgstr "Titre; Date; Lien"
 msgid "Uninstalls the ideabox.policy add-on."
 msgstr ""
 
-#: ../export/export.py:89
+#: ../export/export.py:98
 msgid "User ID"
 msgstr "ID utilisateur"
 
-#: ../export/export.py:78
+#: ../export/export.py:85
 msgid "Voters list"
 msgstr "Liste des votants"
 
-#: ../export/export.py:131
+#: ../export/export.py:165
 msgid "Votes"
 msgstr "Votes"
 
-#: ../export/export.py:124
+#: ../export/export.py:158
 #: ../userdataschema.py:29
 msgid "Zip code"
 msgstr "Code postal"

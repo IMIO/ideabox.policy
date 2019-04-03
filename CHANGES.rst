@@ -5,6 +5,9 @@ Changelog
 2.0b6 (unreleased)
 ------------------
 
+- Add permission for export projects and users
+  [vpiret]
+
 - Add action user for excel export
   [vpiret]
 

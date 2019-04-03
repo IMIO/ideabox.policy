@@ -16,7 +16,12 @@ class IIdeaBoxSettingsSchema(Interface):
         title=_(u"Email address of the project manager"),
         description=_(
             u"If there are multiple email addresses, separate them with semicolons"
-        ),  # noqa
+        ),
+    )
+
+    project_submission = schema.Bool(
+        title=_(u"Enable / Disable project submission"),
+        default=True
     )
 
 

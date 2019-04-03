@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2019-04-03 11:49+0000\n"
+"POT-Creation-Date: 2019-04-03 13:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: ideabox.policy\n"
 
-#: ../browser/controlpanel.py:27
+#: ../browser/controlpanel.py:32
 msgid ""
 msgstr ""
 
@@ -26,7 +26,7 @@ msgstr ""
 msgid "Birthdate"
 msgstr ""
 
-#: ../browser/controlpanel.py:26
+#: ../browser/controlpanel.py:31
 msgid "Configuration for ideabox product"
 msgstr ""
 
@@ -56,6 +56,10 @@ msgstr ""
 
 #: ../browser/controlpanel.py:16
 msgid "Email address of the project manager"
+msgstr ""
+
+#: ../browser/controlpanel.py:23
+msgid "Enable / Disable project submission"
 msgstr ""
 
 #: ../profiles/default/actions.xml
@@ -179,6 +183,10 @@ msgstr ""
 
 #: ../form/project_submission.py:25
 msgid "Project image"
+msgstr ""
+
+#: ../browser/templates/project_submission.pt:12
+msgid "Project submission is currently disabled"
 msgstr ""
 
 #: ../faceted/configure.zcml:15

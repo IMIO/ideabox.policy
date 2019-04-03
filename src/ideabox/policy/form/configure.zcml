@@ -7,13 +7,6 @@
   i18n_domain="ideabox.policy">
 
   <browser:page
-    for="Products.CMFCore.interfaces.ISiteRoot"
-    name="project_submission_form"
-    permission="ideabox.ProposeProject"
-    class=".project_submission.ProjectSubmissionForm"
-    />
-
-  <browser:page
     for="*"
     name="project_encoding"
     permission="cmf.ModifyPortalContent"

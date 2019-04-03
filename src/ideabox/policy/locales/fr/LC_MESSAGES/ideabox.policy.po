@@ -20,7 +20,7 @@ msgstr ""
 msgid "Birthdate"
 msgstr "Date de naissance"
 
-#: ../browser/controlpanel.py:26
+#: ../browser/controlpanel.py:31
 msgid "Configuration for ideabox product"
 msgstr ""
 
@@ -51,6 +51,10 @@ msgstr ""
 #: ../browser/controlpanel.py:16
 msgid "Email address of the project manager"
 msgstr "Adresse e-mail du responsable des projets"
+
+#: ../browser/controlpanel.py:23
+msgid "Enable / Disable project submission"
+msgstr "Activer / Désactiver la soumission de projet"
 
 #: ../profiles/default/actions.xml
 msgid "Encoding project with user"
@@ -174,6 +178,10 @@ msgstr "Encoder un projet"
 #: ../form/project_submission.py:25
 msgid "Project image"
 msgstr "Image du projet"
+
+#: ../browser/templates/project_submission.pt:12
+msgid "Project submission is currently disabled"
+msgstr "La soumission de projet est actuellement désactivé"
 
 #: ../faceted/configure.zcml:15
 msgid "Projects"

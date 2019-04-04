@@ -121,10 +121,15 @@ class UserGenderRenderer(ExtendedRenderer):
     def render_value(self, obj):
         factory = getUtility(IVocabularyFactory, "ideabox.vocabularies.gender")
         vocabulary = factory(self.context)
-        return translate(
-            vocabulary.getTerm(obj.getProperty("gender")).title,
-            target_language=api.portal.get_current_language(),
-        )
+        if obj.getProperty("gender"):
+            try:
+                return translate(
+                    vocabulary.getTerm(obj.getProperty("gender")).title,
+                    target_language=api.portal.get_current_language(),
+                )
+            except KeyError:
+                return
+        return
 
 
 class UserBirthdateRenderer(ExtendedRenderer):
@@ -148,10 +153,15 @@ class UserIamRenderer(ExtendedRenderer):
     def render_value(self, obj):
         factory = getUtility(IVocabularyFactory, "collective.taxonomy.iam")
         vocabulary = factory(self.context)
-        return translate(
-            vocabulary.getTerm(obj.getProperty("iam")).title,
-            target_language=api.portal.get_current_language(),
-        )
+        if obj.getProperty("iam"):
+            try:
+                return translate(
+                    vocabulary.getTerm(obj.getProperty("iam")).title,
+                    target_language=api.portal.get_current_language(),
+                )
+            except KeyError:
+                return
+        return
 
 
 class UserZipCodeRenderer(ExtendedRenderer):

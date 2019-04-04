@@ -5,7 +5,8 @@ Changelog
 2.0b7 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix export users
+  [vpiret]
 
 
 2.0b6 (2019-04-03)

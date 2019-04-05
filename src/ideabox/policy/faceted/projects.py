@@ -21,9 +21,7 @@ class ProjectsView(BrowserView):
         return self._keys[key % len(self._keys)]
 
     def random_sort(self, elements):
-        elements = sorted(
-            elements, key=attrgetter(self.random_sort_key)
-        )
+        elements = sorted(elements, key=attrgetter(self.random_sort_key))
         return elements
 
     def sort_items(self, elements):
@@ -56,3 +54,9 @@ class ProjectsView(BrowserView):
             return self._themes.getTerm(key).title
         except KeyError:
             return ""
+
+    def number_of_projects_displayed(self):
+        return api.portal.get_registry_record(
+            "ideabox.policy.browser.controlpanel.IIdeaBoxSettingsSchema.number_project",
+            default=9,
+        )

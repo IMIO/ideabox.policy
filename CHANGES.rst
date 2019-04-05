@@ -5,6 +5,9 @@ Changelog
 2.0b7 (unreleased)
 ------------------
 
+- Implement number_of_projects_displayed
+  [vpiret]
+
 - Fix export users
   [vpiret]
 

@@ -15,7 +15,8 @@
         folderContents python:self.random_sort(folderContents);
         Batch python:modules['Products.CMFPlone'].Batch;
         b_start python:request.get('b_start', 0);
-        batch python:isinstance(folderContents, Batch) and folderContents or Batch(folderContents, 9, int(b_start), orphan=0);
+        number_of_projects self/number_of_projects_displayed;
+        batch python:isinstance(folderContents, Batch) and folderContents or Batch(folderContents, number_of_projects, int(b_start), orphan=0);
         sorted_batch python:self.sort_items(batch)">
 
         <div metal:use-macro="context/batch_macros/macros/navigation" />

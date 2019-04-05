@@ -20,8 +20,11 @@ class IIdeaBoxSettingsSchema(Interface):
     )
 
     project_submission = schema.Bool(
-        title=_(u"Enable / Disable project submission"),
-        default=True
+        title=_(u"Enable / Disable project submission"), default=True
+    )
+
+    number_project = schema.Int(
+        title=_(u"Number of projects displayed"), required=False
     )
 
 

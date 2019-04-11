@@ -19,6 +19,8 @@ class IEnhancedUserDataSchema(model.Schema):
 
     first_name = schema.TextLine(title=_(u"First name"), required=False)
 
+    address = schema.Text(title=_(u"Address"), required=False)
+
     gender = schema.Choice(
         title=_(u"Gender"), required=True, vocabulary=u"ideabox.vocabularies.gender"
     )
@@ -30,7 +32,7 @@ class IEnhancedUserDataSchema(model.Schema):
     )
 
     iam = schema.Choice(
-        title=_(u"I am"), required=True, vocabulary=u"collective.taxonomy.iam",
+        title=_(u"I am"), required=True, vocabulary=u"collective.taxonomy.iam"
     )
 
 

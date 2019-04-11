@@ -1,4 +1,4 @@
-# encoding: utf-8
+# -*- coding: utf-8 -*-
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from ideabox.policy import _
 from plone.supermodel.model import Schema
@@ -26,16 +26,12 @@ class TimelineTile(Tile):
 
     def steps(self):
         steps = self.data["steps"]
-        lines = steps.split('\r\n')
+        lines = steps.split("\r\n")
         data_steps = []
         for line in lines:
-            data_line = line.split(';')
+            data_line = line.split(";")
             if len(data_line) > 0 and len(data_line) < 4:
-                step = {
-                        "title": "",
-                        "date": "",
-                        "link": "",
-                }
+                step = {"title": "", "date": "", "link": ""}
                 step["title"] = data_line[0]
                 if len(data_line) > 1:
                     step["date"] = data_line[1]

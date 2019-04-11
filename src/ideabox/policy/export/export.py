@@ -98,21 +98,40 @@ class UserIdRenderer(ExtendedRenderer):
     name = _(u"User ID")
 
     def render_value(self, obj):
-        return obj.getProperty("id")
+        try:
+            return obj.getProperty("id")
+        except ValueError:
+            return
 
 
 class UserLastNameRenderer(ExtendedRenderer):
     name = _(u"Last name")
 
     def render_value(self, obj):
-        return obj.getProperty("last_name")
+        try:
+            return obj.getProperty("last_name")
+        except ValueError:
+            return
 
 
 class UserFirstNameRenderer(ExtendedRenderer):
     name = _(u"First name")
 
     def render_value(self, obj):
-        return obj.getProperty("first_name")
+        try:
+            return obj.getProperty("first_name")
+        except ValueError:
+            return
+
+
+class UserAddressRenderer(ExtendedRenderer):
+    name = _(u"Address")
+
+    def render_value(self, obj):
+        try:
+            return obj.getProperty("address")
+        except ValueError:
+            return
 
 
 class UserGenderRenderer(ExtendedRenderer):
@@ -121,15 +140,17 @@ class UserGenderRenderer(ExtendedRenderer):
     def render_value(self, obj):
         factory = getUtility(IVocabularyFactory, "ideabox.vocabularies.gender")
         vocabulary = factory(self.context)
-        if obj.getProperty("gender"):
-            try:
-                return translate(
-                    vocabulary.getTerm(obj.getProperty("gender")).title,
-                    target_language=api.portal.get_current_language(),
-                )
-            except KeyError:
-                return
-        return
+        try:
+            if obj.getProperty("gender"):
+                try:
+                    return translate(
+                        vocabulary.getTerm(obj.getProperty("gender")).title,
+                        target_language=api.portal.get_current_language(),
+                    )
+                except KeyError:
+                    return
+        except ValueError:
+            return
 
 
 class UserBirthdateRenderer(ExtendedRenderer):
@@ -143,8 +164,11 @@ class UserBirthdateRenderer(ExtendedRenderer):
         return base_style
 
     def render_value(self, obj):
-        value = obj.getProperty("birthdate")
-        return self.render_collection_entry(obj, value)
+        try:
+            value = obj.getProperty("birthdate")
+            return self.render_collection_entry(obj, value)
+        except ValueError:
+            return
 
 
 class UserIamRenderer(ExtendedRenderer):
@@ -153,22 +177,28 @@ class UserIamRenderer(ExtendedRenderer):
     def render_value(self, obj):
         factory = getUtility(IVocabularyFactory, "collective.taxonomy.iam")
         vocabulary = factory(self.context)
-        if obj.getProperty("iam"):
-            try:
-                return translate(
-                    vocabulary.getTerm(obj.getProperty("iam")).title,
-                    target_language=api.portal.get_current_language(),
-                )
-            except KeyError:
-                return
-        return
+        try:
+            if obj.getProperty("iam"):
+                try:
+                    return translate(
+                        vocabulary.getTerm(obj.getProperty("iam")).title,
+                        target_language=api.portal.get_current_language(),
+                    )
+                except KeyError:
+                    return
+            return
+        except ValueError:
+            return
 
 
 class UserZipCodeRenderer(ExtendedRenderer):
     name = _(u"Zip code")
 
     def render_value(self, obj):
-        return obj.getProperty("zip_code")
+        try:
+            return obj.getProperty("zip_code")
+        except ValueError:
+            return
 
 
 class UserVotesRenderer(ExtendedRenderer):

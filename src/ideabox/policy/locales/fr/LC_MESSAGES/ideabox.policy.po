@@ -15,16 +15,21 @@ msgstr ""
 "Domain: ideabox.policy\n"
 "X-Is-Fallback-For: fr-be fr-ca fr-lu fr-mc fr-ch fr-fr\n"
 
-#: ../export/export.py:131
-#: ../userdataschema.py:26
+#: ../export/export.py:128
+#: ../userdataschema.py:22
+msgid "Adress"
+msgstr "Adresse"
+
+#: ../export/export.py:157
+#: ../userdataschema.py:28
 msgid "Birthdate"
 msgstr "Date de naissance"
 
-#: ../browser/controlpanel.py:31
+#: ../browser/controlpanel.py:34
 msgid "Configuration for ideabox product"
 msgstr ""
 
-#: ../content/project.py:45
+#: ../content/project.py:48
 msgid "Content"
 msgstr "Contenu"
 
@@ -32,11 +37,11 @@ msgstr "Contenu"
 msgid "District"
 msgstr "Quartier"
 
-#: ../content/project.py:37
+#: ../content/project.py:40
 msgid "District(s) concerned"
 msgstr "Quartier(s) concerné(s)"
 
-#: ../content/project.py:28
+#: ../content/project.py:31
 msgid "Domain(s) concerned"
 msgstr "Domaine(s) concerné(s)"
 
@@ -85,19 +90,19 @@ msgstr "Export les utilisateurs avec leurs votes"
 msgid "FEMALE"
 msgstr "Femme"
 
-#: ../export/export.py:112
+#: ../export/export.py:118
 #: ../userdataschema.py:20
 msgid "First name"
 msgstr "Prénom"
 
-#: ../export/export.py:119
-#: ../userdataschema.py:23
+#: ../export/export.py:138
+#: ../userdataschema.py:25
 msgid "Gender"
 msgstr "Sexe"
 
-#: ../export/export.py:146
+#: ../export/export.py:175
 #: ../setuphandlers.py:140
-#: ../userdataschema.py:33
+#: ../userdataschema.py:35
 msgid "I am"
 msgstr "Je suis"
 
@@ -121,11 +126,11 @@ msgstr ""
 msgid "If there are multiple email addresses, separate them with semicolons"
 msgstr "Si il y a plusieurs adresse email à renseigner séparez les par des points-virgules"
 
-#: ../configure.zcml:40
+#: ../configure.zcml:41
 msgid "Installs the ideabox.policy add-on."
 msgstr ""
 
-#: ../export/export.py:105
+#: ../export/export.py:108
 msgid "Last name"
 msgstr "Nom"
 
@@ -154,7 +159,11 @@ msgstr "Soumission d'un nouveau projet"
 msgid "News"
 msgstr "Actualités"
 
-#: ../content/project.py:50
+#: ../browser/controlpanel.py:27
+msgid "Number of projects displayed"
+msgstr "Nombre de projets affichés"
+
+#: ../content/project.py:53
 msgid "Original author"
 msgstr "Auteur original"
 
@@ -228,7 +237,7 @@ msgstr "Titre"
 msgid "Title; Date; Link"
 msgstr "Titre; Date; Lien"
 
-#: ../configure.zcml:49
+#: ../configure.zcml:50
 msgid "Uninstalls the ideabox.policy add-on."
 msgstr ""
 
@@ -240,12 +249,12 @@ msgstr "ID utilisateur"
 msgid "Voters list"
 msgstr "Liste des votants"
 
-#: ../export/export.py:165
+#: ../export/export.py:205
 msgid "Votes"
 msgstr "Votes"
 
-#: ../export/export.py:158
-#: ../userdataschema.py:29
+#: ../export/export.py:195
+#: ../userdataschema.py:31
 msgid "Zip code"
 msgstr "Code postal"
 
@@ -265,11 +274,11 @@ msgstr ""
 "              ${url}\n"
 "              "
 
-#: ../configure.zcml:40
+#: ../configure.zcml:41
 msgid "ideabox.policy"
 msgstr ""
 
-#: ../configure.zcml:49
+#: ../configure.zcml:50
 msgid "ideabox.policy (uninstall)"
 msgstr ""
 

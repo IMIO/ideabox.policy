@@ -36,6 +36,10 @@
            provides=".interfaces.IUsersExportable"
            name="first_name" />
 
+  <adapter factory=".export.UserAddressRenderer"
+           provides=".interfaces.IUsersExportable"
+           name="address" />
+
   <adapter factory=".export.UserGenderRenderer"
            provides=".interfaces.IUsersExportable"
            name="gender" />

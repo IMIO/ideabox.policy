@@ -5,6 +5,9 @@ Changelog
 2.0b7 (unreleased)
 ------------------
 
+- Add address property members
+  [vpiret]
+
 - Implement number_of_projects_displayed
   [vpiret]
 

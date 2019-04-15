@@ -30,7 +30,14 @@ class ProjectEncodingForm(Form):
     label = _(u"Project encoding")
     implements(IFieldsForm)
     fields = Fields(IProjectEncoding).select(
-        "mail", "last_name", "first_name", "gender", "birthdate", "zip_code", "iam"
+        "last_name",
+        "first_name",
+        "gender",
+        "mail",
+        "birthdate",
+        "address",
+        "zip_code",
+        "iam",
     )
 
     fields = fields + Fields(IProjectSubmission).select(
@@ -56,6 +63,7 @@ class ProjectEncodingForm(Form):
             birthdate=data["birthdate"],
             zip_code=data["zip_code"],
             iam=data["iam"],
+            address=data["address"],
         )
         if not data["mail"]:
             normalizer = getUtility(IIDNormalizer)
@@ -82,6 +90,7 @@ class ProjectEncodingForm(Form):
             "birthdate": data["birthdate"],
             "zip_code": data["zip_code"],
             "iam": data["iam"],
+            "address": data["address"],
         }
         for field, new_value in new_properties.items():
             if not new_value:

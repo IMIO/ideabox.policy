@@ -5,8 +5,11 @@ Changelog
 2.0b7 (unreleased)
 ------------------
 
+- Adapt required fields for project encoding form
+  [mpeeters]
+
 - Add address property members
-  [vpiret]
+  [vpiret, mpeeters]
 
 - Implement number_of_projects_displayed
   [vpiret]

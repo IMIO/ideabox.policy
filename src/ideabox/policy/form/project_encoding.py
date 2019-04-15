@@ -15,6 +15,7 @@ from z3c.form.form import Form
 from z3c.form.interfaces import IFieldsForm
 from zope.component import getUtility
 from zope.interface import implements
+from zope.i18n import translate
 
 from ideabox.policy import _
 from ideabox.policy.form.project_submission import IProjectSubmission
@@ -64,7 +65,8 @@ class ProjectEncodingForm(Form):
                 self.update_user(existing_user, data)
                 return existing_user
         properties = dict(
-            last_name=data["last_name"],
+            last_name=data["last_name"]
+            or translate(_(u"Anonymous"), context=self.request),
             first_name=data["first_name"],
             gender=data["gender"],
             birthdate=data["birthdate"],
@@ -91,7 +93,8 @@ class ProjectEncodingForm(Form):
     def update_user(self, user, data):
         updates = {}
         new_properties = {
-            "last_name": data["last_name"],
+            "last_name": data["last_name"]
+            or translate(_(u"Anonymous"), context=self.request),
             "first_name": data["first_name"],
             "gender": data["gender"],
             "birthdate": data["birthdate"],

@@ -48,7 +48,14 @@ class ProjectEncodingForm(Form):
     fields["project_district"].widgetFactory = MultiSelect2FieldWidget
     fields["gender"].widgetFactory = RadioFieldWidget
 
+    _required_fields = ("address", "title", "project_theme", "project_district", "body")
+
     ignoreContext = True
+
+    def update(self):
+        for name, field in self.fields.items():
+            field.field.required = name in self._required_fields
+        super(ProjectEncodingForm, self).update()
 
     def create_user(self, data):
         if data["mail"]:

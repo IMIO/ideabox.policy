@@ -17,8 +17,12 @@ msgstr ""
 
 #: ../export/export.py:128
 #: ../userdataschema.py:22
-msgid "Adress"
+msgid "Address"
 msgstr "Adresse"
+
+#: ../form/project_encoding.py:60
+msgid "Anonymous"
+msgstr "Anonyme"
 
 #: ../export/export.py:157
 #: ../userdataschema.py:28
@@ -208,7 +212,7 @@ msgstr "Vote"
 msgid "Save"
 msgstr "Enregistrer"
 
-#: ../form/project_encoding.py:126
+#: ../form/project_encoding.py:134
 #: ../form/project_submission.py:113
 msgid "Send"
 msgstr "Envoyer"

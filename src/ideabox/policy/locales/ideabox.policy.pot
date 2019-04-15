@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2019-04-11 11:41+0000\n"
+"POT-Creation-Date: 2019-04-15 15:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,6 +24,10 @@ msgstr ""
 #: ../export/export.py:128
 #: ../userdataschema.py:22
 msgid "Address"
+msgstr ""
+
+#: ../form/project_encoding.py:60
+msgid "Anonymous"
 msgstr ""
 
 #: ../export/export.py:157
@@ -214,7 +218,7 @@ msgstr ""
 msgid "Save"
 msgstr ""
 
-#: ../form/project_encoding.py:126
+#: ../form/project_encoding.py:134
 #: ../form/project_submission.py:113
 msgid "Send"
 msgstr ""

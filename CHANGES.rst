@@ -2,8 +2,8 @@ Changelog
 =========
 
 
-2.0b7 (unreleased)
-------------------
+2.1 (2019-04-16)
+----------------
 
 - Fix export of users
   [vpiret, mpeeters]

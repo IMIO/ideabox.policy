@@ -1,17 +1,17 @@
 # -*- coding: utf-8 -*-
-from zope.interface import Interface
-from zope.component import adapts
-from datetime import datetime
 
-from plone import api
 from collective.excelexport.datasources.base import BaseContentsDataSource
-from zope.component import getAdapters
+from datetime import datetime
 from ideabox.policy.export.interfaces import IUsersExportable
+from plone import api
+from zope.component import adapts
+from zope.component import getAdapters
+from zope.interface import Interface
 
 
 class UsersDataSource(BaseContentsDataSource):
     """
-    Export RIC contents
+    Export Users
     """
 
     adapts(Interface, Interface)

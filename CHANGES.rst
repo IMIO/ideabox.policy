@@ -5,6 +5,9 @@ Changelog
 2.0b7 (unreleased)
 ------------------
 
+- Fix export of users
+  [vpiret, mpeeters]
+
 - Adapt required fields for project encoding form
   [mpeeters]
 
@@ -12,9 +15,6 @@ Changelog
   [vpiret, mpeeters]
 
 - Implement number_of_projects_displayed
-  [vpiret]
-
-- Fix export users
   [vpiret]
 
 

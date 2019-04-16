@@ -70,6 +70,19 @@ class ExtendedRenderer(BaseFieldRenderer):
         return self.name
 
 
+class UserPropertyRenderer(ExtendedRenderer):
+    prop = ""
+
+    def render_value(self, obj):
+        try:
+            value = obj.getProperty(self.prop)
+            if isinstance(value, str):
+                value = value.decode("utf8")
+            return value
+        except ValueError:
+            return
+
+
 class RatingRenderer(ExtendedRenderer):
     name = _(u"Rating")
 
@@ -94,67 +107,47 @@ class VotersListRenderer(ExtendedRenderer):
         return voters
 
 
-class UserIdRenderer(ExtendedRenderer):
+class UserIdRenderer(UserPropertyRenderer):
     name = _(u"User ID")
-
-    def render_value(self, obj):
-        try:
-            return obj.getProperty("id")
-        except ValueError:
-            return
+    prop = "id"
 
 
-class UserLastNameRenderer(ExtendedRenderer):
+class UserLastNameRenderer(UserPropertyRenderer):
     name = _(u"Last name")
-
-    def render_value(self, obj):
-        try:
-            return obj.getProperty("last_name")
-        except ValueError:
-            return
+    prop = "last_name"
 
 
-class UserFirstNameRenderer(ExtendedRenderer):
+class UserFirstNameRenderer(UserPropertyRenderer):
     name = _(u"First name")
-
-    def render_value(self, obj):
-        try:
-            return obj.getProperty("first_name")
-        except ValueError:
-            return
+    prop = "first_name"
 
 
-class UserAddressRenderer(ExtendedRenderer):
+class UserAddressRenderer(UserPropertyRenderer):
     name = _(u"Address")
-
-    def render_value(self, obj):
-        try:
-            return obj.getProperty("address")
-        except ValueError:
-            return
+    prop = "address"
 
 
-class UserGenderRenderer(ExtendedRenderer):
+class UserGenderRenderer(UserPropertyRenderer):
     name = _(u"Gender")
+    prop = "gender"
 
     def render_value(self, obj):
-        factory = getUtility(IVocabularyFactory, "ideabox.vocabularies.gender")
-        vocabulary = factory(self.context)
-        try:
-            if obj.getProperty("gender"):
-                try:
-                    return translate(
-                        vocabulary.getTerm(obj.getProperty("gender")).title,
-                        target_language=api.portal.get_current_language(),
-                    )
-                except KeyError:
-                    return
-        except ValueError:
-            return
+        value = super(UserGenderRenderer, self).render_value(obj)
+        if value:
+            factory = getUtility(IVocabularyFactory, "ideabox.vocabularies.gender")
+            vocabulary = factory(self.context)
+            try:
+                return translate(
+                    vocabulary.getTerm(obj.getProperty("gender")).title,
+                    target_language=api.portal.get_current_language(),
+                )
+            except KeyError:
+                return
 
 
-class UserBirthdateRenderer(ExtendedRenderer):
+class UserBirthdateRenderer(UserPropertyRenderer):
     name = _(u"Birthdate")
+    prop = "birthdate"
 
     def render_collection_entry(self, obj, value):
         return value.strftime("%d/%m/%Y")
@@ -164,41 +157,32 @@ class UserBirthdateRenderer(ExtendedRenderer):
         return base_style
 
     def render_value(self, obj):
-        try:
-            value = obj.getProperty("birthdate")
+        value = super(UserBirthdateRenderer, self).render_value(obj)
+        if value:
             return self.render_collection_entry(obj, value)
-        except ValueError:
-            return
 
 
-class UserIamRenderer(ExtendedRenderer):
+class UserIamRenderer(UserPropertyRenderer):
     name = _(u"I am")
+    prop = "iam"
 
     def render_value(self, obj):
-        factory = getUtility(IVocabularyFactory, "collective.taxonomy.iam")
-        vocabulary = factory(self.context)
-        try:
-            if obj.getProperty("iam"):
-                try:
-                    return translate(
-                        vocabulary.getTerm(obj.getProperty("iam")).title,
-                        target_language=api.portal.get_current_language(),
-                    )
-                except KeyError:
-                    return
-            return
-        except ValueError:
-            return
+        value = super(UserIamRenderer, self).render_value(obj)
+        if value:
+            factory = getUtility(IVocabularyFactory, "collective.taxonomy.iam")
+            vocabulary = factory(self.context)
+            try:
+                return translate(
+                    vocabulary.getTerm(obj.getProperty("iam")).title,
+                    target_language=api.portal.get_current_language(),
+                )
+            except KeyError:
+                return
 
 
-class UserZipCodeRenderer(ExtendedRenderer):
+class UserZipCodeRenderer(UserPropertyRenderer):
     name = _(u"Zip code")
-
-    def render_value(self, obj):
-        try:
-            return obj.getProperty("zip_code")
-        except ValueError:
-            return
+    prop = "zip_code"
 
 
 class UserVotesRenderer(ExtendedRenderer):

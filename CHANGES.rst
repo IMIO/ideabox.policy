@@ -5,7 +5,8 @@ Changelog
 2.1.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix faceted query and batch for projects
+  [mpeeters]
 
 
 2.1 (2019-04-16)

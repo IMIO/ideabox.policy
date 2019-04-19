@@ -30,4 +30,10 @@
     class=".events.EventsView"
     />
 
+  <subscriber
+      for="zope.interface.Interface
+           eea.facetednavigation.events.IQueryWillBeExecutedEvent"
+      handler=".subscriber.faceted_query_handler"
+      />
+
 </configure>

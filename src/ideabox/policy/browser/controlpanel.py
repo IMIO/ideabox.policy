@@ -23,10 +23,6 @@ class IIdeaBoxSettingsSchema(Interface):
         title=_(u"Enable / Disable project submission"), default=True
     )
 
-    number_project = schema.Int(
-        title=_(u"Number of projects displayed"), required=False
-    )
-
 
 class IdeaBoxSettingsEditForm(controlpanel.RegistryEditForm):
 

@@ -48,13 +48,13 @@
   <criterion name="c0">
    <property name="widget">resultsperpage</property>
    <property name="title">Results per page</property>
-   <property name="default">9</property>
+   <property name="default">12</property>
    <property name="position">right</property>
    <property name="section">default</property>
    <property name="hidden">True</property>
    <property name="start">0</property>
-   <property name="end">90</property>
-   <property name="step">9</property>
+   <property name="end">30</property>
+   <property name="step">3</property>
   </criterion>
   <criterion name="c1">
    <property name="widget">checkbox</property>

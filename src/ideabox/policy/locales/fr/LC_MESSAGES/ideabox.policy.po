@@ -15,21 +15,21 @@ msgstr ""
 "Domain: ideabox.policy\n"
 "X-Is-Fallback-For: fr-be fr-ca fr-lu fr-mc fr-ch fr-fr\n"
 
-#: ../export/export.py:128
+#: ../export/export.py:126
 #: ../userdataschema.py:22
 msgid "Address"
 msgstr "Adresse"
 
-#: ../form/project_encoding.py:60
+#: ../form/project_encoding.py:69
 msgid "Anonymous"
 msgstr "Anonyme"
 
-#: ../export/export.py:157
+#: ../export/export.py:149
 #: ../userdataschema.py:28
 msgid "Birthdate"
 msgstr "Date de naissance"
 
-#: ../browser/controlpanel.py:34
+#: ../browser/controlpanel.py:30
 msgid "Configuration for ideabox product"
 msgstr ""
 
@@ -53,7 +53,7 @@ msgstr "Domaine(s) concerné(s)"
 msgid "Edit timeline dates"
 msgstr "Modifier les dates de la ligne du temps"
 
-#: ../form/project_encoding.py:26
+#: ../form/project_encoding.py:27
 msgid "Email"
 msgstr ""
 
@@ -94,17 +94,17 @@ msgstr "Export les utilisateurs avec leurs votes"
 msgid "FEMALE"
 msgstr "Femme"
 
-#: ../export/export.py:118
+#: ../export/export.py:121
 #: ../userdataschema.py:20
 msgid "First name"
 msgstr "Prénom"
 
-#: ../export/export.py:138
+#: ../export/export.py:131
 #: ../userdataschema.py:25
 msgid "Gender"
 msgstr "Sexe"
 
-#: ../export/export.py:175
+#: ../export/export.py:166
 #: ../setuphandlers.py:140
 #: ../userdataschema.py:35
 msgid "I am"
@@ -134,7 +134,7 @@ msgstr "Si il y a plusieurs adresse email à renseigner séparez les par des poi
 msgid "Installs the ideabox.policy add-on."
 msgstr ""
 
-#: ../export/export.py:108
+#: ../export/export.py:116
 msgid "Last name"
 msgstr "Nom"
 
@@ -163,10 +163,6 @@ msgstr "Soumission d'un nouveau projet"
 msgid "News"
 msgstr "Actualités"
 
-#: ../browser/controlpanel.py:27
-msgid "Number of projects displayed"
-msgstr "Nombre de projets affichés"
-
 #: ../content/project.py:53
 msgid "Original author"
 msgstr "Auteur original"
@@ -183,7 +179,7 @@ msgstr "Informations personnelles pour un utilisateur connecté"
 msgid "Project"
 msgstr "Projet"
 
-#: ../form/project_encoding.py:30
+#: ../form/project_encoding.py:31
 #: ../profiles/default/actions.xml
 msgid "Project encoding"
 msgstr "Encoder un projet"
@@ -204,7 +200,7 @@ msgstr "Projets"
 msgid "Projects in progression"
 msgstr "Des projets en évolution"
 
-#: ../export/export.py:74
+#: ../export/export.py:87
 msgid "Rating"
 msgstr "Vote"
 
@@ -212,7 +208,7 @@ msgstr "Vote"
 msgid "Save"
 msgstr "Enregistrer"
 
-#: ../form/project_encoding.py:134
+#: ../form/project_encoding.py:145
 #: ../form/project_submission.py:113
 msgid "Send"
 msgstr "Envoyer"
@@ -245,19 +241,19 @@ msgstr "Titre; Date; Lien"
 msgid "Uninstalls the ideabox.policy add-on."
 msgstr ""
 
-#: ../export/export.py:98
+#: ../export/export.py:111
 msgid "User ID"
 msgstr "ID utilisateur"
 
-#: ../export/export.py:85
+#: ../export/export.py:98
 msgid "Voters list"
 msgstr "Liste des votants"
 
-#: ../export/export.py:205
+#: ../export/export.py:189
 msgid "Votes"
 msgstr "Votes"
 
-#: ../export/export.py:195
+#: ../export/export.py:184
 #: ../userdataschema.py:31
 msgid "Zip code"
 msgstr "Code postal"

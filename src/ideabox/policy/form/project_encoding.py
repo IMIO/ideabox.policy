@@ -77,8 +77,8 @@ class ProjectEncodingForm(Form):
         if not data["mail"]:
             normalizer = getUtility(IIDNormalizer)
             mail = "{0}_{1}_{2}@liege2025.be".format(
-                normalizer.normalize(data["title"]),
-                data["last_name"],
+                normalizer.normalize(data["title"])[:20],
+                normalizer.normalize(data["last_name"])[:5],
                 hashlib.md5(str(time.time())).hexdigest()[:4],
             )
         else:

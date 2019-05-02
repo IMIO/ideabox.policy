@@ -5,7 +5,8 @@ Changelog
 2.1.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix project_encoding if the mail is too long
+  [vpiret]
 
 
 2.1.1 (2019-04-22)

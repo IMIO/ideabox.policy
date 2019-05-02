@@ -9,7 +9,6 @@ from zope.schema.interfaces import IVocabularyFactory
 
 
 class ProjectsView(BrowserView):
-
     def sort_items(self, elements):
         elements = [e for e in elements]
         shuffle(elements)

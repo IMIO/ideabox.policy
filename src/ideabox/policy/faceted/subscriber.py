@@ -6,14 +6,14 @@ from hashlib import md5
 
 
 def faceted_query_handler(obj, event):
-    if obj.REQUEST.ACTUAL_URL.endswith('@@faceted_query'):
+    if obj.REQUEST.ACTUAL_URL.endswith("@@faceted_query"):
         try:
             layout = IFacetedLayout(obj).layout
         except TypeError:
             layout = None
-        if layout == 'faceted-project':
-            event.query['sort_on'] = Randomizer(obj.REQUEST).random_sort_key
-            event.query['sort_order'] = 'ascending'
+        if layout == "faceted-project":
+            event.query["sort_on"] = Randomizer(obj.REQUEST).random_sort_key
+            event.query["sort_order"] = "ascending"
 
 
 class Randomizer(object):

@@ -5,6 +5,9 @@ Changelog
 2.1.2 (unreleased)
 ------------------
 
+- `address` is no longer a required field
+  [mpeeters]
+
 - Fix project_encoding if the mail is too long
   [vpiret]
 

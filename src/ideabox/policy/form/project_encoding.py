@@ -49,7 +49,7 @@ class ProjectEncodingForm(Form):
     fields["project_district"].widgetFactory = MultiSelect2FieldWidget
     fields["gender"].widgetFactory = RadioFieldWidget
 
-    _required_fields = ("address", "title", "project_theme", "project_district", "body")
+    _required_fields = ("title", "project_theme", "project_district", "body")
 
     ignoreContext = True
 

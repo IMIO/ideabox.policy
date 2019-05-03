@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.1.2 (unreleased)
+2.1.2 (2019-05-03)
 ------------------
 
 - `address` is no longer a required field

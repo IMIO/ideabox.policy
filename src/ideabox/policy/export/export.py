@@ -83,8 +83,8 @@ class UserPropertyRenderer(ExtendedRenderer):
             return
 
 
-class RatingRenderer(ExtendedRenderer):
-    name = _(u"Rating")
+class PositiveRatingRenderer(ExtendedRenderer):
+    name = _(u"Positive rating ")
 
     def render_value(self, obj):
         annotations = IAnnotations(obj)
@@ -94,8 +94,19 @@ class RatingRenderer(ExtendedRenderer):
         return 0
 
 
-class VotersListRenderer(ExtendedRenderer):
-    name = _(u"Voters list")
+class NegativeRatingRenderer(ExtendedRenderer):
+    name = _(u"Negative rating ")
+
+    def render_value(self, obj):
+        annotations = IAnnotations(obj)
+        vote = annotations.get("cioppino.twothumbs.nays")
+        if vote:
+            return len(annotations["cioppino.twothumbs.nays"])
+        return 0
+
+
+class PositiveVotersListRenderer(ExtendedRenderer):
+    name = _(u"Voters in favour")
 
     def render_value(self, obj):
         annotations = IAnnotations(obj)
@@ -103,6 +114,19 @@ class VotersListRenderer(ExtendedRenderer):
         vote = annotations.get("cioppino.twothumbs.yays")
         if vote:
             for voter in annotations["cioppino.twothumbs.yays"]:
+                voters.append(voter)
+        return voters
+
+
+class NegativeVotersListRenderer(ExtendedRenderer):
+    name = _(u"Voters opposed")
+
+    def render_value(self, obj):
+        annotations = IAnnotations(obj)
+        voters = []
+        vote = annotations.get("cioppino.twothumbs.nays")
+        if vote:
+            for voter in annotations["cioppino.twothumbs.nays"]:
                 voters.append(voter)
         return voters
 

@@ -12,13 +12,21 @@
              provides="collective.excelexport.interfaces.IExportableFactory"
              name="project" />
 
-  <adapter factory=".export.RatingRenderer"
+  <adapter factory=".export.PositiveRatingRenderer"
            provides=".interfaces.IExtendedProjectExportable"
-           name="rating" />
+           name="positiveRating" />
 
-  <adapter factory=".export.VotersListRenderer"
+  <adapter factory=".export.NegativeRatingRenderer"
            provides=".interfaces.IExtendedProjectExportable"
-           name="votersList" />
+           name="negativeRating" />
+
+  <adapter factory=".export.PositiveVotersListRenderer"
+           provides=".interfaces.IExtendedProjectExportable"
+           name="positiveVotersList" />
+
+  <adapter factory=".export.NegativeVotersListRenderer"
+           provides=".interfaces.IExtendedProjectExportable"
+           name="negativeVotersList" />
 
   <adapter factory=".datasource.UsersDataSource"
            provides="collective.excelexport.interfaces.IDataSource"

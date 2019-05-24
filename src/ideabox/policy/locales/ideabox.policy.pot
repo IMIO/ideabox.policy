@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2019-04-19 14:03+0000\n"
+"POT-Creation-Date: 2019-05-24 14:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,7 +21,7 @@ msgstr ""
 msgid ""
 msgstr ""
 
-#: ../export/export.py:126
+#: ../export/export.py:150
 #: ../userdataschema.py:22
 msgid "Address"
 msgstr ""
@@ -30,7 +30,7 @@ msgstr ""
 msgid "Anonymous"
 msgstr ""
 
-#: ../export/export.py:149
+#: ../export/export.py:173
 #: ../userdataschema.py:28
 msgid "Birthdate"
 msgstr ""
@@ -100,17 +100,17 @@ msgstr ""
 msgid "FEMALE"
 msgstr ""
 
-#: ../export/export.py:121
+#: ../export/export.py:145
 #: ../userdataschema.py:20
 msgid "First name"
 msgstr ""
 
-#: ../export/export.py:131
+#: ../export/export.py:155
 #: ../userdataschema.py:25
 msgid "Gender"
 msgstr ""
 
-#: ../export/export.py:166
+#: ../export/export.py:190
 #: ../setuphandlers.py:140
 #: ../userdataschema.py:35
 msgid "I am"
@@ -140,7 +140,7 @@ msgstr ""
 msgid "Installs the ideabox.policy add-on."
 msgstr ""
 
-#: ../export/export.py:116
+#: ../export/export.py:140
 msgid "Last name"
 msgstr ""
 
@@ -161,6 +161,10 @@ msgstr ""
 msgid "MALE"
 msgstr ""
 
+#: ../export/export.py:98
+msgid "Negative rating "
+msgstr ""
+
 #: ../form/project_submission.py:77
 msgid "New project submission"
 msgstr ""
@@ -179,6 +183,10 @@ msgstr ""
 
 #: ../profiles/default/actions.xml
 msgid "Personal information for connected user"
+msgstr ""
+
+#: ../export/export.py:87
+msgid "Positive rating "
 msgstr ""
 
 #: ../profiles/default/types/Project.xml
@@ -204,10 +212,6 @@ msgstr ""
 
 #: ../browser/project.py:12
 msgid "Projects in progression"
-msgstr ""
-
-#: ../export/export.py:87
-msgid "Rating"
 msgstr ""
 
 #: ../browser/workflow.py:82
@@ -247,19 +251,23 @@ msgstr ""
 msgid "Uninstalls the ideabox.policy add-on."
 msgstr ""
 
-#: ../export/export.py:111
+#: ../export/export.py:135
 msgid "User ID"
 msgstr ""
 
-#: ../export/export.py:98
-msgid "Voters list"
+#: ../export/export.py:109
+msgid "Voters in favour"
 msgstr ""
 
-#: ../export/export.py:189
+#: ../export/export.py:122
+msgid "Voters opposed"
+msgstr ""
+
+#: ../export/export.py:213
 msgid "Votes"
 msgstr ""
 
-#: ../export/export.py:184
+#: ../export/export.py:208
 #: ../userdataschema.py:31
 msgid "Zip code"
 msgstr ""

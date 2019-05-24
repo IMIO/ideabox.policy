@@ -5,7 +5,8 @@ Changelog
 2.1.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add negative rating on export excell
+  [vpiret]
 
 
 2.1.2 (2019-05-03)

@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.1.3 (unreleased)
+2.1.3 (2019-05-27)
 ------------------
 
 - Add negative rating on export excell

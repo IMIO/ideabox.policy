@@ -5,7 +5,8 @@ Changelog
 2.1.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Remove user votes on export excel
+  [vpiret]
 
 
 2.1.3 (2019-05-27)

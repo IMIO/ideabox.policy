@@ -64,8 +64,8 @@
            provides=".interfaces.IUsersExportable"
            name="zip_code" />
 
-  <adapter factory=".export.UserVotesRenderer"
-           provides=".interfaces.IUsersExportable"
-           name="votes" />
+<!--  <adapter factory=".export.UserVotesRenderer"-->
+<!--           provides=".interfaces.IUsersExportable"-->
+<!--           name="votes" />-->
 
 </configure>

@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.1.4 (unreleased)
+2.1.4 (2019-05-28)
 ------------------
 
 - Remove user votes on export excel

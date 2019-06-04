@@ -5,7 +5,8 @@ Changelog
 2.1.5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix social media metadatas for projects
+  [mpeeters]
 
 
 2.1.4 (2019-05-28)

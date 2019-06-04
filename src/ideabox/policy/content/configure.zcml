@@ -13,6 +13,12 @@
       permission="zope2.View"
       />
 
+  <adapter factory=".syndication.ProjectItem"
+    for=".project.IProject
+         Products.CMFPlone.interfaces.syndication.IFeed"
+    provides="Products.CMFPlone.interfaces.syndication.IFeedItem"
+    />
+
   <adapter
       name="project_picture"
       factory=".indexer.project_picture"

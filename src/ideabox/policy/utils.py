@@ -4,8 +4,9 @@ from AccessControl import getSecurityManager
 from AccessControl.SecurityManagement import newSecurityManager
 from AccessControl.SecurityManagement import setSecurityManager
 from AccessControl.User import UnrestrictedUser as BaseUnrestrictedUser
-from plone import api
+from datetime import datetime
 from ideabox.policy import vocabularies
+from plone import api
 from zope.i18n import translate
 
 
@@ -53,3 +54,7 @@ def review_state(context):
 def can_view_rating(context):
     _rating_states = ("vote", "result_analysis", "rejected")
     return review_state(context) in _rating_states
+
+
+def now():
+    return datetime.now()

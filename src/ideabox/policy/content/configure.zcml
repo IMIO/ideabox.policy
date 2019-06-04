@@ -19,11 +19,48 @@
     provides="Products.CMFPlone.interfaces.syndication.IFeedItem"
     />
 
+  <!-- indexes -->
   <adapter
       name="project_picture"
       factory=".indexer.project_picture"
       />
 
+  <adapter
+      name="project_random_1"
+      factory=".indexer.project_random_1"
+      />
+
+  <adapter
+      name="project_random_2"
+      factory=".indexer.project_random_2"
+      />
+
+  <adapter
+      name="project_random_3"
+      factory=".indexer.project_random_3"
+      />
+
+  <adapter
+      name="project_random_4"
+      factory=".indexer.project_random_4"
+      />
+
+  <adapter
+      name="project_random_5"
+      factory=".indexer.project_random_5"
+      />
+
+  <adapter
+      name="project_random_6"
+      factory=".indexer.project_random_6"
+      />
+
+  <adapter
+      name="project_random_7"
+      factory=".indexer.project_random_7"
+      />
+
+  <!-- subscribers -->
   <subscriber
       for="plone.app.contenttypes.interfaces.IImage
            zope.lifecycleevent.interfaces.IObjectRemovedEvent"

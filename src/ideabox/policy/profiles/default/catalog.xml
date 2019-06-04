@@ -11,9 +11,44 @@
  </index>
  <column value="project_picture" />
 
- <index name="project_district" meta_type="KeywordIndex">
+ <index name="project_district" meta_type="FieldIndex">
   <indexed_attr value="project_district" />
  </index>
  <column value="project_district" />
+
+ <index name="project_random_1" meta_type="FieldIndex">
+  <indexed_attr value="project_random_1" />
+ </index>
+ <column value="project_random_1" />
+
+ <index name="project_random_2" meta_type="FieldIndex">
+  <indexed_attr value="project_random_2" />
+ </index>
+ <column value="project_random_2" />
+
+ <index name="project_random_3" meta_type="FieldIndex">
+  <indexed_attr value="project_random_3" />
+ </index>
+ <column value="project_random_3" />
+
+ <index name="project_random_4" meta_type="FieldIndex">
+  <indexed_attr value="project_random_4" />
+ </index>
+ <column value="project_random_4" />
+
+ <index name="project_random_5" meta_type="FieldIndex">
+  <indexed_attr value="project_random_5" />
+ </index>
+ <column value="project_random_5" />
+
+ <index name="project_random_6" meta_type="FieldIndex">
+  <indexed_attr value="project_random_6" />
+ </index>
+ <column value="project_random_6" />
+
+ <index name="project_random_7" meta_type="FieldIndex">
+  <indexed_attr value="project_random_7" />
+ </index>
+ <column value="project_random_7" />
 
 </object>

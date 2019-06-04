@@ -5,6 +5,9 @@ Changelog
 2.1.5 (unreleased)
 ------------------
 
+- Improve random sort of projects
+  [mpeeters]
+
 - Fix social media metadatas for projects
   [mpeeters]
 

@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.1.5 (unreleased)
+2.2.0 (2019-06-06)
 ------------------
 
 - Improve random sort of projects

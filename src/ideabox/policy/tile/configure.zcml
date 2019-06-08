@@ -11,7 +11,19 @@
         title="latest projects"
         description="A tile which displays the latest submitted projects"
         add_permission="cmf.ModifyPortalContent"
-        class=".projects.ProjectsTile"
+        class=".projects.LatestProjectsTile"
+        for="*"
+        permission="zope.Public"
+        schema=".projects.IProjectsTile"
+        template="templates/projects.pt"
+        />
+
+    <plone:tile
+        name="ideabox.policy.random_projects"
+        title="random projects"
+        description="A tile which displays randomly selected projects"
+        add_permission="cmf.ModifyPortalContent"
+        class=".projects.RandomProjectsTile"
         for="*"
         permission="zope.Public"
         schema=".projects.IProjectsTile"

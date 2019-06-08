@@ -17,7 +17,7 @@ def faceted_query_handler(obj, event):
         if layout == "faceted-project":
             randomizer = Randomizer(obj.REQUEST)
             event.query["sort_on"] = randomizer.random_sort_key
-            event.query["sort_order"] = randomizer.random_sort_key
+            event.query["sort_order"] = randomizer.random_sort_order
 
 
 def _cache_key(function, generator):

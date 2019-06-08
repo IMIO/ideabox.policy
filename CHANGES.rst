@@ -5,7 +5,8 @@ Changelog
 2.2.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add a tile to randomly display projects
+  [mpeeter]
 
 
 2.2.0 (2019-06-06)

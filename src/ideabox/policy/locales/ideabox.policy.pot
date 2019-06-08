@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2019-05-24 14:18+0000\n"
+"POT-Creation-Date: 2019-06-08 20:58+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -148,11 +148,11 @@ msgstr ""
 msgid "Last name or institution"
 msgstr ""
 
-#: ../tile/projects.py:18
+#: ../tile/projects.py:25
 msgid "Limit"
 msgstr ""
 
-#: ../tile/projects.py:19
+#: ../tile/projects.py:26
 msgid "Limit projects"
 msgstr ""
 
@@ -207,6 +207,7 @@ msgid "Project submission is currently disabled"
 msgstr ""
 
 #: ../faceted/configure.zcml:15
+#: ../tile/projects.py:22
 msgid "Projects"
 msgstr ""
 
@@ -240,6 +241,7 @@ msgid "Theme"
 msgstr ""
 
 #: ../form/project_submission.py:23
+#: ../tile/projects.py:22
 msgid "Title"
 msgstr ""
 

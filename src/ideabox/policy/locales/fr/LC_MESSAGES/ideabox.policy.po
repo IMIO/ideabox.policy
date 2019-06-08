@@ -67,7 +67,7 @@ msgstr "Activer / Désactiver la soumission de projet"
 
 #: ../profiles/default/actions.xml
 msgid "Encoding project with user"
-msgstr ""
+msgstr "Encoder un projet pour un utilisateur"
 
 #: ../faceted/configure.zcml:31
 msgid "Events"
@@ -142,11 +142,11 @@ msgstr "Nom"
 msgid "Last name or institution"
 msgstr "Nom ou institution"
 
-#: ../tile/projects.py:18
+#: ../tile/projects.py:25
 msgid "Limit"
 msgstr "Limite"
 
-#: ../tile/projects.py:19
+#: ../tile/projects.py:26
 msgid "Limit projects"
 msgstr "Limite d'élément affiché"
 
@@ -201,6 +201,7 @@ msgid "Project submission is currently disabled"
 msgstr "La soumission de projet est actuellement désactivée"
 
 #: ../faceted/configure.zcml:15
+#: ../tile/projects.py:22
 msgid "Projects"
 msgstr "Projets"
 
@@ -234,6 +235,7 @@ msgid "Theme"
 msgstr "Thème"
 
 #: ../form/project_submission.py:23
+#: ../tile/projects.py:22
 msgid "Title"
 msgstr "Titre"
 

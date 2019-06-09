@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.2.1 (unreleased)
+2.3.0 (2019-06-09)
 ------------------
 
 - Add a tile to randomly display projects

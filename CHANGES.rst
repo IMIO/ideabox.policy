@@ -5,7 +5,8 @@ Changelog
 2.3.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix user names displayed on comments (it was the email address)
+  [mpeeter]
 
 
 2.3.0 (2019-06-09)

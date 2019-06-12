@@ -2,15 +2,13 @@
   xmlns="http://namespaces.zope.org/zope"
   xmlns:genericsetup="http://namespaces.zope.org/genericsetup">
 
-  <!-- -*- extra stuff goes here -*- -->
-  <!--<genericsetup:upgradeStep
+  <genericsetup:upgradeStep
     source="*"
     destination="1001"
-    title="Reload GS profiles"
-    description=""
+    title="Fix username on comments"
+    description="Replace email addresses by user names on comments"
     profile="ideabox.policy:default"
-    handler=".upgrades.reload_gs_profile"
-    />-->
-
+    handler=".upgrades.fix_comments_1001"
+    />
 
 </configure>

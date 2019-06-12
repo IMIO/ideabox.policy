@@ -105,4 +105,17 @@
     </browser:pages>
   </configure>
 
+  <!-- comments -->
+  <configure package="plone.app.discussion.browser">
+    <browser:viewlet
+      name="plone.comments"
+      for="ideabox.policy.content.project.IProject"
+      layer="..interfaces.IDiscussionLayer"
+      manager="plone.app.layout.viewlets.interfaces.IBelowContent"
+      view="plone.app.layout.globals.interfaces.IViewView"
+      class="ideabox.policy.browser.comment.CommentsViewlet"
+      permission="zope2.View"
+      />
+  </configure>
+
 </configure>

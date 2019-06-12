@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.3.1 (unreleased)
+2.3.1 (2019-06-12)
 ------------------
 
 - Fix user names displayed on comments (it was the email address)

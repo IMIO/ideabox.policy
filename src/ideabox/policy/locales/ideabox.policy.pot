@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2019-06-08 20:58+0000\n"
+"POT-Creation-Date: 2019-06-21 13:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,12 +21,18 @@ msgstr ""
 msgid ""
 msgstr ""
 
+#. Default: "Against"
+#: ../vocabularies.py:89
+msgid "AGAINST"
+msgstr ""
+
 #: ../export/export.py:150
 #: ../userdataschema.py:22
 msgid "Address"
 msgstr ""
 
 #: ../form/project_encoding.py:69
+#: ../form/vote_encoding.py:81
 msgid "Anonymous"
 msgstr ""
 
@@ -60,6 +66,7 @@ msgid "Edit timeline dates"
 msgstr ""
 
 #: ../form/project_encoding.py:27
+#: ../form/vote_encoding.py:26
 msgid "Email"
 msgstr ""
 
@@ -96,8 +103,13 @@ msgid "Export users with their votes"
 msgstr ""
 
 #. Default: "Female"
-#: ../vocabularies.py:45
+#: ../vocabularies.py:48
 msgid "FEMALE"
+msgstr ""
+
+#. Default: "For"
+#: ../vocabularies.py:89
+msgid "FOR"
 msgstr ""
 
 #: ../export/export.py:145
@@ -157,7 +169,7 @@ msgid "Limit projects"
 msgstr ""
 
 #. Default: "Male"
-#: ../vocabularies.py:45
+#: ../vocabularies.py:48
 msgid "MALE"
 msgstr ""
 
@@ -189,6 +201,7 @@ msgstr ""
 msgid "Positive rating "
 msgstr ""
 
+#: ../form/vote_encoding.py:37
 #: ../profiles/default/types/Project.xml
 msgid "Project"
 msgstr ""
@@ -206,6 +219,10 @@ msgstr ""
 msgid "Project submission is currently disabled"
 msgstr ""
 
+#: ../form/vote_encoding.py:35
+msgid "Project(s)"
+msgstr ""
+
 #: ../faceted/configure.zcml:15
 #: ../tile/projects.py:22
 msgid "Projects"
@@ -221,6 +238,7 @@ msgstr ""
 
 #: ../form/project_encoding.py:145
 #: ../form/project_submission.py:113
+#: ../form/vote_encoding.py:137
 msgid "Send"
 msgstr ""
 
@@ -255,6 +273,14 @@ msgstr ""
 
 #: ../export/export.py:135
 msgid "User ID"
+msgstr ""
+
+#: ../form/vote_encoding.py:30
+msgid "Vote"
+msgstr ""
+
+#: ../form/vote_encoding.py:45
+msgid "Vote encoding"
 msgstr ""
 
 #: ../export/export.py:109

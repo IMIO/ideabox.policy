@@ -15,12 +15,18 @@ msgstr ""
 "Domain: ideabox.policy\n"
 "X-Is-Fallback-For: fr-be fr-ca fr-lu fr-mc fr-ch fr-fr\n"
 
+#. Default: "Against"
+#: ../vocabularies.py:89
+msgid "AGAINST"
+msgstr "Contre"
+
 #: ../export/export.py:150
 #: ../userdataschema.py:22
 msgid "Address"
 msgstr "Adresse"
 
 #: ../form/project_encoding.py:69
+#: ../form/vote_encoding.py:81
 msgid "Anonymous"
 msgstr "Anonyme"
 
@@ -54,6 +60,7 @@ msgid "Edit timeline dates"
 msgstr "Modifier les dates de la ligne du temps"
 
 #: ../form/project_encoding.py:27
+#: ../form/vote_encoding.py:26
 msgid "Email"
 msgstr ""
 
@@ -90,9 +97,14 @@ msgid "Export users with their votes"
 msgstr "Export les utilisateurs avec leurs votes"
 
 #. Default: "Female"
-#: ../vocabularies.py:45
+#: ../vocabularies.py:48
 msgid "FEMALE"
 msgstr "Femme"
+
+#. Default: "For"
+#: ../vocabularies.py:89
+msgid "FOR"
+msgstr "Pour"
 
 #: ../export/export.py:145
 #: ../userdataschema.py:20
@@ -151,7 +163,7 @@ msgid "Limit projects"
 msgstr "Limite d'élément affiché"
 
 #. Default: "Male"
-#: ../vocabularies.py:45
+#: ../vocabularies.py:48
 msgid "MALE"
 msgstr "Homme"
 
@@ -183,6 +195,7 @@ msgstr "Informations personnelles pour un utilisateur connecté"
 msgid "Positive rating "
 msgstr "Vote pour"
 
+#: ../form/vote_encoding.py:37
 #: ../profiles/default/types/Project.xml
 msgid "Project"
 msgstr "Projet"
@@ -200,6 +213,10 @@ msgstr "Image du projet"
 msgid "Project submission is currently disabled"
 msgstr "La soumission de projet est actuellement désactivée"
 
+#: ../form/vote_encoding.py:35
+msgid "Project(s)"
+msgstr "Projet(s)"
+
 #: ../faceted/configure.zcml:15
 #: ../tile/projects.py:22
 msgid "Projects"
@@ -215,6 +232,7 @@ msgstr "Enregistrer"
 
 #: ../form/project_encoding.py:145
 #: ../form/project_submission.py:113
+#: ../form/vote_encoding.py:137
 msgid "Send"
 msgstr "Envoyer"
 
@@ -250,6 +268,14 @@ msgstr ""
 #: ../export/export.py:135
 msgid "User ID"
 msgstr "ID utilisateur"
+
+#: ../form/vote_encoding.py:30
+msgid "Vote"
+msgstr "Vote"
+
+#: ../form/vote_encoding.py:45
+msgid "Vote encoding"
+msgstr "Encoder des votes"
 
 #: ../export/export.py:109
 msgid "Voters in favour"

@@ -81,4 +81,18 @@
    <property name="visible">True</property>
   </object>
  </object>
+
+  <object name="user" meta_type="CMF Action Category">
+  <object name="project_encoding" meta_type="CMF Action" i18n:domain="ideabox.policy" insert-before="*">
+   <property name="title" i18n:translate="">Vote encoding</property>
+   <property name="description" i18n:translate="">Encoding vote with user</property>
+   <property name="url_expr">string:${portal_url}/@@vote_encoding</property>
+   <property name="icon_expr"></property>
+   <property name="available_expr"></property>
+   <property name="permissions">
+    <element value="Modify portal content"/>
+   </property>
+   <property name="visible">True</property>
+  </object>
+ </object>
 </object>

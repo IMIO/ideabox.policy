@@ -13,4 +13,11 @@
     class=".project_encoding.ProjectEncodingForm"
     />
 
+  <browser:page
+    for="*"
+    name="vote_encoding"
+    permission="cmf.ModifyPortalContent"
+    class=".vote_encoding.VoteEncodingForm"
+    />
+
 </configure>

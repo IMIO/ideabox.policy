@@ -5,7 +5,8 @@ Changelog
 2.3.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add vote encoding form
+  [vpiret]
 
 
 2.3.1 (2019-06-12)

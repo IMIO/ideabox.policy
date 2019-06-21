@@ -1,9 +1,12 @@
 # -*- coding: utf-8 -*-
 
-from zope.schema.vocabulary import SimpleVocabulary
 from Products.CMFPlone import PloneMessageFactory as PMF
 from plone.registry.interfaces import IRegistry
+from plone import api
+from operator import itemgetter
 from zope.component import getUtility
+from zope.schema.vocabulary import SimpleTerm
+from zope.schema.vocabulary import SimpleVocabulary
 from ideabox.policy import _
 
 
@@ -61,3 +64,30 @@ class ZipCodeVocabularyFactory(object):
 
 
 ZipCodeVocabulary = ZipCodeVocabularyFactory()
+
+
+def make_terms(items):
+    """Create zope.schema terms for vocab from tuples"""
+    terms = [SimpleTerm(value=pair[0], token=pair[0], title=pair[1]) for pair in items]
+    return terms
+
+
+class ProjectsVocabularyFactory(object):
+    def __call__(self, context):
+        brains = api.content.find(portal_type="Project", review_state="vote")
+        results = [(b.UID, b.Title) for b in brains]
+        results = sorted(results, key=itemgetter(1))
+        terms = make_terms(results)
+        return SimpleVocabulary(terms)
+
+
+ProjectsVocabulary = ProjectsVocabularyFactory()
+
+
+class VoteVocabularyFactory(object):
+    def __call__(self, context):
+        values = [{"FOR": _("FOR", u"For")}, {"AGAINST": _("AGAINST", u"Against")}]
+        return dict_list_2_vocabulary(values)
+
+
+VoteVocabulary = VoteVocabularyFactory()

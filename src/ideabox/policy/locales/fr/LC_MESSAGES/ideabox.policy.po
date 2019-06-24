@@ -26,7 +26,7 @@ msgid "Address"
 msgstr "Adresse"
 
 #: ../form/project_encoding.py:69
-#: ../form/vote_encoding.py:81
+#: ../form/vote_encoding.py:82
 msgid "Anonymous"
 msgstr "Anonyme"
 
@@ -60,7 +60,7 @@ msgid "Edit timeline dates"
 msgstr "Modifier les dates de la ligne du temps"
 
 #: ../form/project_encoding.py:27
-#: ../form/vote_encoding.py:26
+#: ../form/vote_encoding.py:27
 msgid "Email"
 msgstr ""
 
@@ -75,6 +75,10 @@ msgstr "Activer / Désactiver la soumission de projet"
 #: ../profiles/default/actions.xml
 msgid "Encoding project with user"
 msgstr "Encoder un projet pour un utilisateur"
+
+#: ../profiles/default/actions.xml
+msgid "Encoding vote with user"
+msgstr "Encoder un vote pour un utilisateur"
 
 #: ../faceted/configure.zcml:31
 msgid "Events"
@@ -195,7 +199,7 @@ msgstr "Informations personnelles pour un utilisateur connecté"
 msgid "Positive rating "
 msgstr "Vote pour"
 
-#: ../form/vote_encoding.py:37
+#: ../form/vote_encoding.py:38
 #: ../profiles/default/types/Project.xml
 msgid "Project"
 msgstr "Projet"
@@ -213,7 +217,7 @@ msgstr "Image du projet"
 msgid "Project submission is currently disabled"
 msgstr "La soumission de projet est actuellement désactivée"
 
-#: ../form/vote_encoding.py:35
+#: ../form/vote_encoding.py:36
 msgid "Project(s)"
 msgstr "Projet(s)"
 
@@ -232,7 +236,7 @@ msgstr "Enregistrer"
 
 #: ../form/project_encoding.py:145
 #: ../form/project_submission.py:113
-#: ../form/vote_encoding.py:137
+#: ../form/vote_encoding.py:139
 msgid "Send"
 msgstr "Envoyer"
 
@@ -247,6 +251,10 @@ msgstr "Etapes pour la ligne du temps"
 #: ../browser/project.py:44
 msgid "The 7 main themes"
 msgstr "Les 7 thématiques prioritaires"
+
+#: ../form/vote_encoding.py:148
+msgid "The votes have been encoded correctly"
+msgstr "es votes on bien été encodés"
 
 #: ../setuphandlers.py:124
 msgid "Theme"
@@ -269,11 +277,12 @@ msgstr ""
 msgid "User ID"
 msgstr "ID utilisateur"
 
-#: ../form/vote_encoding.py:30
+#: ../form/vote_encoding.py:31
 msgid "Vote"
 msgstr "Vote"
 
-#: ../form/vote_encoding.py:45
+#: ../form/vote_encoding.py:46
+#: ../profiles/default/actions.xml
 msgid "Vote encoding"
 msgstr "Encoder des votes"
 

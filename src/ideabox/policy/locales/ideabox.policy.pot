@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2019-06-21 13:08+0000\n"
+"POT-Creation-Date: 2019-06-24 11:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,7 +32,7 @@ msgid "Address"
 msgstr ""
 
 #: ../form/project_encoding.py:69
-#: ../form/vote_encoding.py:81
+#: ../form/vote_encoding.py:82
 msgid "Anonymous"
 msgstr ""
 
@@ -66,7 +66,7 @@ msgid "Edit timeline dates"
 msgstr ""
 
 #: ../form/project_encoding.py:27
-#: ../form/vote_encoding.py:26
+#: ../form/vote_encoding.py:27
 msgid "Email"
 msgstr ""
 
@@ -80,6 +80,10 @@ msgstr ""
 
 #: ../profiles/default/actions.xml
 msgid "Encoding project with user"
+msgstr ""
+
+#: ../profiles/default/actions.xml
+msgid "Encoding vote with user"
 msgstr ""
 
 #: ../faceted/configure.zcml:31
@@ -201,7 +205,7 @@ msgstr ""
 msgid "Positive rating "
 msgstr ""
 
-#: ../form/vote_encoding.py:37
+#: ../form/vote_encoding.py:38
 #: ../profiles/default/types/Project.xml
 msgid "Project"
 msgstr ""
@@ -219,7 +223,7 @@ msgstr ""
 msgid "Project submission is currently disabled"
 msgstr ""
 
-#: ../form/vote_encoding.py:35
+#: ../form/vote_encoding.py:36
 msgid "Project(s)"
 msgstr ""
 
@@ -238,7 +242,7 @@ msgstr ""
 
 #: ../form/project_encoding.py:145
 #: ../form/project_submission.py:113
-#: ../form/vote_encoding.py:137
+#: ../form/vote_encoding.py:139
 msgid "Send"
 msgstr ""
 
@@ -252,6 +256,10 @@ msgstr ""
 
 #: ../browser/project.py:44
 msgid "The 7 main themes"
+msgstr ""
+
+#: ../form/vote_encoding.py:148
+msgid "The votes have been encoded correctly"
 msgstr ""
 
 #: ../setuphandlers.py:124
@@ -275,11 +283,12 @@ msgstr ""
 msgid "User ID"
 msgstr ""
 
-#: ../form/vote_encoding.py:30
+#: ../form/vote_encoding.py:31
 msgid "Vote"
 msgstr ""
 
-#: ../form/vote_encoding.py:45
+#: ../form/vote_encoding.py:46
+#: ../profiles/default/actions.xml
 msgid "Vote encoding"
 msgstr ""
 

@@ -9,6 +9,7 @@ from plone import api
 from plone import schema
 from plone.i18n.normalizer.interfaces import IIDNormalizer
 from plone.autoform import directives as form
+from Products.statusmessages.interfaces import IStatusMessage
 from z3c.form import button
 from z3c.form.browser.radio import RadioFieldWidget
 from z3c.form.field import Fields
@@ -132,6 +133,7 @@ class VoteEncodingForm(Form):
                 context = api.content.find(UID=project)[0].getObject()
                 setupAnnotations(context)
                 hateIt(context, userid=user.id)
+
         self.request.response.redirect("{0}/vote_encoding".format(self.context.absolute_url()))
 
     @button.buttonAndHandler(_(u"Send"), name="send")
@@ -142,3 +144,5 @@ class VoteEncodingForm(Form):
             return
 
         self.send_request(data)
+        messages = IStatusMessage(self.request)
+        messages.add(_(u"The votes have been encoded correctly"), type=u"info")

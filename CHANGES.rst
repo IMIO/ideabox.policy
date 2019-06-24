@@ -5,7 +5,8 @@ Changelog
 2.3.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add status message for vote encoding
+  [vpiret]
 
 
 2.3.2 (2019-06-24)

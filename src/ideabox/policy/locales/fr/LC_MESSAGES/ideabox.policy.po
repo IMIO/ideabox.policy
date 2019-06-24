@@ -254,7 +254,7 @@ msgstr "Les 7 thématiques prioritaires"
 
 #: ../form/vote_encoding.py:148
 msgid "The votes have been encoded correctly"
-msgstr "es votes on bien été encodés"
+msgstr "Les votes ont bien été encodés"
 
 #: ../setuphandlers.py:124
 msgid "Theme"

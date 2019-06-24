@@ -5,7 +5,8 @@ Changelog
 2.3.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix typo
+  [mpeeters]
 
 
 2.3.3 (2019-06-24)

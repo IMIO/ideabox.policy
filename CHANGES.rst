@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.3.5 (unreleased)
+2.3.5 (2019-06-24)
 ------------------
 
 - Add separator in export users

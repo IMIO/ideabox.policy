@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.3.2 (unreleased)
+2.3.2 (2019-06-24)
 ------------------
 
 - Add vote encoding form

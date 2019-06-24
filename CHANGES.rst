@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.3.3 (unreleased)
+2.3.3 (2019-06-24)
 ------------------
 
 - Add status message for vote encoding

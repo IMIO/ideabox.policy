@@ -134,7 +134,7 @@ class VoteEncodingForm(Form):
                 setupAnnotations(context)
                 hateIt(context, userid=user.id)
 
-        self.request.response.redirect("{0}/vote_encoding".format(self.context.absolute_url()))
+        self.request.response.redirect("{0}/@@vote_encoding".format(self.context.absolute_url()))
 
     @button.buttonAndHandler(_(u"Send"), name="send")
     def handleApply(self, action):

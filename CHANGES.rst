@@ -5,7 +5,8 @@ Changelog
 2.3.5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add separator in export users
+  [vpiret]
 
 
 2.3.4 (2019-06-24)

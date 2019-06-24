@@ -115,7 +115,7 @@ class PositiveVotersListRenderer(ExtendedRenderer):
         if vote:
             for voter in annotations["cioppino.twothumbs.yays"]:
                 voters.append(voter)
-        return voters
+        return ",".join(voters)
 
 
 class NegativeVotersListRenderer(ExtendedRenderer):
@@ -128,7 +128,7 @@ class NegativeVotersListRenderer(ExtendedRenderer):
         if vote:
             for voter in annotations["cioppino.twothumbs.nays"]:
                 voters.append(voter)
-        return voters
+        return ",".join(voters)
 
 
 class UserIdRenderer(UserPropertyRenderer):

@@ -25,6 +25,3 @@ after_success:
   - bin/createcoverage
   - pip install coveralls
   - coveralls
-notifications:
-  email:
-    - martin.peeters@affinitic.be

@@ -5,7 +5,8 @@ Changelog
 2.3.6 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Update collection separator for export
+  [vpiret]
 
 
 2.3.5 (2019-06-24)

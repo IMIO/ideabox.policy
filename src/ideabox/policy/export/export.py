@@ -2,6 +2,7 @@
 
 from Products.CMFPlone.utils import safe_unicode
 from collective.excelexport.exportables.dexterityfields import BaseFieldRenderer
+from collective.excelexport.exportables.dexterityfields import CollectionFieldRenderer
 from collective.excelexport.exportables.dexterityfields import (
     DexterityFieldsExportableFactory,
 )
@@ -14,7 +15,7 @@ from z3c.form.interfaces import NO_VALUE
 from zope.component import adapts
 from zope.component import getAdapters
 from zope.interface import Interface
-from zope.schema.interfaces import IText
+from zope.schema.interfaces import IText, ICollection
 from zope.annotation.interfaces import IAnnotations
 from zope.component import getUtility
 from zope.schema.interfaces import IVocabularyFactory
@@ -81,6 +82,11 @@ class UserPropertyRenderer(ExtendedRenderer):
             return value
         except ValueError:
             return
+
+
+class ProjectCollectionFieldRenderer(CollectionFieldRenderer):
+    adapts(ICollection, Interface, IIdeaboxPolicyLayer)
+    separator = u"|"
 
 
 class PositiveRatingRenderer(ExtendedRenderer):

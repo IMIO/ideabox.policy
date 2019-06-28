@@ -32,6 +32,10 @@
            provides="collective.excelexport.interfaces.IDataSource"
            name="users" />
 
+  <adapter factory=".export.ProjectCollectionFieldRenderer"
+           provides="collective.excelexport.interfaces.IExportable" />
+
+
   <adapter factory=".export.UserIdRenderer"
            provides=".interfaces.IUsersExportable"
            name="user_id" />

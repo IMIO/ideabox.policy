@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.3.6 (unreleased)
+2.3.6 (2019-06-30)
 ------------------
 
 - Update collection separator for export

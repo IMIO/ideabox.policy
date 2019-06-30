@@ -86,7 +86,7 @@ class UserPropertyRenderer(ExtendedRenderer):
 
 class ProjectCollectionFieldRenderer(CollectionFieldRenderer):
     adapts(ICollection, Interface, IIdeaboxPolicyLayer)
-    separator = u"|"
+    separator = u","
 
 
 class PositiveRatingRenderer(ExtendedRenderer):

@@ -6,7 +6,7 @@ Changelog
 ------------------
 
 - Update collection separator for export
-  [vpiret]
+  [vpiret, mpeeters]
 
 
 2.3.5 (2019-06-24)

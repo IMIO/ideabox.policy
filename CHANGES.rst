@@ -5,7 +5,8 @@ Changelog
 2.3.7 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Handle basic html structure in timeline tile titles
+  [mpeeters]
 
 
 2.3.6 (2019-06-30)

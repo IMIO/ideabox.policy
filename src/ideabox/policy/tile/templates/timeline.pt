@@ -10,7 +10,7 @@
             <div class="timeline">
                 <ol class="timeline-line" tal:define="steps view/steps">
                   <li class="timeline-step" tal:repeat="step steps">
-                        <div class="timeline-title" tal:content="step/title" tal:condition="step/title">Title</div>
+                        <div class="timeline-title" tal:content="structure step/title" tal:condition="step/title">Title</div>
                         <div class="timeline-block">
                           <div class="timeline-step-content">
                             <div class="timeline-line-left"></div>

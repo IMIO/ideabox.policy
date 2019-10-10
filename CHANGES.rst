@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.3.7 (unreleased)
+2.3.7 (2019-10-10)
 ------------------
 
 - Handle basic html structure in timeline tile titles

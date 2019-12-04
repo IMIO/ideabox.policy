@@ -5,7 +5,8 @@ Changelog
 2.3.8 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add ideabox.theme dependency
+  [mpeeters]
 
 
 2.3.7 (2019-10-10)

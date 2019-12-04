@@ -23,6 +23,10 @@
   <include package="plone.app.imagecropping" />
   <include package="Products.BeakerSessionDataManager" />
 
+  <!-- themes -->
+  <include package="ideabox.diazotheme.spirit" />
+  <include package="ideabox.theme" />
+
   <include package=".browser" />
   <include package=".content" />
   <include package=".faceted" />

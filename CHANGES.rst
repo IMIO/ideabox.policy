@@ -5,6 +5,9 @@ Changelog
 2.3.8 (unreleased)
 ------------------
 
+- Do not install a theme by default
+  [mpeeters]
+
 - Add ideabox.theme dependency
   [mpeeters]
 

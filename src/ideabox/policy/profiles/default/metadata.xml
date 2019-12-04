@@ -11,7 +11,6 @@
     <dependency>profile-collective.editablemenu:default</dependency>
     <dependency>profile-collective.behavior.banner:default</dependency>
     <dependency>profile-iaweb.mosaic:default</dependency>
-    <dependency>profile-ideabox.diazotheme.spirit:default</dependency>
     <dependency>profile-imio.gdpr:default</dependency>
     <dependency>profile-Products.PasswordStrength:default</dependency>
     <dependency>profile-collective.taxonomy:default</dependency>

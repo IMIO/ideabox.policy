@@ -12,7 +12,6 @@
     <dependency>profile-collective.behavior.banner:default</dependency>
     <dependency>profile-iaweb.mosaic:default</dependency>
     <dependency>profile-imio.gdpr:default</dependency>
-    <dependency>profile-Products.PasswordStrength:default</dependency>
     <dependency>profile-collective.taxonomy:default</dependency>
     <dependency>profile-collective.disclaimer:default</dependency>
     <dependency>profile-plone.app.imagecropping:default</dependency>

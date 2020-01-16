@@ -23,7 +23,7 @@ setup(
     classifiers=[
         "Environment :: Web Environment",
         "Framework :: Plone",
-        "Framework :: Plone :: 4.3",
+        "Framework :: Plone :: 5.2",
         "Programming Language :: Python",
         "Programming Language :: Python :: 2.7",
         "Operating System :: OS Independent",
@@ -41,7 +41,6 @@ setup(
     zip_safe=False,
     install_requires=[
         "Products.GenericSetup>=1.8.2",
-        "Products.PasswordStrength",
         "Products.BeakerSessionDataManager",
         "cioppino.twothumbs",
         "collective.behavior.banner",
@@ -62,6 +61,7 @@ setup(
         "plone.app.dexterity",
         "plone.app.discussion",
         "plone.app.imagecropping",
+        "plone.app.imaging",
         "plone.app.lockingbehavior",
         "plone.app.mosaic",
         "plone.app.referenceablebehavior",

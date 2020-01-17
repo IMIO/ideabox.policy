@@ -23,6 +23,15 @@ class IIdeaBoxSettingsSchema(Interface):
         title=_(u"Enable / Disable project submission"), default=True
     )
 
+    legal_informations = schema.Text(
+        title=_(u"Legal informations"),
+        max_length=9999,
+        description=_(
+            u"See these legal informations in the bottom of form."
+        ),
+        required=False
+    )
+
 
 class IdeaBoxSettingsEditForm(controlpanel.RegistryEditForm):
 

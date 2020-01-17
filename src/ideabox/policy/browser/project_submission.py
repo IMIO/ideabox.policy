@@ -13,3 +13,9 @@ class ProjectSubmissionView(FormWrapper):
             "ideabox.policy.browser.controlpanel.IIdeaBoxSettingsSchema.project_submission",
             default=True,
         )
+
+    def get_legal_informations(self):
+        return api.portal.get_registry_record(
+            "ideabox.policy.browser.controlpanel.IIdeaBoxSettingsSchema.legal_informations",
+            default=True,
+        )

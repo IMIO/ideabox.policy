@@ -44,6 +44,15 @@
       />
 
   <genericsetup:registerProfile
+      name="liege"
+      title="ideabox.policy:liege"
+      directory="profiles/liege"
+      description="Installs the ideabox.policy add-on with liege profile."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      post_handler=".setuphandlers.post_install"
+      />
+
+  <genericsetup:registerProfile
       name="uninstall"
       title="ideabox.policy (uninstall)"
       directory="profiles/uninstall"

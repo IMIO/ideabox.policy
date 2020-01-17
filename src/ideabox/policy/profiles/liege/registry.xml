@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<registry xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+  <record name="ideabox.policy.browser.controlpanel.IIdeaBoxSettingsSchema.legal_informations"
+          i18n:domain="ideabox.policy">
+      <value purge="true"><p>Vous avez le droit de retirer votre consentement à tout moment, d'être informé sur la manière dont vos données sont traitées, d'en recevoir copie afin de les transmettre le cas échéant, de faire modifier,rectifier, compléter ou effacer vos données, de vous opposer à leur utilisation ou d'en limiter le traitement à certaines fins, et de ne pas faire l'objet d'une décision individuelle automatisée. Si vous souhaitez exercer un ou plusieurs de vos droits, nous vous invitons à contacter le Délégué à la protection des données (DPO) de la Ville de Liège via l'adresse <a href="mailto:dpo@liege.be">dpo@liege.be</a>.</p>
+      </value>
+  </record>
+</registry>

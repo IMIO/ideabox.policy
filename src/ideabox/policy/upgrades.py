@@ -10,11 +10,14 @@ from zope.component import getUtility
 def add_legal_informations_in_registry_1002(context):
     registry = getUtility(IRegistry)
     registry_field = field.TextLine(title=u"Legal informations")
-    key = "ideabox.policy.browser.controlpanel.IIdeaBoxSettingsSchema.legal_informations"
+    key = (
+        "ideabox.policy.browser.controlpanel.IIdeaBoxSettingsSchema.legal_informations"
+    )
     registry_record = Record(registry_field)
     # registry_record.value = u""
     if key not in registry:
         registry.records[key] = registry_record
+
 
 def fix_comments_1001(context):
     from plone.app.discussion.interfaces import IConversation

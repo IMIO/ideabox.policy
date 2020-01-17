@@ -5,6 +5,12 @@ Changelog
 2.3.8 (unreleased)
 ------------------
 
+- Add upgrades steps for new control panel "legal informations" field.
+  [boulch]
+
+- Add legal informations field in control panel and get it in project submission view.
+  [boulch]
+
 - Do not install a theme by default
   [mpeeters]
 

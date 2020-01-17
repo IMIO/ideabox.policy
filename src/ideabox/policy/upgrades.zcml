@@ -3,6 +3,15 @@
   xmlns:genericsetup="http://namespaces.zope.org/genericsetup">
 
   <genericsetup:upgradeStep
+    source="1001"
+    destination="1002"
+    title="Add legal_informations in registry"
+    description="Add legal informations in registry (use in project submission)"
+    profile="ideabox.policy:default"
+    handler=".upgrades.add_legal_informations_in_registry_1002"
+    />
+
+  <genericsetup:upgradeStep
     source="*"
     destination="1001"
     title="Fix username on comments"

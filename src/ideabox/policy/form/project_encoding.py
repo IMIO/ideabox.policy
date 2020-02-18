@@ -14,7 +14,7 @@ from z3c.form.field import Fields
 from z3c.form.form import Form
 from z3c.form.interfaces import IFieldsForm
 from zope.component import getUtility
-from zope.interface import implements
+from zope.interface import implementer
 from zope.i18n import translate
 
 from ideabox.policy import _
@@ -27,9 +27,9 @@ class IProjectEncoding(IEnhancedUserDataSchema):
     mail = schema.Email(title=_(u"Email"), required=False)
 
 
+@implementer(IFieldsForm)
 class ProjectEncodingForm(Form):
     label = _(u"Project encoding")
-    implements(IFieldsForm)
     fields = Fields(IProjectEncoding).select(
         "last_name",
         "first_name",

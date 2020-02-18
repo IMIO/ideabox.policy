@@ -14,7 +14,7 @@ from plone.supermodel import model
 from zope import schema
 from zope.component import getUtility
 from zope.i18n import translate
-from zope.interface import implements
+from zope.interface import implementer
 from zope.schema.interfaces import IVocabularyFactory
 from plone.app.dexterity import _ as DXMF
 
@@ -53,8 +53,9 @@ class IProject(model.Schema):
     original_author = schema.TextLine(title=_(u"Original author"), required=False)
 
 
+@implementer(IProject)
 class Project(Container):
-    implements(IProject)
+    pass
 
 
 class ProjectView(view.DefaultView):

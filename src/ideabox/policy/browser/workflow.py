@@ -12,7 +12,7 @@ from z3c.form.interfaces import NO_VALUE
 from zope import schema
 from zope.i18n import translate
 from zope.interface import Interface
-from zope.interface import implements
+from zope.interface import implementer
 from zope.interface.interface import InterfaceClass
 
 from ideabox.policy import _
@@ -41,8 +41,8 @@ class WorkflowDataProvider(object):
         }
 
 
+@implementer(IWorkflowForm)
 class WorkflowHistoryForm(Form):
-    implements(IWorkflowForm)
     ignoreContext = True
 
     _states = (

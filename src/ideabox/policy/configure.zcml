@@ -14,7 +14,6 @@
   <include package="collective.behavior.richdescription" />
   <include package="cioppino.twothumbs" />
   <include package="plone.app.discussion" />
-  <include package="imio.gdpr" />
   <include package="eea.facetednavigation" />
   <include package="collective.editablemenu" />
   <include package="collective.behavior.banner" />

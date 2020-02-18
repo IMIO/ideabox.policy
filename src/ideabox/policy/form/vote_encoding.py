@@ -16,7 +16,7 @@ from z3c.form.field import Fields
 from z3c.form.form import Form
 from z3c.form.interfaces import IFieldsForm
 from zope.component import getUtility
-from zope.interface import implements
+from zope.interface import implementer
 from zope.i18n import translate
 
 from ideabox.policy import _
@@ -35,16 +35,15 @@ class IVoteEncoding(IEnhancedUserDataSchema):
     project = schema.List(
         title=_(u"Project(s)"),
         value_type=schema.Choice(
-            title=_(u"Project"),
-            vocabulary=u"ideabox.vocabularies.projects",
+            title=_(u"Project"), vocabulary=u"ideabox.vocabularies.projects"
         ),
         required=True,
     )
 
 
+@implementer(IFieldsForm)
 class VoteEncodingForm(Form):
     label = _(u"Vote encoding")
-    implements(IFieldsForm)
     fields = Fields(IVoteEncoding).select(
         "last_name",
         "first_name",
@@ -55,7 +54,7 @@ class VoteEncodingForm(Form):
         "zip_code",
         "iam",
         "vote",
-        "project"
+        "project",
     )
 
     fields["project"].widgetFactory = MultiSelect2FieldWidget
@@ -134,7 +133,9 @@ class VoteEncodingForm(Form):
                 setupAnnotations(context)
                 hateIt(context, userid=user.id)
 
-        self.request.response.redirect("{0}/@@vote_encoding".format(self.context.absolute_url()))
+        self.request.response.redirect(
+            "{0}/@@vote_encoding".format(self.context.absolute_url())
+        )
 
     @button.buttonAndHandler(_(u"Send"), name="send")
     def handleApply(self, action):

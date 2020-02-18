@@ -16,7 +16,7 @@ from z3c.form.interfaces import IFieldsForm
 from zope import schema
 from zope.component import getUtility
 from zope.i18n import translate
-from zope.interface import implements
+from zope.interface import implementer
 
 
 class IProjectSubmission(IProject):
@@ -25,9 +25,9 @@ class IProjectSubmission(IProject):
     project_image = NamedBlobImage(title=_(u"Project image"), required=False)
 
 
+@implementer(IFieldsForm)
 class ProjectSubmissionForm(Form):
 
-    implements(IFieldsForm)
     fields = Fields(IProjectSubmission).select(
         "title",
         "project_theme",

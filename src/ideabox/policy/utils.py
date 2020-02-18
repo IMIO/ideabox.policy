@@ -3,7 +3,7 @@
 from AccessControl import getSecurityManager
 from AccessControl.SecurityManagement import newSecurityManager
 from AccessControl.SecurityManagement import setSecurityManager
-from AccessControl.User import UnrestrictedUser as BaseUnrestrictedUser
+from AccessControl.User import Super as BaseUnrestrictedUser
 from datetime import datetime
 from ideabox.policy import vocabularies
 from plone import api

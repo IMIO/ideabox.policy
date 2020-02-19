@@ -5,7 +5,8 @@ Changelog
 3.0.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Remove <include package="Products.BeakerSessionDataManager" /> from configure.
+  [bsuttor]
 
 
 3.0.0 (2020-02-19)

@@ -19,7 +19,6 @@
   <include package="collective.behavior.banner" />
   <include package="iaweb.mosaic" />
   <include package="plone.app.imagecropping" />
-  <include package="Products.BeakerSessionDataManager" />
 
   <!-- themes -->
   <include package="ideabox.diazotheme.spirit" />

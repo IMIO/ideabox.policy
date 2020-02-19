@@ -32,7 +32,7 @@ class HiddenProfiles(object):
 
 def post_install(context):
     """Post install script"""
-    add_taxonomies()
+    # add_taxonomies()
     portal = api.portal.get()
     if portal.get("projets") is None:
         project = api.content.create(
@@ -43,11 +43,11 @@ def post_install(context):
             "Folder",
             "eea.facetednavigation.subtypes.interfaces.IPossibleFacetedNavigable",
         )
-        _activate_faceted_navigation(project, True, "/faceted/config/projets.xml")
-        project_layout = FacetedLayout(project)
-        project_layout.update_layout(layout="faceted-project")
-        _disable_portlets(project)
-        _publish(project)
+        # _activate_faceted_navigation(project, True, "/faceted/config/projets.xml")
+        # project_layout = FacetedLayout(project)
+        # project_layout.update_layout(layout="faceted-project")
+        # _disable_portlets(project)
+        # _publish(project)
     if portal.get("participer") is None:
         participate = api.content.create(
             type="Folder", id="participer", title="Participer", container=portal
@@ -65,16 +65,16 @@ def post_install(context):
         "Collection",
         "eea.facetednavigation.subtypes.interfaces.IPossibleFacetedNavigable",
     )
-    if "news" in portal:
-        _activate_faceted_navigation(
-            portal["news"]["aggregator"], True, "/faceted/config/news.xml"
-        )
-        _disable_portlets(portal["news"])
-        news_layout = FacetedLayout(portal["news"]["aggregator"])
-        news_layout.update_layout(layout="faceted-news")
+    # if "news" in portal:
+    #     _activate_faceted_navigation(
+    #         portal["news"]["aggregator"], True, "/faceted/config/news.xml"
+    #     )
+    #     _disable_portlets(portal["news"])
+    #     news_layout = FacetedLayout(portal["news"]["aggregator"])
+    #     news_layout.update_layout(layout="faceted-news")
 
     allowed_sizes = api.portal.get_registry_record("plone.allowed_sizes")
-    scales = (u"banner 1920:800", u"project_faceted 450:300", u"evenement 300:300")
+    scales = ("banner 1920:800", "project_faceted 450:300", "evenement 300:300")
     for scale in scales:
         if scale not in allowed_sizes:
             allowed_sizes.append(scale)
@@ -82,38 +82,38 @@ def post_install(context):
 
     api.portal.set_registry_record(
         "collective.behavior.banner.browser.controlpanel.IBannerSettingsSchema.banner_scale",
-        u"banner",
+        "banner",
     )
 
-    menu = {
-        "/": [
-            {
-                "navigation_folder": "/projets",
-                "simple_link": "/projets",
-                "tab_title": "Projets",
-                "additional_columns": "",
-                "condition": "python: True",
-            },
-            {
-                "navigation_folder": "",
-                "simple_link": "/participer",
-                "tab_title": "Participer",
-                "additional_columns": "",
-                "condition": "python: True",
-            },
-            {
-                "navigation_folder": "/plus-dinfos",
-                "simple_link": "/plus-dinfos",
-                "tab_title": "Plus d'infos",
-                "additional_columns": "",
-                "condition": "python: True",
-            },
-        ]
-    }
-    api.portal.set_registry_record(
-        "collective.editablemenu.browser.interfaces.IEditableMenuSettings.menu_tabs_json",
-        unicode(json.dumps(menu)),
-    )
+    # menu = {
+    #     "/": [
+    #         {
+    #             "navigation_folder": "/projets",
+    #             "simple_link": "/projets",
+    #             "tab_title": "Projets",
+    #             "additional_columns": "",
+    #             "condition": "python: True",
+    #         },
+    #         {
+    #             "navigation_folder": "",
+    #             "simple_link": "/participer",
+    #             "tab_title": "Participer",
+    #             "additional_columns": "",
+    #             "condition": "python: True",
+    #         },
+    #         {
+    #             "navigation_folder": "/plus-dinfos",
+    #             "simple_link": "/plus-dinfos",
+    #             "tab_title": "Plus d'infos",
+    #             "additional_columns": "",
+    #             "condition": "python: True",
+    #         },
+    #     ]
+    # }
+    # api.portal.set_registry_record(
+    #     "collective.editablemenu.browser.interfaces.IEditableMenuSettings.menu_tabs_json",
+    #     json.dumps(menu),
+    # )
 
 
 def add_taxonomies():

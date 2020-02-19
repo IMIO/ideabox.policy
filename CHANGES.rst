@@ -5,7 +5,8 @@ Changelog
 3.0.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Remove specific installation.
+  [bsuttor]
 
 
 3.0.3 (2020-02-19)

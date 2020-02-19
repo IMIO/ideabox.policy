@@ -15,20 +15,6 @@
     <value>projets</value>
   </record>
 
-  <record name="plone.enable_user_pwd_choice">
-    <value>True</value>
-  </record>
-  <record name="plone.use_email_as_login">
-    <value>True</value>
-  </record>
-  <record name="plone.enable_self_reg">
-    <value>True</value>
-  </record>
-
-  <record name="imio.gdpr.interfaces.IGDPRSettings.is_text_ready">
-    <value>True</value>
-  </record>
-
   <records prefix="plone.app.mosaic.app_tiles.projects"
       interface="plone.app.mosaic.interfaces.ITile">
       <value key="name">ideabox.policy.projects</value>

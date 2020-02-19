@@ -5,7 +5,8 @@ Changelog
 3.0.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Clean up registry.
+  [bsuttor]
 
 
 3.0.2 (2020-02-19)

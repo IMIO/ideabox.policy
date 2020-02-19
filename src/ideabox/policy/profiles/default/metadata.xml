@@ -8,10 +8,8 @@
     <dependency>profile-eea.facetednavigation:default</dependency>
     <dependency>profile-collective.z3cform.select2:default</dependency>
     <dependency>profile-plone.app.discussion:default</dependency>
-    <dependency>profile-collective.editablemenu:default</dependency>
     <dependency>profile-collective.behavior.banner:default</dependency>
     <dependency>profile-iaweb.mosaic:default</dependency>
-    <dependency>profile-imio.gdpr:default</dependency>
     <dependency>profile-collective.taxonomy:default</dependency>
     <dependency>profile-collective.disclaimer:default</dependency>
     <dependency>profile-plone.app.imagecropping:default</dependency>

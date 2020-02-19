@@ -5,7 +5,8 @@ Changelog
 3.0.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Clean up metadata.xml profile.
+  [bsuttor]
 
 
 3.0.1 (2020-02-19)

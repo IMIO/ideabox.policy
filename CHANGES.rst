@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.3.8 (unreleased)
+3.0.0 (2020-02-19)
 ------------------
 
 - Remove beaker dependency.

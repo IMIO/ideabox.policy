@@ -41,7 +41,6 @@ setup(
     zip_safe=False,
     install_requires=[
         "Products.GenericSetup>=1.8.2",
-        "Products.BeakerSessionDataManager",
         "cioppino.twothumbs",
         "collective.behavior.banner",
         "collective.behavior.richdescription",

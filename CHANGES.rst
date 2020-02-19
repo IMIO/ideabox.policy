@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.0.1 (unreleased)
+3.0.1 (2020-02-19)
 ------------------
 
 - Remove <include package="Products.BeakerSessionDataManager" /> from configure.

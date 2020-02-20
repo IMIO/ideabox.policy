@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.0.6 (unreleased)
+3.0.6 (2020-02-20)
 ------------------
 
 - First step of migrate code to python 3.

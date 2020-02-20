@@ -5,7 +5,8 @@ Changelog
 3.0.5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Remove old dependencies.
+  [bsuttor]
 
 
 3.0.4 (2020-02-19)

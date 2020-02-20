@@ -15,13 +15,11 @@
   <include package="cioppino.twothumbs" />
   <include package="plone.app.discussion" />
   <include package="eea.facetednavigation" />
-  <include package="collective.editablemenu" />
   <include package="collective.behavior.banner" />
   <include package="iaweb.mosaic" />
   <include package="plone.app.imagecropping" />
 
   <!-- themes -->
-  <include package="ideabox.diazotheme.spirit" />
   <include package="ideabox.theme" />
 
   <include package=".browser" />

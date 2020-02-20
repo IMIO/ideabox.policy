@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.0.7 (unreleased)
+3.0.7 (2020-02-20)
 ------------------
 
 - Improve projet SearchableText.

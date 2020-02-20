@@ -5,7 +5,8 @@ Changelog
 3.0.6 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- First step of migrate code to python 3.
+  [bsuttor]
 
 
 3.0.5 (2020-02-20)

@@ -16,39 +16,39 @@ def project_picture(obj):
 
 def random_hash(obj, method, r_min=0, r_max=32):
     me = getattr(hashlib, method)
-    return me(obj.id).hexdigest()[r_min:r_max]
+    return me(obj.id.encode("utf8")).hexdigest()[r_min:r_max]
 
 
 @indexer(IProject)
 def project_random_1(obj):
-    return random_hash(obj, 'md5', r_min=0, r_max=32)
+    return random_hash(obj, "md5", r_min=0, r_max=32)
 
 
 @indexer(IProject)
 def project_random_2(obj):
-    return random_hash(obj, 'sha256', r_min=0, r_max=32)
+    return random_hash(obj, "sha256", r_min=0, r_max=32)
 
 
 @indexer(IProject)
 def project_random_3(obj):
-    return random_hash(obj, 'sha256', r_min=32, r_max=64)
+    return random_hash(obj, "sha256", r_min=32, r_max=64)
 
 
 @indexer(IProject)
 def project_random_4(obj):
-    return random_hash(obj, 'sha512', r_min=0, r_max=32)
+    return random_hash(obj, "sha512", r_min=0, r_max=32)
 
 
 @indexer(IProject)
 def project_random_5(obj):
-    return random_hash(obj, 'sha512', r_min=32, r_max=64)
+    return random_hash(obj, "sha512", r_min=32, r_max=64)
 
 
 @indexer(IProject)
 def project_random_6(obj):
-    return random_hash(obj, 'sha512', r_min=64, r_max=96)
+    return random_hash(obj, "sha512", r_min=64, r_max=96)
 
 
 @indexer(IProject)
 def project_random_7(obj):
-    return random_hash(obj, 'sha512', r_min=96, r_max=128)
+    return random_hash(obj, "sha512", r_min=96, r_max=128)

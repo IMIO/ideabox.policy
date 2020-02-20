@@ -122,7 +122,7 @@ class ProjectView(view.DefaultView):
                 "state": l.get("review_state"),
                 "date": l.get("time"),
             }
-            for l in self.context.workflow_history.values()[0]
+            for l in [val for val in self.context.workflow_history.values()][0]
             if l.get("review_state") in self._timeline_states
         ]
         return sorted(history, key=lambda x: x["order"])
@@ -219,20 +219,15 @@ def searchabletext_project(object, **kw):
     fields = ["title", "description", "body", "original_author"]
     for field_name in fields:
         value = getattr(object, field_name, None)
-        if type(value) is unicode:
-            text = safe_unicode(value).encode("utf-8")
-            result.append(text)
-        elif IRichTextValue.providedBy(value):
+        if IRichTextValue.providedBy(value):
             transforms = getToolByName(object, "portal_transforms")
             text = (
-                transforms.convertTo(
-                    "text/plain",
-                    safe_unicode(value.raw).encode("utf-8"),
-                    mimetype=value.mimeType,
-                )
+                transforms.convertTo("text/plain", value.raw, mimetype=value.mimeType)
                 .getData()
                 .strip()
             )
-            result.append(text.encode("utf8"))
-
+            result.append(text)
+        else:
+            text = value
+            result.append(text)
     return " ".join(result)

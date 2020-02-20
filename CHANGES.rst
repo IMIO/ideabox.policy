@@ -5,7 +5,8 @@ Changelog
 3.0.7 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Improve projet SearchableText.
+  [bsuttor]
 
 
 3.0.6 (2020-02-20)

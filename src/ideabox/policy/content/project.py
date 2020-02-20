@@ -229,5 +229,6 @@ def searchabletext_project(object, **kw):
             result.append(text)
         else:
             text = value
-            result.append(text)
+            if text:
+                result.append(text)
     return " ".join(result)

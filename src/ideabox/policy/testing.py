@@ -18,12 +18,10 @@ class IdeaboxPolicyLayer(PloneSandboxLayer):
         # Load any other ZCML that is required for your tests.
         # The z3c.autoinclude feature is disabled in the Plone fixture base
         # layer.
-        import plone.app.dexterity
-
-        self.loadZCML(package=plone.app.dexterity)
-        self.loadZCML(package=ideabox.policy)
+        self.loadZCML(name="testing.zcml", package=ideabox.policy)
 
     def setUpPloneSite(self, portal):
+        portal.portal_workflow.setDefaultChain("simple_publication_workflow")
         applyProfile(portal, "ideabox.policy:default")
 
 

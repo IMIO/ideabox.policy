@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from Products.Five import BrowserView
-from plone import api
-
 from ideabox.policy import _
+from plone import api
+from Products.Five import BrowserView
 
 
 class SummaryProgressionView(BrowserView):

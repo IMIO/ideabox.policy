@@ -1,6 +1,5 @@
 # encoding: utf-8
 
-from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from hashlib import md5
 from ideabox.policy import _
 from ideabox.policy.faceted.subscriber import Randomizer
@@ -8,6 +7,7 @@ from ideabox.policy.utils import can_view_rating
 from plone import api
 from plone.supermodel.model import Schema
 from plone.tiles import Tile
+from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from random import shuffle
 from zope import schema
 from zope.component import getUtility

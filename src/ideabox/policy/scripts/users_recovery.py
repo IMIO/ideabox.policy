@@ -1,9 +1,9 @@
 # encoding: utf-8
 
-from Zope2.App import startup
 from plone import api
 from plone.i18n.normalizer import urlnormalizer
 from transaction import commit
+from Zope2.App import startup
 from zope.component.hooks import setSite
 
 import argparse

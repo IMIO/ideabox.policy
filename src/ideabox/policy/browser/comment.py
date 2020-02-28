@@ -2,9 +2,9 @@
 
 from AccessControl import getSecurityManager
 from Acquisition import aq_inner
-from Products.CMFCore.utils import getToolByName
-from plone.app.discussion.browser.comments import CommentsViewlet as BaseViewlet
 from plone.app.discussion.browser.comments import CommentForm as BaseForm
+from plone.app.discussion.browser.comments import CommentsViewlet as BaseViewlet
+from Products.CMFCore.utils import getToolByName
 
 import six
 

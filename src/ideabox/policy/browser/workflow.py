@@ -1,21 +1,20 @@
 # -*- coding: utf-8 -*-
 
-from DateTime import DateTime
-from ZODB.PersistentMapping import PersistentMapping
 from datetime import datetime
+from DateTime import DateTime
+from ideabox.policy import _
 from plone import api
 from plone.z3cform.layout import FormWrapper
 from z3c.form import button
 from z3c.form.field import Fields
 from z3c.form.form import Form
 from z3c.form.interfaces import NO_VALUE
+from ZODB.PersistentMapping import PersistentMapping
 from zope import schema
 from zope.i18n import translate
-from zope.interface import Interface
 from zope.interface import implementer
+from zope.interface import Interface
 from zope.interface.interface import InterfaceClass
-
-from ideabox.policy import _
 
 
 class IWorkflowForm(Interface):

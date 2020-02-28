@@ -1,18 +1,17 @@
 # encoding: utf-8
 
-from Zope2.App import startup
 from cioppino.twothumbs import rate
+from ideabox.policy.utils import token_type_recovery
 from plone import api
 from plone.i18n.normalizer import urlnormalizer
 from plone.namedfile.file import NamedBlobImage
 from transaction import commit
+from Zope2.App import startup
 from zope.component.hooks import setSite
 
 import argparse
 import csv
 import os
-
-from ideabox.policy.utils import token_type_recovery
 
 
 def add_project(
@@ -70,7 +69,7 @@ def add_image_from_file(container, file_name, source):
     if not container.hasObject(file_name):
         # with deterity image
         named_blob_image = NamedBlobImage(
-            data=open(file_path, "r").read(), filename=unicode(file_name)
+            data=open(file_path, "r").read(), filename=file_name
         )
         image = api.content.create(
             type="Image",
@@ -120,7 +119,6 @@ def data_recovery(filename, image, container, status):
             project_unlike,
             status,
         )
-        print(project_title)
 
 
 def follow_path(portal, path):

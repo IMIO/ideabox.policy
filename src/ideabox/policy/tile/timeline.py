@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from ideabox.policy import _
 from plone.supermodel.model import Schema
 from plone.tiles import Tile
+from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from zope import schema
 
 

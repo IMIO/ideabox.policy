@@ -1,27 +1,25 @@
 # -*- coding: utf-8 -*-
 
-from Products.CMFPlone.utils import safe_unicode
 from collective.excelexport.exportables.dexterityfields import BaseFieldRenderer
 from collective.excelexport.exportables.dexterityfields import CollectionFieldRenderer
-from collective.excelexport.exportables.dexterityfields import (
-    DexterityFieldsExportableFactory,
-)
+from collective.excelexport.exportables.dexterityfields import DexterityFieldsExportableFactory
 from collective.excelexport.exportables.dexterityfields import TextFieldRenderer
+from ideabox.policy import _
 from ideabox.policy.export.interfaces import IExtendedProjectExportable
 from ideabox.policy.interfaces import IIdeaboxPolicyLayer
 from plone import api
 from plone.app.textfield.interfaces import IRichText
+from Products.CMFPlone.utils import safe_unicode
 from z3c.form.interfaces import NO_VALUE
+from zope.annotation.interfaces import IAnnotations
 from zope.component import adapts
 from zope.component import getAdapters
-from zope.interface import Interface
-from zope.schema.interfaces import IText, ICollection
-from zope.annotation.interfaces import IAnnotations
 from zope.component import getUtility
-from zope.schema.interfaces import IVocabularyFactory
 from zope.i18n import translate
-
-from ideabox.policy import _
+from zope.interface import Interface
+from zope.schema.interfaces import ICollection
+from zope.schema.interfaces import IText
+from zope.schema.interfaces import IVocabularyFactory
 
 
 class FullTextFieldRenderer(TextFieldRenderer):

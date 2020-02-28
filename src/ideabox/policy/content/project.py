@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-from Products.CMFPlone.utils import getToolByName
-from Products.CMFPlone.utils import safe_unicode
 from collective.z3cform.select2.widget.widget import MultiSelect2FieldWidget
+from ideabox.policy import _
 from plone import api
+from plone.app.dexterity import _ as DXMF
 from plone.app.textfield import RichText
 from plone.app.textfield.value import IRichTextValue
 from plone.app.z3cform.widget import RichTextFieldWidget
@@ -11,14 +11,12 @@ from plone.dexterity.browser import view
 from plone.dexterity.content import Container
 from plone.indexer.decorator import indexer
 from plone.supermodel import model
+from Products.CMFPlone.utils import getToolByName
 from zope import schema
 from zope.component import getUtility
 from zope.i18n import translate
 from zope.interface import implementer
 from zope.schema.interfaces import IVocabularyFactory
-from plone.app.dexterity import _ as DXMF
-
-from ideabox.policy import _
 
 
 class IProject(model.Schema):

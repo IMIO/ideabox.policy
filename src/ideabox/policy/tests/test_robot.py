@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
+from ideabox.policy.testing import IDEABOX_POLICY_ACCEPTANCE_TESTING
 from plone.app.testing import ROBOT_TEST_LEVEL
 from plone.testing import layered
-from ideabox.policy.testing import IDEABOX_POLICY_ACCEPTANCE_TESTING
 
 import os
 import robotsuite

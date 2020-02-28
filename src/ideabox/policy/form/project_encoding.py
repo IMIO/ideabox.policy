@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-import hashlib
-import time
-import password_generator
-
 from collective.z3cform.select2.widget.widget import MultiSelect2FieldWidget
+from ideabox.policy import _
+from ideabox.policy.form.project_submission import IProjectSubmission
+from ideabox.policy.userdataschema import IEnhancedUserDataSchema
+from ideabox.policy.utils import execute_under_admin
 from plone import api
 from plone import schema
 from plone.i18n.normalizer.interfaces import IIDNormalizer
@@ -14,13 +14,12 @@ from z3c.form.field import Fields
 from z3c.form.form import Form
 from z3c.form.interfaces import IFieldsForm
 from zope.component import getUtility
-from zope.interface import implementer
 from zope.i18n import translate
+from zope.interface import implementer
 
-from ideabox.policy import _
-from ideabox.policy.form.project_submission import IProjectSubmission
-from ideabox.policy.userdataschema import IEnhancedUserDataSchema
-from ideabox.policy.utils import execute_under_admin
+import hashlib
+import password_generator
+import time
 
 
 class IProjectEncoding(IEnhancedUserDataSchema):

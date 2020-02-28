@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone import api
 from plone.app.layout.viewlets import ViewletBase
+from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from zope.component import getMultiAdapter
 
 

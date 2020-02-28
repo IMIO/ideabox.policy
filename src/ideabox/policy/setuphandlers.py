@@ -1,16 +1,16 @@
 # -*- coding: utf-8 -*-
 
-from Products.CMFPlone.interfaces import INonInstallable
 from collective.taxonomy.exportimport import TaxonomyImportExportAdapter
 from collective.taxonomy.factory import registerTaxonomy
 from collective.taxonomy.interfaces import ITaxonomy
-from eea.facetednavigation.layout.layout import FacetedLayout
+# from eea.facetednavigation.layout.layout import FacetedLayout
 from ideabox.policy import _
 from plone import api
 from plone.dexterity.interfaces import IDexterityFTI
 from plone.portlets.constants import CONTEXT_CATEGORY
 from plone.portlets.interfaces import ILocalPortletAssignmentManager
 from plone.portlets.interfaces import IPortletManager
+from Products.CMFPlone.interfaces import INonInstallable
 from zope.component import getMultiAdapter
 from zope.component import getUtility
 from zope.component import queryUtility
@@ -19,7 +19,6 @@ from zope.i18n.interfaces import ITranslationDomain
 from zope.interface import implementer
 from zope.schema.interfaces import IVocabularyFactory
 
-import json
 import os
 
 

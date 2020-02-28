@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 
-from Products.CMFPlone import PloneMessageFactory as PMF
-from plone.registry.interfaces import IRegistry
-from plone import api
+from ideabox.policy import _
 from operator import itemgetter
+from plone import api
+from plone.registry.interfaces import IRegistry
+from Products.CMFPlone import PloneMessageFactory as PMF
 from zope.component import getUtility
 from zope.schema.vocabulary import SimpleTerm
 from zope.schema.vocabulary import SimpleVocabulary
-from ideabox.policy import _
 
 
 def dict_list_2_vocabulary(dict_list):

@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
-import hashlib
-import time
-import password_generator
-
-from cioppino.twothumbs.rate import loveIt, hateIt, setupAnnotations
+from cioppino.twothumbs.rate import hateIt
+from cioppino.twothumbs.rate import loveIt
+from cioppino.twothumbs.rate import setupAnnotations
 from collective.z3cform.select2.widget.widget import MultiSelect2FieldWidget
+from ideabox.policy import _
+from ideabox.policy.userdataschema import IEnhancedUserDataSchema
 from plone import api
 from plone import schema
-from plone.i18n.normalizer.interfaces import IIDNormalizer
 from plone.autoform import directives as form
+from plone.i18n.normalizer.interfaces import IIDNormalizer
 from Products.statusmessages.interfaces import IStatusMessage
 from z3c.form import button
 from z3c.form.browser.radio import RadioFieldWidget
@@ -16,11 +16,12 @@ from z3c.form.field import Fields
 from z3c.form.form import Form
 from z3c.form.interfaces import IFieldsForm
 from zope.component import getUtility
-from zope.interface import implementer
 from zope.i18n import translate
+from zope.interface import implementer
 
-from ideabox.policy import _
-from ideabox.policy.userdataschema import IEnhancedUserDataSchema
+import hashlib
+import password_generator
+import time
 
 
 class IVoteEncoding(IEnhancedUserDataSchema):

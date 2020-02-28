@@ -1,11 +1,10 @@
 # -*- coding: utf-8 -*-
 
-from Products.CMFPlone.browser.syndication.adapters import DexterityItem
 from plone import api
+from Products.CMFPlone.browser.syndication.adapters import DexterityItem
 
 
 class ProjectItem(DexterityItem):
-
     def __init__(self, context, feed):
         self.image = self.get_image(context)
         super(ProjectItem, self).__init__(context, feed)
@@ -31,5 +30,5 @@ class ProjectItem(DexterityItem):
         if fi is not None:
             filename = fi.filename
             if filename:
-                url += '/{0}'.format(self.image.id)
+                url += "/{0}".format(self.image.id)
         return url

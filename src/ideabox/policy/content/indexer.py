@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from plone.indexer import indexer
 from ideabox.policy.content.project import IProject
+from plone.indexer import indexer
 
 import hashlib
 

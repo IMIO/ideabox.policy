@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
 from DateTime.DateTime import DateTime
-from plone.app.users.browser.account import AccountPanelSchemaAdapter
 from ideabox.policy.userdataschema import IEnhancedUserDataSchema
+from plone.app.users.browser.account import AccountPanelSchemaAdapter
 
 import datetime
 

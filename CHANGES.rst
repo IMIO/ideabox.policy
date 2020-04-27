@@ -5,7 +5,8 @@ Changelog
 3.0.8 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix an issue with `project_district` index and Python 3
+  [mpeeters]
 
 
 3.0.7 (2020-02-20)

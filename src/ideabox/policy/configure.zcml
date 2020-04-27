@@ -21,6 +21,7 @@
 
   <!-- themes -->
   <include package="ideabox.theme" />
+  <include package="ideabox.stats" />
 
   <include package=".browser" />
   <include package=".content" />

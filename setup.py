@@ -50,6 +50,7 @@ setup(
         "collective.z3cform.select2",
         "iaweb.mosaic",
         "ideabox.theme",
+        "ideabox.stats",
         "pas.plugins.imio",
         "password-generator",
         "plone.api",

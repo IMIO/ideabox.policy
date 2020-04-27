@@ -5,6 +5,9 @@ Changelog
 3.0.8 (unreleased)
 ------------------
 
+- Add `ideabox.stats` to the package dependencies
+  [mpeeters]
+
 - Fix an encoding issue with md5 on Python 3 for random sort
   [mpeeters]
 

@@ -5,6 +5,9 @@ Changelog
 3.0.8 (unreleased)
 ------------------
 
+- Fix an encoding issue with md5 on Python 3 for random sort
+  [mpeeters]
+
 - Fix an issue with `project_district` index and Python 3
   [mpeeters]
 

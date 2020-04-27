@@ -52,7 +52,7 @@ class Randomizer(object):
             ),
             now.strftime("%H"),
         )
-        self.key = random_key_generator(generator)
+        self.key = random_key_generator(generator.encode("utf8"))
 
     @property
     def random_sort_key(self):

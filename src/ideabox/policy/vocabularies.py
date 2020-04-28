@@ -91,3 +91,15 @@ class VoteVocabularyFactory(object):
 
 
 VoteVocabulary = VoteVocabularyFactory()
+
+
+class SortProjectVocabularyFactory(object):
+    def __call__(self, context):
+        values = [
+            {"random_sort": _("Random sort")},
+            {"sortable_title": _("Title")},
+        ]
+        return dict_list_2_vocabulary(values)
+
+
+SortProjectVocabulary = SortProjectVocabularyFactory()

@@ -84,6 +84,12 @@
       provides="zope.schema.interfaces.IVocabularyFactory"
       />
 
+  <utility
+    component=".vocabularies.SortProjectVocabulary"
+    name="ideabox.vocabularies.sort_project"
+    provides="zope.schema.interfaces.IVocabularyFactory"
+    />
+
   <adapter
     factory=".userdataschema.UserDataPanelExtender"
     provides="plone.z3cform.fieldsets.interfaces.IFormExtender"

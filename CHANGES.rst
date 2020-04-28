@@ -5,6 +5,9 @@ Changelog
 3.0.8 (unreleased)
 ------------------
 
+- Add `ideabox.vocabularies.sort_project` vocabulary for faceted sorting projects options
+  [mpeeters]
+
 - Add `ideabox.stats` to the package dependencies
   [mpeeters]
 

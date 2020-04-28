@@ -15,9 +15,10 @@ def faceted_query_handler(obj, event):
         except TypeError:
             layout = None
         if layout == "faceted-project":
-            randomizer = Randomizer(obj.REQUEST)
-            event.query["sort_on"] = randomizer.random_sort_key
-            event.query["sort_order"] = randomizer.random_sort_order
+            if "sort_on" in event.query and event.query["sort_on"] == "random_sort":
+                randomizer = Randomizer(obj.REQUEST)
+                event.query["sort_on"] = randomizer.random_sort_key
+                event.query["sort_order"] = randomizer.random_sort_order
 
 
 def _cache_key(function, generator):

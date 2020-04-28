@@ -5,6 +5,9 @@ Changelog
 3.0.8 (unreleased)
 ------------------
 
+- Handle optional random sort for projects by using a new sort widget
+  [mpeeters]
+
 - Add a sorting faceted widget that allow sort on every index and does not have Relevance by default
   [mpeeters]
 

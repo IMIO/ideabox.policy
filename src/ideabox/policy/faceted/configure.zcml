@@ -35,6 +35,17 @@
     schema=".sort_widget.IProjectSortingSchema"
     />
 
+  <configure package="eea.facetednavigation.browser">
+    <browser:page
+      for="eea.facetednavigation.subtypes.interfaces.IFacetedNavigable"
+      name="faceted_query"
+      class="ideabox.policy.faceted.faceted_query.IdeaboxFacetedQueryHandler"
+      template="template/query.pt"
+      permission="zope2.View"
+      layer="ideabox.policy.interfaces.IIdeaboxPolicyLayer"
+      />
+  </configure>
+
   <subscriber
       for="zope.interface.Interface
            eea.facetednavigation.events.IQueryWillBeExecutedEvent"

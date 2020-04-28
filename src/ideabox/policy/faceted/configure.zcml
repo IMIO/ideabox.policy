@@ -30,6 +30,11 @@
     class=".events.EventsView"
     />
 
+  <faceted:widget
+    factory=".sort_widget.Widget"
+    schema=".sort_widget.IProjectSortingSchema"
+    />
+
   <subscriber
       for="zope.interface.Interface
            eea.facetednavigation.events.IQueryWillBeExecutedEvent"

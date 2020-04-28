@@ -5,6 +5,9 @@ Changelog
 3.0.8 (unreleased)
 ------------------
 
+- Add a sorting faceted widget that allow sort on every index and does not have Relevance by default
+  [mpeeters]
+
 - Add `ideabox.vocabularies.sort_project` vocabulary for faceted sorting projects options
   [mpeeters]
 

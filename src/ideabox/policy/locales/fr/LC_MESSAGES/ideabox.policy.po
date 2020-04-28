@@ -206,7 +206,7 @@ msgstr "Projet"
 
 #: ../faceted/sort_widget.py:40
 msgid "Project Sorting"
-msgstr ""
+msgstr "Tri pour les projets"
 
 #: ../form/project_encoding.py:31
 #: ../profiles/default/actions.xml
@@ -236,7 +236,7 @@ msgstr "Des projets en évolution"
 
 #: ../vocabularies.py:99
 msgid "Random sort"
-msgstr ""
+msgstr "Tri aléatoire"
 
 #: ../browser/workflow.py:81
 msgid "Save"

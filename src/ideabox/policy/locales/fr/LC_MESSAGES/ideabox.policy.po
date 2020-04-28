@@ -20,17 +20,17 @@ msgstr ""
 msgid "AGAINST"
 msgstr "Contre"
 
-#: ../export/export.py:150
+#: ../export/export.py:154
 #: ../userdataschema.py:22
 msgid "Address"
 msgstr "Adresse"
 
-#: ../form/project_encoding.py:69
+#: ../form/project_encoding.py:68
 #: ../form/vote_encoding.py:82
 msgid "Anonymous"
 msgstr "Anonyme"
 
-#: ../export/export.py:173
+#: ../export/export.py:177
 #: ../userdataschema.py:28
 msgid "Birthdate"
 msgstr "Date de naissance"
@@ -39,19 +39,19 @@ msgstr "Date de naissance"
 msgid "Configuration for ideabox product"
 msgstr ""
 
-#: ../content/project.py:48
+#: ../content/project.py:46
 msgid "Content"
 msgstr "Contenu"
 
-#: ../setuphandlers.py:132
+#: ../setuphandlers.py:131
 msgid "District"
 msgstr "Quartier"
 
-#: ../content/project.py:40
+#: ../content/project.py:38
 msgid "District(s) concerned"
 msgstr "Quartier(s) concerné(s)"
 
-#: ../content/project.py:31
+#: ../content/project.py:29
 msgid "Domain(s) concerned"
 msgstr "Domaine(s) concerné(s)"
 
@@ -59,8 +59,8 @@ msgstr "Domaine(s) concerné(s)"
 msgid "Edit timeline dates"
 msgstr "Modifier les dates de la ligne du temps"
 
-#: ../form/project_encoding.py:27
-#: ../form/vote_encoding.py:27
+#: ../form/project_encoding.py:26
+#: ../form/vote_encoding.py:28
 msgid "Email"
 msgstr ""
 
@@ -110,18 +110,18 @@ msgstr "Femme"
 msgid "FOR"
 msgstr "Pour"
 
-#: ../export/export.py:145
+#: ../export/export.py:149
 #: ../userdataschema.py:20
 msgid "First name"
 msgstr "Prénom"
 
-#: ../export/export.py:155
+#: ../export/export.py:159
 #: ../userdataschema.py:25
 msgid "Gender"
 msgstr "Sexe"
 
-#: ../export/export.py:190
-#: ../setuphandlers.py:140
+#: ../export/export.py:194
+#: ../setuphandlers.py:139
 #: ../userdataschema.py:35
 msgid "I am"
 msgstr "Je suis"
@@ -150,7 +150,7 @@ msgstr "Si il y a plusieurs adresse email à renseigner séparez les par des poi
 msgid "Installs the ideabox.policy add-on."
 msgstr ""
 
-#: ../export/export.py:140
+#: ../export/export.py:144
 msgid "Last name"
 msgstr "Nom"
 
@@ -171,7 +171,7 @@ msgstr "Limite d'élément affiché"
 msgid "MALE"
 msgstr "Homme"
 
-#: ../export/export.py:98
+#: ../export/export.py:102
 msgid "Negative rating "
 msgstr "Vote contre"
 
@@ -183,7 +183,7 @@ msgstr "Soumission d'un nouveau projet"
 msgid "News"
 msgstr "Actualités"
 
-#: ../content/project.py:53
+#: ../content/project.py:51
 msgid "Original author"
 msgstr "Auteur original"
 
@@ -195,14 +195,18 @@ msgstr "Informations personnelles"
 msgid "Personal information for connected user"
 msgstr "Informations personnelles pour un utilisateur connecté"
 
-#: ../export/export.py:87
+#: ../export/export.py:91
 msgid "Positive rating "
 msgstr "Vote pour"
 
-#: ../form/vote_encoding.py:38
+#: ../form/vote_encoding.py:39
 #: ../profiles/default/types/Project.xml
 msgid "Project"
 msgstr "Projet"
+
+#: ../faceted/sort_widget.py:40
+msgid "Project Sorting"
+msgstr ""
 
 #: ../form/project_encoding.py:31
 #: ../profiles/default/actions.xml
@@ -217,7 +221,7 @@ msgstr "Image du projet"
 msgid "Project submission is currently disabled"
 msgstr "La soumission de projet est actuellement désactivée"
 
-#: ../form/vote_encoding.py:36
+#: ../form/vote_encoding.py:37
 msgid "Project(s)"
 msgstr "Projet(s)"
 
@@ -226,21 +230,25 @@ msgstr "Projet(s)"
 msgid "Projects"
 msgstr "Projets"
 
-#: ../browser/project.py:12
+#: ../browser/project.py:11
 msgid "Projects in progression"
 msgstr "Des projets en évolution"
 
-#: ../browser/workflow.py:82
+#: ../vocabularies.py:99
+msgid "Random sort"
+msgstr ""
+
+#: ../browser/workflow.py:81
 msgid "Save"
 msgstr "Enregistrer"
 
-#: ../form/project_encoding.py:145
+#: ../form/project_encoding.py:144
 #: ../form/project_submission.py:113
-#: ../form/vote_encoding.py:139
+#: ../form/vote_encoding.py:141
 msgid "Send"
 msgstr "Envoyer"
 
-#: ../browser/project.py:28
+#: ../browser/project.py:27
 msgid "Setting up"
 msgstr "Mise en place"
 
@@ -248,20 +256,21 @@ msgstr "Mise en place"
 msgid "Steps for timeline"
 msgstr "Etapes pour la ligne du temps"
 
-#: ../browser/project.py:44
+#: ../browser/project.py:43
 msgid "The 7 main themes"
 msgstr "Les 7 thématiques prioritaires"
 
-#: ../form/vote_encoding.py:148
+#: ../form/vote_encoding.py:150
 msgid "The votes have been encoded correctly"
 msgstr "Les votes ont bien été encodés"
 
-#: ../setuphandlers.py:124
+#: ../setuphandlers.py:123
 msgid "Theme"
 msgstr "Thème"
 
 #: ../form/project_submission.py:23
 #: ../tile/projects.py:22
+#: ../vocabularies.py:100
 msgid "Title"
 msgstr "Titre"
 
@@ -273,32 +282,32 @@ msgstr "Titre; Date; Lien"
 msgid "Uninstalls the ideabox.policy add-on."
 msgstr ""
 
-#: ../export/export.py:135
+#: ../export/export.py:139
 msgid "User ID"
 msgstr "ID utilisateur"
 
-#: ../form/vote_encoding.py:31
+#: ../form/vote_encoding.py:32
 msgid "Vote"
 msgstr "Vote"
 
-#: ../form/vote_encoding.py:46
+#: ../form/vote_encoding.py:47
 #: ../profiles/default/actions.xml
 msgid "Vote encoding"
 msgstr "Encoder des votes"
 
-#: ../export/export.py:109
+#: ../export/export.py:113
 msgid "Voters in favour"
 msgstr "Votants pour"
 
-#: ../export/export.py:122
+#: ../export/export.py:126
 msgid "Voters opposed"
 msgstr "Votants contre"
 
-#: ../export/export.py:213
+#: ../export/export.py:217
 msgid "Votes"
 msgstr "Votes"
 
-#: ../export/export.py:208
+#: ../export/export.py:212
 #: ../userdataschema.py:31
 msgid "Zip code"
 msgstr "Code postal"
@@ -307,7 +316,7 @@ msgstr "Code postal"
 msgid "Zip code vocabulary values"
 msgstr ""
 
-#: ../browser/project.py:23
+#: ../browser/project.py:22
 msgid "diagnose and analysis"
 msgstr "Diagnostic et analyse"
 

@@ -51,4 +51,13 @@
  </index>
  <column value="project_random_7" />
 
+  <index name="strategic_objectives" meta_type="FieldIndex">
+    <indexed_attr value="strategic_objectives" />
+  </index>
+  <column value="strategic_objectives" />
+
+  <index name="operational_objectives" meta_type="FieldIndex">
+    <indexed_attr value="operational_objectives" />
+  </index>
+  <column value="operational_objectives" />
 </object>

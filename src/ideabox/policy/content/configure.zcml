@@ -13,6 +13,14 @@
       permission="zope2.View"
       />
 
+  <browser:page
+      for=".priority_action.IPriorityAction"
+      name="view"
+      class=".priority_action.PriorityActionView"
+      template="project.pt"
+      permission="zope2.View"
+      />
+
   <adapter factory=".syndication.ProjectItem"
     for=".project.IProject
          Products.CMFPlone.interfaces.syndication.IFeed"

@@ -5,6 +5,12 @@ Changelog
 3.0.8 (unreleased)
 ------------------
 
+- Adapte faceted navigation with new fields
+  [vpiret]
+
+- Add new content "Priority action"
+  [vpiret]
+
 - Handle optional random sort for projects by using a new sort widget
   [mpeeters]
 

@@ -2,7 +2,9 @@
 
 from collective.excelexport.exportables.dexterityfields import BaseFieldRenderer
 from collective.excelexport.exportables.dexterityfields import CollectionFieldRenderer
-from collective.excelexport.exportables.dexterityfields import DexterityFieldsExportableFactory
+from collective.excelexport.exportables.dexterityfields import (
+    DexterityFieldsExportableFactory,
+)
 from collective.excelexport.exportables.dexterityfields import TextFieldRenderer
 from ideabox.policy import _
 from ideabox.policy.export.interfaces import IExtendedProjectExportable

@@ -5,7 +5,6 @@ from random import shuffle
 
 
 class IdeaboxFacetedQueryHandler(FacetedQueryHandler):
-
     def query(self, *args, **kwargs):
         results = super(IdeaboxFacetedQueryHandler, self).query(*args, **kwargs)
         query = self.criteria()

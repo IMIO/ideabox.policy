@@ -3,13 +3,11 @@
 from ideabox.policy.utils import can_view_rating
 from plone import api
 from Products.Five import BrowserView
-from random import shuffle
 from zope.component import getUtility
 from zope.schema.interfaces import IVocabularyFactory
 
 
 class ProjectsView(BrowserView):
-
     @property
     def default_image(self):
         return "{0}/project_default.jpg".format(api.portal.get().absolute_url())

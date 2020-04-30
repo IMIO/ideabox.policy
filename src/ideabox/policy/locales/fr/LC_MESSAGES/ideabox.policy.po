@@ -185,7 +185,7 @@ msgstr "Actualités"
 
 #: ../content/priority_action.py:21
 msgid "Operational objectives"
-msgstr ""
+msgstr "Objectifs opérationnels"
 
 #: ../content/project.py:51
 msgid "Original author"
@@ -205,7 +205,7 @@ msgstr "Vote pour"
 
 #: ../profiles/default/types/priority_action.xml
 msgid "Priority action"
-msgstr ""
+msgstr "Action prioritaire"
 
 #: ../form/vote_encoding.py:39
 #: ../profiles/default/types/Project.xml
@@ -266,7 +266,7 @@ msgstr "Etapes pour la ligne du temps"
 
 #: ../content/priority_action.py:17
 msgid "Strategic Objectives"
-msgstr ""
+msgstr "Objectifs stratégiques"
 
 #: ../browser/project.py:43
 msgid "The 7 main themes"

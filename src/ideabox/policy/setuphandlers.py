@@ -3,6 +3,7 @@
 from collective.taxonomy.exportimport import TaxonomyImportExportAdapter
 from collective.taxonomy.factory import registerTaxonomy
 from collective.taxonomy.interfaces import ITaxonomy
+
 # from eea.facetednavigation.layout.layout import FacetedLayout
 from ideabox.policy import _
 from plone import api

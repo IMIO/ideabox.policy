@@ -5,6 +5,9 @@ Changelog
 3.0.8 (unreleased)
 ------------------
 
+- Add new content "State progress"
+  [vpiret]
+
 - Adapte faceted navigation with new fields
   [vpiret]
 

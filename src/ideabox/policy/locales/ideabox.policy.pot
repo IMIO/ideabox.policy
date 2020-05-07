@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-04-30 11:20+0000\n"
+"POT-Creation-Date: 2020-05-07 17:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,10 +46,15 @@ msgid "Configuration for ideabox product"
 msgstr ""
 
 #: ../content/project.py:46
+#: ../content/state_progress.py:16
 msgid "Content"
 msgstr ""
 
-#: ../setuphandlers.py:132
+#: ../content/state_progress.py:14
+msgid "Date"
+msgstr ""
+
+#: ../setuphandlers.py:131
 msgid "District"
 msgstr ""
 
@@ -127,7 +132,7 @@ msgid "Gender"
 msgstr ""
 
 #: ../export/export.py:196
-#: ../setuphandlers.py:140
+#: ../setuphandlers.py:139
 #: ../userdataschema.py:35
 msgid "I am"
 msgstr ""
@@ -189,7 +194,7 @@ msgstr ""
 msgid "News"
 msgstr ""
 
-#: ../content/priority_action.py:21
+#: ../content/priority_action.py:22
 msgid "Operational objectives"
 msgstr ""
 
@@ -220,6 +225,10 @@ msgstr ""
 
 #: ../faceted/sort_widget.py:40
 msgid "Project Sorting"
+msgstr ""
+
+#: ../content/project.pt:142
+msgid "Project Status"
 msgstr ""
 
 #: ../form/project_encoding.py:31
@@ -266,11 +275,15 @@ msgstr ""
 msgid "Setting up"
 msgstr ""
 
+#: ../profiles/default/types/state_progress.xml
+msgid "State progress"
+msgstr ""
+
 #: ../tile/timeline.py:13
 msgid "Steps for timeline"
 msgstr ""
 
-#: ../content/priority_action.py:17
+#: ../content/priority_action.py:18
 msgid "Strategic Objectives"
 msgstr ""
 
@@ -282,7 +295,7 @@ msgstr ""
 msgid "The votes have been encoded correctly"
 msgstr ""
 
-#: ../setuphandlers.py:124
+#: ../setuphandlers.py:123
 msgid "Theme"
 msgstr ""
 

@@ -40,10 +40,15 @@ msgid "Configuration for ideabox product"
 msgstr ""
 
 #: ../content/project.py:46
+#: ../content/state_progress.py:16
 msgid "Content"
 msgstr "Contenu"
 
-#: ../setuphandlers.py:132
+#: ../content/state_progress.py:14
+msgid "Date"
+msgstr ""
+
+#: ../setuphandlers.py:131
 msgid "District"
 msgstr "Quartier"
 
@@ -121,7 +126,7 @@ msgid "Gender"
 msgstr "Sexe"
 
 #: ../export/export.py:196
-#: ../setuphandlers.py:140
+#: ../setuphandlers.py:139
 #: ../userdataschema.py:35
 msgid "I am"
 msgstr "Je suis"
@@ -183,7 +188,7 @@ msgstr "Soumission d'un nouveau projet"
 msgid "News"
 msgstr "Actualités"
 
-#: ../content/priority_action.py:21
+#: ../content/priority_action.py:22
 msgid "Operational objectives"
 msgstr "Objectifs opérationnels"
 
@@ -215,6 +220,10 @@ msgstr "Projet"
 #: ../faceted/sort_widget.py:40
 msgid "Project Sorting"
 msgstr "Tri pour les projets"
+
+#: ../content/project.pt:142
+msgid "Project Status"
+msgstr "Etat d'avancement du projet"
 
 #: ../form/project_encoding.py:31
 #: ../profiles/default/actions.xml
@@ -260,11 +269,15 @@ msgstr "Envoyer"
 msgid "Setting up"
 msgstr "Mise en place"
 
+#: ../profiles/default/types/state_progress.xml
+msgid "State progress"
+msgstr "Etat d'avancement"
+
 #: ../tile/timeline.py:13
 msgid "Steps for timeline"
 msgstr "Etapes pour la ligne du temps"
 
-#: ../content/priority_action.py:17
+#: ../content/priority_action.py:18
 msgid "Strategic Objectives"
 msgstr "Objectifs stratégiques"
 
@@ -276,7 +289,7 @@ msgstr "Les 7 thématiques prioritaires"
 msgid "The votes have been encoded correctly"
 msgstr "Les votes ont bien été encodés"
 
-#: ../setuphandlers.py:124
+#: ../setuphandlers.py:123
 msgid "Theme"
 msgstr "Thème"
 

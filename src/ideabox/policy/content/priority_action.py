@@ -3,6 +3,7 @@ from ideabox.policy import _
 from ideabox.policy.content.project import IProject
 from ideabox.policy.content.project import Project
 from ideabox.policy.content.project import ProjectView
+from plone import api
 from plone.app.textfield.value import IRichTextValue
 from plone.indexer.decorator import indexer
 from Products.CMFPlone.utils import getToolByName
@@ -28,7 +29,10 @@ class PriorityAction(Project):
 
 
 class PriorityActionView(ProjectView):
-    pass
+    def get_state_progress(self):
+        return api.content.find(contect=self,
+                                portal_type='state_progress',
+                                sort_on='state_date')
 
 
 @indexer(IPriorityAction)

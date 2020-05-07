@@ -137,7 +137,19 @@
                 $('#viewlet-below-content .reply:first').appendTo('li.text_comment');
             });
         </script>
-
+        <div tal:condition="python: context.portal_type=='priority_action'">
+          <div tal:define="state_progess view/get_state_progress" tal:condition="state_progess">
+            <div i18n:translate="">Project Status</div>
+            <div tal:repeat="sp state_progess">
+              <talblock tal:define="spo sp/getObject;
+                                    img python: getattr(spo, 'image', None)">
+                <div tal:content="python: spo.state_date.strftime('%d/%m/%Y')"></div>
+                <img tal:condition="img" class="view img-responsive" src="" tal:attributes="src string: ${spo/absolute_url}/@@images/image" />
+                <div tal:replace="structure spo/body/output"></div>
+              </talblock>
+            </div>
+          </div>
+        </div>
         </metal:main>
     </body>
 </html>

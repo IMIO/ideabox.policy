@@ -60,4 +60,9 @@
     <indexed_attr value="operational_objectives" />
   </index>
   <column value="operational_objectives" />
+
+  <index name="state_date" meta_type="DateIndex">
+    <indexed_attr value="state_date"/>
+  </index>
+  <column value="state_date" />
 </object>

@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<object name="priority_action" meta_type="Dexterity FTI" i18n:domain="ideabox.policy"
+<object name="state_progress" meta_type="Dexterity FTI" i18n:domain="ideabox.policy"
    xmlns:i18n="http://xml.zope.org/namespaces/i18n">
- <property name="title" i18n:translate="">Priority action</property>
+ <property name="title" i18n:translate="">State progress</property>
  <property name="icon_expr">string:${portal_url}/document_icon.png</property>
- <property name="factory">priority_action</property>
+ <property name="factory">state_progress</property>
  <property
-    name="add_view_expr">string:${folder_url}/++add++priority_action</property>
+    name="add_view_expr">string:${folder_url}/++add++state_progress</property>
  <property name="link_target"/>
  <property name="immediate_view">view</property>
- <property name="global_allow">True</property>
+ <property name="global_allow">False</property>
  <property name="filter_content_types">True</property>
- <property name="allowed_content_types">
-    <element value="Image" />
-    <element value="Event" />
-    <element value="News Item" />
-    <element value="state_progress" />
-  </property>
+ <property name="allowed_content_types"/>
  <property name="allow_discussion">False</property>
  <property name="default_view">view</property>
  <property name="view_methods">
@@ -23,13 +18,12 @@
  </property>
  <property name="default_view_fallback">False</property>
  <property name="add_permission">cmf.AddPortalContent</property>
- <property name="klass">ideabox.policy.content.priority_action.PriorityAction</property>
+ <property name="klass">ideabox.policy.content.state_progress.StateProgress</property>
  <property name="behaviors">
-    <element value="plone.app.content.interfaces.INameFromTitle" />
-    <element value="cioppino.twothumbs.interfaces.ILoveThumbsDontYou" />
-    <element value="plone.app.dexterity.behaviors.discussion.IAllowDiscussion" />
-  </property>
- <property name="schema">ideabox.policy.content.priority_action.IPriorityAction</property>
+  <element value="plone.namefromtitle"/>
+  <element value="plone.leadimage"/>
+ </property>
+ <property name="schema">ideabox.policy.content.state_progress.IStateProgress</property>
  <property name="model_source"/>
  <property name="model_file"/>
  <property name="schema_policy">dexterity</property>

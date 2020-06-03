@@ -18,10 +18,11 @@
   <include package="collective.behavior.banner" />
   <include package="iaweb.mosaic" />
   <include package="plone.app.imagecropping" />
+  <include package="ideabox.stats" />
 
   <!-- themes -->
+  <include package="ideabox.diazotheme.spirit" />
   <include package="ideabox.theme" />
-  <include package="ideabox.stats" />
 
   <include package=".browser" />
   <include package=".content" />

@@ -49,6 +49,7 @@ setup(
         "collective.taxonomy",
         "collective.z3cform.select2",
         "iaweb.mosaic",
+        "ideabox.diazotheme.spirit",
         "ideabox.theme",
         "ideabox.stats",
         "pas.plugins.imio",

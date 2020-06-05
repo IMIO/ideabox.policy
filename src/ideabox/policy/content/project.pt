@@ -1,155 +1,138 @@
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
-      xmlns:tal="http://xml.zope.org/namespaces/tal"
-      xmlns:metal="http://xml.zope.org/namespaces/metal"
-      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
-      lang="en"
-      metal:use-macro="context/main_template/macros/master"
-      i18n:domain="ideabox.policy">
-    <body>
-        <metal:main fill-slot="main"
-                    tal:define="images_url view/get_images_url;
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" 
+  xmlns:tal="http://xml.zope.org/namespaces/tal" 
+  xmlns:metal="http://xml.zope.org/namespaces/metal" 
+  xmlns:i18n="http://xml.zope.org/namespaces/i18n" lang="en" metal:use-macro="context/main_template/macros/master" i18n:domain="ideabox.policy">
+  <body>
+    <metal:main fill-slot="main" tal:define="images_url view/get_images_url;
                                 current_state view/review_state;
                                 timeline_states view/timeline_states">
-        <div id="viewlet-above-content-title" tal:content="structure provider:plone.abovecontenttitle" />
-        <h1 tal:content="context/Title"></h1>
+      <div id="action_project">
+        <div class="ap-content">
+          <div id="viewlet-above-content-title" tal:content="structure provider:plone.abovecontenttitle" />
+          <h1 tal:content="context/Title"></h1>
 
-        <div class="documentByLine"
-             id="plone-document-byline"
-             tal:condition="view/before_selected"
-             i18n:domain="plone">
-          <tal:creator tal:define="creator_short_form view/creator;"
-                       tal:condition="creator_short_form">
-            <tal:name tal:define="creator_long_form string:?author=${creator_short_form};
-                                  creator_is_openid python:'/' in creator_short_form;
-                                  creator_id python:(creator_short_form, creator_long_form)[creator_is_openid];
-                                  anonymous view/anonymous">
-              <span class="documentAuthor">
-                <tal:i18n i18n:translate="label_by_author">
-                  by
-                  <span tal:content="view/authorname" i18n:name="author"></span>
-                </tal:i18n>
-              </span>
-            </tal:name>
-          </tal:creator>
-        </div>
-        <p class="theme discreet" tal:content="view/get_project_theme"></p>
-        <p class="theme discreet" tal:content="view/get_project_district"></p>
+          <div class="documentByLine" id="plone-document-byline" tal:condition="view/before_selected" i18n:domain="plone">
+            <tal:creator tal:define="creator_short_form view/creator;" tal:condition="creator_short_form">
+              <tal:name tal:define="creator_long_form string:?author=${creator_short_form};
+                                      creator_is_openid python:'/' in creator_short_form;
+                                      creator_id python:(creator_short_form, creator_long_form)[creator_is_openid];
+                                      anonymous view/anonymous">
+                <span class="documentAuthor">
+                  <tal:i18n i18n:translate="label_by_author">
+                      by
+                    <span tal:content="view/authorname" i18n:name="author"></span>
+                  </tal:i18n>
+                </span>
+              </tal:name>
+            </tal:creator>
+          </div>
+          <div class="theme">
+            <label>Domaines concernés :</label>
+            <p tal:content="view/get_project_theme"></p>
+          </div>
 
-        <div class="field" tal:condition="context/description">
-          <div class="richTextWidget richtext-field"><p tal:content="context/description"></p></div>
-        </div>
+          <div class="description">
+            <p tal:content="context/description"></p>
+          </div>
 
-        <div id="timeline" class="steps_5" i18n:domain="plone" tal:condition="view/can_view_timeline">
-            <ol id="timeline-line"><tal:block tal:repeat="state timeline_states"><li tal:attributes="class python: state['state'] == current_state and 'current' or state['class']" tal:define="date state/date"
-                ><div class="step"><tal:block condition="date"><div tal:content="python: date.strftime('%d')"></div><div tal:content="python: date.strftime('%b')"></div></tal:block></div></li></tal:block></ol>
-            <ol id="timeline-text"><tal:block tal:repeat="state timeline_states"><li tal:attributes="class python: state['state'] == current_state and 'current' or state['class']"><div tal:content="state/state" i18n:translate=""></div></li></tal:block></ol>
-          <div tal:condition="view/can_edit"
-               i18n:domain="ideabox.policy">
-            <a href=""
-               tal:attributes="href string:${context/absolute_url}/@@workflow-edit"
-               i18n:translate="">Edit timeline dates</a>
+          <div id="timeline" class="steps_5" i18n:domain="plone" tal:condition="view/can_view_timeline">
+            <ol id="timeline-line">
+              <tal:block tal:repeat="state timeline_states">
+                <li tal:attributes="class python: state['state'] == current_state and 'current' or state['class']" tal:define="date state/date">
+                  <div class="step">
+                    <tal:block condition="date">
+                      <div tal:content="python: date.strftime('%d')"></div>
+                      <div tal:content="python: date.strftime('%b')"></div>
+                    </tal:block>
+                  </div>
+                </li>
+              </tal:block>
+            </ol>
+            <ol id="timeline-text">
+              <tal:block tal:repeat="state timeline_states">
+                <li tal:attributes="class python: state['state'] == current_state and 'current' or state['class']">
+                  <div tal:content="state/state" i18n:translate=""></div>
+                </li>
+              </tal:block>
+            </ol>
+            <div tal:condition="view/can_edit" i18n:domain="ideabox.policy">
+              <a href="" tal:attributes="href string:${context/absolute_url}/@@workflow-edit" i18n:translate="">Edit timeline dates</a>
+            </div>
+          </div>
+
+          <tal:if condition="view/can_view_rating">
+            <div tal:content="structure here/@@rating"></div>
+          </tal:if>
+
+          <div tal:define="news view/get_news">
+            <div>
+              <tal:block tal:repeat="image_url images_url">
+                <div class="img_project" tal:attributes="style string: background-image:url(${image_url})"></div>
+              </tal:block>
+              <div class="text" tal:content="structure context/body/raw|context/body"></div>
+            </div>
+            <div class="news" tal:condition="news">
+              <div id="project_facet_view" class="news">
+                <tal:block repeat="element news">
+                  <a href="" title="" tal:attributes="href element/getURL;
+                                                title element/Title" tal:define="idx python:repeat['element'].index + 1;
+                                            img_url string:${element/getURL}/@@images/image/project_faceted">
+                    <div class="" tal:attributes="class string:project item_${idx}">
+                      <div class="image" tal:attributes="style string:background-image:url('${img_url}')"></div>
+                      <div>
+                        <div class="date_project" tal:define="date python: element.created > element.effective and element.created or element.effective">
+                          <span tal:replace="python: date.asdatetime().strftime('%d/%m/%Y')"></span>
+                        </div>
+                        <div class="title" tal:content="element/Title">title</div>
+                        <div class="description" tal:content="element/Description">description</div>
+                      </div>
+                    </div>
+                  </a>
+                </tal:block>
+              </div>
+            </div>
+          </div>
+          <div class="ap-comment">
+            <div tal:replace="structure provider:plone.belowcontent" />
           </div>
         </div>
 
-        <tal:if condition="view/can_view_rating">
-        <div tal:content="structure here/@@rating"></div>
-        </tal:if>
-
-        <div id="text_with_button"
-             tal:define="news view/get_news">
-            <ul id="button">
-                <li id="text_description" class="">
-                    Description
-                </li>
-                <li id="text_news" class="" tal:condition="news">
-                    Actualités
-                </li>
-                <li id="text_comment" class="">
-                    Commentaires
-                </li>
-            </ul>
-            <ul id="text">
-                <li class="text_description">
-                  <div class="field">
-                    <div id="form-widgets-body" class="richTextWidget richtext-field" tal:content="structure context/body/raw|context/body"></div>
-                  </div>
-                  <tal:block tal:repeat="image_url images_url">
-                    <div class="img_project" tal:attributes="style string: background-image:url(${image_url})"></div>
-                  </tal:block>
-                </li>
-                <li class="text_news" tal:condition="news">
-                    <div id="project_facet_view" class="news">
-                        <tal:block repeat="element news">
-                          <a href="" title=""
-                             tal:attributes="href element/getURL;
-                                             title element/Title"
-                             tal:define="idx python:repeat['element'].index + 1;
-                                         img_url string:${element/getURL}/@@images/image/project_faceted">
-                            <div class=""
-                                 tal:attributes="class string:project item_${idx}">
-                              <div class="image"
-                                   tal:attributes="style string:background-image:url('${img_url}')"></div>
-                              <div>
-                                <div class="date_project"
-                                     tal:define="date python: element.created > element.effective and element.created or element.effective">
-                                  <span tal:replace="python: date.asdatetime().strftime('%d/%m/%Y')"></span>
-                                </div>
-                                <div class="title"
-                                     tal:content="element/Title">title</div>
-                                <div class="description"
-                                     tal:content="element/Description">description</div>
-                              </div>
-                            </div>
-                          </a>
-                        </tal:block>
+        <div tal:condition="python: context.portal_type=='priority_action'" class="ap-state">
+          <div tal:define="state_progess view/get_state_progress" tal:condition="state_progess" class="state-block">
+            <div i18n:translate="" class="state-header">Project Status</div>
+            <div class="state-body">
+              <div class="state-item" tal:repeat="sp state_progess">
+                <tal:block tal:define="spo sp/getObject;
+                                img python: getattr(spo, 'image', None)">
+                  <div class="state-date" tal:content="python: spo.state_date.strftime('%d/%m/%Y')"></div>
+                  <div class="state-content">
+                    <div tal:condition="img" class="img">
+                      <img class="view img-responsive" src="" tal:attributes="src string: ${spo/absolute_url}/@@images/image" />
                     </div>
-                </li>
-                <li class="text_comment">
-                </li>
-            </ul>
-        </div>
-        <div tal:replace="structure provider:plone.belowcontentbody" />
-
-        <script type="text/javascript">
-            $("#text_with_button").each(function(){
-                $(this).find("li").removeClass("current");
-                var id = window.location.hash;
-                var ids = ['#text_description', '#text_news', '#text_comment'];
-                if (id != '' && ids.includes(id)){
-                    $(id).addClass("current");
-                    $("." + id.substring(1)).addClass("current");
-                }else{
-                    $('#text_description').addClass("current");
-                    $('.text_description').addClass("current");
-                }
-                $("#text_with_button #button li").click(function() {
-                    $("#text_with_button").find("li").removeClass("current");
-                    var id = $(this).attr("id");
-                    history.pushState(null, null, "#" + id);
-                    $(this).addClass("current");
-                    $("#text_with_button #text ." + id).addClass("current");
-                });
-            });
-            jQuery(document).ready(function($) {
-                // XXX This should be replaced by a diazo rule
-                $('#viewlet-below-content .discussion').appendTo('li.text_comment');
-                $('#viewlet-below-content #commenting').appendTo('li.text_comment');
-                $('#viewlet-below-content .reply:first').appendTo('li.text_comment');
-            });
-        </script>
-        <div tal:condition="python: context.portal_type=='priority_action'">
-          <div tal:define="state_progess view/get_state_progress" tal:condition="state_progess">
-            <div i18n:translate="">Project Status</div>
-            <div tal:repeat="sp state_progess">
-              <talblock tal:define="spo sp/getObject;
-                                    img python: getattr(spo, 'image', None)">
-                <div tal:content="python: spo.state_date.strftime('%d/%m/%Y')"></div>
-                <img tal:condition="img" class="view img-responsive" src="" tal:attributes="src string: ${spo/absolute_url}/@@images/image" />
-                <div tal:replace="structure spo/body/output"></div>
-              </talblock>
+                    <div tal:replace="structure spo/body/output"></div>
+                  </div>
+                </tal:block>
+              </div>
+            </div>
+            <div class="state-more">
+              <a href="">
+                Voir plus
+                <i class="fas fa-plus"></i>
+              </a>
+            </div>
+            <div class="state-notif">
+              <p>Souhaitez-vous être tenu au courant de l’avancement du projet ?</p>
+              <div class="state-switch">
+                <div>Non</div>
+                <label>
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+                <div>Oui</div>
+              </div>
             </div>
           </div>
         </div>
-        </metal:main>
+      </metal:main>
     </body>
-</html>
+  </html>

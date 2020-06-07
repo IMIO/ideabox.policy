@@ -5,6 +5,9 @@ Changelog
 3.0.8 (unreleased)
 ------------------
 
+- Fix a Python 3 encoding issue on project tile
+  [mpeeters]
+
 - Restore initial config on install
   [mpeeters]
 

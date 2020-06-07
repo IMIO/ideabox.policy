@@ -33,7 +33,7 @@ class IProjectsTile(Schema):
 
 class TileRandomizer(Randomizer):
     def __init__(self):
-        self.key = md5(str(time.time() // 60 * 5)).hexdigest()
+        self.key = md5(str(time.time() // 60 * 5).encode("utf-8")).hexdigest()
 
 
 class BaseProjectsTile(Tile):

@@ -42,11 +42,11 @@ def post_install(context):
             "Folder",
             "eea.facetednavigation.subtypes.interfaces.IPossibleFacetedNavigable",
         )
-        # _activate_faceted_navigation(project, True, "/faceted/config/projets.xml")
-        # project_layout = FacetedLayout(project)
-        # project_layout.update_layout(layout="faceted-project")
-        # _disable_portlets(project)
-        # _publish(project)
+        _activate_faceted_navigation(project, True, "/faceted/config/projets.xml")
+        project_layout = FacetedLayout(project)
+        project_layout.update_layout(layout="faceted-project")
+        _disable_portlets(project)
+        _publish(project)
     if portal.get("participer") is None:
         participate = api.content.create(
             type="Folder", id="participer", title="Participer", container=portal
@@ -64,13 +64,13 @@ def post_install(context):
         "Collection",
         "eea.facetednavigation.subtypes.interfaces.IPossibleFacetedNavigable",
     )
-    # if "news" in portal:
-    #     _activate_faceted_navigation(
-    #         portal["news"]["aggregator"], True, "/faceted/config/news.xml"
-    #     )
-    #     _disable_portlets(portal["news"])
-    #     news_layout = FacetedLayout(portal["news"]["aggregator"])
-    #     news_layout.update_layout(layout="faceted-news")
+    if "news" in portal:
+        _activate_faceted_navigation(
+            portal["news"]["aggregator"], True, "/faceted/config/news.xml"
+        )
+        _disable_portlets(portal["news"])
+        news_layout = FacetedLayout(portal["news"]["aggregator"])
+        news_layout.update_layout(layout="faceted-news")
 
     allowed_sizes = api.portal.get_registry_record("plone.allowed_sizes")
     scales = ("banner 1920:800", "project_faceted 450:300", "evenement 300:300")

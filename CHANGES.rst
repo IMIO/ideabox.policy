@@ -5,6 +5,9 @@ Changelog
 3.0.8 (unreleased)
 ------------------
 
+- Restore initial config on install
+  [mpeeters]
+
 - Fix Python3 compability
   [mpeeters]
 

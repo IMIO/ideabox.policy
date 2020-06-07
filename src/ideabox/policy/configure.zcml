@@ -19,6 +19,7 @@
   <include package="iaweb.mosaic" />
   <include package="plone.app.imagecropping" />
   <include package="ideabox.stats" />
+  <include package="imio.gdpr" />
 
   <!-- themes -->
   <include package="ideabox.diazotheme.spirit" />

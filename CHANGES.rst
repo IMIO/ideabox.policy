@@ -5,6 +5,9 @@ Changelog
 3.0.8 (unreleased)
 ------------------
 
+- Restore `imio.gdpr` dependency
+  [mpeeters]
+
 - Restore beaker dependency
   [mpeeters]
 

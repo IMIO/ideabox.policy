@@ -53,6 +53,7 @@ setup(
         "ideabox.diazotheme.spirit",
         "ideabox.theme",
         "ideabox.stats",
+        "imio.gdpr",
         "pas.plugins.imio",
         "password-generator",
         "plone.api",

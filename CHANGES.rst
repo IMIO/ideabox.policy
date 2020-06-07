@@ -5,6 +5,9 @@ Changelog
 3.0.8 (unreleased)
 ------------------
 
+- Restore beaker dependency
+  [mpeeters]
+
 - Add new content "State progress"
   [vpiret]
 

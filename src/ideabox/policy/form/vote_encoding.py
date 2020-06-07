@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from Products.statusmessages.interfaces import IStatusMessage
 from cioppino.twothumbs.rate import hateIt
 from cioppino.twothumbs.rate import loveIt
 from cioppino.twothumbs.rate import setupAnnotations
@@ -9,7 +10,6 @@ from plone import api
 from plone import schema
 from plone.autoform import directives as form
 from plone.i18n.normalizer.interfaces import IIDNormalizer
-from Products.statusmessages.interfaces import IStatusMessage
 from z3c.form import button
 from z3c.form.browser.radio import RadioFieldWidget
 from z3c.form.field import Fields

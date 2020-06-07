@@ -5,6 +5,9 @@ Changelog
 3.0.8 (unreleased)
 ------------------
 
+- Fix Python3 compability
+  [mpeeters]
+
 - Restore `imio.gdpr` dependency
   [mpeeters]
 

@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+from Products.CMFPlone.utils import getToolByName
+from Products.CMFPlone.utils import safe_unicode
 from collective.z3cform.select2.widget.widget import MultiSelect2FieldWidget
 from ideabox.policy import _
 from plone import api
@@ -11,7 +13,7 @@ from plone.dexterity.browser import view
 from plone.dexterity.content import Container
 from plone.indexer.decorator import indexer
 from plone.supermodel import model
-from Products.CMFPlone.utils import getToolByName
+from six import text_type
 from zope import schema
 from zope.component import getUtility
 from zope.i18n import translate
@@ -217,7 +219,10 @@ def searchabletext_project(object, **kw):
     fields = ["title", "description", "body", "original_author"]
     for field_name in fields:
         value = getattr(object, field_name, None)
-        if IRichTextValue.providedBy(value):
+        if type(value) is text_type:
+            text = safe_unicode(value).encode("utf-8")
+            result.append(text)
+        elif IRichTextValue.providedBy(value):
             transforms = getToolByName(object, "portal_transforms")
             text = (
                 transforms.convertTo("text/plain", value.raw, mimetype=value.mimeType)

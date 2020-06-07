@@ -1,17 +1,16 @@
 # -*- coding: utf-8 -*-
 
+from Products.CMFPlone.interfaces import INonInstallable
 from collective.taxonomy.exportimport import TaxonomyImportExportAdapter
 from collective.taxonomy.factory import registerTaxonomy
 from collective.taxonomy.interfaces import ITaxonomy
-
-# from eea.facetednavigation.layout.layout import FacetedLayout
+from eea.facetednavigation.layout.layout import FacetedLayout
 from ideabox.policy import _
 from plone import api
 from plone.dexterity.interfaces import IDexterityFTI
 from plone.portlets.constants import CONTEXT_CATEGORY
 from plone.portlets.interfaces import ILocalPortletAssignmentManager
 from plone.portlets.interfaces import IPortletManager
-from Products.CMFPlone.interfaces import INonInstallable
 from zope.component import getMultiAdapter
 from zope.component import getUtility
 from zope.component import queryUtility
@@ -181,9 +180,8 @@ def create_taxonomy_object(data_tax, portal):
     adapter = TaxonomyImportExportAdapter(portal)
     data_path = os.path.join(os.path.dirname(__file__), "data")
     file_path = os.path.join(data_path, data_tax["filename"])
-    data = (open(file_path, "r").read(),)
-    import_file = data[0]
-    adapter.importDocument(taxonomy, import_file)
+    with open(file_path, "r") as f:
+        adapter.importDocument(taxonomy, f.read().encode("utf8"))
 
     del data_tax["taxonomy"]
     del data_tax["filename"]
@@ -207,8 +205,9 @@ def _activate_faceted_navigation(context, configuration=False, path=None):
         return
     subtyper.enable()
     if configuration and path:
+        fpath = os.path.dirname(__file__) + path
         context.unrestrictedTraverse("@@faceted_exportimport").import_xml(
-            import_file=open(os.path.dirname(__file__) + path)
+            import_file=open(fpath, "r").read().encode("utf8")
         )
 
 

@@ -27,7 +27,7 @@
             </tal:creator>
           </div>
           <div class="theme">
-            <label>Domaines concernés :</label>
+            <label i18n:translate="">Areas concerned :</label>
             <p tal:content="view/get_project_theme"></p>
           </div>
 
@@ -69,9 +69,10 @@
               <tal:block tal:repeat="image_url images_url">
                 <div class="img_project" tal:attributes="style string: background-image:url(${image_url})"></div>
               </tal:block>
-              <div class="text" tal:content="structure context/body/raw|context/body"></div>
+              <div i18n:translate="" id="ap-text" class="ap-button">Read more</div>
+              <div class="text ap-text ap-toggle" tal:content="structure context/body/raw|context/body"></div>
             </div>
-            <div class="news" tal:condition="news">
+            <div class="news ap-text ap-toggle" tal:condition="news">
               <div id="project_facet_view" class="news">
                 <tal:block repeat="element news">
                   <a href="" title="" tal:attributes="href element/getURL;
@@ -92,15 +93,16 @@
               </div>
             </div>
           </div>
-          <div class="ap-comment">
-            <div tal:replace="structure provider:plone.belowcontent" />
+          <div>
+            <div i18n:translate="" id="ap-comment" class="ap-button">Comment</div>
+            <div class="ap-comment ap-toggle" tal:content="structure provider:plone.belowcontent" />
           </div>
         </div>
 
         <div tal:condition="python: context.portal_type=='priority_action'" class="ap-state">
           <div tal:define="state_progess view/get_state_progress" tal:condition="state_progess" class="state-block">
-            <div i18n:translate="" class="state-header">Project Status</div>
-            <div class="state-body">
+            <div i18n:translate="" id="ap-status" class="ap-button">Project Status</div>
+            <div class="state-body ap-status ap-toggle">
               <div class="state-item" tal:repeat="sp state_progess">
                 <tal:block tal:define="spo sp/getObject;
                                 img python: getattr(spo, 'image', None)">
@@ -114,13 +116,13 @@
                 </tal:block>
               </div>
             </div>
-            <div class="state-more">
+            <div class="state-more ap-status ap-toggle">
               <a href="">
                 Voir plus
                 <i class="fas fa-plus"></i>
               </a>
             </div>
-            <div class="state-notif">
+            <div class="state-notif ap-status ap-toggle">
               <p>Souhaitez-vous être tenu au courant de l’avancement du projet ?</p>
               <div class="state-switch">
                 <div>Non</div>
@@ -133,6 +135,18 @@
             </div>
           </div>
         </div>
+        <script type="text/javascript">
+        $(".ap-button").click(function() {
+          var id = $(this).attr("id");
+          $(".ap-button:not(#" + id + ")").removeClass("current");
+          $(".ap-toggle:not(." + id + ")").removeClass("current");
+          $("." + id).toggleClass("current");
+          $(this).toggleClass("current");
+          $([document.documentElement, document.body]).animate({
+            scrollTop: $(this).offset().top - 20
+          }, 500);
+        });
+        </script>
       </metal:main>
     </body>
   </html>

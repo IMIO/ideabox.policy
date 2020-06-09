@@ -5,6 +5,9 @@ Changelog
 3.0.8 (unreleased)
 ------------------
 
+- Restore district informations for projects that are now conditional
+  [mpeeters]
+
 - Adapt action and project view
   [Aurore]
 

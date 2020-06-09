@@ -3,9 +3,11 @@
   xmlns:metal="http://xml.zope.org/namespaces/metal" 
   xmlns:i18n="http://xml.zope.org/namespaces/i18n" lang="en" metal:use-macro="context/main_template/macros/master" i18n:domain="ideabox.policy">
   <body>
-    <metal:main fill-slot="main" tal:define="images_url view/get_images_url;
-                                current_state view/review_state;
-                                timeline_states view/timeline_states">
+    <metal:main fill-slot="main"
+      tal:define="images_url view/get_images_url;
+                  current_state view/review_state;
+                  timeline_states view/timeline_states;
+                  district view/get_project_district;">
       <div id="action_project">
         <div class="ap-content">
           <div id="viewlet-above-content-title" tal:content="structure provider:plone.abovecontenttitle" />
@@ -29,6 +31,10 @@
           <div class="theme">
             <label i18n:translate="">Areas concerned :</label>
             <p tal:content="view/get_project_theme"></p>
+          </div>
+          <div class="theme" tal:condition="district">
+            <label i18n:translate="">District(s) :</label>
+            <p tal:content="view/get_project_district"></p>
           </div>
 
           <div class="description">

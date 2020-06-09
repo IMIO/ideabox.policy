@@ -5,6 +5,9 @@ Changelog
 3.0.8 (unreleased)
 ------------------
 
+- Adapt action and project view
+  [Aurore]
+
 - Fix a Python 3 encoding issue on project tile
   [mpeeters]
 

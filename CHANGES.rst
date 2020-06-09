@@ -2,8 +2,8 @@ Changelog
 =========
 
 
-3.0.8 (unreleased)
-------------------
+3.1.0a1 (2020-06-09)
+--------------------
 
 - Restore district informations for projects that are now conditional
   [mpeeters]

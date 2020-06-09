@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-05-07 17:06+0000\n"
+"POT-Creation-Date: 2020-06-09 13:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36,16 +36,24 @@ msgstr ""
 msgid "Anonymous"
 msgstr ""
 
+#: ../content/project.pt:32
+msgid "Areas concerned :"
+msgstr ""
+
 #: ../export/export.py:179
 #: ../userdataschema.py:28
 msgid "Birthdate"
+msgstr ""
+
+#: ../content/project.pt:103
+msgid "Comment"
 msgstr ""
 
 #: ../browser/controlpanel.py:30
 msgid "Configuration for ideabox product"
 msgstr ""
 
-#: ../content/project.py:46
+#: ../content/project.py:48
 #: ../content/state_progress.py:16
 msgid "Content"
 msgstr ""
@@ -58,15 +66,19 @@ msgstr ""
 msgid "District"
 msgstr ""
 
-#: ../content/project.py:38
+#: ../content/project.pt:36
+msgid "District(s) :"
+msgstr ""
+
+#: ../content/project.py:40
 msgid "District(s) concerned"
 msgstr ""
 
-#: ../content/project.py:29
+#: ../content/project.py:31
 msgid "Domain(s) concerned"
 msgstr ""
 
-#: ../content/project.pt:48
+#: ../content/project.pt:65
 msgid "Edit timeline dates"
 msgstr ""
 
@@ -157,7 +169,7 @@ msgstr ""
 msgid "If there are multiple email addresses, separate them with semicolons"
 msgstr ""
 
-#: ../configure.zcml:41
+#: ../configure.zcml:43
 msgid "Installs the ideabox.policy add-on."
 msgstr ""
 
@@ -198,7 +210,7 @@ msgstr ""
 msgid "Operational objectives"
 msgstr ""
 
-#: ../content/project.py:51
+#: ../content/project.py:53
 msgid "Original author"
 msgstr ""
 
@@ -227,7 +239,7 @@ msgstr ""
 msgid "Project Sorting"
 msgstr ""
 
-#: ../content/project.pt:142
+#: ../content/project.pt:110
 msgid "Project Status"
 msgstr ""
 
@@ -259,6 +271,10 @@ msgstr ""
 
 #: ../vocabularies.py:98
 msgid "Random sort"
+msgstr ""
+
+#: ../content/project.pt:78
+msgid "Read more"
 msgstr ""
 
 #: ../browser/workflow.py:81
@@ -309,7 +325,7 @@ msgstr ""
 msgid "Title; Date; Link"
 msgstr ""
 
-#: ../configure.zcml:50
+#: ../configure.zcml:52
 msgid "Uninstalls the ideabox.policy add-on."
 msgstr ""
 
@@ -356,11 +372,11 @@ msgstr ""
 msgid "email_body_project_submission"
 msgstr ""
 
-#: ../configure.zcml:41
+#: ../configure.zcml:43
 msgid "ideabox.policy"
 msgstr ""
 
-#: ../configure.zcml:50
+#: ../configure.zcml:52
 msgid "ideabox.policy (uninstall)"
 msgstr ""
 

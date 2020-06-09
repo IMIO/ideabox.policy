@@ -32,7 +32,7 @@ msgstr "Anonyme"
 
 #: ../content/project.pt:32
 msgid "Areas concerned :"
-msgstr ""
+msgstr "Domaine(s) concerné(s)"
 
 #: ../export/export.py:179
 #: ../userdataschema.py:28
@@ -41,7 +41,7 @@ msgstr "Date de naissance"
 
 #: ../content/project.pt:103
 msgid "Comment"
-msgstr ""
+msgstr "Commentaires"
 
 #: ../browser/controlpanel.py:30
 msgid "Configuration for ideabox product"
@@ -62,7 +62,7 @@ msgstr "Quartier"
 
 #: ../content/project.pt:36
 msgid "District(s) :"
-msgstr ""
+msgstr "Quartier(s) :"
 
 #: ../content/project.py:40
 msgid "District(s) concerned"

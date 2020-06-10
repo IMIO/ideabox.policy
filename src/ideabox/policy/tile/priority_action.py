@@ -34,7 +34,7 @@ class LatestPriorityActionTile(Tile):
     def contents(self):
         return api.content.find(
             portal_type="priority_action", sort_on="created", sort_order="reverse"
-        )[1:4]
+        )[1:6]
 
     def folder_projects(self):
         folder = api.content.find(portal_type="Folder", id="projets")

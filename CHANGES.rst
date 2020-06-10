@@ -5,6 +5,9 @@ Changelog
 3.1.0a2 (unreleased)
 --------------------
 
+- Add translation
+  [vpiret]
+
 - Add priority action tiles
   [vpiret]
 

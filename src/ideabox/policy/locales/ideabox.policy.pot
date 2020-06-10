@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-09 13:17+0000\n"
+"POT-Creation-Date: 2020-06-10 14:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -54,11 +54,11 @@ msgid "Configuration for ideabox product"
 msgstr ""
 
 #: ../content/project.py:48
-#: ../content/state_progress.py:16
+#: ../content/state_progress.py:17
 msgid "Content"
 msgstr ""
 
-#: ../content/state_progress.py:14
+#: ../content/state_progress.py:15
 msgid "Date"
 msgstr ""
 
@@ -227,6 +227,7 @@ msgid "Positive rating "
 msgstr ""
 
 #: ../profiles/default/types/priority_action.xml
+#: ../tile/priority_action.py:15
 msgid "Priority action"
 msgstr ""
 
@@ -240,6 +241,7 @@ msgid "Project Sorting"
 msgstr ""
 
 #: ../content/project.pt:110
+#: ../content/state_progress.pt:12
 msgid "Project Status"
 msgstr ""
 
@@ -316,8 +318,8 @@ msgid "Theme"
 msgstr ""
 
 #: ../form/project_submission.py:23
+#: ../tile/priority_action.py:15
 #: ../tile/projects.py:22
-#: ../vocabularies.py:98
 msgid "Title"
 msgstr ""
 

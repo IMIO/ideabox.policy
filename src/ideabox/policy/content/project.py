@@ -192,11 +192,15 @@ class ProjectView(view.DefaultView):
         for token in self.context.project_theme:
             try:
                 values.append(
-                    translate(vocabulary.getTerm(token).title, context=self.context)
-                )
+                    [translate(vocabulary.getTerm(token).title, context=self.context), token]
+                ),
             except KeyError:
                 continue
-        return ", ".join(values)
+        site = api.portal.get().absolute_url()
+        links = []
+        for value in values:
+            links.append("<a href={0}/projets#b_start=0&c5={1}>{2}</a>".format(site, value[1], value[0]))
+        return ", ".join(links)
 
     def get_project_district(self):
         factory = getUtility(IVocabularyFactory, "collective.taxonomy.district")

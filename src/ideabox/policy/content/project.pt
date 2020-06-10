@@ -30,7 +30,7 @@
           </div>
           <div class="theme">
             <label i18n:translate="">Areas concerned :</label>
-            <p tal:content="view/get_project_theme"></p>
+            <p tal:replace=" structure view/get_project_theme"></p>
           </div>
           <div class="theme" tal:condition="district">
             <label i18n:translate="">District(s) :</label>

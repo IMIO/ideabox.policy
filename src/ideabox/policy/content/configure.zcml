@@ -89,4 +89,11 @@
 
   <adapter name="SearchableText" factory=".project.searchabletext_project"/>
 
+  <browser:page
+    for="ideabox.policy.content.priority_action.IPriorityAction"
+    name="state_progress_view"
+    permission="zope2.View"
+    class=".state_progress.StateProgressView"
+    template="state_progress.pt"
+    />
 </configure>

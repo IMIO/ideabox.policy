@@ -1,6 +1,6 @@
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" 
-  xmlns:tal="http://xml.zope.org/namespaces/tal" 
-  xmlns:metal="http://xml.zope.org/namespaces/metal" 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+  xmlns:tal="http://xml.zope.org/namespaces/tal"
+  xmlns:metal="http://xml.zope.org/namespaces/metal"
   xmlns:i18n="http://xml.zope.org/namespaces/i18n" lang="en" metal:use-macro="context/main_template/macros/master" i18n:domain="ideabox.policy">
   <body>
     <metal:main fill-slot="main"
@@ -112,7 +112,7 @@
               <div class="state-item" tal:repeat="sp state_progess">
                 <tal:block tal:define="spo sp/getObject;
                                 img python: getattr(spo, 'image', None)">
-                  <div class="state-date" tal:content="python: spo.state_date.strftime('%d/%m/%Y')"></div>
+                  <div class="state-date" tal:content="python: spo.state_date.strftime('%d %B %Y')"></div>
                   <div class="state-content">
                     <div tal:condition="img" class="img">
                       <img class="view img-responsive" src="" tal:attributes="src string: ${spo/absolute_url}/@@images/image" />
@@ -123,7 +123,8 @@
               </div>
             </div>
             <div class="state-more ap-status ap-toggle">
-              <a href="">
+              <a href=""
+              tal:attributes="href string:${context/absolute_url}/state_progress_view">
                 Voir plus
                 <i class="fas fa-plus"></i>
               </a>

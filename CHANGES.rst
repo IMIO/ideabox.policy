@@ -5,7 +5,8 @@ Changelog
 3.1.0a2 (unreleased)
 --------------------
 
-- Nothing changed yet.
+- Add StateProgress view
+  [vpiret]
 
 
 3.1.0a1 (2020-06-09)

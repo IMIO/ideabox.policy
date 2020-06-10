@@ -20,9 +20,9 @@
                        tal:attributes="href view_url;
                                        title title">
                       <div class="image" tal:attributes="style string: background-image:url('${image_url}')"></div>
-                      <div>
+                      <div class="text">
                         <div class="title" tal:content="title">title</div>
-                        <div class="description" tal:replace="structure obj/body/output">title</div>
+                        <div class="description" tal:content="structure obj/body/output">title</div>
                       </div>
                     </a>
                 </div>
@@ -39,7 +39,7 @@
                        tal:attributes="href view_url;
                                        title title">
                       <div class="image" tal:attributes="style string: background-image:url('${image_url}')"></div>
-                      <div>
+                      <div class="text">
                         <div class="title" tal:content="title">title</div>
                       </div>
                     </a>

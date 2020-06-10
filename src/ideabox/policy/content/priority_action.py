@@ -36,7 +36,7 @@ class PriorityActionView(ProjectView):
 
 
 @indexer(IPriorityAction)
-def searchabletext_project(object, **kw):
+def searchabletext_priority_action(object, **kw):
     result = []
 
     fields = ["title", "description", "body", "original_author"]

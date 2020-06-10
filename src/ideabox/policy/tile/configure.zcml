@@ -42,4 +42,16 @@
         template="templates/timeline.pt"
         />
 
+  <plone:tile
+        name="ideabox.policy.priority_actions"
+        title="latest priority actions"
+        description="A tile which displays the latest submitted priority actions"
+        add_permission="cmf.ModifyPortalContent"
+        class=".priority_action.LatestPriorityActionTile"
+        for="*"
+        permission="zope.Public"
+        schema=".priority_action.IPriorityActionTile"
+        template="templates/priority_action.pt"
+        />
+
 </configure>

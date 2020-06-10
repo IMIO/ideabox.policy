@@ -89,6 +89,8 @@
 
   <adapter name="SearchableText" factory=".project.searchabletext_project"/>
 
+  <adapter name="SearchableText" factory=".priority_action.searchabletext_priority_action"/>
+
   <browser:page
     for="ideabox.policy.content.priority_action.IPriorityAction"
     name="state_progress_view"

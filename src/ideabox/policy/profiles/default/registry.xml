@@ -29,6 +29,20 @@
       <value key="weight">10</value>
   </records>
 
+  <records prefix="plone.app.mosaic.app_tiles.priorityactions"
+      interface="plone.app.mosaic.interfaces.ITile">
+      <value key="name">ideabox.policy.priority_actions</value>
+      <value key="label">Latest priority actions</value>
+      <value key="category">advanced</value>
+      <value key="tile_type">app</value>
+      <value key="default_value"></value>
+      <value key="read_only">false</value>
+      <value key="settings">true</value>
+      <value key="favorite">false</value>
+      <value key="rich_text">false</value>
+      <value key="weight">10</value>
+  </records>
+
   <records prefix="plone.app.mosaic.app_tiles.random_projects"
       interface="plone.app.mosaic.interfaces.ITile">
       <value key="name">ideabox.policy.random_projects</value>

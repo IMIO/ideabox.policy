@@ -5,6 +5,9 @@ Changelog
 3.1.0a2 (unreleased)
 --------------------
 
+- Add priority action tiles
+  [vpiret]
+
 - Transforms the display of project themes to links
   [vpiret]
 

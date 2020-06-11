@@ -9,7 +9,7 @@ Changelog
   [vpiret]
 
 - Add priority action tiles
-  [vpiret]
+  [vpiret, Aurore]
 
 - Transforms the display of project themes to links
   [vpiret]

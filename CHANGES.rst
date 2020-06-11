@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.1.0a3 (unreleased)
+3.1.0a3 (2020-06-11)
 --------------------
 
 - Fix encoding of `SearchableText` index on Python 3

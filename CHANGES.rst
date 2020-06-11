@@ -5,7 +5,8 @@ Changelog
 3.1.0a3 (unreleased)
 --------------------
 
-- Nothing changed yet.
+- Fix encoding for comments with Python 3
+  [mpeeters]
 
 
 3.1.0a2 (2020-06-11)

@@ -37,11 +37,11 @@ class CommentForm(BaseForm):
             fullname = " ".join([i for i in infos if i])
             if not fullname or fullname == "":
                 fullname = member.getUserName()
-            elif isinstance(fullname, str):
-                fullname = six.text_type(fullname, "utf-8")
+            elif isinstance(fullname, six.text_type):
+                fullname = fullname.encode("utf-8")
             author_name = fullname
-            if email and isinstance(email, str):
-                email = six.text_type(email, "utf-8")
+            if email and isinstance(email, six.text_type):
+                email = email.encode("utf-8")
             # XXX: according to IComment interface author_email must not be  # noqa T000
             # set for logged in users, cite:
             # 'for anonymous comments only, set to None for logged in comments'

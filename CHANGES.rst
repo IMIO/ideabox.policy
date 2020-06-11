@@ -5,6 +5,9 @@ Changelog
 3.1.0a3 (unreleased)
 --------------------
 
+- Fix encoding of `SearchableText` index on Python 3
+  [mpeeters]
+
 - Fix encoding for comments with Python 3
   [mpeeters]
 

@@ -233,8 +233,7 @@ def searchabletext_project(object, **kw):
     for field_name in fields:
         value = getattr(object, field_name, None)
         if type(value) is text_type:
-            text = safe_unicode(value).encode("utf-8")
-            result.append(text)
+            result.append(value)
         elif IRichTextValue.providedBy(value):
             transforms = getToolByName(object, "portal_transforms")
             text = (

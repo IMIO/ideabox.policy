@@ -19,4 +19,12 @@
     handler=".upgrades.to_1002"
     />
 
+  <genericsetup:upgradeStep
+    source="1002"
+    destination="1003"
+    title="Hide comment viewlet from belowcontent viewlet manager"
+    profile="ideabox.policy:default"
+    handler=".upgrades.to_1003"
+    />
+
 </configure>

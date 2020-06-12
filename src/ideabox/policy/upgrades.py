@@ -32,3 +32,8 @@ def to_1002(context):
 
     for brain in api.content.find(portal_type="Project"):
         brain.getObject().reindexObject(idxs=["project_district"])
+
+
+def to_1003(context):
+    portal_setup = api.portal.get_tool("portal_setup")
+    portal_setup.runImportStepFromProfile("profile-ideabox.policy:default", "viewlets")

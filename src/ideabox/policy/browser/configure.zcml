@@ -77,6 +77,16 @@
     layer="ideabox.policy.interfaces.IIdeaboxPolicyLayer"
     />
 
+  <browser:viewlet
+    name="plone.comments"
+    for="Products.CMFCore.interfaces.IContentish"
+    layer="plone.app.discussion.interfaces.IDiscussionLayer"
+    manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
+    view="plone.app.layout.globals.interfaces.IViewView"
+    class="plone.app.discussion.browser.comments.CommentsViewlet"
+    permission="zope2.View"
+    />
+
   <browser:page
     name="ideabox_settings"
     for="Products.CMFPlone.interfaces.IPloneSiteRoot"

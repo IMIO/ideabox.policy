@@ -5,6 +5,9 @@ Changelog
 3.1.0a4 (unreleased)
 --------------------
 
+- Move comments viewlet into `plone.belowcontentbody` manager
+  [mpeeters]
+
 - Fix duplicate comments due to a duplicate render of `viewlet-below-content` that was introduce by Plone 5.2
   [mpeeters]
 

@@ -101,7 +101,7 @@
           </div>
           <div>
             <div i18n:translate="" id="ap-comment" class="ap-button">Comment</div>
-            <div class="ap-comment ap-toggle" tal:content="structure provider:plone.belowcontent" />
+            <div class="ap-comment ap-toggle" tal:content="structure provider:plone.belowcontentbody" />
           </div>
         </div>
 

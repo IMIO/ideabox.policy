@@ -5,7 +5,8 @@ Changelog
 3.1.0a4 (unreleased)
 --------------------
 
-- Nothing changed yet.
+- Fix duplicate comments due to a duplicate render of `viewlet-below-content` that was introduce by Plone 5.2
+  [mpeeters]
 
 
 3.1.0a3 (2020-06-11)

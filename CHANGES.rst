@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.1.0a4 (unreleased)
+3.1.0a4 (2020-06-12)
 --------------------
 
 - Move comments viewlet into `plone.belowcontentbody` manager

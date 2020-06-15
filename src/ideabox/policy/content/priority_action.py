@@ -31,8 +31,8 @@ class PriorityAction(Project):
 class PriorityActionView(ProjectView):
     def get_state_progress(self):
         return api.content.find(
-            contect=self, portal_type="state_progress", sort_on="state_date"
-        )
+            context=self.context, portal_type="state_progress", sort_on="state_date"
+        )[:4]
 
 
 @indexer(IPriorityAction)

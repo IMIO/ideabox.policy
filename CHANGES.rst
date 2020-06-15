@@ -5,7 +5,8 @@ Changelog
 3.1.0a5 (unreleased)
 --------------------
 
-- Nothing changed yet.
+- Fix display of state_progress
+  [vpiret]
 
 
 3.1.0a4 (2020-06-12)

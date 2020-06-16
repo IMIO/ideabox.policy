@@ -5,6 +5,9 @@ Changelog
 3.1.0a5 (unreleased)
 --------------------
 
+- Add macaron
+  [vpiret]
+
 - Add content type "campaign"
   [vpiret]
 

@@ -11,6 +11,7 @@
       <div id="action_project">
         <div class="ap-content">
           <div id="viewlet-above-content-title" tal:content="structure provider:plone.abovecontenttitle" />
+          <img class="view img-responsive" tal:condition="view/display_mac" src="" tal:attributes="src view/get_mac"/>
           <h1 tal:content="context/Title"></h1>
 
           <div class="documentByLine" id="plone-document-byline" tal:condition="view/before_selected" i18n:domain="plone">

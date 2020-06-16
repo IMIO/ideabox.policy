@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 from Products.CMFPlone.utils import getToolByName
-from Products.CMFPlone.utils import safe_unicode
 from collective.z3cform.select2.widget.widget import MultiSelect2FieldWidget
 from ideabox.policy import _
 from plone import api
@@ -223,6 +222,22 @@ class ProjectView(view.DefaultView):
             except KeyError:
                 continue
         return ", ".join(values)
+
+    def display_mac(self):
+        if (
+            self.context.aq_parent.portal_type == "campaign"
+            and self.context.aq_parent.image
+        ):
+            return True
+        return False
+
+    def get_mac(self):
+        if (
+            self.context.aq_parent.portal_type == "campaign"
+            and self.context.aq_parent.image
+        ):
+            return "{0}/@@images/image".format(self.context.aq_parent.absolute_url())
+        return ""
 
 
 @indexer(IProject)

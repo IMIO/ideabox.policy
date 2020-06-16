@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-10 14:23+0000\n"
+"POT-Creation-Date: 2020-06-16 11:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -43,6 +43,10 @@ msgstr ""
 #: ../export/export.py:179
 #: ../userdataschema.py:28
 msgid "Birthdate"
+msgstr ""
+
+#: ../profiles/default/types/campaign.xml
+msgid "Campaign"
 msgstr ""
 
 #: ../content/project.pt:103
@@ -153,11 +157,11 @@ msgstr ""
 msgid "Ideabox Settings"
 msgstr ""
 
-#: ../browser/configure.zcml:104
+#: ../browser/configure.zcml:114
 msgid "Ideabox Standard view"
 msgstr ""
 
-#: ../browser/configure.zcml:98
+#: ../browser/configure.zcml:108
 msgid "Ideabox Summary view"
 msgstr ""
 

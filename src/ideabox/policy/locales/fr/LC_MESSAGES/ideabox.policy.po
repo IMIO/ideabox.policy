@@ -39,6 +39,10 @@ msgstr "Domaine(s) concerné(s)"
 msgid "Birthdate"
 msgstr "Date de naissance"
 
+#: ../profiles/default/types/campaign.xml
+msgid "Campaign"
+msgstr ""
+
 #: ../content/project.pt:103
 msgid "Comment"
 msgstr "Commentaires"
@@ -147,11 +151,11 @@ msgstr "Je suis"
 msgid "Ideabox Settings"
 msgstr "Paramètres Ideabox"
 
-#: ../browser/configure.zcml:104
+#: ../browser/configure.zcml:114
 msgid "Ideabox Standard view"
 msgstr "Vue standard"
 
-#: ../browser/configure.zcml:98
+#: ../browser/configure.zcml:108
 msgid "Ideabox Summary view"
 msgstr "Vue sommaire"
 

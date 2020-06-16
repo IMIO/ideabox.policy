@@ -5,6 +5,9 @@ Changelog
 3.1.0a5 (unreleased)
 --------------------
 
+- Add content type "campaign"
+  [vpiret]
+
 - Fix display of state_progress
   [vpiret]
 

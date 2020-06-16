@@ -5,9 +5,12 @@ from AccessControl.SecurityManagement import newSecurityManager
 from AccessControl.SecurityManagement import setSecurityManager
 from AccessControl.User import Super as BaseUnrestrictedUser
 from datetime import datetime
+from eea.facetednavigation.layout.interfaces import IFacetedLayout
 from ideabox.policy import vocabularies
 from plone import api
 from zope.i18n import translate
+
+import os
 
 
 def token_type_recovery(value):
@@ -58,3 +61,12 @@ def can_view_rating(context):
 
 def now():
     return datetime.now()
+
+
+def _activate_dashboard_navigation(context, config_path=""):
+    subtyper = context.restrictedTraverse("@@faceted_subtyper")
+    if subtyper.is_faceted:
+        return
+    subtyper.enable()
+    file = open(config_path, mode="rb")
+    context.unrestrictedTraverse("@@faceted_exportimport").import_xml(import_file=file)

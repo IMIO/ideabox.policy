@@ -87,6 +87,12 @@
       handler=".subscriber.project_added"
       />
 
+  <subscriber
+      for="ideabox.policy.content.campaign.ICampaign
+           zope.lifecycleevent.interfaces.IObjectAddedEvent"
+      handler=".subscriber.campaign_added"
+      />
+
   <adapter name="SearchableText" factory=".project.searchabletext_project"/>
 
   <adapter name="SearchableText" factory=".priority_action.searchabletext_priority_action"/>

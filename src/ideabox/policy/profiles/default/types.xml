@@ -6,4 +6,5 @@
   <object name="Folder" meta_type="Dexterity FTI"/>
   <object name="priority_action" meta_type="Dexterity FTI"/>
   <object name="state_progress" meta_type="Dexterity FTI"/>
+  <object name="campaign" meta_type="Dexterity FTI"/>
 </object>

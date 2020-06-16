@@ -211,17 +211,18 @@ class ProjectView(view.DefaultView):
         return ", ".join(links)
 
     def get_project_district(self):
-        factory = getUtility(IVocabularyFactory, "collective.taxonomy.district")
-        vocabulary = factory(self.context)
-        values = []
-        for token in self.context.project_district:
-            try:
-                values.append(
-                    translate(vocabulary.getTerm(token).title, context=self.context)
-                )
-            except KeyError:
-                continue
-        return ", ".join(values)
+        if self.context.project_district:
+            factory = getUtility(IVocabularyFactory, "collective.taxonomy.district")
+            vocabulary = factory(self.context)
+            values = []
+            for token in self.context.project_district:
+                try:
+                    values.append(
+                        translate(vocabulary.getTerm(token).title, context=self.context)
+                    )
+                except KeyError:
+                    continue
+            return ", ".join(values)
 
     def display_mac(self):
         if (

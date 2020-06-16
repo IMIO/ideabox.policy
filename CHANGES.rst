@@ -5,6 +5,9 @@ Changelog
 3.1.0a5 (unreleased)
 --------------------
 
+- Override priority_action schema
+  [vpiret]
+
 - Add macaron
   [vpiret]
 

@@ -41,7 +41,7 @@ msgstr "Date de naissance"
 
 #: ../profiles/default/types/campaign.xml
 msgid "Campaign"
-msgstr ""
+msgstr "Campagne"
 
 #: ../content/project.pt:103
 msgid "Comment"

@@ -6,7 +6,7 @@
       xmlns:metal="http://xml.zope.org/namespaces/metal">
     <body>
         <section>
-            <h1>Ligne du temps</h1>
+            <h2>Ligne du temps</h2>
             <div class="timeline">
                 <ol class="timeline-line" tal:define="steps view/steps">
                   <li class="timeline-step" tal:repeat="step steps">

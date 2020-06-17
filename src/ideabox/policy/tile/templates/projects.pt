@@ -7,7 +7,7 @@
     <body>
         <section tal:define="projects view/contents;
                              default_image view/default_image">
-            <h1 tal:content="view/title"></h1>
+            <h2 tal:content="view/title"></h2>
             <div id="project_facet_view"
                  class="eea-preview-items">
                 <tal:block repeat="brain projects">

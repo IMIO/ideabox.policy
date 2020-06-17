@@ -5,6 +5,9 @@ Changelog
 3.1.0a5 (unreleased)
 --------------------
 
+- Adapt title for homepage
+  [Aurore]
+
 - Override priority_action schema
   [vpiret]
 

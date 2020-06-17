@@ -11,31 +11,36 @@
       <div id="action_project">
         <div class="ap-content">
           <div id="viewlet-above-content-title" tal:content="structure provider:plone.abovecontenttitle" />
-          <img class="view img-responsive" tal:condition="view/display_mac" src="" tal:attributes="src view/get_mac"/>
-          <h1 tal:content="context/Title"></h1>
+          <div class="ap-header">
+            <img class="view img-responsive" tal:condition="view/display_mac" src="" tal:attributes="src view/get_mac"/>
+            <div class="ap-header-text">
+              <h1 tal:content="context/Title"></h1>
 
-          <div class="documentByLine" id="plone-document-byline" tal:condition="view/before_selected" i18n:domain="plone">
-            <tal:creator tal:define="creator_short_form view/creator;" tal:condition="creator_short_form">
-              <tal:name tal:define="creator_long_form string:?author=${creator_short_form};
-                                      creator_is_openid python:'/' in creator_short_form;
-                                      creator_id python:(creator_short_form, creator_long_form)[creator_is_openid];
-                                      anonymous view/anonymous">
-                <span class="documentAuthor">
-                  <tal:i18n i18n:translate="label_by_author">
-                      by
-                    <span tal:content="view/authorname" i18n:name="author"></span>
-                  </tal:i18n>
-                </span>
-              </tal:name>
-            </tal:creator>
-          </div>
-          <div class="theme">
-            <label i18n:translate="">Areas concerned :</label>
-            <p tal:replace=" structure view/get_project_theme"></p>
-          </div>
-          <div class="theme" tal:condition="district">
-            <label i18n:translate="">District(s) :</label>
-            <p tal:content="view/get_project_district"></p>
+
+              <div class="documentByLine" id="plone-document-byline" tal:condition="view/before_selected" i18n:domain="plone">
+                <tal:creator tal:define="creator_short_form view/creator;" tal:condition="creator_short_form">
+                  <tal:name tal:define="creator_long_form string:?author=${creator_short_form};
+                                          creator_is_openid python:'/' in creator_short_form;
+                                          creator_id python:(creator_short_form, creator_long_form)[creator_is_openid];
+                                          anonymous view/anonymous">
+                    <span class="documentAuthor">
+                      <tal:i18n i18n:translate="label_by_author">
+                          by
+                        <span tal:content="view/authorname" i18n:name="author"></span>
+                      </tal:i18n>
+                    </span>
+                  </tal:name>
+                </tal:creator>
+              </div>
+              <div class="theme">
+                <label i18n:translate="">Areas concerned :</label>
+                <p tal:replace=" structure view/get_project_theme"></p>
+              </div>
+              <div class="theme" tal:condition="district">
+                <label i18n:translate="">District(s) :</label>
+                <p tal:content="view/get_project_district"></p>
+              </div>
+            </div>
           </div>
 
           <div class="description">

@@ -5,6 +5,9 @@ Changelog
 3.1.0a5 (unreleased)
 --------------------
 
+- Adapt image for project view
+  [Aurore]
+
 - Adapt title for homepage
   [Aurore]
 

@@ -31,7 +31,7 @@ class IProject(model.Schema):
         value_type=schema.Choice(
             title=_(u"Domain(s) concerned"), vocabulary=u"collective.taxonomy.theme"
         ),
-        required=True,
+        required=False,
     )
 
     form.widget(project_district=MultiSelect2FieldWidget)
@@ -41,7 +41,7 @@ class IProject(model.Schema):
             title=_(u"District(s) concerned"),
             vocabulary=u"collective.taxonomy.district",
         ),
-        required=True,
+        required=False,
     )
 
     body = RichText(title=_(u"Content"), required=True)
@@ -185,6 +185,8 @@ class ProjectView(view.DefaultView):
         return author and author["fullname"] or self.creator()
 
     def get_project_theme(self):
+        if not self.context.project_theme:
+            return
         factory = getUtility(IVocabularyFactory, "collective.taxonomy.theme")
         vocabulary = factory(self.context)
         values = []

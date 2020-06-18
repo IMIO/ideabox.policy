@@ -5,7 +5,8 @@ Changelog
 3.1.0a6 (unreleased)
 --------------------
 
-- Nothing changed yet.
+- District and theme are now optional for project and priority action and are now display only if a value is defined
+  [mpeeters]
 
 
 3.1.0a5 (2020-06-22)

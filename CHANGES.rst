@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.1.0a6 (unreleased)
+3.1.0a6 (2020-06-22)
 --------------------
 
 - Adapt template for state actions

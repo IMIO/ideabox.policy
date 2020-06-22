@@ -5,6 +5,9 @@ Changelog
 3.1.0a6 (unreleased)
 --------------------
 
+- Adapt template for state actions
+  [Aurore]
+
 - Add `ideabox.restapi` dependency
   [mpeeters]
 

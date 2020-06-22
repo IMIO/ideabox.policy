@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.1.0a5 (unreleased)
+3.1.0a5 (2020-06-22)
 --------------------
 
 - Adapt image for project view

@@ -5,7 +5,8 @@ Changelog
 3.1.0a7 (unreleased)
 --------------------
 
-- Nothing changed yet.
+- Fix allowed types for campaign and add excludefromnavigation behavior
+  [mpeeters]
 
 
 3.1.0a6 (2020-06-22)

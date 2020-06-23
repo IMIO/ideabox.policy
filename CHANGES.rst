@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.1.0a7 (unreleased)
+3.1.0a7 (2020-06-23)
 --------------------
 
 - Add an upgrade step for the new content types

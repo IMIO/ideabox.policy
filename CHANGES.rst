@@ -5,6 +5,9 @@ Changelog
 3.1.0a7 (unreleased)
 --------------------
 
+- Add an upgrade step for the new content types
+  [mpeeters]
+
 - Fix allowed types for campaign and add excludefromnavigation behavior
   [mpeeters]
 

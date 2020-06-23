@@ -27,4 +27,12 @@
     handler=".upgrades.to_1003"
     />
 
+  <genericsetup:upgradeStep
+    source="1003"
+    destination="1004"
+    title="Add priority action, progress and campaign content types"
+    profile="ideabox.policy:default"
+    handler=".upgrades.to_1004"
+    />
+
 </configure>

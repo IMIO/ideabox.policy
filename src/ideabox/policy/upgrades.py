@@ -37,3 +37,8 @@ def to_1002(context):
 def to_1003(context):
     portal_setup = api.portal.get_tool("portal_setup")
     portal_setup.runImportStepFromProfile("profile-ideabox.policy:default", "viewlets")
+
+
+def to_1004(context):
+    portal_setup = api.portal.get_tool("portal_setup")
+    portal_setup.runImportStepFromProfile("profile-ideabox.policy:default", "typeinfo")

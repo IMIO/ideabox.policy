@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.1.0a8 (unreleased)
+3.1.0a8 (2020-06-23)
 --------------------
 
 - Fix random sort mecanism

@@ -5,7 +5,8 @@ Changelog
 3.1.0a8 (unreleased)
 --------------------
 
-- Nothing changed yet.
+- Fix image on actions view
+  [Aurore]
 
 
 3.1.0a7 (2020-06-23)

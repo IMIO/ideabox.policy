@@ -5,6 +5,9 @@ Changelog
 3.1.0a8 (unreleased)
 --------------------
 
+- Fix random sort mecanism
+  [mpeeters]
+
 - Fix image on actions view
   [Aurore]
 

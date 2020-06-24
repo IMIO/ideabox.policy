@@ -5,7 +5,8 @@ Changelog
 3.1.0a10 (unreleased)
 ---------------------
 
-- Nothing changed yet.
+- Translate month in dates
+  [mpeeters]
 
 
 3.1.0a9 (2020-06-24)

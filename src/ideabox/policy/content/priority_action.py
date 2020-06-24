@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from Products.CMFPlone.utils import getToolByName
 from ideabox.policy import _
+from ideabox.policy import utils
 from ideabox.policy.content.project import IProject
 from ideabox.policy.content.project import Project
 from ideabox.policy.content.project import ProjectView
@@ -33,6 +34,9 @@ class PriorityActionView(ProjectView):
         return api.content.find(
             context=self.context, portal_type="state_progress", sort_on="state_date"
         )[:4]
+
+    def format_date(self, value):
+        return utils.localized_month(value.strftime("%d %B %Y"))
 
 
 @indexer(IPriorityAction)

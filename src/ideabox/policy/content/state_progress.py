@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from ideabox.policy import _
+from ideabox.policy import utils
 from plone import api
 from plone.app.textfield import RichText
 from plone.dexterity.content import Container
@@ -27,3 +28,6 @@ class StateProgressView(BrowserView):
         return api.content.find(
             context=self.context, portal_type="state_progress", sort_on="state_date"
         )
+
+    def format_date(self, value):
+        return utils.localized_month(value.strftime("%d %B %Y"))

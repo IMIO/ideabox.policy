@@ -7,6 +7,7 @@ from AccessControl.User import Super as BaseUnrestrictedUser
 from datetime import datetime
 from eea.facetednavigation.layout.interfaces import IFacetedLayout
 from ideabox.policy import vocabularies
+from ideabox.policy import _
 from plone import api
 from zope.i18n import translate
 
@@ -70,3 +71,35 @@ def _activate_dashboard_navigation(context, config_path=""):
     subtyper.enable()
     file = open(config_path, mode="rb")
     context.unrestrictedTraverse("@@faceted_exportimport").import_xml(import_file=file)
+
+
+def localized_month(value):
+    keys = {
+        "January": _("January"),
+        "February": _("February"),
+        "March": _("March"),
+        "April": _("April"),
+        "May": _("May"),
+        "June": _("June"),
+        "July": _("July"),
+        "August": _("August"),
+        "September": _("September"),
+        "October": _("October"),
+        "November": _("November"),
+        "December": _("December"),
+        "Jan": _("Jan"),
+        "Feb": _("Feb"),
+        "Mar": _("Mar"),
+        "Apr": _("Apr"),
+        "Jun": _("Jun"),
+        "Jul": _("Jul"),
+        "Aug": _("Aug"),
+        "Sep": _("Sep"),
+        "Oct": _("Oct"),
+        "Nov": _("Nov"),
+        "Dec": _("Dec"),
+    }
+    for k, v in keys.items():
+        if k in value:
+            value = value.replace(k, v)
+    return value

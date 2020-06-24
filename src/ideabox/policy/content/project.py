@@ -226,20 +226,14 @@ class ProjectView(view.DefaultView):
                     continue
             return ", ".join(values)
 
-    def display_mac(self):
-        if (
-            self.context.aq_parent.portal_type == "campaign"
-            and self.context.aq_parent.image
-        ):
-            return True
-        return False
+    def has_campaign_image(self):
+        parent = self.context.aq_parent
+        return parent.portal_type == "campaign" and parent.image
 
-    def get_mac(self):
-        if (
-            self.context.aq_parent.portal_type == "campaign"
-            and self.context.aq_parent.image
-        ):
-            return "{0}/@@images/image".format(self.context.aq_parent.absolute_url())
+    def get_campaign_image(self):
+        parent = self.context.aq_parent
+        if parent.portal_type == "campaign" and parent.image:
+            return "{0}/@@images/image".format(parent.absolute_url())
         return ""
 
 

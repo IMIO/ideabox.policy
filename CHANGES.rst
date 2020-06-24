@@ -5,6 +5,9 @@ Changelog
 3.1.0a10 (unreleased)
 ---------------------
 
+- Fix display of campaign images on projects and actions
+  [mpeeters]
+
 - Add missing translations
   [mpeeters]
 

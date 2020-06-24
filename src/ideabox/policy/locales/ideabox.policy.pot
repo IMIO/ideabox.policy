@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-16 11:06+0000\n"
+"POT-Creation-Date: 2020-06-24 13:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36,8 +36,24 @@ msgstr ""
 msgid "Anonymous"
 msgstr ""
 
-#: ../content/project.pt:32
+#: ../utils.py:93
+msgid "Apr"
+msgstr ""
+
+#: ../utils.py:81
+msgid "April"
+msgstr ""
+
+#: ../content/project.pt:42
 msgid "Areas concerned :"
+msgstr ""
+
+#: ../utils.py:96
+msgid "Aug"
+msgstr ""
+
+#: ../utils.py:85
+msgid "August"
 msgstr ""
 
 #: ../export/export.py:179
@@ -49,7 +65,7 @@ msgstr ""
 msgid "Campaign"
 msgstr ""
 
-#: ../content/project.pt:103
+#: ../content/project.pt:115
 msgid "Comment"
 msgstr ""
 
@@ -57,32 +73,40 @@ msgstr ""
 msgid "Configuration for ideabox product"
 msgstr ""
 
-#: ../content/project.py:48
-#: ../content/state_progress.py:17
+#: ../content/project.py:47
+#: ../content/state_progress.py:18
 msgid "Content"
 msgstr ""
 
-#: ../content/state_progress.py:15
+#: ../content/state_progress.py:16
 msgid "Date"
+msgstr ""
+
+#: ../utils.py:100
+msgid "Dec"
+msgstr ""
+
+#: ../utils.py:89
+msgid "December"
 msgstr ""
 
 #: ../setuphandlers.py:131
 msgid "District"
 msgstr ""
 
-#: ../content/project.pt:36
+#: ../content/project.pt:46
 msgid "District(s) :"
 msgstr ""
 
-#: ../content/project.py:40
+#: ../content/project.py:39
 msgid "District(s) concerned"
 msgstr ""
 
-#: ../content/project.py:31
+#: ../content/project.py:30
 msgid "Domain(s) concerned"
 msgstr ""
 
-#: ../content/project.pt:65
+#: ../content/project.pt:77
 msgid "Edit timeline dates"
 msgstr ""
 
@@ -137,6 +161,14 @@ msgstr ""
 msgid "FOR"
 msgstr ""
 
+#: ../utils.py:91
+msgid "Feb"
+msgstr ""
+
+#: ../utils.py:79
+msgid "February"
+msgstr ""
+
 #: ../export/export.py:151
 #: ../userdataschema.py:20
 msgid "First name"
@@ -173,8 +205,32 @@ msgstr ""
 msgid "If there are multiple email addresses, separate them with semicolons"
 msgstr ""
 
-#: ../configure.zcml:43
+#: ../configure.zcml:44
 msgid "Installs the ideabox.policy add-on."
+msgstr ""
+
+#: ../utils.py:90
+msgid "Jan"
+msgstr ""
+
+#: ../utils.py:78
+msgid "January"
+msgstr ""
+
+#: ../utils.py:95
+msgid "Jul"
+msgstr ""
+
+#: ../utils.py:84
+msgid "July"
+msgstr ""
+
+#: ../utils.py:94
+msgid "Jun"
+msgstr ""
+
+#: ../utils.py:83
+msgid "June"
 msgstr ""
 
 #: ../export/export.py:146
@@ -198,6 +254,18 @@ msgstr ""
 msgid "MALE"
 msgstr ""
 
+#: ../utils.py:92
+msgid "Mar"
+msgstr ""
+
+#: ../utils.py:80
+msgid "March"
+msgstr ""
+
+#: ../utils.py:82
+msgid "May"
+msgstr ""
+
 #: ../export/export.py:104
 msgid "Negative rating "
 msgstr ""
@@ -210,11 +278,27 @@ msgstr ""
 msgid "News"
 msgstr ""
 
-#: ../content/priority_action.py:22
+#: ../utils.py:99
+msgid "Nov"
+msgstr ""
+
+#: ../utils.py:88
+msgid "November"
+msgstr ""
+
+#: ../utils.py:98
+msgid "Oct"
+msgstr ""
+
+#: ../utils.py:87
+msgid "October"
+msgstr ""
+
+#: ../content/priority_action.py:23
 msgid "Operational objectives"
 msgstr ""
 
-#: ../content/project.py:53
+#: ../content/project.py:52
 msgid "Original author"
 msgstr ""
 
@@ -244,8 +328,8 @@ msgstr ""
 msgid "Project Sorting"
 msgstr ""
 
-#: ../content/project.pt:110
-#: ../content/state_progress.pt:12
+#: ../content/project.pt:122
+#: ../content/state_progress.pt:9
 msgid "Project Status"
 msgstr ""
 
@@ -279,7 +363,7 @@ msgstr ""
 msgid "Random sort"
 msgstr ""
 
-#: ../content/project.pt:78
+#: ../content/project.pt:90
 msgid "Read more"
 msgstr ""
 
@@ -291,6 +375,14 @@ msgstr ""
 #: ../form/project_submission.py:113
 #: ../form/vote_encoding.py:141
 msgid "Send"
+msgstr ""
+
+#: ../utils.py:97
+msgid "Sep"
+msgstr ""
+
+#: ../utils.py:86
+msgid "September"
 msgstr ""
 
 #: ../browser/project.py:27
@@ -305,7 +397,7 @@ msgstr ""
 msgid "Steps for timeline"
 msgstr ""
 
-#: ../content/priority_action.py:18
+#: ../content/priority_action.py:19
 msgid "Strategic Objectives"
 msgstr ""
 
@@ -331,7 +423,7 @@ msgstr ""
 msgid "Title; Date; Link"
 msgstr ""
 
-#: ../configure.zcml:52
+#: ../configure.zcml:53
 msgid "Uninstalls the ideabox.policy add-on."
 msgstr ""
 
@@ -378,11 +470,11 @@ msgstr ""
 msgid "email_body_project_submission"
 msgstr ""
 
-#: ../configure.zcml:43
+#: ../configure.zcml:44
 msgid "ideabox.policy"
 msgstr ""
 
-#: ../configure.zcml:52
+#: ../configure.zcml:53
 msgid "ideabox.policy (uninstall)"
 msgstr ""
 

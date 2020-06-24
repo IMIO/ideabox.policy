@@ -124,7 +124,9 @@
               <div class="state-item" tal:repeat="sp state_progess">
                 <tal:block tal:define="spo sp/getObject;
                                 img python: getattr(spo, 'image', None)">
-                  <div class="state-date pat-moment" tal:content="python: spo.state_date.strftime('%d %B %Y')"></div>
+                  <div class="state-date pat-moment"
+                       data-pat-moment="format:Do MMMM YYYY;"
+                       tal:content="python: spo.state_date.strftime('%Y-%m-%dT%H:%M:%S')"></div>
                   <div class="state-content">
                     <div tal:condition="img" class="img">
                       <img class="view img-responsive" src="" tal:attributes="src string: ${spo/absolute_url}/@@images/image" />

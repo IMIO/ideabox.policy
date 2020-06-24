@@ -5,7 +5,8 @@ Changelog
 3.1.0a9 (unreleased)
 --------------------
 
-- Nothing changed yet.
+- Add class pat-moment on state_progress dates
+  [vpiret]
 
 
 3.1.0a8 (2020-06-23)

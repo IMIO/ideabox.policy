@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.1.0a9 (unreleased)
+3.1.0a9 (2020-06-24)
 --------------------
 
 - Add class pat-moment on state_progress dates

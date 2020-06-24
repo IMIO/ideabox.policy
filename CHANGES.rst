@@ -5,6 +5,9 @@ Changelog
 3.1.0a10 (unreleased)
 ---------------------
 
+- Add missing translations
+  [mpeeters]
+
 - Translate month in dates
   [mpeeters]
 

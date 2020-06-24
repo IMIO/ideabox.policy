@@ -138,19 +138,19 @@
             <div class="state-more ap-status ap-toggle">
               <a href=""
               tal:attributes="href string:${context/absolute_url}/state_progress_view">
-                Voir plus
+                <tal:block i18n:translate="">See more</tal:block>
                 <i class="fas fa-plus"></i>
               </a>
             </div>
             <div class="state-notif ap-status ap-toggle">
-              <p>Souhaitez-vous être tenu au courant de l’avancement du projet ?</p>
+              <p i18n:translate="">Would you like to be kept up to date on the progress of the project?</p>
               <div class="state-switch">
-                <div>Non</div>
+                <div i18n:translate="">No</div>
                 <label>
                   <input type="checkbox" />
                   <span class="slider round"></span>
                 </label>
-                <div>Oui</div>
+                <div i18n:translate="">Yes</div>
               </div>
             </div>
           </div>

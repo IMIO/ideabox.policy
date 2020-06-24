@@ -272,6 +272,10 @@ msgstr "Soumission d'un nouveau projet"
 msgid "News"
 msgstr "Actualités"
 
+#: ../content/project.pt:148
+msgid "No"
+msgstr "Non"
+
 #: ../utils.py:99
 msgid "Nov"
 msgstr "Nov"
@@ -365,6 +369,10 @@ msgstr "En savoir plus"
 msgid "Save"
 msgstr "Enregistrer"
 
+#: ../content/project.pt:141
+msgid "See more"
+msgstr "Voir plus"
+
 #: ../form/project_encoding.py:144
 #: ../form/project_submission.py:113
 #: ../form/vote_encoding.py:141
@@ -445,6 +453,14 @@ msgstr "Votants contre"
 #: ../export/export.py:219
 msgid "Votes"
 msgstr "Votes"
+
+#: ../content/project.pt:146
+msgid "Would you like to be kept up to date on the progress of the project?"
+msgstr "Souhaitez-vous être tenu au courant de l’avancement du projet?"
+
+#: ../content/project.pt:153
+msgid "Yes"
+msgstr "Oui"
 
 #: ../export/export.py:214
 #: ../userdataschema.py:31

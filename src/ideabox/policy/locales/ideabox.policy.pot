@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-24 13:50+0000\n"
+"POT-Creation-Date: 2020-06-24 14:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -278,6 +278,10 @@ msgstr ""
 msgid "News"
 msgstr ""
 
+#: ../content/project.pt:148
+msgid "No"
+msgstr ""
+
 #: ../utils.py:99
 msgid "Nov"
 msgstr ""
@@ -371,6 +375,10 @@ msgstr ""
 msgid "Save"
 msgstr ""
 
+#: ../content/project.pt:141
+msgid "See more"
+msgstr ""
+
 #: ../form/project_encoding.py:144
 #: ../form/project_submission.py:113
 #: ../form/vote_encoding.py:141
@@ -450,6 +458,14 @@ msgstr ""
 
 #: ../export/export.py:219
 msgid "Votes"
+msgstr ""
+
+#: ../content/project.pt:146
+msgid "Would you like to be kept up to date on the progress of the project?"
+msgstr ""
+
+#: ../content/project.pt:153
+msgid "Yes"
 msgstr ""
 
 #: ../export/export.py:214

@@ -38,7 +38,7 @@ msgstr "Avr"
 msgid "April"
 msgstr "Avril"
 
-#: ../content/project.pt:42
+#: ../content/project.pt:38
 msgid "Areas concerned :"
 msgstr "Domaine(s) concerné(s)"
 
@@ -59,7 +59,7 @@ msgstr "Date de naissance"
 msgid "Campaign"
 msgstr "Campagne"
 
-#: ../content/project.pt:115
+#: ../content/project.pt:111
 msgid "Comment"
 msgstr "Commentaires"
 
@@ -88,7 +88,7 @@ msgstr "Décembre"
 msgid "District"
 msgstr "Quartier"
 
-#: ../content/project.pt:46
+#: ../content/project.pt:42
 msgid "District(s) :"
 msgstr "Quartier(s) :"
 
@@ -100,7 +100,7 @@ msgstr "Quartier(s) concerné(s)"
 msgid "Domain(s) concerned"
 msgstr "Domaine(s) concerné(s)"
 
-#: ../content/project.pt:77
+#: ../content/project.pt:73
 msgid "Edit timeline dates"
 msgstr "Modifier les dates de la ligne du temps"
 
@@ -172,6 +172,10 @@ msgstr "Prénom"
 #: ../userdataschema.py:25
 msgid "Gender"
 msgstr "Sexe"
+
+#: ../browser/register.py:16
+msgid "I Accept Legal terms and conditions"
+msgstr ""
 
 #: ../export/export.py:196
 #: ../setuphandlers.py:139
@@ -272,7 +276,7 @@ msgstr "Soumission d'un nouveau projet"
 msgid "News"
 msgstr "Actualités"
 
-#: ../content/project.pt:148
+#: ../content/project.pt:144
 msgid "No"
 msgstr "Non"
 
@@ -313,7 +317,7 @@ msgid "Positive rating "
 msgstr "Vote pour"
 
 #: ../profiles/default/types/priority_action.xml
-#: ../tile/priority_action.py:15
+#: ../tile/priority_action.py:22
 msgid "Priority action"
 msgstr "Action prioritaire"
 
@@ -326,7 +330,7 @@ msgstr "Projet"
 msgid "Project Sorting"
 msgstr "Tri pour les projets"
 
-#: ../content/project.pt:122
+#: ../content/project.pt:118
 #: ../content/state_progress.pt:9
 msgid "Project Status"
 msgstr "Etat d'avancement du projet"
@@ -361,7 +365,7 @@ msgstr "Des projets en évolution"
 msgid "Random sort"
 msgstr "Tri aléatoire"
 
-#: ../content/project.pt:90
+#: ../content/project.pt:86
 msgid "Read more"
 msgstr "En savoir plus"
 
@@ -369,9 +373,13 @@ msgstr "En savoir plus"
 msgid "Save"
 msgstr "Enregistrer"
 
-#: ../content/project.pt:141
+#: ../content/project.pt:137
 msgid "See more"
 msgstr "Voir plus"
+
+#: ../tile/priority_action.py:26
+msgid "Select a container"
+msgstr ""
 
 #: ../form/project_encoding.py:144
 #: ../form/project_submission.py:113
@@ -416,7 +424,7 @@ msgid "Theme"
 msgstr "Thème"
 
 #: ../form/project_submission.py:23
-#: ../tile/priority_action.py:15
+#: ../tile/priority_action.py:22
 #: ../tile/projects.py:22
 msgid "Title"
 msgstr "Titre"
@@ -432,6 +440,11 @@ msgstr ""
 #: ../export/export.py:141
 msgid "User ID"
 msgstr "ID utilisateur"
+
+#: ../tile/templates/priority_action.pt:51
+#: ../tile/templates/projects.pt:40
+msgid "View all"
+msgstr ""
 
 #: ../form/vote_encoding.py:32
 msgid "Vote"
@@ -454,13 +467,17 @@ msgstr "Votants contre"
 msgid "Votes"
 msgstr "Votes"
 
-#: ../content/project.pt:146
+#: ../content/project.pt:142
 msgid "Would you like to be kept up to date on the progress of the project?"
 msgstr "Souhaitez-vous être tenu au courant de l’avancement du projet?"
 
-#: ../content/project.pt:153
+#: ../content/project.pt:149
 msgid "Yes"
 msgstr "Oui"
+
+#: ../browser/register.py:39
+msgid "You need to accept our legal terms and conditions."
+msgstr ""
 
 #: ../export/export.py:214
 #: ../userdataschema.py:31
@@ -498,3 +515,8 @@ msgstr "Dossier pour les nouveaux projets proposés"
 #: ../browser/templates/project_summary.pt:21
 msgid "projets"
 msgstr "projets"
+
+#. Default: "See <a href=\"${legal_conditions_url}\">legal terms and conditions</a>."
+#: ../browser/register.py:29
+msgid "see_legal_conditions"
+msgstr ""

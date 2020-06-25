@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-24 14:25+0000\n"
+"POT-Creation-Date: 2020-06-25 17:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -44,7 +44,7 @@ msgstr ""
 msgid "April"
 msgstr ""
 
-#: ../content/project.pt:42
+#: ../content/project.pt:38
 msgid "Areas concerned :"
 msgstr ""
 
@@ -65,7 +65,7 @@ msgstr ""
 msgid "Campaign"
 msgstr ""
 
-#: ../content/project.pt:115
+#: ../content/project.pt:111
 msgid "Comment"
 msgstr ""
 
@@ -94,7 +94,7 @@ msgstr ""
 msgid "District"
 msgstr ""
 
-#: ../content/project.pt:46
+#: ../content/project.pt:42
 msgid "District(s) :"
 msgstr ""
 
@@ -106,7 +106,7 @@ msgstr ""
 msgid "Domain(s) concerned"
 msgstr ""
 
-#: ../content/project.pt:77
+#: ../content/project.pt:73
 msgid "Edit timeline dates"
 msgstr ""
 
@@ -177,6 +177,10 @@ msgstr ""
 #: ../export/export.py:161
 #: ../userdataschema.py:25
 msgid "Gender"
+msgstr ""
+
+#: ../browser/register.py:16
+msgid "I Accept Legal terms and conditions"
 msgstr ""
 
 #: ../export/export.py:196
@@ -278,7 +282,7 @@ msgstr ""
 msgid "News"
 msgstr ""
 
-#: ../content/project.pt:148
+#: ../content/project.pt:144
 msgid "No"
 msgstr ""
 
@@ -319,7 +323,7 @@ msgid "Positive rating "
 msgstr ""
 
 #: ../profiles/default/types/priority_action.xml
-#: ../tile/priority_action.py:15
+#: ../tile/priority_action.py:22
 msgid "Priority action"
 msgstr ""
 
@@ -332,7 +336,7 @@ msgstr ""
 msgid "Project Sorting"
 msgstr ""
 
-#: ../content/project.pt:122
+#: ../content/project.pt:118
 #: ../content/state_progress.pt:9
 msgid "Project Status"
 msgstr ""
@@ -367,7 +371,7 @@ msgstr ""
 msgid "Random sort"
 msgstr ""
 
-#: ../content/project.pt:90
+#: ../content/project.pt:86
 msgid "Read more"
 msgstr ""
 
@@ -375,8 +379,12 @@ msgstr ""
 msgid "Save"
 msgstr ""
 
-#: ../content/project.pt:141
+#: ../content/project.pt:137
 msgid "See more"
+msgstr ""
+
+#: ../tile/priority_action.py:26
+msgid "Select a container"
 msgstr ""
 
 #: ../form/project_encoding.py:144
@@ -422,7 +430,7 @@ msgid "Theme"
 msgstr ""
 
 #: ../form/project_submission.py:23
-#: ../tile/priority_action.py:15
+#: ../tile/priority_action.py:22
 #: ../tile/projects.py:22
 msgid "Title"
 msgstr ""
@@ -437,6 +445,11 @@ msgstr ""
 
 #: ../export/export.py:141
 msgid "User ID"
+msgstr ""
+
+#: ../tile/templates/priority_action.pt:51
+#: ../tile/templates/projects.pt:40
+msgid "View all"
 msgstr ""
 
 #: ../form/vote_encoding.py:32
@@ -460,12 +473,16 @@ msgstr ""
 msgid "Votes"
 msgstr ""
 
-#: ../content/project.pt:146
+#: ../content/project.pt:142
 msgid "Would you like to be kept up to date on the progress of the project?"
 msgstr ""
 
-#: ../content/project.pt:153
+#: ../content/project.pt:149
 msgid "Yes"
+msgstr ""
+
+#: ../browser/register.py:39
+msgid "You need to accept our legal terms and conditions."
 msgstr ""
 
 #: ../export/export.py:214
@@ -500,4 +517,9 @@ msgstr ""
 
 #: ../browser/templates/project_summary.pt:21
 msgid "projets"
+msgstr ""
+
+#. Default: "See <a href=\"${legal_conditions_url}\">legal terms and conditions</a>."
+#: ../browser/register.py:29
+msgid "see_legal_conditions"
 msgstr ""

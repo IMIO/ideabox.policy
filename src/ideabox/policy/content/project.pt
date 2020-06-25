@@ -13,11 +13,23 @@
         <div class="ap-content">
           <div id="viewlet-above-content-title" tal:content="structure provider:plone.abovecontenttitle" />
           <div class="ap-header">
+<<<<<<< Updated upstream
             <div class="image" tal:condition="view/has_campaign_image">
               <img src="" tal:attributes="src view/get_campaign_image"/>
             </div>
             <div class="ap-header-text">
               <h1 tal:content="context/Title"></h1>
+=======
+            <div class="image" tal:condition="view/display_mac" >
+              <img src="" tal:attributes="src view/get_mac"/>
+            </div>
+            <div class="ap-header-text">
+              <h1 tal:content="context/Title"></h1>
+              <div class="image hidden" tal:condition="view/display_mac" >
+                <img src="" tal:attributes="src view/get_mac"/>
+              </div>
+
+>>>>>>> Stashed changes
 
               <div class="documentByLine" id="plone-document-byline" tal:condition="view/before_selected" i18n:domain="plone">
                 <tal:creator tal:define="creator_short_form view/creator;" tal:condition="creator_short_form">

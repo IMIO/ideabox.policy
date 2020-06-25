@@ -5,6 +5,9 @@ Changelog
 3.1.0a10 (unreleased)
 ---------------------
 
+- Change condition for image in action view
+  [Aurore]
+
 - Add missing translated texts
   [mpeeters]
 

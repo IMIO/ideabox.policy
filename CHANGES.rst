@@ -5,6 +5,9 @@ Changelog
 3.1.0a10 (unreleased)
 ---------------------
 
+- Allow to create `Campaign` in `Campaign` content type to handle subcampaign mecanism
+  [mpeeters]
+
 - Fix display of campaign images on projects and actions
   [mpeeters]
 

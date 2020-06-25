@@ -14,6 +14,7 @@
   <element value="priority_action"/>
   <element value="Image"/>
   <element value="Project"/>
+  <element value="campaign"/>
  </property>
  <property name="allow_discussion">False</property>
  <property name="default_view">view</property>

@@ -175,7 +175,7 @@ msgstr "Sexe"
 
 #: ../browser/register.py:16
 msgid "I Accept Legal terms and conditions"
-msgstr ""
+msgstr "J'accepte les Mentions Légales"
 
 #: ../export/export.py:196
 #: ../setuphandlers.py:139
@@ -379,7 +379,7 @@ msgstr "Voir plus"
 
 #: ../tile/priority_action.py:26
 msgid "Select a container"
-msgstr ""
+msgstr "Sélectionner un dossier"
 
 #: ../form/project_encoding.py:144
 #: ../form/project_submission.py:113
@@ -444,7 +444,7 @@ msgstr "ID utilisateur"
 #: ../tile/templates/priority_action.pt:51
 #: ../tile/templates/projects.pt:40
 msgid "View all"
-msgstr ""
+msgstr "Voir tout"
 
 #: ../form/vote_encoding.py:32
 msgid "Vote"
@@ -477,7 +477,7 @@ msgstr "Oui"
 
 #: ../browser/register.py:39
 msgid "You need to accept our legal terms and conditions."
-msgstr ""
+msgstr "Vous devez accepter les Mentions Légales pour pouvoir créer un compte."
 
 #: ../export/export.py:214
 #: ../userdataschema.py:31
@@ -519,4 +519,4 @@ msgstr "projets"
 #. Default: "See <a href=\"${legal_conditions_url}\">legal terms and conditions</a>."
 #: ../browser/register.py:29
 msgid "see_legal_conditions"
-msgstr ""
+msgstr "Voir les <a href=\"${legal_conditions_url}\">Mentions Légales</a>."

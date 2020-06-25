@@ -5,6 +5,9 @@ Changelog
 3.1.0a10 (unreleased)
 ---------------------
 
+- Add legal terms on register form
+  [mpeeters]
+
 - Allow to create `Campaign` in `Campaign` content type to handle subcampaign mecanism
   [mpeeters]
 

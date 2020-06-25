@@ -128,4 +128,12 @@
       />
   </configure>
 
+  <browser:page
+    name="register"
+    for="plone.app.layout.navigation.interfaces.INavigationRoot"
+    class=".register.CustomRegistrationForm"
+    layer="ideabox.policy.interfaces.IIdeaboxPolicyLayer"
+    permission="cmf.AddPortalMember"
+    />
+
 </configure>

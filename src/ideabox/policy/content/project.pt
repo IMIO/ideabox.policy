@@ -1,10 +1,9 @@
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
-  xmlns:tal="http://xml.zope.org/namespaces/tal"
-  xmlns:metal="http://xml.zope.org/namespaces/metal"
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" 
+  xmlns:tal="http://xml.zope.org/namespaces/tal" 
+  xmlns:metal="http://xml.zope.org/namespaces/metal" 
   xmlns:i18n="http://xml.zope.org/namespaces/i18n" lang="en" metal:use-macro="context/main_template/macros/master" i18n:domain="ideabox.policy">
   <body>
-    <metal:main fill-slot="main"
-      tal:define="images_url view/get_images_url;
+    <metal:main fill-slot="main" tal:define="images_url view/get_images_url;
                   current_state view/review_state;
                   timeline_states view/timeline_states;
                   district view/get_project_district;
@@ -13,24 +12,14 @@
         <div class="ap-content">
           <div id="viewlet-above-content-title" tal:content="structure provider:plone.abovecontenttitle" />
           <div class="ap-header">
-<<<<<<< Updated upstream
             <div class="image" tal:condition="view/has_campaign_image">
               <img src="" tal:attributes="src view/get_campaign_image"/>
             </div>
             <div class="ap-header-text">
               <h1 tal:content="context/Title"></h1>
-=======
-            <div class="image" tal:condition="view/display_mac" >
-              <img src="" tal:attributes="src view/get_mac"/>
-            </div>
-            <div class="ap-header-text">
-              <h1 tal:content="context/Title"></h1>
-              <div class="image hidden" tal:condition="view/display_mac" >
-                <img src="" tal:attributes="src view/get_mac"/>
+              <div class="image hidden" tal:condition="view/has_campaign_image">
+                <img src="" tal:attributes="src view/get_campaign_image"/>
               </div>
-
->>>>>>> Stashed changes
-
               <div class="documentByLine" id="plone-document-byline" tal:condition="view/before_selected" i18n:domain="plone">
                 <tal:creator tal:define="creator_short_form view/creator;" tal:condition="creator_short_form">
                   <tal:name tal:define="creator_long_form string:?author=${creator_short_form};
@@ -132,8 +121,7 @@
               <div class="state-item" tal:repeat="sp state_progess">
                 <tal:block tal:define="spo sp/getObject;
                                 img python: getattr(spo, 'image', None)">
-                  <div class="state-date"
-                       tal:content="python: view.format_date(spo.state_date)"></div>
+                  <div class="state-date" tal:content="python: view.format_date(spo.state_date)"></div>
                   <div class="state-content">
                     <div tal:condition="img" class="img">
                       <img class="view img-responsive" src="" tal:attributes="src string: ${spo/absolute_url}/@@images/image" />
@@ -144,8 +132,7 @@
               </div>
             </div>
             <div class="state-more ap-status ap-toggle">
-              <a href=""
-              tal:attributes="href string:${context/absolute_url}/state_progress_view">
+              <a href="" tal:attributes="href string:${context/absolute_url}/state_progress_view">
                 <tal:block i18n:translate="">See more</tal:block>
                 <i class="fas fa-plus"></i>
               </a>

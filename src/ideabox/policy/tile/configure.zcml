@@ -44,10 +44,22 @@
 
   <plone:tile
     name="ideabox.policy.priority_actions"
-    title="latest priority actions"
-    description="A tile which displays the latest submitted priority actions"
+    title="Latest priority actions"
+    description="A tile which displays the latest priority actions"
     add_permission="cmf.ModifyPortalContent"
     class=".priority_action.LatestPriorityActionTile"
+    for="*"
+    permission="zope.Public"
+    schema=".priority_action.IPriorityActionTile"
+    template="templates/priority_action.pt"
+    />
+
+  <plone:tile
+    name="ideabox.policy.random_priority_actions"
+    title="Random priority actions"
+    description="A tile which displays randomly the priority actions"
+    add_permission="cmf.ModifyPortalContent"
+    class=".priority_action.RandomPriorityActionTile"
     for="*"
     permission="zope.Public"
     schema=".priority_action.IPriorityActionTile"

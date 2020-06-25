@@ -5,6 +5,12 @@ Changelog
 3.1.0a10 (unreleased)
 ---------------------
 
+- Add a parameter to priority action tiles to specify from which folder or campaign the actions should be displayed
+  [mpeeters]
+
+- Add a Random Priority Actions tile
+  [mpeeters]
+
 - Add legal terms on register form
   [mpeeters]
 

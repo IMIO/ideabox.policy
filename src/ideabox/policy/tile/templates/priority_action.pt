@@ -5,12 +5,13 @@
       xmlns:tal="http://xml.zope.org/namespaces/tal"
       xmlns:metal="http://xml.zope.org/namespaces/metal">
     <body>
-        <section tal:define="priority_actions view/contents;
-                             default_image view/default_image">
+        <section tal:define="default_image view/default_image;
+                             data view/contents">
             <h2 tal:content="view/title"></h2>
             <div id="priority_actions_view"
-                 class="priority_actions">
-                <tal:block define="brain view/lastcontent">
+                 class="priority_actions"
+                 tal:condition="data/results">
+              <tal:block define="brain python:data['results'][0]">
                 <div tal:define="title brain/pretty_title_or_id|string:;
                                  view_url brain/getURL|string:#;
                                  image_id brain/project_picture|string:;
@@ -26,15 +27,14 @@
                       </div>
                     </a>
                 </div>
-                </tal:block>
-              <tal:block repeat="brain priority_actions">
+              </tal:block>
+              <tal:block repeat="brain python:data['results'][1:]">
                 <div tal:define="idx python:repeat['brain'].index + 1;
                                  title brain/pretty_title_or_id|string:;
                                  view_url brain/getURL|string:#;
                                  image_id brain/project_picture|string:;
                                  image_url python:image_id and view_url + '/' + image_id + '/@@images/image/project_faceted' or default_image"
                      tal:attributes="class string:project item_${idx}">
-
                     <a href="" title=""
                        tal:attributes="href view_url;
                                        title title">
@@ -44,11 +44,11 @@
                       </div>
                     </a>
                 </div>
-                </tal:block>
+              </tal:block>
             </div>
-                <div class="align-right">
-                  <a class="voir-tout" href="" tal:attributes="href view/folder_projects" tal:condition="view/folder_projects">Voir tout</a>
-                </div>
+            <div class="align-right" tal:condition="data/url">
+              <a class="voir-tout" href="" tal:attributes="href data/url">Voir tout</a>
+            </div>
         </section>
     </body>
 </html>

@@ -3,7 +3,8 @@
       xml:lang="en"
       lang="en"
       xmlns:tal="http://xml.zope.org/namespaces/tal"
-      xmlns:metal="http://xml.zope.org/namespaces/metal">
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      i18n:domain="ideabox.policy">
     <body>
         <section tal:define="projects view/contents;
                              default_image view/default_image">
@@ -35,9 +36,9 @@
                 </div>
                 </tal:block>
             </div>
-                <div class="align-right">
-                  <a class="voir-tout" href="" tal:attributes="href view/folder_projects" tal:condition="view/folder_projects">Voir tout</a>
-                </div>
+            <div class="align-right">
+              <a class="voir-tout" href="" tal:attributes="href view/folder_projects" tal:condition="view/folder_projects" i18n:translate="">View all</a>
+            </div>
         </section>
     </body>
 </html>

@@ -5,6 +5,9 @@ Changelog
 3.1.0a10 (unreleased)
 ---------------------
 
+- Add missing translated texts
+  [mpeeters]
+
 - Add a parameter to priority action tiles to specify from which folder or campaign the actions should be displayed
   [mpeeters]
 

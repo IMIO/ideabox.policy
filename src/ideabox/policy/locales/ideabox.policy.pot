@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-25 17:01+0000\n"
+"POT-Creation-Date: 2020-06-26 12:22+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -44,7 +44,7 @@ msgstr ""
 msgid "April"
 msgstr ""
 
-#: ../content/project.pt:38
+#: ../content/project.pt:39
 msgid "Areas concerned :"
 msgstr ""
 
@@ -65,7 +65,7 @@ msgstr ""
 msgid "Campaign"
 msgstr ""
 
-#: ../content/project.pt:111
+#: ../content/project.pt:112
 msgid "Comment"
 msgstr ""
 
@@ -94,7 +94,7 @@ msgstr ""
 msgid "District"
 msgstr ""
 
-#: ../content/project.pt:42
+#: ../content/project.pt:43
 msgid "District(s) :"
 msgstr ""
 
@@ -106,7 +106,7 @@ msgstr ""
 msgid "Domain(s) concerned"
 msgstr ""
 
-#: ../content/project.pt:73
+#: ../content/project.pt:74
 msgid "Edit timeline dates"
 msgstr ""
 
@@ -282,7 +282,7 @@ msgstr ""
 msgid "News"
 msgstr ""
 
-#: ../content/project.pt:144
+#: ../content/project.pt:151
 msgid "No"
 msgstr ""
 
@@ -336,7 +336,7 @@ msgstr ""
 msgid "Project Sorting"
 msgstr ""
 
-#: ../content/project.pt:118
+#: ../content/project.pt:119
 #: ../content/state_progress.pt:9
 msgid "Project Status"
 msgstr ""
@@ -371,7 +371,7 @@ msgstr ""
 msgid "Random sort"
 msgstr ""
 
-#: ../content/project.pt:86
+#: ../content/project.pt:87
 msgid "Read more"
 msgstr ""
 
@@ -379,7 +379,7 @@ msgstr ""
 msgid "Save"
 msgstr ""
 
-#: ../content/project.pt:137
+#: ../content/project.pt:141
 msgid "See more"
 msgstr ""
 
@@ -429,6 +429,10 @@ msgstr ""
 msgid "Theme"
 msgstr ""
 
+#: ../content/project.pt:122
+msgid "There is no progress for the moment."
+msgstr ""
+
 #: ../form/project_submission.py:23
 #: ../tile/priority_action.py:22
 #: ../tile/projects.py:22
@@ -473,11 +477,11 @@ msgstr ""
 msgid "Votes"
 msgstr ""
 
-#: ../content/project.pt:142
+#: ../content/project.pt:146
 msgid "Would you like to be kept up to date on the progress of the project?"
 msgstr ""
 
-#: ../content/project.pt:149
+#: ../content/project.pt:156
 msgid "Yes"
 msgstr ""
 

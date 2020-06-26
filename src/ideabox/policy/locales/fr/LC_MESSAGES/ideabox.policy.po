@@ -38,7 +38,7 @@ msgstr "Avr"
 msgid "April"
 msgstr "Avril"
 
-#: ../content/project.pt:38
+#: ../content/project.pt:39
 msgid "Areas concerned :"
 msgstr "Domaine(s) concerné(s)"
 
@@ -59,7 +59,7 @@ msgstr "Date de naissance"
 msgid "Campaign"
 msgstr "Campagne"
 
-#: ../content/project.pt:111
+#: ../content/project.pt:112
 msgid "Comment"
 msgstr "Commentaires"
 
@@ -88,7 +88,7 @@ msgstr "Décembre"
 msgid "District"
 msgstr "Quartier"
 
-#: ../content/project.pt:42
+#: ../content/project.pt:43
 msgid "District(s) :"
 msgstr "Quartier(s) :"
 
@@ -100,7 +100,7 @@ msgstr "Quartier(s) concerné(s)"
 msgid "Domain(s) concerned"
 msgstr "Domaine(s) concerné(s)"
 
-#: ../content/project.pt:73
+#: ../content/project.pt:74
 msgid "Edit timeline dates"
 msgstr "Modifier les dates de la ligne du temps"
 
@@ -276,7 +276,7 @@ msgstr "Soumission d'un nouveau projet"
 msgid "News"
 msgstr "Actualités"
 
-#: ../content/project.pt:144
+#: ../content/project.pt:151
 msgid "No"
 msgstr "Non"
 
@@ -330,7 +330,7 @@ msgstr "Projet"
 msgid "Project Sorting"
 msgstr "Tri pour les projets"
 
-#: ../content/project.pt:118
+#: ../content/project.pt:119
 #: ../content/state_progress.pt:9
 msgid "Project Status"
 msgstr "Etat d'avancement du projet"
@@ -365,7 +365,7 @@ msgstr "Des projets en évolution"
 msgid "Random sort"
 msgstr "Tri aléatoire"
 
-#: ../content/project.pt:86
+#: ../content/project.pt:87
 msgid "Read more"
 msgstr "En savoir plus"
 
@@ -373,7 +373,7 @@ msgstr "En savoir plus"
 msgid "Save"
 msgstr "Enregistrer"
 
-#: ../content/project.pt:137
+#: ../content/project.pt:141
 msgid "See more"
 msgstr "Voir plus"
 
@@ -423,6 +423,10 @@ msgstr "Les votes ont bien été encodés"
 msgid "Theme"
 msgstr "Thème"
 
+#: ../content/project.pt:122
+msgid "There is no progress for the moment."
+msgstr "Il n'y a pas d'état d'avancement pour le moment."
+
 #: ../form/project_submission.py:23
 #: ../tile/priority_action.py:22
 #: ../tile/projects.py:22
@@ -467,11 +471,11 @@ msgstr "Votants contre"
 msgid "Votes"
 msgstr "Votes"
 
-#: ../content/project.pt:142
+#: ../content/project.pt:146
 msgid "Would you like to be kept up to date on the progress of the project?"
 msgstr "Souhaitez-vous être tenu au courant de l’avancement du projet?"
 
-#: ../content/project.pt:149
+#: ../content/project.pt:156
 msgid "Yes"
 msgstr "Oui"
 

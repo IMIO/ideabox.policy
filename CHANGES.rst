@@ -5,7 +5,8 @@ Changelog
 3.1.0a11 (unreleased)
 ---------------------
 
-- Nothing changed yet.
+- Always display the column with progress for priority actions and add a message when there is no progress
+  [mpeeters]
 
 
 3.1.0a10 (2020-06-26)

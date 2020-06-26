@@ -5,6 +5,9 @@ Changelog
 3.1.0a11 (unreleased)
 ---------------------
 
+- Remove strategic and operational objectives from project faceted view
+  [mpeeters]
+
 - Fix campaign faceted view
   [mpeeters]
 

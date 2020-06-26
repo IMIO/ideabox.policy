@@ -38,40 +38,6 @@
    <property name="hidezerocount">True</property>
    <property name="sortreversed">False</property>
   </criterion>
-  <criterion name="c7">
-   <property name="widget">multiselect</property>
-   <property name="title">Objectifs stratégiques</property>
-   <property name="index">strategic_objectives</property>
-   <property name="operator">or</property>
-   <property name="operator_visible">False</property>
-   <property name="multiple">True</property>
-   <property name="vocabulary"></property>
-   <property name="catalog">portal_catalog</property>
-   <property name="position">top</property>
-   <property name="section">default</property>
-   <property name="hidden">False</property>
-   <property name="count">False</property>
-   <property name="sortcountable">False</property>
-   <property name="hidezerocount">False</property>
-   <property name="sortreversed">False</property>
-  </criterion>
-  <criterion name="c8">
-   <property name="widget">multiselect</property>
-   <property name="title">Objectifs opérationnels</property>
-   <property name="index">operational_objectives</property>
-   <property name="operator">or</property>
-   <property name="operator_visible">False</property>
-   <property name="multiple">True</property>
-   <property name="vocabulary"></property>
-   <property name="catalog">portal_catalog</property>
-   <property name="position">top</property>
-   <property name="section">default</property>
-   <property name="hidden">False</property>
-   <property name="count">False</property>
-   <property name="sortcountable">False</property>
-   <property name="hidezerocount">False</property>
-   <property name="sortreversed">False</property>
-  </criterion>
   <criterion name="c6">
    <property name="widget">project_sorting</property>
    <property name="title">Tri</property>

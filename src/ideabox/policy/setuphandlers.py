@@ -6,13 +6,9 @@ from collective.taxonomy.factory import registerTaxonomy
 from collective.taxonomy.interfaces import ITaxonomy
 from eea.facetednavigation.layout.layout import FacetedLayout
 from ideabox.policy import _
+from ideabox.policy import utils
 from plone import api
 from plone.dexterity.interfaces import IDexterityFTI
-from plone.portlets.constants import CONTEXT_CATEGORY
-from plone.portlets.interfaces import ILocalPortletAssignmentManager
-from plone.portlets.interfaces import IPortletManager
-from zope.component import getMultiAdapter
-from zope.component import getUtility
 from zope.component import queryUtility
 from zope.i18n import translate
 from zope.i18n.interfaces import ITranslationDomain
@@ -45,19 +41,19 @@ def post_install(context):
         _activate_faceted_navigation(project, True, "/faceted/config/projets.xml")
         project_layout = FacetedLayout(project)
         project_layout.update_layout(layout="faceted-project")
-        _disable_portlets(project)
+        utils.disable_portlets(project)
         _publish(project)
     if portal.get("participer") is None:
         participate = api.content.create(
             type="Folder", id="participer", title="Participer", container=portal
         )
-        _disable_portlets(participate)
+        utils.disable_portlets(participate)
         _publish(participate)
     if portal.get("plus-dinfos") is None:
         infos = api.content.create(
             type="Folder", id="plus-dinfos", title=u"Plus d'infos", container=portal
         )
-        _disable_portlets(infos, disabled=("plone.rightcolumn",))
+        utils.disable_portlets(infos, disabled=("plone.rightcolumn",))
         _publish(infos)
 
     add_behavior(
@@ -68,7 +64,7 @@ def post_install(context):
         _activate_faceted_navigation(
             portal["news"]["aggregator"], True, "/faceted/config/news.xml"
         )
-        _disable_portlets(portal["news"])
+        utils.disable_portlets(portal["news"])
         news_layout = FacetedLayout(portal["news"]["aggregator"])
         news_layout.update_layout(layout="faceted-news")
 
@@ -83,36 +79,6 @@ def post_install(context):
         "collective.behavior.banner.browser.controlpanel.IBannerSettingsSchema.banner_scale",
         "banner",
     )
-
-    # menu = {
-    #     "/": [
-    #         {
-    #             "navigation_folder": "/projets",
-    #             "simple_link": "/projets",
-    #             "tab_title": "Projets",
-    #             "additional_columns": "",
-    #             "condition": "python: True",
-    #         },
-    #         {
-    #             "navigation_folder": "",
-    #             "simple_link": "/participer",
-    #             "tab_title": "Participer",
-    #             "additional_columns": "",
-    #             "condition": "python: True",
-    #         },
-    #         {
-    #             "navigation_folder": "/plus-dinfos",
-    #             "simple_link": "/plus-dinfos",
-    #             "tab_title": "Plus d'infos",
-    #             "additional_columns": "",
-    #             "condition": "python: True",
-    #         },
-    #     ]
-    # }
-    # api.portal.set_registry_record(
-    #     "collective.editablemenu.browser.interfaces.IEditableMenuSettings.menu_tabs_json",
-    #     json.dumps(menu),
-    # )
 
 
 def add_taxonomies():
@@ -200,22 +166,8 @@ def add_behavior(type_name, behavior_name):
 
 
 def _activate_faceted_navigation(context, configuration=False, path=None):
-    subtyper = context.restrictedTraverse("@@faceted_subtyper")
-    if subtyper.is_faceted:
-        return
-    subtyper.enable()
-    if configuration and path:
-        fpath = os.path.dirname(__file__) + path
-        context.unrestrictedTraverse("@@faceted_exportimport").import_xml(
-            import_file=open(fpath, "r").read().encode("utf8")
-        )
-
-
-def _disable_portlets(context, disabled=("plone.leftcolumn", "plone.rightcolumn")):
-    for name in disabled:
-        manager = getUtility(IPortletManager, name=name)
-        blacklist = getMultiAdapter((context, manager), ILocalPortletAssignmentManager)
-        blacklist.setBlacklistStatus(CONTEXT_CATEGORY, True)
+    fpath = os.path.dirname(__file__) + path
+    utils.activate_faceted_navigation(context, fpath)
 
 
 def _publish(obj):

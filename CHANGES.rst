@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.1.0a10 (unreleased)
+3.1.0a10 (2020-06-26)
 ---------------------
 
 - Add login popup in action view

@@ -139,14 +139,31 @@
             </div>
             <div class="state-notif ap-status ap-toggle">
               <p i18n:translate="">Would you like to be kept up to date on the progress of the project?</p>
-              <div class="state-switch">
-                <div i18n:translate="">No</div>
-                <label>
-                  <input type="checkbox" />
-                  <span class="slider round"></span>
-                </label>
-                <div i18n:translate="">Yes</div>
-              </div>
+              <tal:anonymous tal:condition="python: context.portal_membership.isAnonymousUser()">
+                <a title="Se connecter" href="http://localhost:8080/ideabox/login" id="personaltools-login" class="pat-plone-modal"
+                data-pat-plone-modal="{&quot;prependContent&quot;: &quot;.portalMessage&quot;, &quot;title&quot;: &quot;Log in&quot;, &quot;width&quot;: &quot;26em&quot;, &quot;actionOptions&quot;: {&quot;redirectOnResponse&quot;: true}}">
+                  <div class="state-switch">
+                    <div i18n:translate="">No</div>
+                    <label>
+                      <input type="checkbox" />
+                      <span class="slider round"></span>
+                    </label>
+                    <div i18n:translate="">Yes</div>
+                  </div>
+                </a>
+              </tal:anonymous>
+
+              <tal:authenticated tal:condition="not: python: context.portal_membership.isAnonymousUser()">
+                <div class="state-switch">
+                  <div i18n:translate="">No</div>
+                  <label>
+                    <input type="checkbox" />
+                    <span class="slider round"></span>
+                  </label>
+                  <div i18n:translate="">Yes</div>
+                </div>
+              </tal:authenticated>
+
             </div>
           </div>
         </div>

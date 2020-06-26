@@ -5,6 +5,9 @@ Changelog
 3.1.0a10 (unreleased)
 ---------------------
 
+- Add login popup in action view
+  [Aurore]
+
 - Change condition for image in action view
   [Aurore]
 

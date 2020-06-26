@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 
+from ideabox.policy import utils
 from ideabox.policy.content.project import IProject
-from ideabox.policy.utils import _activate_dashboard_navigation
+from plone.protect.auto import safeWrite
 from tempfile import mkstemp
 from zope.globalrequest import getRequest
-from plone.protect.auto import safeWrite
 
 import os
 
@@ -23,12 +23,15 @@ def project_added(obj, event):
 
 
 def campaign_added(obj, event):
-    file = open(os.path.dirname(__file__) + "/../faceted/config/campaign.xml")
-    xml = file.read()
-    file.close()
+    fpath = os.path.join(
+        os.path.dirname(__file__), "..", "faceted", "config", "campaign.xml"
+    )
+    xml = ""
+    with open(fpath, "r") as config:
+        xml = config.read()
 
     xml = xml.replace(
-        '<property name="default">//REMPLACE//</property>',
+        '<property name="default">##PATH##</property>',
         '<property name="default">{0}</property>'.format(
             "/{0}".format("/".join(obj.absolute_url_path().split("/")[2:]))
         ),
@@ -37,6 +40,8 @@ def campaign_added(obj, event):
     with open(path, "w") as f:
         f.write(xml)
     os.close(fd)
-    _activate_dashboard_navigation(obj, path)
+    utils.activate_faceted_navigation(obj, path)
     request = getRequest()
     request.response.redirect(obj.absolute_url())
+    utils.disable_portlets(obj)
+    utils.set_faceted_view(obj, "faceted-project")

@@ -5,6 +5,9 @@ Changelog
 3.1.0a11 (unreleased)
 ---------------------
 
+- Fix campaign faceted view
+  [mpeeters]
+
 - Always display the column with progress for priority actions and add a message when there is no progress
   [mpeeters]
 

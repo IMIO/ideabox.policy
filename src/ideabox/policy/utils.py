@@ -5,13 +5,16 @@ from AccessControl.SecurityManagement import newSecurityManager
 from AccessControl.SecurityManagement import setSecurityManager
 from AccessControl.User import Super as BaseUnrestrictedUser
 from datetime import datetime
-from eea.facetednavigation.layout.interfaces import IFacetedLayout
-from ideabox.policy import vocabularies
+from eea.facetednavigation.layout.layout import FacetedLayout
 from ideabox.policy import _
+from ideabox.policy import vocabularies
 from plone import api
+from plone.portlets.constants import CONTEXT_CATEGORY
+from plone.portlets.interfaces import ILocalPortletAssignmentManager
+from plone.portlets.interfaces import IPortletManager
+from zope.component import getMultiAdapter
+from zope.component import getUtility
 from zope.i18n import translate
-
-import os
 
 
 def token_type_recovery(value):
@@ -23,12 +26,10 @@ def token_type_recovery(value):
 
 
 class UnrestrictedUser(BaseUnrestrictedUser):
-    """Unrestricted user that still has an id.
-    """
+    """Unrestricted user that still has an id."""
 
     def getId(self):
-        """Return the ID of the user.
-        """
+        """Return the ID of the user."""
         return self.getUserName()
 
 
@@ -64,13 +65,20 @@ def now():
     return datetime.now()
 
 
-def _activate_dashboard_navigation(context, config_path=""):
+def activate_faceted_navigation(context, config_path=""):
     subtyper = context.restrictedTraverse("@@faceted_subtyper")
     if subtyper.is_faceted:
         return
     subtyper.enable()
-    file = open(config_path, mode="rb")
-    context.unrestrictedTraverse("@@faceted_exportimport").import_xml(import_file=file)
+    with open(config_path, "rb") as config:
+        context.unrestrictedTraverse("@@faceted_exportimport").import_xml(
+            import_file=config
+        )
+
+
+def set_faceted_view(context, view_name):
+    layout = FacetedLayout(context)
+    layout.update_layout(layout=view_name)
 
 
 def localized_month(value):
@@ -103,3 +111,10 @@ def localized_month(value):
         if k in value:
             value = value.replace(k, v)
     return value
+
+
+def disable_portlets(context, disabled=("plone.leftcolumn", "plone.rightcolumn")):
+    for manager_name in disabled:
+        manager = getUtility(IPortletManager, name=manager_name)
+        blacklist = getMultiAdapter((context, manager), ILocalPortletAssignmentManager)
+        blacklist.setBlacklistStatus(CONTEXT_CATEGORY, True)

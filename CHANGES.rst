@@ -5,6 +5,9 @@ Changelog
 3.1.0a11 (unreleased)
 ---------------------
 
+- Add a link to all progress view on project progress title
+  [mpeeters]
+
 - Remove strategic and operational objectives from project faceted view
   [mpeeters]
 

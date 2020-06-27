@@ -116,7 +116,7 @@
 
         <div tal:condition="python: context.portal_type=='priority_action'" class="ap-state">
           <div tal:define="state_progress view/get_state_progress" class="state-block">
-            <div i18n:translate="" id="ap-status" class="ap-button">Project Status</div>
+            <div id="ap-status" class="ap-button"><a href="" tal:attributes="href string:${context/absolute_url}/@@state_progress_view" i18n:translate="">Project Status</a></div>
             <div class="state-body ap-status ap-toggle">
               <div class="state-item" tal:condition="not: state_progress">
                 <div class="state-content" i18n:translate="">
@@ -137,7 +137,7 @@
               </div>
             </div>
             <div class="state-more ap-status ap-toggle">
-              <a href="" tal:attributes="href string:${context/absolute_url}/state_progress_view">
+              <a href="" tal:attributes="href string:${context/absolute_url}/@@state_progress_view">
                 <tal:block i18n:translate="">See more</tal:block>
                 <i class="fas fa-plus"></i>
               </a>

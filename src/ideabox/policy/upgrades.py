@@ -7,6 +7,11 @@ from plone.registry.interfaces import IRegistry
 from zope.component import getUtility
 
 
+def reload_content_types(context):
+    """ Reload content types """
+    portal_setup = api.portal.get_tool("portal_setup")
+    portal_setup.runImportStepFromProfile("profile-ideabox.policy:default", "typeinfo")
+
 
 def fix_comments_1001(context):
     from plone.app.discussion.interfaces import IConversation
@@ -42,12 +47,6 @@ def to_1002(context):
 def to_1003(context):
     portal_setup = api.portal.get_tool("portal_setup")
     portal_setup.runImportStepFromProfile("profile-ideabox.policy:default", "viewlets")
-
-
-def to_1004(context):
-    """ Add priority action, progress and campaign content types """
-    portal_setup = api.portal.get_tool("portal_setup")
-    portal_setup.runImportStepFromProfile("profile-ideabox.policy:default", "typeinfo")
 
 
 def to_1005(context):

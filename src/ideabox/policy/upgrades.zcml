@@ -32,7 +32,7 @@
     destination="1004"
     title="Add priority action, progress and campaign content types"
     profile="ideabox.policy:default"
-    handler=".upgrades.to_1004"
+    handler=".upgrades.reload_content_types"
     />
 
   <genericsetup:upgradeStep
@@ -41,6 +41,14 @@
     title="Add priority action mosaic tiles"
     profile="ideabox.policy:default"
     handler=".upgrades.to_1005"
+    />
+
+  <genericsetup:upgradeStep
+    source="1005"
+    destination="1006"
+    title="Update campaign allowed content types"
+    profile="ideabox.policy:default"
+    handler=".upgrades.reload_content_types"
     />
 
 </configure>

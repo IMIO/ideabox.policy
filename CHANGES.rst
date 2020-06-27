@@ -5,6 +5,9 @@ Changelog
 3.1.0a11 (unreleased)
 ---------------------
 
+- Fix translation of state progress date on progress view
+  [mpeeters]
+
 - Add the project title on the progress view
   [mpeeters]
 

@@ -17,9 +17,8 @@
 
                 <img tal:condition="img" class="state-img" src="" tal:attributes="src string: ${spo/absolute_url}/@@images/image" />
 
-                <div class="state-date pat-moment"
-                     data-pat-moment="format:Do MMM;"
-                     tal:content="python: spo.state_date.strftime('%Y-%m-%dT%H:%M:%S')"></div>
+                <div class="state-date"
+                     tal:content="python: view.format_date(spo.state_date)"></div>
                 <div tal:replace="structure python: spo.body.output"></div>
 
               </tal:block>

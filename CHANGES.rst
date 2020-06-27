@@ -5,6 +5,9 @@ Changelog
 3.1.0a11 (unreleased)
 ---------------------
 
+- Add the project title on the progress view
+  [mpeeters]
+
 - Allow `Folder` and `Link` on `Campaign` content type
   [mpeeters]
 

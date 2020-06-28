@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.1.0a11 (unreleased)
+3.1.0a11 (2020-06-28)
 ---------------------
 
 - Fix translation of state progress date on progress view

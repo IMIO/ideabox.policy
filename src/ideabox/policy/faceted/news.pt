@@ -39,7 +39,6 @@
                 </tal:block>
                 <div class="text">
                   <h3 class="title" tal:content="title">title</h3>
-                  <div class="description" tal:content="obj/description">description</div>
                 </div>
               </a>
               </tal:block>

@@ -5,7 +5,8 @@ Changelog
 3.1.0a12 (unreleased)
 ---------------------
 
-- Nothing changed yet.
+- Remove description from tile on news faceted
+  [mpeeters]
 
 
 3.1.0a11 (2020-06-28)

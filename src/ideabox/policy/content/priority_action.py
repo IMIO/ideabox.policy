@@ -36,7 +36,7 @@ class PriorityActionView(ProjectView):
         )[:4]
 
     def format_date(self, value):
-        return utils.localized_month(value.strftime("%d %B %Y"))
+        return utils.localized_month(value.strftime("%d %B %Y"), self.request)
 
 
 @indexer(IPriorityAction)

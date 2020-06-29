@@ -5,6 +5,9 @@ Changelog
 3.1.0a12 (unreleased)
 ---------------------
 
+- Use request as context to translate month in dates
+  [mpeeters]
+
 - Remove description from tile on news faceted
   [mpeeters]
 

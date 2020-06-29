@@ -81,7 +81,7 @@ def set_faceted_view(context, view_name):
     layout.update_layout(layout=view_name)
 
 
-def localized_month(value):
+def localized_month(value, request):
     keys = {
         "January": _("January"),
         "February": _("February"),
@@ -109,7 +109,7 @@ def localized_month(value):
     }
     for k, v in keys.items():
         if k in value:
-            value = value.replace(k, v)
+            value = value.replace(k, translate(v, context=request))
     return value
 
 

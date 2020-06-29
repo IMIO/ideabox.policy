@@ -30,4 +30,4 @@ class StateProgressView(BrowserView):
         )
 
     def format_date(self, value):
-        return utils.localized_month(value.strftime("%d %B %Y"))
+        return utils.localized_month(value.strftime("%d %B %Y"), self.request)

@@ -30,11 +30,11 @@ msgstr "Adresse"
 msgid "Anonymous"
 msgstr "Anonyme"
 
-#: ../utils.py:93
+#: ../utils.py:101
 msgid "Apr"
 msgstr "Avr"
 
-#: ../utils.py:81
+#: ../utils.py:89
 msgid "April"
 msgstr "Avril"
 
@@ -42,11 +42,11 @@ msgstr "Avril"
 msgid "Areas concerned :"
 msgstr "Domaine(s) concerné(s)"
 
-#: ../utils.py:96
+#: ../utils.py:104
 msgid "Aug"
 msgstr "Août"
 
-#: ../utils.py:85
+#: ../utils.py:93
 msgid "August"
 msgstr "Août"
 
@@ -76,15 +76,15 @@ msgstr "Contenu"
 msgid "Date"
 msgstr ""
 
-#: ../utils.py:100
+#: ../utils.py:108
 msgid "Dec"
 msgstr "Déc"
 
-#: ../utils.py:89
+#: ../utils.py:97
 msgid "December"
 msgstr "Décembre"
 
-#: ../setuphandlers.py:131
+#: ../setuphandlers.py:97
 msgid "District"
 msgstr "Quartier"
 
@@ -155,11 +155,11 @@ msgstr "Femme"
 msgid "FOR"
 msgstr "Pour"
 
-#: ../utils.py:91
+#: ../utils.py:99
 msgid "Feb"
 msgstr "Fév"
 
-#: ../utils.py:79
+#: ../utils.py:87
 msgid "February"
 msgstr "Février"
 
@@ -178,7 +178,7 @@ msgid "I Accept Legal terms and conditions"
 msgstr "J'accepte les Mentions Légales"
 
 #: ../export/export.py:196
-#: ../setuphandlers.py:139
+#: ../setuphandlers.py:105
 #: ../userdataschema.py:35
 msgid "I am"
 msgstr "Je suis"
@@ -187,11 +187,11 @@ msgstr "Je suis"
 msgid "Ideabox Settings"
 msgstr "Paramètres Ideabox"
 
-#: ../browser/configure.zcml:114
+#: ../browser/configure.zcml:119
 msgid "Ideabox Standard view"
 msgstr "Vue standard"
 
-#: ../browser/configure.zcml:108
+#: ../browser/configure.zcml:113
 msgid "Ideabox Summary view"
 msgstr "Vue sommaire"
 
@@ -203,31 +203,35 @@ msgstr ""
 msgid "If there are multiple email addresses, separate them with semicolons"
 msgstr "Si il y a plusieurs adresse email à renseigner séparez les par des points-virgules"
 
+#: ../configure.zcml:61
+msgid "Installs the ideabox.policy add-on resources"
+msgstr ""
+
 #: ../configure.zcml:44
 msgid "Installs the ideabox.policy add-on."
 msgstr ""
 
-#: ../utils.py:90
+#: ../utils.py:98
 msgid "Jan"
 msgstr "Jan"
 
-#: ../utils.py:78
+#: ../utils.py:86
 msgid "January"
 msgstr "Janvier"
 
-#: ../utils.py:95
+#: ../utils.py:103
 msgid "Jul"
 msgstr "Jui"
 
-#: ../utils.py:84
+#: ../utils.py:92
 msgid "July"
 msgstr "Juillet"
 
-#: ../utils.py:94
+#: ../utils.py:102
 msgid "Jun"
 msgstr "Juin"
 
-#: ../utils.py:83
+#: ../utils.py:91
 msgid "June"
 msgstr "Juin"
 
@@ -252,15 +256,15 @@ msgstr "Limite d'élément affiché"
 msgid "MALE"
 msgstr "Homme"
 
-#: ../utils.py:92
+#: ../utils.py:100
 msgid "Mar"
 msgstr "Mars"
 
-#: ../utils.py:80
+#: ../utils.py:88
 msgid "March"
 msgstr "Mars"
 
-#: ../utils.py:82
+#: ../utils.py:90
 msgid "May"
 msgstr "Mai"
 
@@ -280,19 +284,19 @@ msgstr "Actualités"
 msgid "No"
 msgstr "Non"
 
-#: ../utils.py:99
+#: ../utils.py:107
 msgid "Nov"
 msgstr "Nov"
 
-#: ../utils.py:88
+#: ../utils.py:96
 msgid "November"
 msgstr "Novembre"
 
-#: ../utils.py:98
+#: ../utils.py:106
 msgid "Oct"
 msgstr "Oct"
 
-#: ../utils.py:87
+#: ../utils.py:95
 msgid "October"
 msgstr "Octobre"
 
@@ -331,7 +335,7 @@ msgid "Project Sorting"
 msgstr "Tri pour les projets"
 
 #: ../content/project.pt:119
-#: ../content/state_progress.pt:9
+#: ../content/state_progress.pt:11
 msgid "Project Status"
 msgstr "Etat d'avancement du projet"
 
@@ -387,11 +391,11 @@ msgstr "Sélectionner un dossier"
 msgid "Send"
 msgstr "Envoyer"
 
-#: ../utils.py:97
+#: ../utils.py:105
 msgid "Sep"
 msgstr "Sep"
 
-#: ../utils.py:86
+#: ../utils.py:94
 msgid "September"
 msgstr "Septembre"
 
@@ -419,7 +423,7 @@ msgstr "Les 7 thématiques prioritaires"
 msgid "The votes have been encoded correctly"
 msgstr "Les votes ont bien été encodés"
 
-#: ../setuphandlers.py:123
+#: ../setuphandlers.py:89
 msgid "Theme"
 msgstr "Thème"
 
@@ -506,6 +510,10 @@ msgstr ""
 
 #: ../configure.zcml:44
 msgid "ideabox.policy"
+msgstr ""
+
+#: ../configure.zcml:61
+msgid "ideabox.policy (resources)"
 msgstr ""
 
 #: ../configure.zcml:53

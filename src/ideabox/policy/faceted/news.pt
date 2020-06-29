@@ -29,7 +29,7 @@
                    tal:define="title brain/pretty_title_or_id|string:;
                                url brain/getURL|string:#;
                                view_url python:(url and useView and url + '/view') or url">
-              <a href="" title=""
+              <a href="" title="" class="Item"
                  tal:attributes="href view_url;
                                  title title">
 
@@ -37,10 +37,19 @@
                                    image_url python:image and view_url + '/@@images/image/' + scale or ''">
                 <div class="image" tal:attributes="style string: background-image:url('${image_url}')"></div>
                 </tal:block>
-                <div class="text">
-                  <h3 class="title" tal:content="title">title</h3>
-                </div>
               </a>
+              <div class="caption">
+                <div class="caption-inner">
+                  <h2>
+                    <a href="" title=""
+                       tal:attributes="href view_url;
+                                       title title"
+                       tal:content="title">
+                      Title
+                    </a>
+                  </h2>
+                </div>
+              </div>
               </tal:block>
             </div>
             </tal:block>

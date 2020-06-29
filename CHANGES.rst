@@ -5,6 +5,9 @@ Changelog
 3.1.0a12 (unreleased)
 ---------------------
 
+- Change news faceted item structure for redesign
+  [mpeeters]
+
 - Add missing pickadate js resource for anonymous
   [mpeeters]
 

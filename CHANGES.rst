@@ -5,6 +5,9 @@ Changelog
 3.1.0a12 (unreleased)
 ---------------------
 
+- Add missing pickadate js resource for anonymous
+  [mpeeters]
+
 - Use request as context to translate month in dates
   [mpeeters]
 

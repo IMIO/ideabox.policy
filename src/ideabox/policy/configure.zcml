@@ -52,6 +52,14 @@
       post_handler=".setuphandlers.uninstall"
       />
 
+  <genericsetup:registerProfile
+      name="resources"
+      title="ideabox.policy (resources)"
+      directory="profiles/resources"
+      description="Installs the ideabox.policy add-on resources"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
   <utility
       factory=".setuphandlers.HiddenProfiles"
       name="ideabox.policy-hiddenprofiles"

@@ -2,8 +2,8 @@ Changelog
 =========
 
 
-3.1.0a12 (unreleased)
----------------------
+3.1.0 (2020-06-29)
+------------------
 
 - Change news faceted item structure for redesign
   [mpeeters]

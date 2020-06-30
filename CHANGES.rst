@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.1.1 (unreleased)
+3.1.1 (2020-06-30)
 ------------------
 
 - Disable subscription button since developments are not ready

@@ -5,7 +5,8 @@ Changelog
 3.1.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Disable subscription button since developments are not ready
+  [mpeeters]
 
 
 3.1.0 (2020-06-29)

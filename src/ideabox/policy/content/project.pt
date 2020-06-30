@@ -142,7 +142,7 @@
                 <i class="fas fa-plus"></i>
               </a>
             </div>
-            <div class="state-notif ap-status ap-toggle">
+            <div class="state-notif ap-status ap-toggle" tal:condition="python: True == False">
               <p i18n:translate="">Would you like to be kept up to date on the progress of the project?</p>
               <tal:anonymous tal:condition="python: context.portal_membership.isAnonymousUser()">
                 <a title="Se connecter" href="http://localhost:8080/ideabox/login" id="personaltools-login" class="pat-plone-modal"

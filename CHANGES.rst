@@ -5,7 +5,8 @@ Changelog
 3.1.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add publiction date on actuality facete
+  [vpiret]
 
 
 3.1.1 (2020-06-30)

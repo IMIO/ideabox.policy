@@ -9,7 +9,6 @@
   <metal:content-core fill-slot="content-core">
     <metal:block define-macro="content-core">
       <div tal:define="
-        self nocall:context/@@faceted-news;
         scale python: getattr(context, 'collection_image_scale', 'preview') or 'preview';
         folderContents folderContents | python:context.getFolderContents();
         Batch python:modules['Products.CMFPlone'].Batch;
@@ -41,8 +40,6 @@
               </a>
               <div class="caption">
                 <div class="caption-inner">
-                  <div class="state-date"
-                     tal:content="python: self.format_date(obj.effective())"></div>
                   <h2>
                     <a href="" title=""
                        tal:attributes="href view_url;

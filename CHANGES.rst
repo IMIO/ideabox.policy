@@ -5,6 +5,9 @@ Changelog
 3.1.2 (unreleased)
 ------------------
 
+- Cleanup actuality facete code
+  [vpiret]
+
 - Add publication date on news items view
   [vpiret]
 

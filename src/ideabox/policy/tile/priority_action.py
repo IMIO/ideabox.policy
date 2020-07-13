@@ -58,10 +58,7 @@ class BasePriorityActionTile(Tile):
 
     def contents(self):
         uid = self.data["uid"]
-        data = {
-            "url": "",
-            "results": [],
-        }
+        data = {"url": "", "results": []}
         if uid:
             container = api.content.get(UID=uid)
             if container:
@@ -93,9 +90,7 @@ class RandomPriorityActionTile(BasePriorityActionTile):
         query["sort_on"] = randomizer.random_sort_key
         query["sort_order"] = randomizer.random_sort_order
         result = api.content.find(
-            context=container,
-            portal_type="priority_action",
-            **query
+            context=container, portal_type="priority_action", **query
         )[:200]
         shuffle(result)
         return result[:6]

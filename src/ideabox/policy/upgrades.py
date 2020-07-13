@@ -102,11 +102,5 @@ def to_1005(context):
                 required = False
             if r_key in records:
                 continue
-            record = Record(
-                field_type(
-                    title=title,
-                    required=required
-                ),
-                value=value
-            )
+            record = Record(field_type(title=title, required=required), value=value)
             records[r_key] = record

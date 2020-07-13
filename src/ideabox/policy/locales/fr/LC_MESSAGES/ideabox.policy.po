@@ -365,6 +365,10 @@ msgstr "Projets"
 msgid "Projects in progression"
 msgstr "Des projets en évolution"
 
+#: ../browser/overrides/plone.app.contenttypes.browser.templates.newsitem.pt:14
+msgid "Published online on"
+msgstr "Mis en ligne le "
+
 #: ../vocabularies.py:98
 msgid "Random sort"
 msgstr "Tri aléatoire"

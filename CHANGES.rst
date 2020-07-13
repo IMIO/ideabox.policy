@@ -5,7 +5,10 @@ Changelog
 3.1.2 (unreleased)
 ------------------
 
-- Add publiction date on actuality facete
+- Add publication date on news items view
+  [vpiret]
+
+- Add publication date on actuality facete
   [vpiret]
 
 

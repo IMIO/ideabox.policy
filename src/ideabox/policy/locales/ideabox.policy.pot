@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-29 17:15+0000\n"
+"POT-Creation-Date: 2020-07-13 10:54+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -369,6 +369,10 @@ msgstr ""
 
 #: ../browser/project.py:11
 msgid "Projects in progression"
+msgstr ""
+
+#: ../browser/overrides/plone.app.contenttypes.browser.templates.newsitem.pt:14
+msgid "Published online on"
 msgstr ""
 
 #: ../vocabularies.py:98

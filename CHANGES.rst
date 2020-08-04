@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.1.3 (unreleased)
+3.1.3 (2020-08-04)
 ------------------
 
 - Add image on news

@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.1.2 (unreleased)
+3.1.2 (2020-08-04)
 ------------------
 
 - Cleanup actuality facete code

@@ -5,7 +5,8 @@ Changelog
 3.1.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add image on news
+  [mpeeters]
 
 
 3.1.2 (2020-08-04)

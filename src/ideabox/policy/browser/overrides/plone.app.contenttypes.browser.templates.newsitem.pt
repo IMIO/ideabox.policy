@@ -9,8 +9,13 @@
 
 <metal:content-core fill-slot="content-core">
 <metal:content-core define-macro="content-core"
-                    tal:define="toc context/table_of_contents|nothing;">
- <div style="text-align:right;">
+                    tal:define="toc context/table_of_contents|nothing;
+                                image context/image|nothing">
+ <tal:block condition="image"
+            define="image_url string:${context/absolute_url}/@@images/image">
+ <div class="img_news" style="" tal:attributes="style string:background-image:url(${image_url})"></div>
+ </tal:block>
+ <div class="publication-date">
    <span i18n:translate="">Published online on </span>
    <span tal:content="python: context.effective().strftime('%d/%m/%Y, %H:%M')"></span>
  </div>

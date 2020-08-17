@@ -7,14 +7,12 @@ from ideabox.policy.content.project import IProject
 from ideabox.policy.utils import execute_under_admin
 from plone import api
 from plone.namedfile.field import NamedBlobImage
-from plone.registry.interfaces import IRegistry
 from z3c.form import button
 from z3c.form.field import Fields
 from z3c.form.form import Form
 from z3c.form.interfaces import HIDDEN_MODE
 from z3c.form.interfaces import IFieldsForm
 from zope import schema
-from zope.component import getUtility
 from zope.i18n import translate
 from zope.interface import implementer
 
@@ -79,8 +77,8 @@ class ProjectSubmissionForm(Form):
             )
 
     def send_request(self, data):
-        registry = getUtility(IRegistry)
-        folder = registry.get("ideabox.new.project.folder")
+        context = self.context
+        folder = "/".join(context.getPhysicalPath())
         if not folder.startswith("/"):
             folder = "/{0}".format(folder)
         container = api.content.get(path=folder)

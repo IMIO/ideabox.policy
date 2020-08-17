@@ -3,7 +3,7 @@
    xmlns:i18n="http://xml.zope.org/namespaces/i18n">
   <property name="title" i18n:translate="">Project</property>
   <property name="description" i18n:translate="">Ideabox project</property>
-  <property name="global_allow">True</property>
+  <property name="global_allow">False</property>
   <property name="filter_content_types">True</property>
   <property name="allowed_content_types">
     <element value="Image" />

@@ -7,6 +7,7 @@
   <include package="eea.facetednavigation" />
 
   <faceted:view
+    for="ideabox.policy.content.campaign.ICampaign"
     name="faceted-project"
     template="projects.pt"
     title="Projects"

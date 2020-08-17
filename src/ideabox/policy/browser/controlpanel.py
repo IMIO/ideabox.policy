@@ -19,10 +19,6 @@ class IIdeaBoxSettingsSchema(Interface):
         ),
     )
 
-    project_submission = schema.Bool(
-        title=_(u"Enable / Disable project submission"), default=True
-    )
-
 
 class IdeaBoxSettingsEditForm(controlpanel.RegistryEditForm):
 

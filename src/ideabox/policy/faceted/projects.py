@@ -5,6 +5,7 @@ from plone import api
 from Products.Five import BrowserView
 from zope.component import getUtility
 from zope.schema.interfaces import IVocabularyFactory
+from z3c.form import button
 
 
 class ProjectsView(BrowserView):
@@ -23,3 +24,7 @@ class ProjectsView(BrowserView):
             return self._themes.getTerm(key).title
         except KeyError:
             return ""
+
+    def get_path(self):
+        context = self.context
+        return "/".join(context.getPhysicalPath())

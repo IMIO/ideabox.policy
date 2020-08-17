@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-07-13 10:54+0000\n"
+"POT-Creation-Date: 2020-08-07 09:29+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -76,6 +76,10 @@ msgstr ""
 #: ../content/project.py:47
 #: ../content/state_progress.py:18
 msgid "Content"
+msgstr ""
+
+#: ../faceted/projects.pt:24
+msgid "Create project"
 msgstr ""
 
 #: ../content/state_progress.py:16
@@ -371,7 +375,7 @@ msgstr ""
 msgid "Projects in progression"
 msgstr ""
 
-#: ../browser/overrides/plone.app.contenttypes.browser.templates.newsitem.pt:14
+#: ../browser/overrides/plone.app.contenttypes.browser.templates.newsitem.pt:19
 msgid "Published online on"
 msgstr ""
 
@@ -396,7 +400,7 @@ msgid "Select a container"
 msgstr ""
 
 #: ../form/project_encoding.py:144
-#: ../form/project_submission.py:113
+#: ../form/project_submission.py:115
 #: ../form/vote_encoding.py:141
 msgid "Send"
 msgstr ""
@@ -493,7 +497,7 @@ msgstr ""
 msgid "Yes"
 msgstr ""
 
-#: ../browser/register.py:39
+#: ../browser/register.py:38
 msgid "You need to accept our legal terms and conditions."
 msgstr ""
 
@@ -536,6 +540,6 @@ msgid "projets"
 msgstr ""
 
 #. Default: "See <a href=\"${legal_conditions_url}\">legal terms and conditions</a>."
-#: ../browser/register.py:29
+#: ../browser/register.py:28
 msgid "see_legal_conditions"
 msgstr ""

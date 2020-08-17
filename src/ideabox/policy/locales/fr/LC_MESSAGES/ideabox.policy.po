@@ -72,6 +72,10 @@ msgstr "Configuration pour Ideabox"
 msgid "Content"
 msgstr "Contenu"
 
+#: ../faceted/projects.pt:24
+msgid "Create project"
+msgstr "Déposer un projet"
+
 #: ../content/state_progress.py:16
 msgid "Date"
 msgstr ""
@@ -365,7 +369,7 @@ msgstr "Projets"
 msgid "Projects in progression"
 msgstr "Des projets en évolution"
 
-#: ../browser/overrides/plone.app.contenttypes.browser.templates.newsitem.pt:14
+#: ../browser/overrides/plone.app.contenttypes.browser.templates.newsitem.pt:19
 msgid "Published online on"
 msgstr "Mis en ligne le "
 
@@ -390,7 +394,7 @@ msgid "Select a container"
 msgstr "Sélectionner un dossier"
 
 #: ../form/project_encoding.py:144
-#: ../form/project_submission.py:113
+#: ../form/project_submission.py:115
 #: ../form/vote_encoding.py:141
 msgid "Send"
 msgstr "Envoyer"
@@ -487,7 +491,7 @@ msgstr "Souhaitez-vous être tenu au courant de l’avancement du projet?"
 msgid "Yes"
 msgstr "Oui"
 
-#: ../browser/register.py:39
+#: ../browser/register.py:38
 msgid "You need to accept our legal terms and conditions."
 msgstr "Vous devez accepter les Mentions Légales pour pouvoir créer un compte."
 
@@ -533,6 +537,6 @@ msgid "projets"
 msgstr "projets"
 
 #. Default: "See <a href=\"${legal_conditions_url}\">legal terms and conditions</a>."
-#: ../browser/register.py:29
+#: ../browser/register.py:28
 msgid "see_legal_conditions"
 msgstr "Voir les <a href=\"${legal_conditions_url}\">Mentions Légales</a>."

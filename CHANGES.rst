@@ -5,8 +5,12 @@ Changelog
 3.1.4 (unreleased)
 ------------------
 
+- Fix an error during registration of users
+  [mpeeters]
+
 - [IDBOX-25] : Move disable/enable project submission from registry to a field in each Campaign.
   [boulch]
+
 - [IDBOX-25] : Add "Create project" button on campaign.
   [boulch]
 

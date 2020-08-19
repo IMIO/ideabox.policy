@@ -141,4 +141,6 @@
     permission="cmf.AddPortalMember"
     />
 
+  <adapter factory=".register.CustomRegistrationAdapter" />
+
 </configure>

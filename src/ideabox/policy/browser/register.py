@@ -7,7 +7,9 @@ from plone.app.users.browser.register import RegistrationForm
 from plone.app.users.utils import notifyWidgetActionExecutionError
 from z3c.form.field import Fields
 from zope import schema
+from zope.component import adapter
 from zope.interface import Interface
+from zope.interface import implementer
 
 
 class ICustomRegisterSchema(Interface):
@@ -15,6 +17,14 @@ class ICustomRegisterSchema(Interface):
     legal_conditions = schema.Bool(
         title=_(u"I Accept Legal terms and conditions"), required=True
     )
+
+
+@adapter(Interface)
+@implementer(ICustomRegisterSchema)
+class CustomRegistrationAdapter(object):
+
+    def __init__(self, context):
+        self.context = context
 
 
 class CustomRegistrationForm(RegistrationForm):
@@ -34,6 +44,7 @@ class CustomRegistrationForm(RegistrationForm):
         self.fields["legal_conditions"].field.description = legal_description
 
     def validate_registration(self, action, data):
+        super(CustomRegistrationForm, self).validate_registration(action, data)
         if not data.get("legal_conditions"):
             err_str = _(u"You need to accept our legal terms and conditions.")
             notifyWidgetActionExecutionError(action, "legal_conditions", err_str)

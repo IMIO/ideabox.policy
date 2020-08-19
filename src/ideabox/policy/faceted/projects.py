@@ -1,11 +1,10 @@
 # -*- coding: utf-8 -*-
 
+from Products.Five import BrowserView
 from ideabox.policy.utils import can_view_rating
 from plone import api
-from Products.Five import BrowserView
 from zope.component import getUtility
 from zope.schema.interfaces import IVocabularyFactory
-from z3c.form import button
 
 
 class ProjectsView(BrowserView):

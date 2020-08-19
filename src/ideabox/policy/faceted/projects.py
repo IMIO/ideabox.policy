@@ -27,3 +27,8 @@ class ProjectsView(BrowserView):
     def get_path(self):
         context = self.context
         return "/".join(context.getPhysicalPath())
+
+    def can_submit_project(self):
+        if self.context.portal_type != "campaign":
+            return False
+        return getattr(self.context, "project_submission", False)

@@ -9,7 +9,7 @@ from zope.interface import implementer
 
 class ICampaign(model.Schema):
     project_submission = schema.Bool(
-        title=_(u"Enable / Disable project submission"), default=True
+        title=_(u"Enable / Disable project submission"), default=False,
     )
 
 

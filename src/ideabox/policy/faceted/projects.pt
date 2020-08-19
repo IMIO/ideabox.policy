@@ -20,7 +20,7 @@
         b_start python:request.get('b_start', 0);
         batch python:isinstance(folderContents, Batch) and folderContents or Batch(folderContents, 100, int(b_start), orphan=0);">
           <div tal:condition="python: context.portal_type=='campaign'">
-            <div>
+            <div i18n:domain="ideabox.policy">
               <button class="btn" id="btn-create-projects" i18n:translate="" tal:attributes="onclick
                   python:'window.open(\'{}/{}\',\'_self\')'.format(self.get_path(), '@@project_submission')">
                 Create project</button>

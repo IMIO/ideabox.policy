@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.1.4 (unreleased)
+3.2.0 (2020-08-20)
 ------------------
 
 - Fix an error during registration of users

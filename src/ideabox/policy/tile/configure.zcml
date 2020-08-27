@@ -66,4 +66,16 @@
     template="templates/priority_action.pt"
     />
 
+  <plone:tile
+    name="ideabox.policy.newsletter"
+    title="Newsletter"
+    description="A tile which displays newsletter button"
+    add_permission="cmf.ModifyPortalContent"
+    class=".newsletter.NewsletterTile"
+    for="*"
+    permission="zope.Public"
+    schema=".newsletter.INewsletterTile"
+    template="templates/newsletter.pt"
+    />
+
 </configure>

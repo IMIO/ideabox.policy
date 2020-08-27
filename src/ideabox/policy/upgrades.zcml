@@ -51,4 +51,12 @@
     handler=".upgrades.reload_content_types"
     />
 
+  <genericsetup:upgradeStep
+    source="1006"
+    destination="1007"
+    title="Add newsletter mosaic tiles"
+    profile="ideabox.policy:default"
+    handler=".upgrades.to_1007"
+    />
+
 </configure>

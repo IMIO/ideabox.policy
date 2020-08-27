@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-08-07 09:29+0000\n"
+"POT-Creation-Date: 2020-08-27 12:52+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: ideabox.policy\n"
 
-#: ../browser/controlpanel.py:31
+#: ../browser/controlpanel.py:27
 msgid ""
 msgstr ""
 
@@ -69,7 +69,7 @@ msgstr ""
 msgid "Comment"
 msgstr ""
 
-#: ../browser/controlpanel.py:30
+#: ../browser/controlpanel.py:26
 msgid "Configuration for ideabox product"
 msgstr ""
 
@@ -123,7 +123,7 @@ msgstr ""
 msgid "Email address of the project manager"
 msgstr ""
 
-#: ../browser/controlpanel.py:23
+#: ../content/campaign.py:12
 msgid "Enable / Disable project submission"
 msgstr ""
 
@@ -135,7 +135,7 @@ msgstr ""
 msgid "Encoding vote with user"
 msgstr ""
 
-#: ../faceted/configure.zcml:31
+#: ../faceted/configure.zcml:32
 msgid "Events"
 msgstr ""
 
@@ -183,7 +183,7 @@ msgstr ""
 msgid "Gender"
 msgstr ""
 
-#: ../browser/register.py:16
+#: ../browser/register.py:18
 msgid "I Accept Legal terms and conditions"
 msgstr ""
 
@@ -282,12 +282,20 @@ msgstr ""
 msgid "Negative rating "
 msgstr ""
 
-#: ../form/project_submission.py:77
+#: ../form/project_submission.py:75
 msgid "New project submission"
 msgstr ""
 
-#: ../faceted/configure.zcml:23
+#: ../faceted/configure.zcml:24
 msgid "News"
+msgstr ""
+
+#: ../tile/newsletter.py:20
+msgid "Newsletter"
+msgstr ""
+
+#: ../tile/newsletter.py:23
+msgid "Newsletter link"
 msgstr ""
 
 #: ../content/project.pt:151
@@ -354,7 +362,7 @@ msgstr ""
 msgid "Project encoding"
 msgstr ""
 
-#: ../form/project_submission.py:25
+#: ../form/project_submission.py:23
 msgid "Project image"
 msgstr ""
 
@@ -366,7 +374,7 @@ msgstr ""
 msgid "Project(s)"
 msgstr ""
 
-#: ../faceted/configure.zcml:15
+#: ../faceted/configure.zcml:16
 #: ../tile/projects.py:22
 msgid "Projects"
 msgstr ""
@@ -400,7 +408,7 @@ msgid "Select a container"
 msgstr ""
 
 #: ../form/project_encoding.py:144
-#: ../form/project_submission.py:115
+#: ../form/project_submission.py:111
 #: ../form/vote_encoding.py:141
 msgid "Send"
 msgstr ""
@@ -445,9 +453,9 @@ msgstr ""
 msgid "There is no progress for the moment."
 msgstr ""
 
-#: ../form/project_submission.py:23
+#: ../form/project_submission.py:21
+#: ../tile/newsletter.py:20
 #: ../tile/priority_action.py:22
-#: ../tile/projects.py:22
 msgid "Title"
 msgstr ""
 
@@ -497,7 +505,7 @@ msgstr ""
 msgid "Yes"
 msgstr ""
 
-#: ../browser/register.py:38
+#: ../browser/register.py:49
 msgid "You need to accept our legal terms and conditions."
 msgstr ""
 
@@ -515,7 +523,7 @@ msgid "diagnose and analysis"
 msgstr ""
 
 #. Default: "A new project has been created you can access it at the following url:\n              ${url}\n              "
-#: ../form/project_submission.py:65
+#: ../form/project_submission.py:63
 msgid "email_body_project_submission"
 msgstr ""
 
@@ -535,11 +543,15 @@ msgstr ""
 msgid "new project submission folder"
 msgstr ""
 
+#: ../tile/templates/newsletter.pt:10
+msgid "newsletter"
+msgstr ""
+
 #: ../browser/templates/project_summary.pt:21
 msgid "projets"
 msgstr ""
 
 #. Default: "See <a href=\"${legal_conditions_url}\">legal terms and conditions</a>."
-#: ../browser/register.py:28
+#: ../browser/register.py:38
 msgid "see_legal_conditions"
 msgstr ""

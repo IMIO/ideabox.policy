@@ -104,3 +104,47 @@ def to_1005(context):
                 continue
             record = Record(field_type(title=title, required=required), value=value)
             records[r_key] = record
+
+def to_1007(context):
+    """ Add new tiles for newsletter """
+    registry = getUtility(IRegistry)
+    records = registry.records
+
+    tiles = {
+        "plone.app.mosaic.app_tiles.newsletter": {
+            "name": "ideabox.policy.newsletter",
+            "label": "Newsletter",
+            "category": "advanced",
+            "tile_type": "app",
+            "default_value": "",
+            "read_only": False,
+            "settings": True,
+            "favorite": False,
+            "rich_text": False,
+            "weight": 10,
+        },
+    }
+    types = {
+        "name": (field.TextLine, "Name"),
+        "label": (field.TextLine, "Label"),
+        "category": (field.TextLine, "Category"),
+        "tile_type": (field.TextLine, "Type"),
+        "default_value": (field.TextLine, "Default value"),
+        "read_only": (field.Bool, "Read only"),
+        "settings": (field.Bool, "Settings"),
+        "favorite": (field.Bool, "Favorite"),
+        "rich_text": (field.Bool, "Rich Text"),
+        "weight": (field.Int, "Weight"),
+    }
+
+    for name, values in tiles.items():
+        for key, value in values.items():
+            r_key = "{0}.{1}".format(name, key)
+            field_type, title = types[key]
+            required = True
+            if key == "default_value":
+                required = False
+            if r_key in records:
+                continue
+            record = Record(field_type(title=title, required=required), value=value)
+            records[r_key] = record

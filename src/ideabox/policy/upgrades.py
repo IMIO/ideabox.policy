@@ -105,6 +105,7 @@ def to_1005(context):
             record = Record(field_type(title=title, required=required), value=value)
             records[r_key] = record
 
+
 def to_1007(context):
     """ Add new tiles for newsletter """
     registry = getUtility(IRegistry)
@@ -122,7 +123,7 @@ def to_1007(context):
             "favorite": False,
             "rich_text": False,
             "weight": 10,
-        },
+        }
     }
     types = {
         "name": (field.TextLine, "Name"),

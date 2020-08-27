@@ -1,17 +1,9 @@
-# encoding: utf-8
-
-from hashlib import md5
+# -*- coding: utf-8 -*-
 from ideabox.policy import _
-from ideabox.policy.faceted.subscriber import Randomizer
-from ideabox.policy.utils import can_view_rating
-from plone import api
 from plone.supermodel.model import Schema
 from plone.tiles import Tile
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-from random import shuffle
 from zope import schema
-from zope.component import getUtility
-from zope.schema.interfaces import IVocabularyFactory
 
 
 class INewsletterTile(Schema):
@@ -19,10 +11,7 @@ class INewsletterTile(Schema):
 
     title = schema.TextLine(title=_(u"Title"), required=True, default=_(u"Newsletter"))
 
-    newsletter_link = schema.TextLine(
-        title=_(u"Newsletter link"),
-        required=True,
-    )
+    newsletter_link = schema.TextLine(title=_(u"Newsletter link"), required=True)
 
 
 class NewsletterTile(Tile):

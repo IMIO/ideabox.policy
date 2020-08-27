@@ -22,7 +22,6 @@ class ICustomRegisterSchema(Interface):
 @adapter(Interface)
 @implementer(ICustomRegisterSchema)
 class CustomRegistrationAdapter(object):
-
     def __init__(self, context):
         self.context = context
 
@@ -37,7 +36,7 @@ class CustomRegistrationForm(RegistrationForm):
         gpdr_url = "/".join([portal_url, "gdpr-view"])
         msgid = _(
             u"see_legal_conditions",
-            default=u'See <a href="${legal_conditions_url}">legal terms and conditions</a>.',  # NOQA
+            default=u'See <a href="${legal_conditions_url}">legal terms and conditions</a>.',
             mapping={u"legal_conditions_url": gpdr_url},
         )
         legal_description = self.context.translate(msgid)

@@ -542,7 +542,7 @@ msgstr "Dossier pour les nouveaux projets proposés"
 
 #: ../tile/templates/newsletter.pt:10
 msgid "newsletter"
-msgstr "S'inscrire à la newsletter"
+msgstr "Inscrivez-vous à la newsletter"
 
 #: ../browser/templates/project_summary.pt:21
 msgid "projets"

@@ -5,6 +5,9 @@ Changelog
 3.2.1 (unreleased)
 ------------------
 
+- Fix an issue with faceted view used on Folder
+  [mpeeters]
+
 - Add newsletter tile
   [vpiret]
 

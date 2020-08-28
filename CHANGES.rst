@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.2.1 (unreleased)
+3.3.0 (2020-08-28)
 ------------------
 
 - Fix an issue with faceted view used on Folder

@@ -1,10 +1,15 @@
 # -*- coding: utf-8 -*-
 
+from collective.taxonomy.interfaces import ITaxonomy
+from ideabox.policy import _
+from ideabox.policy.setuphandlers import create_taxonomy_object
 from plone import api
 from plone.registry import field
 from plone.registry import Record
 from plone.registry.interfaces import IRegistry
 from zope.component import getUtility
+from zope.i18n import translate
+from zope.schema.interfaces import IVocabularyFactory
 
 
 def reload_content_types(context):
@@ -149,3 +154,23 @@ def to_1007(context):
                 continue
             record = Record(field_type(title=title, required=required), value=value)
             records[r_key] = record
+
+
+def to_1008(context):
+    """ Add new taxonomy for locality (user profile) """
+    current_lang = api.portal.get_current_language()[:2]
+    data_locality = {
+        "taxonomy": "locality",
+        "field_title": translate(_("Locality"), target_language=current_lang),
+        "field_description": "",
+        "default_language": "fr",
+        "filename": "taxonomy-settings-locality.xml",
+    }
+
+    portal = api.portal.get()
+    sm = portal.getSiteManager()
+    locality_item = "collective.taxonomy.locality"
+    utility_locality = sm.queryUtility(ITaxonomy, name=locality_item)
+
+    if not utility_locality:
+        create_taxonomy_object(data_locality, portal)

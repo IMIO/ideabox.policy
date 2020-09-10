@@ -59,4 +59,11 @@
     handler=".upgrades.to_1007"
     />
 
+  <genericsetup:upgradeStep
+    source="1007"
+    destination="1008"
+    title="Add new taxonomy for locality (user profile)"
+    profile="ideabox.policy:default"
+    handler=".upgrades.to_1008"
+    />
 </configure>

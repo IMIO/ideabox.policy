@@ -28,7 +28,7 @@ class IEnhancedUserDataSchema(model.Schema):
     birthdate = schema.Date(title=_(u"Birthdate"), required=True)
 
     zip_code = schema.Choice(
-        title=_(u"Zip code"), required=True, vocabulary=u"ideabox.vocabularies.zip_code"
+        title=_(u"Zip code"), required=True, vocabulary=u"collective.taxonomy.locality"
     )
 
     iam = schema.Choice(

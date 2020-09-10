@@ -108,21 +108,32 @@ def add_taxonomies():
         "filename": "taxonomy-settings-iam.xml",
     }
 
+    data_locality = {
+        "taxonomy": "locality",
+        "field_title": translate(_("Locality"), target_language=current_lang),
+        "field_description": "",
+        "default_language": "fr",
+        "filename": "taxonomy-settings-locality.xml",
+    }
+
     portal = api.portal.get()
     sm = portal.getSiteManager()
     theme_item = "collective.taxonomy.theme"
     district_item = "collective.taxonomy.district"
     iam_item = "collective.taxonomy.iam"
+    locality_item = "collective.taxonomy.locality"
     utility_theme = sm.queryUtility(ITaxonomy, name=theme_item)
     utility_district = sm.queryUtility(ITaxonomy, name=district_item)
     utility_iam = sm.queryUtility(ITaxonomy, name=iam_item)
+    utility_locality = sm.queryUtility(ITaxonomy, name=locality_item)
 
-    if utility_theme and utility_district and utility_iam:
+    if utility_theme and utility_district and utility_iam and utility_locality:
         return
 
     create_taxonomy_object(data_theme, portal)
     create_taxonomy_object(data_district, portal)
     create_taxonomy_object(data_iam, portal)
+    create_taxonomy_object(data_locality, portal)
 
     # remove taxonomy test
     item = "collective.taxonomy.test"

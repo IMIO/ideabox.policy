@@ -5,7 +5,8 @@ Changelog
 3.3.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- [IDBOX-22] : Add locality taxonomy and use it instead of vocabulary for user zip_code field + upgrade step (create taxonomy).
+  [boulch]
 
 
 3.3.0 (2020-08-28)

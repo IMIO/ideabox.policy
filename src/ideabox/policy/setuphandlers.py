@@ -82,6 +82,7 @@ def post_install(context):
 
 
 def add_taxonomies():
+    # TODO fix in test... and also in collective.taxonomy.
     current_lang = api.portal.get_current_language()[:2]
 
     data_theme = {

@@ -5,6 +5,8 @@ Changelog
 3.3.1 (unreleased)
 ------------------
 
+- Fix encoding issue in faceted tests.
+  [boulch]
 - [IDBOX-22] : Add locality taxonomy and use it instead of vocabulary for user zip_code field + upgrade step (create taxonomy).
   [boulch]
 

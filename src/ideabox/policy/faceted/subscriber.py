@@ -27,7 +27,8 @@ def _cache_key(function, generator):
 
 @ram.cache(_cache_key)
 def random_key_generator(generator):
-    return md5(generator).hexdigest()
+    encoded_generator = generator.encode("utf8")
+    return md5(encoded_generator).hexdigest()
 
 
 class Randomizer(object):

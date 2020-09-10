@@ -36,7 +36,7 @@ class TestRandomizer(unittest.TestCase):
 
     def test_cache_key_generator(self):
         self.assertEqual(
-            "0cc175b9c0f1b6a831c399e269772661".encode("utf8"),
+            "0cc175b9c0f1b6a831c399e269772661",
             subscriber.random_key_generator(u"a"),
         )
 

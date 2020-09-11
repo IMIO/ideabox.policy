@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-08-27 12:52+0000\n"
+"POT-Creation-Date: 2020-09-11 07:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -94,7 +94,7 @@ msgstr ""
 msgid "December"
 msgstr ""
 
-#: ../setuphandlers.py:97
+#: ../setuphandlers.py:98
 msgid "District"
 msgstr ""
 
@@ -188,7 +188,7 @@ msgid "I Accept Legal terms and conditions"
 msgstr ""
 
 #: ../export/export.py:196
-#: ../setuphandlers.py:105
+#: ../setuphandlers.py:106
 #: ../userdataschema.py:35
 msgid "I am"
 msgstr ""
@@ -261,6 +261,11 @@ msgstr ""
 msgid "Limit projects"
 msgstr ""
 
+#: ../setuphandlers.py:114
+#: ../upgrades.py:164
+msgid "Locality"
+msgstr ""
+
 #. Default: "Male"
 #: ../vocabularies.py:48
 msgid "MALE"
@@ -290,11 +295,11 @@ msgstr ""
 msgid "News"
 msgstr ""
 
-#: ../tile/newsletter.py:20
+#: ../tile/newsletter.py:12
 msgid "Newsletter"
 msgstr ""
 
-#: ../tile/newsletter.py:23
+#: ../tile/newsletter.py:14
 msgid "Newsletter link"
 msgstr ""
 
@@ -445,7 +450,7 @@ msgstr ""
 msgid "The votes have been encoded correctly"
 msgstr ""
 
-#: ../setuphandlers.py:89
+#: ../setuphandlers.py:90
 msgid "Theme"
 msgstr ""
 
@@ -454,7 +459,7 @@ msgid "There is no progress for the moment."
 msgstr ""
 
 #: ../form/project_submission.py:21
-#: ../tile/newsletter.py:20
+#: ../tile/newsletter.py:12
 #: ../tile/priority_action.py:22
 msgid "Title"
 msgstr ""
@@ -505,7 +510,7 @@ msgstr ""
 msgid "Yes"
 msgstr ""
 
-#: ../browser/register.py:49
+#: ../browser/register.py:48
 msgid "You need to accept our legal terms and conditions."
 msgstr ""
 
@@ -552,6 +557,6 @@ msgid "projets"
 msgstr ""
 
 #. Default: "See <a href=\"${legal_conditions_url}\">legal terms and conditions</a>."
-#: ../browser/register.py:38
+#: ../browser/register.py:37
 msgid "see_legal_conditions"
 msgstr ""

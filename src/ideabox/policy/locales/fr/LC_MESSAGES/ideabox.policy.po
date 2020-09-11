@@ -88,7 +88,7 @@ msgstr "Déc"
 msgid "December"
 msgstr "Décembre"
 
-#: ../setuphandlers.py:97
+#: ../setuphandlers.py:98
 msgid "District"
 msgstr "Quartier"
 
@@ -182,7 +182,7 @@ msgid "I Accept Legal terms and conditions"
 msgstr "J'accepte les Mentions Légales"
 
 #: ../export/export.py:196
-#: ../setuphandlers.py:105
+#: ../setuphandlers.py:106
 #: ../userdataschema.py:35
 msgid "I am"
 msgstr "Je suis"
@@ -255,6 +255,11 @@ msgstr "Limite"
 msgid "Limit projects"
 msgstr "Limite d'élément affiché"
 
+#: ../setuphandlers.py:114
+#: ../upgrades.py:164
+msgid "Locality"
+msgstr "Localité"
+
 #. Default: "Male"
 #: ../vocabularies.py:48
 msgid "MALE"
@@ -284,11 +289,11 @@ msgstr "Soumission d'un nouveau projet"
 msgid "News"
 msgstr "Actualités"
 
-#: ../tile/newsletter.py:20
+#: ../tile/newsletter.py:12
 msgid "Newsletter"
 msgstr ""
 
-#: ../tile/newsletter.py:23
+#: ../tile/newsletter.py:14
 msgid "Newsletter link"
 msgstr "Lien vers l'inscription à la newsletter"
 
@@ -439,7 +444,7 @@ msgstr "Les 7 thématiques prioritaires"
 msgid "The votes have been encoded correctly"
 msgstr "Les votes ont bien été encodés"
 
-#: ../setuphandlers.py:89
+#: ../setuphandlers.py:90
 msgid "Theme"
 msgstr "Thème"
 
@@ -448,7 +453,7 @@ msgid "There is no progress for the moment."
 msgstr "Il n'y a pas d'état d'avancement pour le moment."
 
 #: ../form/project_submission.py:21
-#: ../tile/newsletter.py:20
+#: ../tile/newsletter.py:12
 #: ../tile/priority_action.py:22
 msgid "Title"
 msgstr "Titre"
@@ -459,7 +464,7 @@ msgstr "Titre; Date; Lien"
 
 #: ../configure.zcml:53
 msgid "Uninstalls the ideabox.policy add-on."
-msgstr ""
+msgstr "Désinstaller le module ideabox.policy"
 
 #: ../export/export.py:141
 msgid "User ID"
@@ -499,7 +504,7 @@ msgstr "Souhaitez-vous être tenu au courant de l’avancement du projet?"
 msgid "Yes"
 msgstr "Oui"
 
-#: ../browser/register.py:49
+#: ../browser/register.py:48
 msgid "You need to accept our legal terms and conditions."
 msgstr "Vous devez accepter les Mentions Légales pour pouvoir créer un compte."
 
@@ -549,6 +554,6 @@ msgid "projets"
 msgstr "projets"
 
 #. Default: "See <a href=\"${legal_conditions_url}\">legal terms and conditions</a>."
-#: ../browser/register.py:38
+#: ../browser/register.py:37
 msgid "see_legal_conditions"
 msgstr "Voir les <a href=\"${legal_conditions_url}\">Mentions Légales</a>."

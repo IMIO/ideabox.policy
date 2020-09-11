@@ -5,7 +5,8 @@ Changelog
 3.3.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add some translations
+  [boulch]
 
 
 3.3.1 (2020-09-10)

@@ -5,6 +5,8 @@ Changelog
 3.3.2 (unreleased)
 ------------------
 
+- Fix typo in js compilation filename
+  [mpeeters]
 - Add description for "birthdate" field in registration form
   [boulch]
 - Add some translations

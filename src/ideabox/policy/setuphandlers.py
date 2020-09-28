@@ -95,7 +95,7 @@ def add_taxonomies():
 
     data_district = {
         "taxonomy": "district",
-        "field_title": translate(_("District"), target_language=current_lang),
+        "field_title": translate(_("District (Project)"), target_language=current_lang),
         "field_description": "",
         "default_language": "fr",
         "filename": "taxonomy-settings-district.xml",
@@ -111,7 +111,7 @@ def add_taxonomies():
 
     data_locality = {
         "taxonomy": "locality",
-        "field_title": translate(_("Locality"), target_language=current_lang),
+        "field_title": translate(_("Locality (Registration form)"), target_language=current_lang),
         "field_description": "",
         "default_language": "fr",
         "filename": "taxonomy-settings-locality.xml",

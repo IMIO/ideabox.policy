@@ -161,7 +161,7 @@ def to_1008(context):
     current_lang = api.portal.get_current_language()[:2]
     data_locality = {
         "taxonomy": "locality",
-        "field_title": translate(_("Locality"), target_language=current_lang),
+        "field_title": translate(_("Locality (Registration form)"), target_language=current_lang),
         "field_description": "",
         "default_language": "fr",
         "filename": "taxonomy-settings-locality.xml",

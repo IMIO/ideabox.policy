@@ -5,6 +5,8 @@ Changelog
 3.3.2 (unreleased)
 ------------------
 
+- Change two taxonomies title (locality, district)
+  [boulch]
 - undo description for "birthdate" field in registration form (calendar widget up again)
   [boulch]
 - Fix typo in js compilation filename

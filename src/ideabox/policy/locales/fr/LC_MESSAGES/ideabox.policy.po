@@ -89,8 +89,8 @@ msgid "December"
 msgstr "Décembre"
 
 #: ../setuphandlers.py:98
-msgid "District"
-msgstr "Quartier"
+msgid "District (Project)"
+msgstr "Quartier (Voir projet)"
 
 #: ../content/project.pt:43
 msgid "District(s) :"
@@ -257,8 +257,8 @@ msgstr "Limite d'élément affiché"
 
 #: ../setuphandlers.py:114
 #: ../upgrades.py:164
-msgid "Locality"
-msgstr "Localité"
+msgid "Locality (Registration form)"
+msgstr "Localité (Formulaire d'inscription)"
 
 #. Default: "Male"
 #: ../vocabularies.py:48

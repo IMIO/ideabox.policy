@@ -41,11 +41,6 @@ class CustomRegistrationForm(RegistrationForm):
         )
         legal_description = self.context.translate(msgid)
         self.fields["legal_conditions"].field.description = legal_description
-        msg_birthdate = _(
-            u"birthdate_format",
-            default=u'(Birthdate format: yyyy-mm-dd)',
-        )
-        self.fields["birthdate"].field.description = self.context.translate(msg_birthdate)
 
     def validate_registration(self, action, data):
         super(CustomRegistrationForm, self).validate_registration(action, data)

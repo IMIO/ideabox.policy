@@ -510,7 +510,7 @@ msgstr ""
 msgid "Yes"
 msgstr ""
 
-#: ../browser/register.py:53
+#: ../browser/register.py:48
 msgid "You need to accept our legal terms and conditions."
 msgstr ""
 
@@ -521,11 +521,6 @@ msgstr ""
 
 #: ../profiles/default/registry.xml
 msgid "Zip code vocabulary values"
-msgstr ""
-
-#. Default: "(Birthdate format: yyyy-mm-dd)"
-#: ../browser/register.py:44
-msgid "birthdate_format"
 msgstr ""
 
 #: ../browser/project.py:22

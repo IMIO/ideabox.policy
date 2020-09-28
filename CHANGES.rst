@@ -5,9 +5,12 @@ Changelog
 3.3.2 (unreleased)
 ------------------
 
+- undo description for "birthdate" field in registration form (calendar widget up again)
+  [boulch]
 - Fix typo in js compilation filename
   [mpeeters]
 - Add description for "birthdate" field in registration form
+- [SUP-14825] Add description for "birthdate" field in registration form
   [boulch]
 - Add some translations
   [boulch]

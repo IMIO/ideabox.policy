@@ -504,7 +504,7 @@ msgstr "Souhaitez-vous être tenu au courant de l’avancement du projet?"
 msgid "Yes"
 msgstr "Oui"
 
-#: ../browser/register.py:53
+#: ../browser/register.py:48
 msgid "You need to accept our legal terms and conditions."
 msgstr "Vous devez accepter les Mentions Légales pour pouvoir créer un compte."
 
@@ -516,11 +516,6 @@ msgstr "Code postal"
 #: ../profiles/default/registry.xml
 msgid "Zip code vocabulary values"
 msgstr ""
-
-#. Default: "(Birthdate format: yyyy-mm-dd)"
-#: ../browser/register.py:44
-msgid "birthdate_format"
-msgstr "(Format de la date de naissance: aaaa-mm-jj)"
 
 #: ../browser/project.py:22
 msgid "diagnose and analysis"

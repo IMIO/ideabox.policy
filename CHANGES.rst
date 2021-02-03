@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.3.2 (unreleased)
+3.4.0 (2021-02-03)
 ------------------
 
 - Add REST API specific viewlets on prioity action template

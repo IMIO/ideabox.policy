@@ -1,6 +1,6 @@
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" 
-  xmlns:tal="http://xml.zope.org/namespaces/tal" 
-  xmlns:metal="http://xml.zope.org/namespaces/metal" 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+  xmlns:tal="http://xml.zope.org/namespaces/tal"
+  xmlns:metal="http://xml.zope.org/namespaces/metal"
   xmlns:i18n="http://xml.zope.org/namespaces/i18n" lang="en" metal:use-macro="context/main_template/macros/master" i18n:domain="ideabox.policy">
   <body>
     <metal:main fill-slot="main" tal:define="images_url view/get_images_url;
@@ -169,6 +169,13 @@
                 </div>
               </tal:authenticated>
 
+            </div>
+            <div class="actions" tal:define="viewlets view/get_restapi_viewlets">
+              <tal:while repeat="viewlet viewlets">
+                <tal:if condition="viewlet/available">
+                  <span tal:replace="structure viewlet/render"></span>
+                </tal:if>
+              </tal:while>
             </div>
           </div>
         </div>

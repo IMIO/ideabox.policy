@@ -10,6 +10,8 @@ from plone.app.textfield.value import IRichTextValue
 from plone.indexer.decorator import indexer
 from zope import schema
 from zope.interface import implementer
+from zope.component import queryMultiAdapter
+from zope.viewlet.interfaces import IViewletManager
 
 
 class IPriorityAction(IProject):
@@ -37,6 +39,17 @@ class PriorityActionView(ProjectView):
 
     def format_date(self, value):
         return utils.localized_month(value.strftime("%d %B %Y"), self.request)
+
+    def get_restapi_viewlets(self):
+        manager = queryMultiAdapter(
+            (self.context, self.request, self),
+            IViewletManager,
+            "plone.belowcontenttitle",
+            default=None,
+        )
+        manager.update()
+        viewlets = [v for v in manager.viewlets if v.__name__ == "imio-restapi-actions"]
+        return viewlets
 
 
 @indexer(IPriorityAction)

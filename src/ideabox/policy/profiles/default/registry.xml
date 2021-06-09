@@ -118,6 +118,13 @@
       </value>
   </record>
 
+  <record name="ideabox.legal_information_text"
+        i18n:domain="ideabox.policy">
+    <field type="plone.registry.field.Text">
+        <title i18n:translate="">Legal information text</title>
+    </field>
+  </record>
+
   <!-- Plone bundle resources -->
   <records prefix="plone.resources/ideabox"
            interface='Products.CMFPlone.interfaces.IResourceRegistry'>

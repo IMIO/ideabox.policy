@@ -66,4 +66,12 @@
     profile="ideabox.policy:default"
     handler=".upgrades.to_1008"
     />
+
+  <genericsetup:upgradeStep
+    source="1008"
+    destination="1009"
+    title="Adding ideabox.policy.browser.controlpanel.IIdeaBoxSettingsSchema.legal_information_text to registry"
+    profile="ideabox.policy:default"
+    handler=".upgrades.to_1009"
+    />
 </configure>

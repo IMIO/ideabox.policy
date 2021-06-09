@@ -11,6 +11,10 @@ from zope.component import getUtility
 from zope.i18n import translate
 from zope.schema.interfaces import IVocabularyFactory
 
+import logging
+
+logger = logging.getLogger("ideabox.policy")
+
 
 def reload_content_types(context):
     """ Reload content types """
@@ -174,3 +178,29 @@ def to_1008(context):
 
     if not utility_locality:
         create_taxonomy_object(data_locality, portal)
+
+
+def to_1009(context):
+    """Add legal information text field in registry"""
+    registry = getUtility(IRegistry)
+    records = registry.records
+
+    if (
+        "ideabox.policy.browser.controlpanel.IIdeaBoxSettingsSchema.legal_information_text"
+        in records
+    ):  # noqa
+        return
+
+    logger.info(
+        "Adding ideabox.policy.browser.controlpanel.IIdeaBoxSettingsSchema.legal_information_text to registry"
+    )  # noqa
+    record = Record(
+        field.Text(
+            title=_(u"Legal information text"),
+            required=False,
+            description=_(u"Legal information text"),
+        )
+    )
+    records[
+        "ideabox.policy.browser.controlpanel.IIdeaBoxSettingsSchema.legal_information_text"
+    ] = record

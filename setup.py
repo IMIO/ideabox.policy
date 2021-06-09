@@ -48,6 +48,7 @@ setup(
         "collective.excelexport",
         "collective.disclaimer",
         "collective.taxonomy",
+        "collective.z3cform.datetimewidget",
         "collective.z3cform.select2",
         "iaweb.mosaic",
         "ideabox.diazotheme.spirit",

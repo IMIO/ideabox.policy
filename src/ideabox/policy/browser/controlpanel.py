@@ -2,6 +2,10 @@
 
 from ideabox.policy import _
 from plone.app.registry.browser import controlpanel
+from plone.app.textfield import RichText
+from plone.app.z3cform.wysiwyg import WysiwygFieldWidget
+from plone.autoform import directives as form
+from z3c.form.interfaces import INPUT_MODE
 from zope import schema
 from zope.interface import Interface
 
@@ -19,6 +23,13 @@ class IIdeaBoxSettingsSchema(Interface):
         ),
     )
 
+    form.widget("legal_information_text", klass="pat-tinymce")
+    legal_information_text = schema.Text(
+        title=_(u"Legal information text"),
+        required=False,
+        description=_(u"Legal information text"),
+    )
+
 
 class IdeaBoxSettingsEditForm(controlpanel.RegistryEditForm):
 
@@ -31,6 +42,9 @@ class IdeaBoxSettingsEditForm(controlpanel.RegistryEditForm):
 
     def updateWidgets(self):
         super(IdeaBoxSettingsEditForm, self).updateWidgets()
+        self.fields["legal_information_text"].widgetFactory[
+            INPUT_MODE
+        ] = WysiwygFieldWidget
 
 
 class IdeaBoxSettingsControlPanel(controlpanel.ControlPanelFormWrapper):

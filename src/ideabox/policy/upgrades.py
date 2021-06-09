@@ -17,7 +17,7 @@ logger = logging.getLogger("ideabox.policy")
 
 
 def reload_content_types(context):
-    """ Reload content types """
+    """Reload content types"""
     portal_setup = api.portal.get_tool("portal_setup")
     portal_setup.runImportStepFromProfile("profile-ideabox.policy:default", "typeinfo")
 
@@ -59,7 +59,7 @@ def to_1003(context):
 
 
 def to_1005(context):
-    """ Add new tiles for priority action """
+    """Add new tiles for priority action"""
     registry = getUtility(IRegistry)
     records = registry.records
 
@@ -116,7 +116,7 @@ def to_1005(context):
 
 
 def to_1007(context):
-    """ Add new tiles for newsletter """
+    """Add new tiles for newsletter"""
     registry = getUtility(IRegistry)
     records = registry.records
 
@@ -161,11 +161,13 @@ def to_1007(context):
 
 
 def to_1008(context):
-    """ Add new taxonomy for locality (user profile) """
+    """Add new taxonomy for locality (user profile)"""
     current_lang = api.portal.get_current_language()[:2]
     data_locality = {
         "taxonomy": "locality",
-        "field_title": translate(_("Locality (Registration form)"), target_language=current_lang),
+        "field_title": translate(
+            _("Locality (Registration form)"), target_language=current_lang
+        ),
         "field_description": "",
         "default_language": "fr",
         "filename": "taxonomy-settings-locality.xml",

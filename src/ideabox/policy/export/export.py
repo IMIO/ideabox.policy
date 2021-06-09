@@ -28,8 +28,7 @@ class FullTextFieldRenderer(TextFieldRenderer):
     adapts(IText, Interface, IIdeaboxPolicyLayer)
 
     def render_value(self, obj):
-        """Gets the value to render in excel file from content value
-        """
+        """Gets the value to render in excel file from content value"""
         value = self.get_value(obj)
         if not value or value == NO_VALUE:
             return ""

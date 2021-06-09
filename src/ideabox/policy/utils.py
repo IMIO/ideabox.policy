@@ -34,7 +34,7 @@ class UnrestrictedUser(BaseUnrestrictedUser):
 
 
 def execute_under_admin(portal, function, *args, **kwargs):
-    """ Execude code under admin privileges """
+    """Execude code under admin privileges"""
     sm = getSecurityManager()
     try:
         try:

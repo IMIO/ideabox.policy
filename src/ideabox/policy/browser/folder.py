@@ -4,7 +4,7 @@ from plone.app.contenttypes.browser import folder
 
 
 class FolderView(folder.FolderView):
-    """ Override of plone.app.contenttypes.browser.folder.FolderView """
+    """Override of plone.app.contenttypes.browser.folder.FolderView"""
 
     def results(self, **kwargs):
         """Return a content listing based result set with contents of the

@@ -24,8 +24,7 @@ class IProjectSortingSchema(ISchema):
 
 
 class DefaultSchemata(DS):
-    """ Schemata default
-    """
+    """Schemata default"""
 
     fields = field.Fields(IProjectSortingSchema).select(
         u"title", u"vocabulary", u"default"
@@ -33,8 +32,7 @@ class DefaultSchemata(DS):
 
 
 class Widget(AbstractWidget):
-    """ Widget
-    """
+    """Widget"""
 
     widget_type = "project_sorting"
     widget_label = _("Project Sorting")
@@ -44,15 +42,13 @@ class Widget(AbstractWidget):
 
     @property
     def css_class(self):
-        """ Widget specific css class
-        """
+        """Widget specific css class"""
         base = super(Widget, self).css_class
         return "faceted-sorting-widget {0}".format(base)
 
     @property
     def default(self):
-        """ Return default sorting values
-        """
+        """Return default sorting values"""
         default = self.data.get("default", "")
         if not default:
             return ()
@@ -64,8 +60,7 @@ class Widget(AbstractWidget):
         return (default, reverse)
 
     def query(self, form):
-        """ Get value from form and return a catalog dict query
-        """
+        """Get value from form and return a catalog dict query"""
         query = {}
 
         if self.hidden:
@@ -87,13 +82,11 @@ class Widget(AbstractWidget):
         return query
 
     def validateAddCriterion(self, indexId, criteriaType):
-        """Is criteriaType acceptable criteria for indexId
-        """
+        """Is criteriaType acceptable criteria for indexId"""
         return True
 
     def vocabulary(self, **kwargs):
-        """ Return data vocabulary
-        """
+        """Return data vocabulary"""
         vocab = self.portal_vocabulary()
         vocab_fields = [(x[0].replace("term.", "", 1), x[1], "") for x in vocab]
         return vocab_fields

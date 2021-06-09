@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.4.1 (unreleased)
+3.4.1 (2021-06-09)
 ------------------
 
 - Create legal_information_text field in control panel

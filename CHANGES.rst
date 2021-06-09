@@ -5,7 +5,8 @@ Changelog
 3.4.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Create legal_information_text field in control panel
+  [boulch]
 
 
 3.4.0 (2021-02-03)

@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.4.2 (unreleased)
+3.4.2 (2021-06-10)
 ------------------
 
 - Change "zip_code" field label to "zip code / locality" in user registration form.

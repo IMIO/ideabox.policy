@@ -5,7 +5,8 @@ Changelog
 3.4.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Change "zip_code" field label to "zip code / locality" in user registration form.
+  [boulch]
 
 
 3.4.1 (2021-06-09)

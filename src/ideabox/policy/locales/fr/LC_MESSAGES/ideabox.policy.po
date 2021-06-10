@@ -20,7 +20,7 @@ msgstr ""
 msgid "AGAINST"
 msgstr "Contre"
 
-#: ../export/export.py:156
+#: ../export/export.py:155
 #: ../userdataschema.py:22
 msgid "Address"
 msgstr "Adresse"
@@ -50,7 +50,7 @@ msgstr "Août"
 msgid "August"
 msgstr "Août"
 
-#: ../export/export.py:179
+#: ../export/export.py:178
 #: ../userdataschema.py:28
 msgid "Birthdate"
 msgstr "Date de naissance"
@@ -63,7 +63,7 @@ msgstr "Campagne"
 msgid "Comment"
 msgstr "Commentaires"
 
-#: ../browser/controlpanel.py:26
+#: ../browser/controlpanel.py:37
 msgid "Configuration for ideabox product"
 msgstr "Configuration pour Ideabox"
 
@@ -113,7 +113,7 @@ msgstr "Modifier les dates de la ligne du temps"
 msgid "Email"
 msgstr ""
 
-#: ../browser/controlpanel.py:16
+#: ../browser/controlpanel.py:20
 msgid "Email address of the project manager"
 msgstr "Adresse e-mail du responsable des projets"
 
@@ -167,12 +167,12 @@ msgstr "Fév"
 msgid "February"
 msgstr "Février"
 
-#: ../export/export.py:151
+#: ../export/export.py:150
 #: ../userdataschema.py:20
 msgid "First name"
 msgstr "Prénom"
 
-#: ../export/export.py:161
+#: ../export/export.py:160
 #: ../userdataschema.py:25
 msgid "Gender"
 msgstr "Sexe"
@@ -181,7 +181,7 @@ msgstr "Sexe"
 msgid "I Accept Legal terms and conditions"
 msgstr "J'accepte les Mentions Légales"
 
-#: ../export/export.py:196
+#: ../export/export.py:195
 #: ../setuphandlers.py:106
 #: ../userdataschema.py:35
 msgid "I am"
@@ -203,7 +203,7 @@ msgstr "Vue sommaire"
 msgid "Ideabox project"
 msgstr ""
 
-#: ../browser/controlpanel.py:17
+#: ../browser/controlpanel.py:21
 msgid "If there are multiple email addresses, separate them with semicolons"
 msgstr "Si il y a plusieurs adresse email à renseigner séparez les par des points-virgules"
 
@@ -239,13 +239,19 @@ msgstr "Juin"
 msgid "June"
 msgstr "Juin"
 
-#: ../export/export.py:146
+#: ../export/export.py:145
 msgid "Last name"
 msgstr "Nom"
 
 #: ../userdataschema.py:18
 msgid "Last name or institution"
 msgstr "Nom ou institution"
+
+#: ../browser/controlpanel.py:28
+#: ../profiles/default/registry.xml
+#: ../upgrades.py:201
+msgid "Legal information text"
+msgstr "Mentions légales"
 
 #: ../tile/projects.py:25
 msgid "Limit"
@@ -255,8 +261,8 @@ msgstr "Limite"
 msgid "Limit projects"
 msgstr "Limite d'élément affiché"
 
-#: ../setuphandlers.py:114
-#: ../upgrades.py:164
+#: ../setuphandlers.py:115
+#: ../upgrades.py:169
 msgid "Locality (Registration form)"
 msgstr "Localité (Formulaire d'inscription)"
 
@@ -277,7 +283,7 @@ msgstr "Mars"
 msgid "May"
 msgstr "Mai"
 
-#: ../export/export.py:104
+#: ../export/export.py:103
 msgid "Negative rating "
 msgstr "Vote contre"
 
@@ -317,7 +323,7 @@ msgstr "Oct"
 msgid "October"
 msgstr "Octobre"
 
-#: ../content/priority_action.py:23
+#: ../content/priority_action.py:25
 msgid "Operational objectives"
 msgstr "Objectifs opérationnels"
 
@@ -333,7 +339,7 @@ msgstr "Informations personnelles"
 msgid "Personal information for connected user"
 msgstr "Informations personnelles pour un utilisateur connecté"
 
-#: ../export/export.py:93
+#: ../export/export.py:92
 msgid "Positive rating "
 msgstr "Vote pour"
 
@@ -347,7 +353,7 @@ msgstr "Action prioritaire"
 msgid "Project"
 msgstr "Projet"
 
-#: ../faceted/sort_widget.py:40
+#: ../faceted/sort_widget.py:38
 msgid "Project Sorting"
 msgstr "Tri pour les projets"
 
@@ -432,7 +438,7 @@ msgstr "Etat d'avancement"
 msgid "Steps for timeline"
 msgstr "Etapes pour la ligne du temps"
 
-#: ../content/priority_action.py:19
+#: ../content/priority_action.py:21
 msgid "Strategic Objectives"
 msgstr "Objectifs stratégiques"
 
@@ -466,7 +472,7 @@ msgstr "Titre; Date; Lien"
 msgid "Uninstalls the ideabox.policy add-on."
 msgstr "Désinstaller le module ideabox.policy"
 
-#: ../export/export.py:141
+#: ../export/export.py:140
 msgid "User ID"
 msgstr "ID utilisateur"
 
@@ -484,15 +490,15 @@ msgstr "Vote"
 msgid "Vote encoding"
 msgstr "Encoder des votes"
 
-#: ../export/export.py:115
+#: ../export/export.py:114
 msgid "Voters in favour"
 msgstr "Votants pour"
 
-#: ../export/export.py:128
+#: ../export/export.py:127
 msgid "Voters opposed"
 msgstr "Votants contre"
 
-#: ../export/export.py:219
+#: ../export/export.py:218
 msgid "Votes"
 msgstr "Votes"
 
@@ -508,10 +514,13 @@ msgstr "Oui"
 msgid "You need to accept our legal terms and conditions."
 msgstr "Vous devez accepter les Mentions Légales pour pouvoir créer un compte."
 
-#: ../export/export.py:214
-#: ../userdataschema.py:31
+#: ../export/export.py:213
 msgid "Zip code"
 msgstr "Code postal"
+
+#: ../userdataschema.py:31
+msgid "Zip code / locality"
+msgstr "Code postal / localité"
 
 #: ../profiles/default/registry.xml
 msgid "Zip code vocabulary values"
@@ -557,3 +566,7 @@ msgstr "projets"
 #: ../browser/register.py:37
 msgid "see_legal_conditions"
 msgstr "Voir les <a href=\"${legal_conditions_url}\">Mentions Légales</a>."
+
+#: ../userdataschema.py:31
+msgid "zip code, locality or zip code and locality"
+msgstr "Code postal, localité, code postal et localité"

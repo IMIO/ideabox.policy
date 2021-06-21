@@ -12,6 +12,12 @@ class ICampaign(model.Schema):
         title=_(u"Enable / Disable project submission"), default=False
     )
 
+    emails = schema.TextLine(
+        title=_(u"Mails address"),
+        description=_(u'You can set many mails address separated with ";"'),
+        required=False,
+    )
+
 
 @implementer(ICampaign)
 class Campaign(Container):

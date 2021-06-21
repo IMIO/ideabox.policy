@@ -5,7 +5,8 @@ Changelog
 3.4.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add campaign_emails field on campaign type to send mails only on to these campaign managers
+  [boulch]
 
 
 3.4.2 (2021-06-10)

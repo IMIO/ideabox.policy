@@ -53,11 +53,14 @@ class ProjectSubmissionForm(Form):
             "ideabox.policy.browser.controlpanel.IIdeaBoxSettingsSchema.project_manager_email",
             default=None,
         )
-        if email is None:
+
+        campaign_email = self.context.emails
+
+        if campaign_email is None and email is None:
             logger.warn("missing email for project submission notification")
             return
 
-        list_mail = email.split(";")
+        list_mail = campaign_email.split(";") or email.split(";")
 
         body = translate(
             _(

@@ -60,7 +60,10 @@ class ProjectSubmissionForm(Form):
             logger.warn("missing email for project submission notification")
             return
 
-        list_mail = campaign_email.split(";") or email.split(";")
+        if campaign_email is not None:
+            list_mail = campaign_email.split(";")
+        else:
+            list_mail = email.split(";")
 
         body = translate(
             _(

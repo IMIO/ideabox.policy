@@ -99,9 +99,15 @@ class ProjectSubmissionForm(Form):
             container=container,
             original_author=api.user.get_current().id,
         )
-        execute_under_admin(
-            container, api.content.transition, obj=project_obj, transition="deposit"
+        project_directly_submitted = api.portal.get_registry_record(
+            "ideabox.policy.browser.controlpanel.IIdeaBoxSettingsSchema.project_directly_submitted",
+            default=None,
         )
+
+        if project_directly_submitted is True:
+            execute_under_admin(
+                container, api.content.transition, obj=project_obj, transition="deposit"
+            )
         if data["project_image"]:
             execute_under_admin(
                 project_obj,

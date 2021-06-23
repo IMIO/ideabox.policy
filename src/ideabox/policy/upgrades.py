@@ -9,7 +9,6 @@ from plone.registry import Record
 from plone.registry.interfaces import IRegistry
 from zope.component import getUtility
 from zope.i18n import translate
-from zope.schema.interfaces import IVocabularyFactory
 
 import logging
 
@@ -205,4 +204,32 @@ def to_1009(context):
     )
     records[
         "ideabox.policy.browser.controlpanel.IIdeaBoxSettingsSchema.legal_information_text"
+    ] = record
+
+
+def to_1010(context):
+    """Add legal information text field in registry"""
+    registry = getUtility(IRegistry)
+    records = registry.records
+
+    if (
+        "ideabox.policy.browser.controlpanel.IIdeaBoxSettingsSchema.project_directly_submitted"
+        in records
+    ):  # noqa
+        return
+
+    logger.info(
+        "Adding ideabox.policy.browser.controlpanel.IIdeaBoxSettingsSchema.project_directly_submitted to registry"
+    )  # noqa
+    record = Record(
+        field.Bool(
+            title=_(u"Projects directly submitted"),
+            default=True,
+            description=_(
+                u"If checked, projects are public as soon as they are submitted."
+            ),
+        )
+    )
+    records[
+        "ideabox.policy.browser.controlpanel.IIdeaBoxSettingsSchema.project_directly_submitted"
     ] = record

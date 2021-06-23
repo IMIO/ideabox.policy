@@ -68,6 +68,15 @@
    <property name="hidezerocount">True</property>
    <property name="sortreversed">False</property>
   </criterion>
+  <criterion name="c6">
+   <property name="widget">project_sorting</property>
+   <property name="title">Tri</property>
+   <property name="vocabulary">ideabox.vocabularies.sort_project</property>
+   <property name="default">sortable_title</property>
+   <property name="position">top</property>
+   <property name="section">default</property>
+   <property name="hidden">False</property>
+  </criterion>
   <criterion name="c7">
    <property name="widget">select</property>
    <property name="title">Objectifs stratégiques</property>
@@ -96,14 +105,32 @@
    <property name="hidezerocount">True</property>
    <property name="sortreversed">False</property>
   </criterion>
-  <criterion name="c6">
-   <property name="widget">project_sorting</property>
-   <property name="title">Tri</property>
-   <property name="vocabulary">ideabox.vocabularies.sort_project</property>
-   <property name="default">sortable_title</property>
+  <criterion name="c9">
+   <property name="widget">checkbox</property>
+   <property name="title">wf_status</property>
+   <property name="index">review_state</property>
+   <property name="operator">or</property>
+   <property name="operator_visible">False</property>
+   <property name="vocabulary"></property>
+   <property name="catalog">portal_catalog</property>
+   <property name="default">
+    <element value="deposited"/>
+    <element value="in_progress"/>
+    <element value="private"/>
+    <element value="project_analysis"/>
+    <element value="published"/>
+    <element value="result_analysis"/>
+    <element value="selected"/>
+    <element value="vote"/>
+   </property>
    <property name="position">top</property>
    <property name="section">default</property>
-   <property name="hidden">False</property>
+   <property name="hidden">True</property>
+   <property name="count">False</property>
+   <property name="sortcountable">False</property>
+   <property name="hidezerocount">False</property>
+   <property name="maxitems">0</property>
+   <property name="sortreversed">False</property>
   </criterion>
  </criteria>
 </object>

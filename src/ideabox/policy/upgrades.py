@@ -2,15 +2,18 @@
 
 from collective.taxonomy.interfaces import ITaxonomy
 from ideabox.policy import _
+from ideabox.policy import utils
 from ideabox.policy.setuphandlers import create_taxonomy_object
 from plone import api
 from plone.registry import field
 from plone.registry import Record
 from plone.registry.interfaces import IRegistry
+from tempfile import mkstemp
 from zope.component import getUtility
 from zope.i18n import translate
 
 import logging
+import os
 
 logger = logging.getLogger("ideabox.policy")
 
@@ -233,3 +236,30 @@ def to_1010(context):
     records[
         "ideabox.policy.browser.controlpanel.IIdeaBoxSettingsSchema.project_directly_submitted"
     ] = record
+
+def to_1011(context):
+    fpath = os.path.join(
+        os.path.dirname(__file__), "faceted", "config", "campaign.xml"
+    )
+    for brain in api.content.find(portal_type="campaign"):
+        obj = brain.getObject()
+        import pdb;pdb.set_trace()
+        xml = ""
+        with open(fpath, "r") as config:
+            xml = config.read()
+
+        xml = xml.replace(
+            '<property name="default">##PATH##</property>',
+            '<property name="default">{0}</property>'.format(
+                "/{0}".format("/".join(obj.absolute_url_path().split("/")[2:]))
+            ),
+        )
+        fd, path = mkstemp()
+        with open(path, "w") as f:
+            f.write(xml)
+        os.close(fd)
+        with open(path, "rb") as config:
+            obj.unrestrictedTraverse("@@faceted_exportimport").import_xml(
+                import_file=config
+            )
+        utils.set_faceted_view(obj, "faceted-project")

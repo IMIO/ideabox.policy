@@ -125,6 +125,13 @@
     </field>
   </record>
 
+  <record name="ideabox.project_directly_submitted"
+        i18n:domain="ideabox.policy">
+    <field type="plone.registry.field.Bool">
+        <title i18n:translate="">Projects directly submitted</title>
+    </field>
+  </record>
+
   <!-- Plone bundle resources -->
   <records prefix="plone.resources/ideabox"
            interface='Products.CMFPlone.interfaces.IResourceRegistry'>

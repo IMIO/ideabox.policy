@@ -63,7 +63,7 @@ msgstr "Campagne"
 msgid "Comment"
 msgstr "Commentaires"
 
-#: ../browser/controlpanel.py:37
+#: ../browser/controlpanel.py:42
 msgid "Configuration for ideabox product"
 msgstr "Configuration pour Ideabox"
 
@@ -113,7 +113,7 @@ msgstr "Modifier les dates de la ligne du temps"
 msgid "Email"
 msgstr ""
 
-#: ../browser/controlpanel.py:20
+#: ../browser/controlpanel.py:19
 msgid "Email address of the project manager"
 msgstr "Adresse e-mail du responsable des projets"
 
@@ -183,7 +183,7 @@ msgstr "J'accepte les Mentions Légales"
 
 #: ../export/export.py:195
 #: ../setuphandlers.py:106
-#: ../userdataschema.py:35
+#: ../userdataschema.py:38
 msgid "I am"
 msgstr "Je suis"
 
@@ -203,7 +203,11 @@ msgstr "Vue sommaire"
 msgid "Ideabox project"
 msgstr ""
 
-#: ../browser/controlpanel.py:21
+#: ../upgrades.py:232
+msgid "If checked, projects are public as soon as they are submitted."
+msgstr "Si cochée, les projet sont rendus publiques dès qu'ils sont soumis."
+
+#: ../browser/controlpanel.py:20
 msgid "If there are multiple email addresses, separate them with semicolons"
 msgstr "Si il y a plusieurs adresse email à renseigner séparez les par des points-virgules"
 
@@ -247,9 +251,9 @@ msgstr "Nom"
 msgid "Last name or institution"
 msgstr "Nom ou institution"
 
-#: ../browser/controlpanel.py:28
+#: ../browser/controlpanel.py:27
 #: ../profiles/default/registry.xml
-#: ../upgrades.py:201
+#: ../upgrades.py:204
 msgid "Legal information text"
 msgstr "Mentions légales"
 
@@ -262,7 +266,7 @@ msgid "Limit projects"
 msgstr "Limite d'élément affiché"
 
 #: ../setuphandlers.py:115
-#: ../upgrades.py:169
+#: ../upgrades.py:172
 msgid "Locality (Registration form)"
 msgstr "Localité (Formulaire d'inscription)"
 
@@ -270,6 +274,10 @@ msgstr "Localité (Formulaire d'inscription)"
 #: ../vocabularies.py:48
 msgid "MALE"
 msgstr "Homme"
+
+#: ../content/campaign.py:16
+msgid "Mails address"
+msgstr "Adresse e-mail"
 
 #: ../utils.py:100
 msgid "Mar"
@@ -287,7 +295,7 @@ msgstr "Mai"
 msgid "Negative rating "
 msgstr "Vote contre"
 
-#: ../form/project_submission.py:75
+#: ../form/project_submission.py:81
 msgid "New project submission"
 msgstr "Soumission d'un nouveau projet"
 
@@ -384,6 +392,11 @@ msgstr "Projet(s)"
 msgid "Projects"
 msgstr "Projets"
 
+#: ../profiles/default/registry.xml
+#: ../upgrades.py:230
+msgid "Projects directly submitted"
+msgstr "Soumettre directement le projet"
+
 #: ../browser/project.py:11
 msgid "Projects in progression"
 msgstr "Des projets en évolution"
@@ -413,7 +426,7 @@ msgid "Select a container"
 msgstr "Sélectionner un dossier"
 
 #: ../form/project_encoding.py:144
-#: ../form/project_submission.py:111
+#: ../form/project_submission.py:123
 #: ../form/vote_encoding.py:141
 msgid "Send"
 msgstr "Envoyer"
@@ -510,6 +523,10 @@ msgstr "Souhaitez-vous être tenu au courant de l’avancement du projet?"
 msgid "Yes"
 msgstr "Oui"
 
+#: ../content/campaign.py:17
+msgid "You can set many mails address separated with \";\""
+msgstr "Vous pouvez spécifier plusieurs adresses e-mails en les spérarants par \";\""
+
 #: ../browser/register.py:48
 msgid "You need to accept our legal terms and conditions."
 msgstr "Vous devez accepter les Mentions Légales pour pouvoir créer un compte."
@@ -531,7 +548,7 @@ msgid "diagnose and analysis"
 msgstr "Diagnostic et analyse"
 
 #. Default: "A new project has been created you can access it at the following url:\n              ${url}\n              "
-#: ../form/project_submission.py:63
+#: ../form/project_submission.py:69
 msgid "email_body_project_submission"
 msgstr ""
 "Un nouveau projet a été créé vous pouvez y accéder à l'url suivante :\n"
@@ -567,6 +584,6 @@ msgstr "projets"
 msgid "see_legal_conditions"
 msgstr "Voir les <a href=\"${legal_conditions_url}\">Mentions Légales</a>."
 
-#: ../userdataschema.py:31
+#: ../userdataschema.py:34
 msgid "zip code, locality or zip code and locality"
 msgstr "Code postal, localité, code postal et localité"

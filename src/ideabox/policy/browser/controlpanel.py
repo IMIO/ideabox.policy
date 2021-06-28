@@ -2,7 +2,6 @@
 
 from ideabox.policy import _
 from plone.app.registry.browser import controlpanel
-from plone.app.textfield import RichText
 from plone.app.z3cform.wysiwyg import WysiwygFieldWidget
 from plone.autoform import directives as form
 from z3c.form.interfaces import INPUT_MODE
@@ -28,6 +27,12 @@ class IIdeaBoxSettingsSchema(Interface):
         title=_(u"Legal information text"),
         required=False,
         description=_(u"Legal information text"),
+    )
+
+    project_directly_submitted = schema.Bool(
+        title=u"Projects directly submitted",
+        description=u"If checked, projects are public as soon as they are submitted.",
+        default=True,
     )
 
 

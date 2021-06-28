@@ -5,7 +5,12 @@ Changelog
 3.4.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Update faceted xml configuration. Add a workflow "draft" filter on projects. (Don't keep projects in draft state)
+  [boulch]
+- Add a project_directly_submitted checkbox field in ideabox controlpanel to choice is project can be directly submitted
+  [boulch]
+- Add campaign_emails field on campaign type to send mails only on to these campaign managers
+  [boulch]
 
 
 3.4.2 (2021-06-10)

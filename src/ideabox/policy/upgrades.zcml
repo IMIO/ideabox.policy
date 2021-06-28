@@ -74,4 +74,21 @@
     profile="ideabox.policy:default"
     handler=".upgrades.to_1009"
     />
+
+  <genericsetup:upgradeStep
+    source="1009"
+    destination="1010"
+    title="Adding ideabox.policy.browser.controlpanel.IIdeaBoxSettingsSchema.project_directly_submitted to registry"
+    profile="ideabox.policy:default"
+    handler=".upgrades.to_1010"
+    />
+
+  <genericsetup:upgradeStep
+    source="1010"
+    destination="1011"
+    title="Update faceted config for campaign"
+    profile="ideabox.policy:default"
+    handler=".upgrades.to_1011"
+    />
+
 </configure>

@@ -49,20 +49,19 @@ class ProjectSubmissionForm(Form):
 
     def send_mail(self, url):
         lang = api.portal.get_current_language()[:2]
-        email = api.portal.get_registry_record(
-            "ideabox.policy.browser.controlpanel.IIdeaBoxSettingsSchema.project_manager_email",
-            default=None,
-        )
 
         campaign_email = self.context.emails
-
-        if campaign_email is None and email is None:
-            logger.warn("missing email for project submission notification")
-            return
 
         if campaign_email is not None:
             list_mail = campaign_email.split(";")
         else:
+            email = api.portal.get_registry_record(
+                "ideabox.policy.browser.controlpanel.IIdeaBoxSettingsSchema.project_manager_email",
+                default=None,
+            )
+            if campaign_email is None and email is None:
+                logger.warn("missing email for project submission notification")
+                return
             list_mail = email.split(";")
 
         body = translate(
@@ -101,7 +100,7 @@ class ProjectSubmissionForm(Form):
         )
         project_directly_submitted = api.portal.get_registry_record(
             "ideabox.policy.browser.controlpanel.IIdeaBoxSettingsSchema.project_directly_submitted",
-            default=None,
+            default=True,
         )
 
         if project_directly_submitted is True:

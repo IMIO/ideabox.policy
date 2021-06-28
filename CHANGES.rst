@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.4.3 (unreleased)
+3.4.3 (2021-06-28)
 ------------------
 
 - Update faceted xml configuration. Add a workflow "draft" filter on projects. (Don't keep projects in draft state)

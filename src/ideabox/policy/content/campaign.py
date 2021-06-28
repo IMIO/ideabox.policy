@@ -13,8 +13,10 @@ class ICampaign(model.Schema):
     )
 
     emails = schema.TextLine(
-        title=_(u"Mails address"),
-        description=_(u'You can set many mails address separated with ";"'),
+        title=_(u"Email addresses"),
+        description=_(
+            u'Used to send notification when a new project is proposed by an user. Accept many email addresses separated with ";"'
+        ),
         required=False,
     )
 

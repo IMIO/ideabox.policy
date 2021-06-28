@@ -116,7 +116,6 @@
    <property name="default">
     <element value="deposited"/>
     <element value="in_progress"/>
-    <element value="private"/>
     <element value="project_analysis"/>
     <element value="published"/>
     <element value="result_analysis"/>

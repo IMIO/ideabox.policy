@@ -243,7 +243,6 @@ def to_1011(context):
     )
     for brain in api.content.find(portal_type="campaign"):
         obj = brain.getObject()
-        import pdb;pdb.set_trace()
         xml = ""
         with open(fpath, "r") as config:
             xml = config.read()

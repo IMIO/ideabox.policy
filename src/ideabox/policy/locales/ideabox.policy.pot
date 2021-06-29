@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-06-22 14:37+0000\n"
+"POT-Creation-Date: 2021-06-29 08:58+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -123,6 +123,10 @@ msgstr ""
 msgid "Email address of the project manager"
 msgstr ""
 
+#: ../content/campaign.py:16
+msgid "Email addresses"
+msgstr ""
+
 #: ../content/campaign.py:12
 msgid "Enable / Disable project submission"
 msgstr ""
@@ -209,7 +213,7 @@ msgstr ""
 msgid "Ideabox project"
 msgstr ""
 
-#: ../upgrades.py:232
+#: ../upgrades.py:231
 msgid "If checked, projects are public as soon as they are submitted."
 msgstr ""
 
@@ -259,7 +263,7 @@ msgstr ""
 
 #: ../browser/controlpanel.py:27
 #: ../profiles/default/registry.xml
-#: ../upgrades.py:204
+#: ../upgrades.py:203
 msgid "Legal information text"
 msgstr ""
 
@@ -272,17 +276,13 @@ msgid "Limit projects"
 msgstr ""
 
 #: ../setuphandlers.py:115
-#: ../upgrades.py:172
+#: ../upgrades.py:171
 msgid "Locality (Registration form)"
 msgstr ""
 
 #. Default: "Male"
 #: ../vocabularies.py:48
 msgid "MALE"
-msgstr ""
-
-#: ../content/campaign.py:16
-msgid "Mails address"
 msgstr ""
 
 #: ../utils.py:100
@@ -301,7 +301,7 @@ msgstr ""
 msgid "Negative rating "
 msgstr ""
 
-#: ../form/project_submission.py:81
+#: ../form/project_submission.py:80
 msgid "New project submission"
 msgstr ""
 
@@ -399,7 +399,7 @@ msgid "Projects"
 msgstr ""
 
 #: ../profiles/default/registry.xml
-#: ../upgrades.py:230
+#: ../upgrades.py:229
 msgid "Projects directly submitted"
 msgstr ""
 
@@ -432,7 +432,7 @@ msgid "Select a container"
 msgstr ""
 
 #: ../form/project_encoding.py:144
-#: ../form/project_submission.py:123
+#: ../form/project_submission.py:122
 #: ../form/vote_encoding.py:141
 msgid "Send"
 msgstr ""
@@ -491,6 +491,10 @@ msgstr ""
 msgid "Uninstalls the ideabox.policy add-on."
 msgstr ""
 
+#: ../content/campaign.py:17
+msgid "Used to send notification when a new project is proposed by an user. Accept many email addresses separated with \";\""
+msgstr ""
+
 #: ../export/export.py:140
 msgid "User ID"
 msgstr ""
@@ -529,10 +533,6 @@ msgstr ""
 msgid "Yes"
 msgstr ""
 
-#: ../content/campaign.py:17
-msgid "You can set many mails address separated with \";\""
-msgstr ""
-
 #: ../browser/register.py:48
 msgid "You need to accept our legal terms and conditions."
 msgstr ""
@@ -554,7 +554,7 @@ msgid "diagnose and analysis"
 msgstr ""
 
 #. Default: "A new project has been created you can access it at the following url:\n              ${url}\n              "
-#: ../form/project_submission.py:69
+#: ../form/project_submission.py:68
 msgid "email_body_project_submission"
 msgstr ""
 

@@ -117,6 +117,10 @@ msgstr ""
 msgid "Email address of the project manager"
 msgstr "Adresse e-mail du responsable des projets"
 
+#: ../content/campaign.py:16
+msgid "Email addresses"
+msgstr "Adresses e-mail"
+
 #: ../content/campaign.py:12
 msgid "Enable / Disable project submission"
 msgstr "Activer / Désactiver la soumission de projet"
@@ -203,7 +207,7 @@ msgstr "Vue sommaire"
 msgid "Ideabox project"
 msgstr ""
 
-#: ../upgrades.py:232
+#: ../upgrades.py:231
 msgid "If checked, projects are public as soon as they are submitted."
 msgstr "Si cochée, les projet sont rendus publiques dès qu'ils sont soumis."
 
@@ -253,7 +257,7 @@ msgstr "Nom ou institution"
 
 #: ../browser/controlpanel.py:27
 #: ../profiles/default/registry.xml
-#: ../upgrades.py:204
+#: ../upgrades.py:203
 msgid "Legal information text"
 msgstr "Mentions légales"
 
@@ -266,7 +270,7 @@ msgid "Limit projects"
 msgstr "Limite d'élément affiché"
 
 #: ../setuphandlers.py:115
-#: ../upgrades.py:172
+#: ../upgrades.py:171
 msgid "Locality (Registration form)"
 msgstr "Localité (Formulaire d'inscription)"
 
@@ -274,10 +278,6 @@ msgstr "Localité (Formulaire d'inscription)"
 #: ../vocabularies.py:48
 msgid "MALE"
 msgstr "Homme"
-
-#: ../content/campaign.py:16
-msgid "Mails address"
-msgstr "Adresse e-mail"
 
 #: ../utils.py:100
 msgid "Mar"
@@ -295,7 +295,7 @@ msgstr "Mai"
 msgid "Negative rating "
 msgstr "Vote contre"
 
-#: ../form/project_submission.py:81
+#: ../form/project_submission.py:80
 msgid "New project submission"
 msgstr "Soumission d'un nouveau projet"
 
@@ -393,7 +393,7 @@ msgid "Projects"
 msgstr "Projets"
 
 #: ../profiles/default/registry.xml
-#: ../upgrades.py:230
+#: ../upgrades.py:229
 msgid "Projects directly submitted"
 msgstr "Soumettre directement le projet"
 
@@ -426,7 +426,7 @@ msgid "Select a container"
 msgstr "Sélectionner un dossier"
 
 #: ../form/project_encoding.py:144
-#: ../form/project_submission.py:123
+#: ../form/project_submission.py:122
 #: ../form/vote_encoding.py:141
 msgid "Send"
 msgstr "Envoyer"
@@ -485,6 +485,10 @@ msgstr "Titre; Date; Lien"
 msgid "Uninstalls the ideabox.policy add-on."
 msgstr "Désinstaller le module ideabox.policy"
 
+#: ../content/campaign.py:17
+msgid "Used to send notification when a new project is proposed by an user. Accept many email addresses separated with \";\""
+msgstr "Envoi une notification quand un nouveau projet est proposé par un citoyen. Le champ accepte plusieurs adresses séparées par \";\""
+
 #: ../export/export.py:140
 msgid "User ID"
 msgstr "ID utilisateur"
@@ -523,10 +527,6 @@ msgstr "Souhaitez-vous être tenu au courant de l’avancement du projet?"
 msgid "Yes"
 msgstr "Oui"
 
-#: ../content/campaign.py:17
-msgid "You can set many mails address separated with \";\""
-msgstr "Vous pouvez spécifier plusieurs adresses e-mails en les spérarants par \";\""
-
 #: ../browser/register.py:48
 msgid "You need to accept our legal terms and conditions."
 msgstr "Vous devez accepter les Mentions Légales pour pouvoir créer un compte."
@@ -548,7 +548,7 @@ msgid "diagnose and analysis"
 msgstr "Diagnostic et analyse"
 
 #. Default: "A new project has been created you can access it at the following url:\n              ${url}\n              "
-#: ../form/project_submission.py:69
+#: ../form/project_submission.py:68
 msgid "email_body_project_submission"
 msgstr ""
 "Un nouveau projet a été créé vous pouvez y accéder à l'url suivante :\n"

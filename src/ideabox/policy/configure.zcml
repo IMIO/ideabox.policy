@@ -11,6 +11,7 @@
   <include file="upgrades.zcml" />
 
   <include package="collective.z3cform.select2" />
+  <inclide package="collective.anonymouseditpatterns" />
   <include package="collective.behavior.richdescription" />
   <include package="cioppino.twothumbs" />
   <include package="plone.app.discussion" />

@@ -5,7 +5,9 @@ Changelog
 3.4.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add package : collective.anonymouseditpatterns. Fix some widgets
+  In our case, fix datetime picker in @@register form (in anonymous mode)
+  [boulch]
 
 
 3.4.3 (2021-06-28)

@@ -43,6 +43,7 @@ setup(
         "Products.GenericSetup>=1.8.2",
         "Products.BeakerSessionDataManager",
         "cioppino.twothumbs",
+        "collective.anonymouseditpatterns",
         "collective.behavior.banner",
         "collective.behavior.richdescription",
         "collective.excelexport",

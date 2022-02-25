@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.4.4 (unreleased)
+3.4.4 (2022-02-25)
 ------------------
 
 - Add package : collective.anonymouseditpatterns. Fix some widgets

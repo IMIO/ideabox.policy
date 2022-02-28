@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.4.5 (unreleased)
+3.4.5 (2022-02-28)
 ------------------
 
 - Add collective.big.bang dependency

@@ -46,6 +46,7 @@ setup(
         "collective.anonymouseditpatterns",
         "collective.behavior.banner",
         "collective.behavior.richdescription",
+        "collective.big.bang",
         "collective.excelexport",
         "collective.disclaimer",
         "collective.taxonomy",

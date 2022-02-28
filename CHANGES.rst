@@ -5,7 +5,8 @@ Changelog
 3.4.5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add collective.big.bang dependency
+  [boulch]
 
 
 3.4.4 (2022-02-25)

@@ -5,7 +5,8 @@ Changelog
 3.4.6 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix bad include instruction
+  [boulch]
 
 
 3.4.5 (2022-02-28)

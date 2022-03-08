@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.4.6 (unreleased)
+3.4.6 (2022-03-08)
 ------------------
 
 - Fix bad include instruction

@@ -5,7 +5,8 @@ Changelog
 3.4.7 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- auto-install imio.gdpr , collective.excelexport
+  [boulch]
 
 
 3.4.6 (2022-03-08)

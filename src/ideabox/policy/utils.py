@@ -110,6 +110,7 @@ def localized_month(value, request):
     for k, v in keys.items():
         if k in value:
             value = value.replace(k, translate(v, context=request))
+            return value
     return value
 
 

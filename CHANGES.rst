@@ -5,6 +5,9 @@ Changelog
 3.4.7 (unreleased)
 ------------------
 
+- Avoid a double translation for localized month
+  [mpeeters]
+
 - auto-install imio.gdpr , collective.excelexport
   [boulch]
 

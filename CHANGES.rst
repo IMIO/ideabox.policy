@@ -5,6 +5,9 @@ Changelog
 3.4.7 (unreleased)
 ------------------
 
+- Fix js error : Uncaught ReferenceError: ploneFormTabbing is not defined
+  [boulch]
+
 - Avoid a double translation for localized month
   [mpeeters]
 

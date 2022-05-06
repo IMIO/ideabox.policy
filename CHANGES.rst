@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.4.7 (unreleased)
+3.4.7 (2022-05-06)
 ------------------
 
 - Fix js error : Uncaught ReferenceError: ploneFormTabbing is not defined

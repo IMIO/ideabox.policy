@@ -5,7 +5,8 @@ Changelog
 3.4.8 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Adapt code to sort priority action progress by latest to oldest elements
+  [mpeeters]
 
 
 3.4.7 (2022-05-06)

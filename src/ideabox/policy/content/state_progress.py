@@ -26,7 +26,10 @@ class StateProgress(Container):
 class StateProgressView(BrowserView):
     def get_state_progress(self):
         return api.content.find(
-            context=self.context, portal_type="state_progress", sort_on="state_date"
+            context=self.context,
+            portal_type="state_progress",
+            sort_on="state_date",
+            sort_order="descending",
         )
 
     def format_date(self, value):

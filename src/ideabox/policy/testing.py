@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+
+from plone.api import portal as portal_api
 from plone.app.robotframework.testing import REMOTE_LIBRARY_BUNDLE_FIXTURE
 from plone.app.testing import applyProfile
 from plone.app.testing import FunctionalTesting
@@ -6,6 +8,7 @@ from plone.app.testing import IntegrationTesting
 from plone.app.testing import PLONE_FIXTURE
 from plone.app.testing import PloneSandboxLayer
 from plone.testing import z2
+from unittest.mock import Mock
 
 import ideabox.policy
 
@@ -22,6 +25,7 @@ class IdeaboxPolicyLayer(PloneSandboxLayer):
 
     def setUpPloneSite(self, portal):
         portal.portal_workflow.setDefaultChain("simple_publication_workflow")
+        portal_api.get_current_language = Mock(return_value="fr")
         applyProfile(portal, "ideabox.policy:default")
 
 

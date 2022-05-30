@@ -13,7 +13,7 @@ class CommentForm(BaseForm):
     def get_author(self, data):
         context = aq_inner(self.context)
         # some attributes are not always set
-        author_name = u""
+        author_name = ""
 
         # Make sure author_name/ author_email is properly encoded
         if "author_name" in data:

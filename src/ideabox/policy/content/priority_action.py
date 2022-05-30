@@ -18,11 +18,11 @@ class IPriorityAction(IProject):
     """IPriorityActionIProject"""
 
     strategic_objectives = schema.TextLine(
-        title=_(u"Strategic Objectives"), required=False
+        title=_("Strategic Objectives"), required=False
     )
 
     operational_objectives = schema.TextLine(
-        title=_(u"Operational objectives"), required=False
+        title=_("Operational objectives"), required=False
     )
 
 

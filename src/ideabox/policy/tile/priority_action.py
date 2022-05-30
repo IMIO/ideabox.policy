@@ -19,11 +19,11 @@ class IPriorityActionTile(Schema):
     """A tile that displays a listing of content items"""
 
     title = schema.TextLine(
-        title=_(u"Title"), required=True, default=_(u"Priority action")
+        title=_("Title"), required=True, default=_("Priority action")
     )
 
     uid = schema.Choice(
-        title=_(u"Select a container"),
+        title=_("Select a container"),
         required=True,
         vocabulary="plone.app.vocabularies.Catalog",
     )
@@ -47,7 +47,7 @@ class BasePriorityActionTile(Tile):
 
     @property
     def title(self):
-        return self.data.get("title") or _(u"Priority action")
+        return self.data.get("title") or _("Priority action")
 
     @property
     def default_image(self):

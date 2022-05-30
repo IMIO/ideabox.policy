@@ -13,9 +13,9 @@ from zope.interface import implementer
 class IStateProgress(model.Schema):
     """IStateProgress"""
 
-    state_date = schema.Date(title=_(u"Date"), required=True)
+    state_date = schema.Date(title=_("Date"), required=True)
 
-    body = RichText(title=_(u"Content"), required=True)
+    body = RichText(title=_("Content"), required=True)
 
 
 @implementer(IStateProgress)

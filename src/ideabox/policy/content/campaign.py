@@ -9,13 +9,13 @@ from zope.interface import implementer
 
 class ICampaign(model.Schema):
     project_submission = schema.Bool(
-        title=_(u"Enable / Disable project submission"), default=False
+        title=_("Enable / Disable project submission"), default=False
     )
 
     emails = schema.TextLine(
-        title=_(u"Email addresses"),
+        title=_("Email addresses"),
         description=_(
-            u'Used to send notification when a new project is proposed by an user. Accept many email addresses separated with ";"'
+            'Used to send notification when a new project is proposed by an user. Accept many email addresses separated with ";"'
         ),
         required=False,
     )

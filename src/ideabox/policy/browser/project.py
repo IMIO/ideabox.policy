@@ -19,12 +19,12 @@ class SummaryProgressionView(BrowserView):
             {
                 "title": "study_in_progress",
                 "count": self.count("study_in_progress"),
-                "description": _(u"diagnose and analysis"),
+                "description": _("diagnose and analysis"),
             },
             {
                 "title": "in_progress",
                 "count": self.count("in_progress"),
-                "description": _(u"Setting up"),
+                "description": _("Setting up"),
             },
             {"title": "realized", "count": self.count("realized"), "description": None},
         )

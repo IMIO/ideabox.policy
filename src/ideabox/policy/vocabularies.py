@@ -45,7 +45,7 @@ ReviewStateVocabulary = ReviewStateVocabularyFactory()
 
 class GenderVocabularyFactory(object):
     def __call__(self, context):
-        values = [{"MALE": _("MALE", u"Male")}, {"FEMALE": _("FEMALE", u"Female")}]
+        values = [{"MALE": _("MALE", "Male")}, {"FEMALE": _("FEMALE", "Female")}]
         return dict_list_2_vocabulary(values)
 
 
@@ -86,7 +86,7 @@ ProjectsVocabulary = ProjectsVocabularyFactory()
 
 class VoteVocabularyFactory(object):
     def __call__(self, context):
-        values = [{"FOR": _("FOR", u"For")}, {"AGAINST": _("AGAINST", u"Against")}]
+        values = [{"FOR": _("FOR", "For")}, {"AGAINST": _("AGAINST", "Against")}]
         return dict_list_2_vocabulary(values)
 
 

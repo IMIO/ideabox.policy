@@ -78,7 +78,7 @@ class WorkflowHistoryForm(Form):
             )
         super(WorkflowHistoryForm, self).update()
 
-    @button.buttonAndHandler(_(u"Save"), name="save")
+    @button.buttonAndHandler(_("Save"), name="save")
     def handleApply(self, action):
         data, errors = self.extractData()
         workflow_history = self.context.workflow_history

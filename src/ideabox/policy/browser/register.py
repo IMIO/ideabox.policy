@@ -15,7 +15,7 @@ from zope.interface import implementer
 class ICustomRegisterSchema(Interface):
 
     legal_conditions = schema.Bool(
-        title=_(u"I Accept Legal terms and conditions"), required=True
+        title=_("I Accept Legal terms and conditions"), required=True
     )
 
 
@@ -35,9 +35,9 @@ class CustomRegistrationForm(RegistrationForm):
         portal_url = api.portal.get().absolute_url()
         gpdr_url = "/".join([portal_url, "gdpr-view"])
         msgid = _(
-            u"see_legal_conditions",
-            default=u'See <a href="${legal_conditions_url}">legal terms and conditions</a>.',
-            mapping={u"legal_conditions_url": gpdr_url},
+            "see_legal_conditions",
+            default='See <a href="${legal_conditions_url}">legal terms and conditions</a>.',
+            mapping={"legal_conditions_url": gpdr_url},
         )
         legal_description = self.context.translate(msgid)
         self.fields["legal_conditions"].field.description = legal_description
@@ -45,5 +45,5 @@ class CustomRegistrationForm(RegistrationForm):
     def validate_registration(self, action, data):
         super(CustomRegistrationForm, self).validate_registration(action, data)
         if not data.get("legal_conditions"):
-            err_str = _(u"You need to accept our legal terms and conditions.")
+            err_str = _("You need to accept our legal terms and conditions.")
             notifyWidgetActionExecutionError(action, "legal_conditions", err_str)

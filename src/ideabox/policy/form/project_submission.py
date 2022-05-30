@@ -18,9 +18,9 @@ from zope.interface import implementer
 
 
 class IProjectSubmission(IProject):
-    title = schema.TextLine(title=_(u"Title"), required=True)
+    title = schema.TextLine(title=_("Title"), required=True)
 
-    project_image = NamedBlobImage(title=_(u"Project image"), required=False)
+    project_image = NamedBlobImage(title=_("Project image"), required=False)
 
 
 @implementer(IFieldsForm)
@@ -66,18 +66,18 @@ class ProjectSubmissionForm(Form):
 
         body = translate(
             _(
-                u"email_body_project_submission",
-                default=u"""A new project has been created you can access it at the following url:
+                "email_body_project_submission",
+                default="""A new project has been created you can access it at the following url:
               ${url}
               """,
-                mapping={u"url": url},
+                mapping={"url": url},
             ),
             target_language=lang,
         )
         for mail in list_mail:
             api.portal.send_email(
                 recipient=mail,
-                subject=translate(_(u"New project submission"), target_language=lang),
+                subject=translate(_("New project submission"), target_language=lang),
                 body=body,
             )
 
@@ -119,7 +119,7 @@ class ProjectSubmissionForm(Form):
         self.request.response.redirect(project_obj.absolute_url())
         self.send_mail(project_obj.absolute_url())
 
-    @button.buttonAndHandler(_(u"Send"), name="send")
+    @button.buttonAndHandler(_("Send"), name="send")
     def handleApply(self, action):
         data, errors = self.extractData()
         if errors:

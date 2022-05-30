@@ -23,12 +23,12 @@ import time
 
 
 class IProjectEncoding(IEnhancedUserDataSchema):
-    mail = schema.Email(title=_(u"Email"), required=False)
+    mail = schema.Email(title=_("Email"), required=False)
 
 
 @implementer(IFieldsForm)
 class ProjectEncodingForm(Form):
-    label = _(u"Project encoding")
+    label = _("Project encoding")
     fields = Fields(IProjectEncoding).select(
         "last_name",
         "first_name",
@@ -65,7 +65,7 @@ class ProjectEncodingForm(Form):
                 return existing_user
         properties = dict(
             last_name=data["last_name"]
-            or translate(_(u"Anonymous"), context=self.request),
+            or translate(_("Anonymous"), context=self.request),
             first_name=data["first_name"],
             gender=data["gender"],
             birthdate=data["birthdate"],
@@ -93,7 +93,7 @@ class ProjectEncodingForm(Form):
         updates = {}
         new_properties = {
             "last_name": data["last_name"]
-            or translate(_(u"Anonymous"), context=self.request),
+            or translate(_("Anonymous"), context=self.request),
             "first_name": data["first_name"],
             "gender": data["gender"],
             "birthdate": data["birthdate"],
@@ -141,7 +141,7 @@ class ProjectEncodingForm(Form):
             )
         self.request.response.redirect(project_obj.absolute_url())
 
-    @button.buttonAndHandler(_(u"Send"), name="send")
+    @button.buttonAndHandler(_("Send"), name="send")
     def handleApply(self, action):
         data, errors = self.extractData()
         if errors:

@@ -19,11 +19,11 @@ import time
 class IProjectsTile(Schema):
     """A tile that displays a listing of content items"""
 
-    title = schema.TextLine(title=_(u"Title"), required=True, default=_(u"Projects"))
+    title = schema.TextLine(title=_("Title"), required=True, default=_("Projects"))
 
     limit = schema.Int(
-        title=_(u"Limit"),
-        description=_(u"Limit projects"),
+        title=_("Limit"),
+        description=_("Limit projects"),
         required=False,
         default=6,
         min=1,
@@ -44,7 +44,7 @@ class BaseProjectsTile(Tile):
 
     @property
     def title(self):
-        return self.data.get("title") or _(u"Projects")
+        return self.data.get("title") or _("Projects")
 
     def contents(self):
         limit = self.data["limit"]

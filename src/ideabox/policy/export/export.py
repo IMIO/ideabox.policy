@@ -85,11 +85,11 @@ class UserPropertyRenderer(ExtendedRenderer):
 
 class ProjectCollectionFieldRenderer(CollectionFieldRenderer):
     adapts(ICollection, Interface, IIdeaboxPolicyLayer)
-    separator = u","
+    separator = ","
 
 
 class PositiveRatingRenderer(ExtendedRenderer):
-    name = _(u"Positive rating ")
+    name = _("Positive rating ")
 
     def render_value(self, obj):
         annotations = IAnnotations(obj)
@@ -100,7 +100,7 @@ class PositiveRatingRenderer(ExtendedRenderer):
 
 
 class NegativeRatingRenderer(ExtendedRenderer):
-    name = _(u"Negative rating ")
+    name = _("Negative rating ")
 
     def render_value(self, obj):
         annotations = IAnnotations(obj)
@@ -111,7 +111,7 @@ class NegativeRatingRenderer(ExtendedRenderer):
 
 
 class PositiveVotersListRenderer(ExtendedRenderer):
-    name = _(u"Voters in favour")
+    name = _("Voters in favour")
 
     def render_value(self, obj):
         annotations = IAnnotations(obj)
@@ -124,7 +124,7 @@ class PositiveVotersListRenderer(ExtendedRenderer):
 
 
 class NegativeVotersListRenderer(ExtendedRenderer):
-    name = _(u"Voters opposed")
+    name = _("Voters opposed")
 
     def render_value(self, obj):
         annotations = IAnnotations(obj)
@@ -137,27 +137,27 @@ class NegativeVotersListRenderer(ExtendedRenderer):
 
 
 class UserIdRenderer(UserPropertyRenderer):
-    name = _(u"User ID")
+    name = _("User ID")
     prop = "id"
 
 
 class UserLastNameRenderer(UserPropertyRenderer):
-    name = _(u"Last name")
+    name = _("Last name")
     prop = "last_name"
 
 
 class UserFirstNameRenderer(UserPropertyRenderer):
-    name = _(u"First name")
+    name = _("First name")
     prop = "first_name"
 
 
 class UserAddressRenderer(UserPropertyRenderer):
-    name = _(u"Address")
+    name = _("Address")
     prop = "address"
 
 
 class UserGenderRenderer(UserPropertyRenderer):
-    name = _(u"Gender")
+    name = _("Gender")
     prop = "gender"
 
     def render_value(self, obj):
@@ -175,7 +175,7 @@ class UserGenderRenderer(UserPropertyRenderer):
 
 
 class UserBirthdateRenderer(UserPropertyRenderer):
-    name = _(u"Birthdate")
+    name = _("Birthdate")
     prop = "birthdate"
 
     def render_collection_entry(self, obj, value):
@@ -192,7 +192,7 @@ class UserBirthdateRenderer(UserPropertyRenderer):
 
 
 class UserIamRenderer(UserPropertyRenderer):
-    name = _(u"I am")
+    name = _("I am")
     prop = "iam"
 
     def render_value(self, obj):
@@ -210,12 +210,12 @@ class UserIamRenderer(UserPropertyRenderer):
 
 
 class UserZipCodeRenderer(UserPropertyRenderer):
-    name = _(u"Zip code")
+    name = _("Zip code")
     prop = "zip_code"
 
 
 class UserVotesRenderer(ExtendedRenderer):
-    name = _(u"Votes")
+    name = _("Votes")
 
     def render_value(self, obj):
         projects = []

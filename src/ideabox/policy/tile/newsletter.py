@@ -9,9 +9,9 @@ from zope import schema
 class INewsletterTile(Schema):
     """A tile that displays a listing of content items"""
 
-    title = schema.TextLine(title=_(u"Title"), required=True, default=_(u"Newsletter"))
+    title = schema.TextLine(title=_("Title"), required=True, default=_("Newsletter"))
 
-    newsletter_link = schema.TextLine(title=_(u"Newsletter link"), required=True)
+    newsletter_link = schema.TextLine(title=_("Newsletter link"), required=True)
 
 
 class NewsletterTile(Tile):
@@ -22,7 +22,7 @@ class NewsletterTile(Tile):
 
     @property
     def title(self):
-        return self.data.get("title") or _(u"Newsletter")
+        return self.data.get("title") or _("Newsletter")
 
     @property
     def newsletter_link(self):

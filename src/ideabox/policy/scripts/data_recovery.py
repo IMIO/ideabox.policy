@@ -33,7 +33,7 @@ def add_project(
             type="Project",
             title=title,
             project_theme=project_theme,
-            body=u"<br>".join(project_body.decode("utf8").splitlines()),
+            body="<br>".join(project_body.decode("utf8").splitlines()),
             container=container,
             original_author=project_author,
             original_id=project_id,

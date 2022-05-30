@@ -10,8 +10,8 @@ class ITimelineTile(Schema):
     """A tile that displays a listing of content items"""
 
     steps = schema.Text(
-        title=_(u"Steps for timeline"),
-        description=_(u"Title; Date; Link"),
+        title=_("Steps for timeline"),
+        description=_("Title; Date; Link"),
         required=True,
     )
 

@@ -51,7 +51,7 @@ def post_install(context):
         _publish(participate)
     if portal.get("plus-dinfos") is None:
         infos = api.content.create(
-            type="Folder", id="plus-dinfos", title=u"Plus d'infos", container=portal
+            type="Folder", id="plus-dinfos", title="Plus d'infos", container=portal
         )
         utils.disable_portlets(infos, disabled=("plone.rightcolumn",))
         _publish(infos)

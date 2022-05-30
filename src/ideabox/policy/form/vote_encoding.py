@@ -25,18 +25,18 @@ import time
 
 
 class IVoteEncoding(IEnhancedUserDataSchema):
-    mail = schema.Email(title=_(u"Email"), required=False)
+    mail = schema.Email(title=_("Email"), required=False)
 
     form.widget(vote=RadioFieldWidget)
     vote = schema.Choice(
-        title=_(u"Vote"), required=True, vocabulary=u"ideabox.vocabularies.vote"
+        title=_("Vote"), required=True, vocabulary="ideabox.vocabularies.vote"
     )
 
     form.widget(project=MultiSelect2FieldWidget)
     project = schema.List(
-        title=_(u"Project(s)"),
+        title=_("Project(s)"),
         value_type=schema.Choice(
-            title=_(u"Project"), vocabulary=u"ideabox.vocabularies.projects"
+            title=_("Project"), vocabulary="ideabox.vocabularies.projects"
         ),
         required=True,
     )
@@ -44,7 +44,7 @@ class IVoteEncoding(IEnhancedUserDataSchema):
 
 @implementer(IFieldsForm)
 class VoteEncodingForm(Form):
-    label = _(u"Vote encoding")
+    label = _("Vote encoding")
     fields = Fields(IVoteEncoding).select(
         "last_name",
         "first_name",
@@ -79,7 +79,7 @@ class VoteEncodingForm(Form):
                 return existing_user
         properties = dict(
             last_name=data["last_name"]
-            or translate(_(u"Anonymous"), context=self.request),
+            or translate(_("Anonymous"), context=self.request),
             first_name=data["first_name"],
             gender=data["gender"],
             birthdate=data["birthdate"],
@@ -106,7 +106,7 @@ class VoteEncodingForm(Form):
         updates = {}
         new_properties = {
             "last_name": data["last_name"]
-            or translate(_(u"Anonymous"), context=self.request),
+            or translate(_("Anonymous"), context=self.request),
             "first_name": data["first_name"],
             "gender": data["gender"],
             "birthdate": data["birthdate"],
@@ -138,7 +138,7 @@ class VoteEncodingForm(Form):
             "{0}/@@vote_encoding".format(self.context.absolute_url())
         )
 
-    @button.buttonAndHandler(_(u"Send"), name="send")
+    @button.buttonAndHandler(_("Send"), name="send")
     def handleApply(self, action):
         data, errors = self.extractData()
         if errors:
@@ -147,4 +147,4 @@ class VoteEncodingForm(Form):
 
         self.send_request(data)
         messages = IStatusMessage(self.request)
-        messages.add(_(u"The votes have been encoded correctly"), type=u"info")
+        messages.add(_("The votes have been encoded correctly"), type="info")

@@ -15,27 +15,27 @@ from zope.publisher.interfaces.browser import IDefaultBrowserLayer
 
 class IEnhancedUserDataSchema(model.Schema):
 
-    last_name = schema.TextLine(title=_(u"Last name or institution"), required=True)
+    last_name = schema.TextLine(title=_("Last name or institution"), required=True)
 
-    first_name = schema.TextLine(title=_(u"First name"), required=False)
+    first_name = schema.TextLine(title=_("First name"), required=False)
 
-    address = schema.Text(title=_(u"Address"), required=False)
+    address = schema.Text(title=_("Address"), required=False)
 
     gender = schema.Choice(
-        title=_(u"Gender"), required=True, vocabulary=u"ideabox.vocabularies.gender"
+        title=_("Gender"), required=True, vocabulary="ideabox.vocabularies.gender"
     )
 
-    birthdate = schema.Date(title=_(u"Birthdate"), required=True)
+    birthdate = schema.Date(title=_("Birthdate"), required=True)
 
     zip_code = schema.Choice(
-        title=_(u"Zip code / locality"),
+        title=_("Zip code / locality"),
         required=True,
-        vocabulary=u"collective.taxonomy.locality",
-        description=_(u"zip code, locality or zip code and locality"),
+        vocabulary="collective.taxonomy.locality",
+        description=_("zip code, locality or zip code and locality"),
     )
 
     iam = schema.Choice(
-        title=_(u"I am"), required=True, vocabulary=u"collective.taxonomy.iam"
+        title=_("I am"), required=True, vocabulary="collective.taxonomy.iam"
     )
 
 

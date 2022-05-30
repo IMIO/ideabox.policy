@@ -200,9 +200,9 @@ def to_1009(context):
     )  # noqa
     record = Record(
         field.Text(
-            title=_(u"Legal information text"),
+            title=_("Legal information text"),
             required=False,
-            description=_(u"Legal information text"),
+            description=_("Legal information text"),
         )
     )
     records[
@@ -226,10 +226,10 @@ def to_1010(context):
     )  # noqa
     record = Record(
         field.Bool(
-            title=_(u"Projects directly submitted"),
+            title=_("Projects directly submitted"),
             default=True,
             description=_(
-                u"If checked, projects are public as soon as they are submitted."
+                "If checked, projects are public as soon as they are submitted."
             ),
         )
     )
@@ -237,10 +237,9 @@ def to_1010(context):
         "ideabox.policy.browser.controlpanel.IIdeaBoxSettingsSchema.project_directly_submitted"
     ] = record
 
+
 def to_1011(context):
-    fpath = os.path.join(
-        os.path.dirname(__file__), "faceted", "config", "campaign.xml"
-    )
+    fpath = os.path.join(os.path.dirname(__file__), "faceted", "config", "campaign.xml")
     for brain in api.content.find(portal_type="campaign"):
         obj = brain.getObject()
         xml = ""

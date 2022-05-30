@@ -13,12 +13,12 @@ from eea.facetednavigation import EEAMessageFactory as EEAMF_
 
 class IProjectSortingSchema(ISchema):
     vocabulary = schema.Choice(
-        title=EEAMF_(u"Filter from vocabulary"),
+        title=EEAMF_("Filter from vocabulary"),
         description=EEAMF_(
-            u"Vocabulary to use to filter sorting criteria. "
-            u"Leave empty for default sorting criteria."
+            "Vocabulary to use to filter sorting criteria. "
+            "Leave empty for default sorting criteria."
         ),
-        vocabulary=u"eea.faceted.vocabularies.PortalVocabularies",
+        vocabulary="eea.faceted.vocabularies.PortalVocabularies",
         required=True,
     )
 
@@ -27,7 +27,7 @@ class DefaultSchemata(DS):
     """Schemata default"""
 
     fields = field.Fields(IProjectSortingSchema).select(
-        u"title", u"vocabulary", u"default"
+        "title", "vocabulary", "default"
     )
 
 

@@ -23,33 +23,33 @@ from zope.schema.interfaces import IVocabularyFactory
 class IProject(model.Schema):
     """IProject"""
 
-    title = schema.TextLine(title=DXMF(u"label_title", default=u"Title"), required=True)
+    title = schema.TextLine(title=DXMF("label_title", default="Title"), required=True)
 
     form.widget(project_theme=MultiSelect2FieldWidget)
     project_theme = schema.List(
-        title=_(u"Domain(s) concerned"),
+        title=_("Domain(s) concerned"),
         value_type=schema.Choice(
-            title=_(u"Domain(s) concerned"), vocabulary=u"collective.taxonomy.theme"
+            title=_("Domain(s) concerned"), vocabulary="collective.taxonomy.theme"
         ),
         required=False,
     )
 
     form.widget(project_district=MultiSelect2FieldWidget)
     project_district = schema.List(
-        title=_(u"District(s) concerned"),
+        title=_("District(s) concerned"),
         value_type=schema.Choice(
-            title=_(u"District(s) concerned"),
-            vocabulary=u"collective.taxonomy.district",
+            title=_("District(s) concerned"),
+            vocabulary="collective.taxonomy.district",
         ),
         required=False,
     )
 
-    body = RichText(title=_(u"Content"), required=True)
+    body = RichText(title=_("Content"), required=True)
     form.widget("body", RichTextFieldWidget)
     model.primary("body")
 
     form.mode(original_author="hidden")
-    original_author = schema.TextLine(title=_(u"Original author"), required=False)
+    original_author = schema.TextLine(title=_("Original author"), required=False)
 
 
 @implementer(IProject)
@@ -149,7 +149,7 @@ class ProjectView(view.DefaultView):
             or second_timeline_states
         )
         states = [
-            {"state": e, "date": "", "class": u"unfinished"} for e in selected_states
+            {"state": e, "date": "", "class": "unfinished"} for e in selected_states
         ]
         idx = (
             current_state in self._timeline_states
@@ -164,7 +164,7 @@ class ProjectView(view.DefaultView):
             state = [s for s in states if s["state"] == line["state"]]
             if len(state) == 1:
                 state[0]["date"] = line["date"]
-                state[0]["class"] = u"finished"
+                state[0]["class"] = "finished"
         return states
 
     @property

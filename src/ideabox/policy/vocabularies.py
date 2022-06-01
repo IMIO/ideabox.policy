@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 
 from ideabox.policy import _
+from ideabox.policy.utils import get_district
+from ideabox.policy.utils import get_theme
 from operator import itemgetter
 from plone import api
 from plone.registry.interfaces import IRegistry
@@ -100,3 +102,23 @@ class SortProjectVocabularyFactory(object):
 
 
 SortProjectVocabulary = SortProjectVocabularyFactory()
+
+
+class DistrictVocabularyFactory:
+    def __call__(self, context=None):
+        district_taxo = get_district()
+        language = api.portal.get_current_language(context=context)
+        district_voca = district_taxo.makeVocabulary(language)
+        return district_voca
+
+DistrictVocabulary = DistrictVocabularyFactory()
+
+
+class ThemeVocabularyFactory:
+    def __call__(self, context=None):
+        theme_taxo = get_theme()
+        language = api.portal.get_current_language(context=context)
+        theme_voca = theme_taxo.makeVocabulary(language)
+        return theme_voca
+
+ThemeVocabulary = ThemeVocabularyFactory()

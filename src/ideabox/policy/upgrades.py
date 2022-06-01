@@ -2,7 +2,7 @@
 
 from collective.taxonomy.interfaces import ITaxonomy
 from ideabox.policy import _
-from ideabox.policy import utils
+from ideabox.policy.utils import set_faceted_view
 from ideabox.policy.setuphandlers import create_taxonomy_object
 from plone import api
 from plone.registry import field
@@ -260,4 +260,4 @@ def to_1011(context):
             obj.unrestrictedTraverse("@@faceted_exportimport").import_xml(
                 import_file=config
             )
-        utils.set_faceted_view(obj, "faceted-project")
+        set_faceted_view(obj, "faceted-project")

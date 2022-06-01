@@ -9,6 +9,7 @@
 
   <include file="permissions.zcml" />
   <include file="upgrades.zcml" />
+  <include file="vocabularies.zcml" />
 
   <include package="collective.z3cform.select2" />
   <include package="collective.anonymouseditpatterns" />
@@ -67,42 +68,6 @@
       factory=".setuphandlers.HiddenProfiles"
       name="ideabox.policy-hiddenprofiles"
       />
-
-  <utility
-      component=".vocabularies.ReviewStateVocabulary"
-      name="ideabox.vocabularies.review_states"
-      provides="zope.schema.interfaces.IVocabularyFactory"
-      />
-
-  <utility
-      component=".vocabularies.GenderVocabulary"
-      name="ideabox.vocabularies.gender"
-      provides="zope.schema.interfaces.IVocabularyFactory"
-      />
-
-  <utility
-      component=".vocabularies.ZipCodeVocabulary"
-      name="ideabox.vocabularies.zip_code"
-      provides="zope.schema.interfaces.IVocabularyFactory"
-      />
-
-  <utility
-      component=".vocabularies.VoteVocabulary"
-      name="ideabox.vocabularies.vote"
-      provides="zope.schema.interfaces.IVocabularyFactory"
-      />
-
-  <utility
-      component=".vocabularies.ProjectsVocabulary"
-      name="ideabox.vocabularies.projects"
-      provides="zope.schema.interfaces.IVocabularyFactory"
-      />
-
-  <utility
-    component=".vocabularies.SortProjectVocabulary"
-    name="ideabox.vocabularies.sort_project"
-    provides="zope.schema.interfaces.IVocabularyFactory"
-    />
 
   <adapter
     factory=".userdataschema.UserDataPanelExtender"

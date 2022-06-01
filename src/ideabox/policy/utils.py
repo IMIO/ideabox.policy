@@ -4,6 +4,7 @@ from AccessControl import getSecurityManager
 from AccessControl.SecurityManagement import newSecurityManager
 from AccessControl.SecurityManagement import setSecurityManager
 from AccessControl.User import Super as BaseUnrestrictedUser
+from collective.taxonomy.interfaces import ITaxonomy
 from datetime import datetime
 from eea.facetednavigation.layout.layout import FacetedLayout
 from ideabox.policy import _
@@ -12,6 +13,7 @@ from plone.portlets.constants import CONTEXT_CATEGORY
 from plone.portlets.interfaces import ILocalPortletAssignmentManager
 from plone.portlets.interfaces import IPortletManager
 from zope.component import getMultiAdapter
+from zope.component import getSiteManager
 from zope.component import getUtility
 from zope.i18n import translate
 
@@ -121,3 +123,13 @@ def disable_portlets(context, disabled=("plone.leftcolumn", "plone.rightcolumn")
         manager = getUtility(IPortletManager, name=manager_name)
         blacklist = getMultiAdapter((context, manager), ILocalPortletAssignmentManager)
         blacklist.setBlacklistStatus(CONTEXT_CATEGORY, True)
+
+
+def get_district():
+    sm = getSiteManager()
+    return sm.queryUtility(ITaxonomy, name="collective.taxonomy.district")
+
+
+def get_theme():
+    sm = getSiteManager()
+    return sm.queryUtility(ITaxonomy, name="collective.taxonomy.theme")

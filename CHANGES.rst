@@ -5,6 +5,9 @@ Changelog
 3.4.8 (unreleased)
 ------------------
 
+- Move project_image (leadimage) to project content type
+  [boulch]
+
 - Adapt code to sort priority action progress by latest to oldest elements
   [mpeeters]
 

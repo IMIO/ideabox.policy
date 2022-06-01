@@ -18,9 +18,7 @@ from zope.interface import implementer
 
 
 class IProjectSubmission(IProject):
-    title = schema.TextLine(title=_("Title"), required=True)
-
-    project_image = NamedBlobImage(title=_("Project image"), required=False)
+    """"""
 
 
 @implementer(IFieldsForm)

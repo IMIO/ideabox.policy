@@ -11,6 +11,7 @@ from plone.autoform import directives as form
 from plone.dexterity.browser import view
 from plone.dexterity.content import Container
 from plone.indexer.decorator import indexer
+from plone.namedfile.field import NamedBlobImage
 from plone.supermodel import model
 from six import text_type
 from zope import schema
@@ -47,6 +48,8 @@ class IProject(model.Schema):
     body = RichText(title=_("Content"), required=True)
     form.widget("body", RichTextFieldWidget)
     model.primary("body")
+
+    project_image = NamedBlobImage(title=_("Project image"), required=False)
 
     form.mode(original_author="hidden")
     original_author = schema.TextLine(title=_("Original author"), required=False)

@@ -8,7 +8,6 @@
   <i18n:registerTranslations directory="locales" />
 
   <include file="permissions.zcml" />
-  <include file="upgrades.zcml" />
   <include file="vocabularies.zcml" />
 
   <include package="collective.z3cform.select2" />
@@ -16,7 +15,6 @@
   <include package="collective.behavior.richdescription" />
   <include package="collective.big.bang" />
   <include package="collective.excelexport" />
-  <include package="collective.geolocationbehavior" />
   <include package="cioppino.twothumbs" />
   <include package="plone.app.discussion" />
   <include package="eea.facetednavigation" />
@@ -24,6 +22,7 @@
   <include package="collective.behavior.banner" />
   <include package="iaweb.mosaic" />
   <include package="plone.app.imagecropping" />
+  <include package="plone.formwidget.geolocation" />
   <include package="ideabox.stats" />
   <include package="ideabox.restapi" />
   <include package="imio.gdpr" />
@@ -39,6 +38,7 @@
   <include package=".viewlets" />
   <include package=".export" />
   <include package=".form" />
+  <include package=".upgrades" />
 
   <genericsetup:registerProfile
       name="default"

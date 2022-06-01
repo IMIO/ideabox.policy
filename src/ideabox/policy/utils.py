@@ -7,7 +7,6 @@ from AccessControl.User import Super as BaseUnrestrictedUser
 from datetime import datetime
 from eea.facetednavigation.layout.layout import FacetedLayout
 from ideabox.policy import _
-from ideabox.policy import vocabularies
 from plone import api
 from plone.portlets.constants import CONTEXT_CATEGORY
 from plone.portlets.interfaces import ILocalPortletAssignmentManager
@@ -19,10 +18,13 @@ from zope.i18n import translate
 
 def token_type_recovery(value):
     value = value.decode("utf8")
-    vocabulary = vocabularies.ThemeVocabulary(None)
-    return [
-        e.token for e in vocabulary.by_value.values() if translate(e.title) == value
-    ][0]
+    return value
+    # Deprecated ?
+    # from ideabox.policy import vocabularies
+    # vocabulary = vocabularies.ThemeVocabulary(None)
+    # return [
+    #     e.token for e in vocabulary.by_value.values() if translate(e.title) == value
+    # ][0]
 
 
 class UnrestrictedUser(BaseUnrestrictedUser):

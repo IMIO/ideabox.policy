@@ -10,7 +10,10 @@ from plone.app.z3cform.widget import RichTextFieldWidget
 from plone.autoform import directives as form
 from plone.dexterity.browser import view
 from plone.dexterity.content import Container
+from plone.formwidget.geolocation.field import GeolocationField
+from plone.formwidget.geolocation.interfaces import _ as _geo
 from plone.indexer.decorator import indexer
+from plone.namedfile.field import NamedBlobImage
 from plone.supermodel import model
 from six import text_type
 from zope import schema
@@ -48,8 +51,17 @@ class IProject(model.Schema):
     form.widget("body", RichTextFieldWidget)
     model.primary("body")
 
+    project_image = NamedBlobImage(title=_("Project image"), required=False)
+
     form.mode(original_author="hidden")
     original_author = schema.TextLine(title=_("Original author"), required=False)
+
+    geolocation = GeolocationField(
+        title=_geo('label_geolocation', default=u'Geolocation'),
+        description=_geo('help_geolocation',
+                      default=u'Click on the map to select a location, or '
+                              u'use the text input to search by address.'),
+        required=False)
 
 
 @implementer(IProject)

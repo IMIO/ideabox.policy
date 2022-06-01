@@ -5,6 +5,15 @@ Changelog
 3.4.8 (unreleased)
 ------------------
 
+- Add new geolocated faceted view
+  [boulch]
+
+- Add geolocation field to project content type
+  [boulch]
+
+- Move project_image (leadimage) to project content type
+  [boulch]
+
 - Adapt code to sort priority action progress by latest to oldest elements
   [mpeeters]
 

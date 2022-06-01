@@ -6,7 +6,6 @@ from ideabox.policy import logger
 from ideabox.policy.content.project import IProject
 from ideabox.policy.utils import execute_under_admin
 from plone import api
-from plone.namedfile.field import NamedBlobImage
 from z3c.form import button
 from z3c.form.field import Fields
 from z3c.form.form import Form
@@ -18,9 +17,7 @@ from zope.interface import implementer
 
 
 class IProjectSubmission(IProject):
-    title = schema.TextLine(title=_("Title"), required=True)
-
-    project_image = NamedBlobImage(title=_("Project image"), required=False)
+    """"""
 
 
 @implementer(IFieldsForm)
@@ -32,6 +29,7 @@ class ProjectSubmissionForm(Form):
         "project_district",
         "body",
         "project_image",
+        "geolocation",
         "original_author",
     )
     fields["project_theme"].widgetFactory = MultiSelect2FieldWidget

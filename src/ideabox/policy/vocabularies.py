@@ -26,7 +26,7 @@ def dict_list_2_vocabulary(dict_list):
 
 
 class ReviewStateVocabularyFactory(object):
-    def __call__(self, context):
+    def __call__(self, context=None):
         values = [
             {"draft": PMF("draft")},
             {"deposited": PMF("deposited")},
@@ -46,7 +46,7 @@ ReviewStateVocabulary = ReviewStateVocabularyFactory()
 
 
 class GenderVocabularyFactory(object):
-    def __call__(self, context):
+    def __call__(self, context=None):
         values = [{"MALE": _("MALE", "Male")}, {"FEMALE": _("FEMALE", "Female")}]
         return dict_list_2_vocabulary(values)
 
@@ -55,7 +55,7 @@ GenderVocabulary = GenderVocabularyFactory()
 
 
 class ZipCodeVocabularyFactory(object):
-    def __call__(self, context):
+    def __call__(self, context=None):
         registry = getUtility(IRegistry)
         dict_value = registry.get("ideabox.vocabulary.zip_code")
         values = []
@@ -75,7 +75,7 @@ def make_terms(items):
 
 
 class ProjectsVocabularyFactory(object):
-    def __call__(self, context):
+    def __call__(self, context=None):
         brains = api.content.find(portal_type="Project", review_state="vote")
         results = [(b.UID, b.Title) for b in brains]
         results = sorted(results, key=itemgetter(1))
@@ -87,7 +87,7 @@ ProjectsVocabulary = ProjectsVocabularyFactory()
 
 
 class VoteVocabularyFactory(object):
-    def __call__(self, context):
+    def __call__(self, context=None):
         values = [{"FOR": _("FOR", "For")}, {"AGAINST": _("AGAINST", "Against")}]
         return dict_list_2_vocabulary(values)
 
@@ -96,7 +96,7 @@ VoteVocabulary = VoteVocabularyFactory()
 
 
 class SortProjectVocabularyFactory(object):
-    def __call__(self, context):
+    def __call__(self, context=None):
         values = [{"random_sort": _("Random sort")}, {"sortable_title": _("Title")}]
         return dict_list_2_vocabulary(values)
 

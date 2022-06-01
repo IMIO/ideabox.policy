@@ -41,7 +41,7 @@ class ProjectEncodingForm(Form):
     )
 
     fields = fields + Fields(IProjectSubmission).select(
-        "title", "project_theme", "project_district", "body", "project_image"
+        "title", "project_theme", "project_district", "body", "project_image", "geolocation",
     )
 
     fields["project_theme"].widgetFactory = MultiSelect2FieldWidget

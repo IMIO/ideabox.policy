@@ -65,6 +65,7 @@ setup(
         "plone.app.imagecropping",
         "plone.app.mosaic",
         "plone.dexterity",
+        "plone.formwidget.geolocation",
         "setuptools",
         "z3c.jbot",
     ],

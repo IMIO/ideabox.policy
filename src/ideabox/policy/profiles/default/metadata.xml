@@ -14,5 +14,6 @@
     <dependency>profile-collective.taxonomy:default</dependency>
     <dependency>profile-collective.disclaimer:default</dependency>
     <dependency>profile-plone.app.imagecropping:default</dependency>
+    <dependency>profile-plone.formwidget.geolocation:default</dependency>
   </dependencies>
 </metadata>

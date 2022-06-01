@@ -16,6 +16,7 @@
   <include package="collective.behavior.richdescription" />
   <include package="collective.big.bang" />
   <include package="collective.excelexport" />
+  <include package="collective.geolocationbehavior" />
   <include package="cioppino.twothumbs" />
   <include package="plone.app.discussion" />
   <include package="eea.facetednavigation" />

@@ -49,7 +49,7 @@ setup(
         "collective.big.bang",
         "collective.excelexport",
         "collective.disclaimer",
-        "collective.faceted.map",
+        "collective.faceted.map>=1.0b7",
         "collective.taxonomy",
         "collective.z3cform.datetimewidget",
         "collective.z3cform.select2",

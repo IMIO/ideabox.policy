@@ -20,6 +20,7 @@
   <include package="cioppino.twothumbs" />
   <include package="plone.app.discussion" />
   <include package="eea.facetednavigation" />
+  <include package="collective.faceted.map" />
   <include package="collective.behavior.banner" />
   <include package="iaweb.mosaic" />
   <include package="plone.app.imagecropping" />

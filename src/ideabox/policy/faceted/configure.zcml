@@ -16,6 +16,15 @@
     />
 
   <faceted:view
+    for="*"
+    name="faceted-explorer"
+    template="explorer.pt"
+    title="Explorer"
+    permission="zope2.View"
+    class=".projects.ProjectsView"
+    />
+
+  <faceted:view
     name="faceted-news"
     template="news.pt"
     title="News"

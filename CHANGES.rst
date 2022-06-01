@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.4.8 (unreleased)
+3.4.8 (2022-06-01)
 ------------------
 
 - Add new geolocated faceted view

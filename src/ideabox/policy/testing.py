@@ -9,8 +9,12 @@ from plone.app.testing import PLONE_FIXTURE
 from plone.app.testing import PloneSandboxLayer
 from plone.testing import z2
 from unittest.mock import Mock
+from zope.component import getUtility
+from zope.schema.interfaces import IVocabularyFactory
+
 
 import ideabox.policy
+import unittest
 
 
 class IdeaboxPolicyLayer(PloneSandboxLayer):
@@ -46,3 +50,10 @@ IDEABOX_POLICY_ACCEPTANCE_TESTING = FunctionalTesting(
     bases=(IDEABOX_POLICY_FIXTURE, REMOTE_LIBRARY_BUNDLE_FIXTURE, z2.ZSERVER_FIXTURE),
     name="IdeaboxPolicyLayer:AcceptanceTesting",
 )
+
+
+class IdeaboxTestCase(unittest.TestCase):
+    def assertVocabularyLen(self, vocname, voc_len):
+        factory = getUtility(IVocabularyFactory, vocname)
+        vocabulary = factory()
+        self.assertEqual(len(vocabulary), voc_len)

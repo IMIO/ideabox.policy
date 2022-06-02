@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.4.9 (unreleased)
+3.4.9 (2022-06-02)
 ------------------
 
 - Add endpoints to get projects themes and projects districts

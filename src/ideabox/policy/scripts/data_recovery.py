@@ -97,7 +97,7 @@ def data_recovery(filename, image, container, status):
         project_like = line[15]
         project_unlike = line[16]
 
-        token_type = token_type_recovery(project_theme)
+        token_type = project_theme
 
         if len(project_author) < 3:
             project_author = urlnormalizer.normalize(

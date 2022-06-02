@@ -18,17 +18,6 @@ from zope.component import getUtility
 from zope.i18n import translate
 
 
-def token_type_recovery(value):
-    value = value.decode("utf8")
-    return value
-    # Deprecated ?
-    # from ideabox.policy import vocabularies
-    # vocabulary = vocabularies.ThemeVocabulary(None)
-    # return [
-    #     e.token for e in vocabulary.by_value.values() if translate(e.title) == value
-    # ][0]
-
-
 class UnrestrictedUser(BaseUnrestrictedUser):
     """Unrestricted user that still has an id."""
 

@@ -8,6 +8,11 @@ on:
   pull_request:
     branches: [ plone5.2 ]
 
+env:
+  LANG: "fr_BE.UTF-8"
+  LANGUAGE: "fr_BE:fr"
+  LC_ALL: "fr_BE.UTF-8"
+
 jobs:
   test:
     runs-on: ubuntu-latest

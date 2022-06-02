@@ -108,7 +108,7 @@ class DistrictVocabularyFactory:
     def __call__(self, context=None):
         district_taxo = get_district()
         language = api.portal.get_current_language(context=context)
-        district_voca = district_taxo.makeVocabulary(language)
+        district_voca = district_taxo.makeVocabulary(language).inv_data
         return district_voca
 
 DistrictVocabulary = DistrictVocabularyFactory()
@@ -118,7 +118,7 @@ class ThemeVocabularyFactory:
     def __call__(self, context=None):
         theme_taxo = get_theme()
         language = api.portal.get_current_language(context=context)
-        theme_voca = theme_taxo.makeVocabulary(language)
+        theme_voca = theme_taxo.makeVocabulary(language).inv_data
         return theme_voca
 
 ThemeVocabulary = ThemeVocabularyFactory()

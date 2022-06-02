@@ -5,6 +5,9 @@ Changelog
 3.4.9 (unreleased)
 ------------------
 
+- Add endpoints to get projects themes and projects districts
+  [boulch]
+
 - Refactor default_image project and take project leadimage in consideration
   [boulch]
 

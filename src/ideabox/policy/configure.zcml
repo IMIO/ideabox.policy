@@ -39,6 +39,7 @@
   <include package=".export" />
   <include package=".form" />
   <include package=".upgrades" />
+  <include package=".rest_services" />
 
   <genericsetup:registerProfile
       name="default"

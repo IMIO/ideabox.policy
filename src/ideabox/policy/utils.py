@@ -16,6 +16,7 @@ from zope.component import getMultiAdapter
 from zope.component import getSiteManager
 from zope.component import getUtility
 from zope.i18n import translate
+from zope.schema.interfaces import IVocabularyFactory
 
 
 class UnrestrictedUser(BaseUnrestrictedUser):
@@ -122,3 +123,8 @@ def get_district():
 def get_theme():
     sm = getSiteManager()
     return sm.queryUtility(ITaxonomy, name="collective.taxonomy.theme")
+
+def get_vocabulary(voc_name):
+    factory = getUtility(IVocabularyFactory, voc_name)
+    vocabulary = factory(api.portal.get())
+    return vocabulary

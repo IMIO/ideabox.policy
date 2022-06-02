@@ -108,6 +108,17 @@
               </div>
             </div>
           </div>
+          <tal:block condition="view/is_geolocated">
+            <tal:widget
+              tal:define="widget python:view.widgets.get('geolocation', None)"
+              tal:replace="structure widget/@@ploneform-render-widget" />
+            <label class="horizontal" i18n:translate="">
+              Coordinates
+            </label>
+            <span tal:content="context/geolocation/latitude" /> ;
+            <span tal:content="context/geolocation/longitude" />
+          </tal:block>
+
           <div>
             <div i18n:translate="" id="ap-comment" class="ap-button">Comment</div>
             <div class="ap-comment ap-toggle" tal:content="structure provider:plone.belowcontentbody" />

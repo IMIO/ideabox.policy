@@ -248,6 +248,9 @@ class ProjectView(view.DefaultView):
             return "{0}/@@images/image".format(parent.absolute_url())
         return ""
 
+    def is_geolocated(self):
+        return is_geolocated(self.context)
+
 
 @indexer(IProject)
 def searchabletext_project(object, **kw):
@@ -271,3 +274,21 @@ def searchabletext_project(object, **kw):
             if text:
                 result.append(text)
     return " ".join(result)
+
+
+def is_geolocated(obj):
+    if getattr(obj, "geolocation", None) is not None:
+        if (
+            getattr(obj.geolocation, "latitude", None) is not None
+            and getattr(obj.geolocation, "longitude", None) is not None
+        ):
+            if float(obj.geolocation.latitude) != float(0) and float(
+                obj.geolocation.longitude
+            ) != float(0):
+                return True
+            else:
+                return False
+        else:
+            return False
+    else:
+        return False

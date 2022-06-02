@@ -5,7 +5,8 @@ Changelog
 3.4.9 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add map and coordinates in project template
+  [boulch]
 
 
 3.4.8 (2022-06-01)

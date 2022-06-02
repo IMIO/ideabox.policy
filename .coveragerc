@@ -3,4 +3,4 @@ include =
     src/ideabox/*
 omit =
     */test*
-    */upgrades/*
+    */upgrades*

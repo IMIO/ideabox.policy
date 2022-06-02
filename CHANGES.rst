@@ -5,6 +5,9 @@ Changelog
 3.4.9 (unreleased)
 ------------------
 
+- Refactor default_image project and take project leadimage in consideration
+  [boulch]
+
 - Add map and coordinates in project template
   [boulch]
 

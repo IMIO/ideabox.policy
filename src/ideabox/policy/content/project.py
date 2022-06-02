@@ -92,6 +92,9 @@ class ProjectView(view.DefaultView):
     def default_image(self):
         """Try to find the default image for the project, return `None` otherwise"""
         portal = api.portal.get()
+        context = self.context
+        if context.project_image is not None:
+            return "{}/@@images/project_image/large".format(context.absolute_url())
         if "project_default_large.jpg" in portal:
             return portal["project_default_large.jpg"].absolute_url()
 

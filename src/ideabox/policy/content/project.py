@@ -57,11 +57,14 @@ class IProject(model.Schema):
     original_author = schema.TextLine(title=_("Original author"), required=False)
 
     geolocation = GeolocationField(
-        title=_geo('label_geolocation', default=u'Geolocation'),
-        description=_geo('help_geolocation',
-                      default=u'Click on the map to select a location, or '
-                              u'use the text input to search by address.'),
-        required=False)
+        title=_geo("label_geolocation", default="Geolocation"),
+        description=_geo(
+            "help_geolocation",
+            default="Click on the map to select a location, or "
+            "use the text input to search by address.",
+        ),
+        required=False,
+    )
 
 
 @implementer(IProject)

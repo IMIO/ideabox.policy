@@ -111,6 +111,7 @@ class DistrictVocabularyFactory:
         district_voca = district_taxo.makeVocabulary(language).inv_data
         return district_voca
 
+
 DistrictVocabulary = DistrictVocabularyFactory()
 
 
@@ -120,5 +121,6 @@ class ThemeVocabularyFactory:
         language = api.portal.get_current_language(context=context)
         theme_voca = theme_taxo.makeVocabulary(language).inv_data
         return theme_voca
+
 
 ThemeVocabulary = ThemeVocabularyFactory()

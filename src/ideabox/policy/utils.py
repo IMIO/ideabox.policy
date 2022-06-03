@@ -124,6 +124,7 @@ def get_theme():
     sm = getSiteManager()
     return sm.queryUtility(ITaxonomy, name="collective.taxonomy.theme")
 
+
 def get_vocabulary(voc_name):
     factory = getUtility(IVocabularyFactory, voc_name)
     vocabulary = factory(api.portal.get())

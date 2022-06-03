@@ -12,7 +12,6 @@ import json
 
 
 class ProjectsView(MapView):
-
     @property
     def map_configuration(self):
         map_layers = api.portal.get_registry_record("geolocation.map_layers") or []

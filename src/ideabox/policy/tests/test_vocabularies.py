@@ -27,13 +27,11 @@ class TestVocabularies(IdeaboxTestCase):
     def test_zip_code(self):
         zip_code = api.portal.get_registry_record("ideabox.vocabulary.zip_code")
         self.assertVocabularyLen("ideabox.vocabularies.zip_code", len(zip_code))
-    
+
     def test_projects(self):
         self.assertVocabularyLen("ideabox.vocabularies.projects", 0)
         campaign = api.content.create(
-            container=self.portal,
-            type="campaign",
-            title="Campaign1"
+            container=self.portal, type="campaign", title="Campaign1"
         )
         project = api.content.create(
             container=campaign,
@@ -43,7 +41,7 @@ class TestVocabularies(IdeaboxTestCase):
         self.assertVocabularyLen("ideabox.vocabularies.projects", 0)
         api.content.transition(obj=project, to_state="vote")
         self.assertVocabularyLen("ideabox.vocabularies.projects", 1)
-    
+
     def test_sort_project(self):
         self.assertVocabularyLen("ideabox.vocabularies.sort_project", 2)
 

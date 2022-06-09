@@ -2,6 +2,14 @@
   xmlns="http://namespaces.zope.org/zope"
   xmlns:genericsetup="http://namespaces.zope.org/genericsetup">
 
+  <genericsetup:registerProfile
+      name="upgrade_1012_to_1013"
+      title="Upgrade policy from 1012 to 1013"
+      directory="profiles/1012_to_1013"
+      description="Add a path to e-guichet project form to registry"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
   <genericsetup:upgradeStep
     source="*"
     destination="1001"
@@ -102,6 +110,16 @@
     <genericsetup:upgradeDepends
         title="Install plone.formwidget.geolocation"
         import_profile="plone.formwidget.geolocation:default"
+        />
+  </genericsetup:upgradeSteps>
+
+  <genericsetup:upgradeSteps
+      source="1012"
+      destination="1013"
+      profile="ideabox.policy:default">
+    <genericsetup:upgradeDepends
+        title="Add a path to e-guichet project form to registry"
+        import_profile="ideabox.policy.upgrades:upgrade_1012_to_1013"
         />
   </genericsetup:upgradeSteps>
 

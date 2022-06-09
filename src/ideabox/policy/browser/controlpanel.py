@@ -35,6 +35,14 @@ class IIdeaBoxSettingsSchema(Interface):
         default=True,
     )
 
+    ts_project_submission_path = schema.TextLine(
+        title=_("Path to e-guichet project form"),
+        required=False,
+        description=_(
+            "Specify the path to the e-guichet project form. If not exist, system use default ideabox citizen form."
+        ),
+    )
+
 
 class IdeaBoxSettingsEditForm(controlpanel.RegistryEditForm):
 

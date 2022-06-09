@@ -5,6 +5,9 @@ Changelog
 3.4.10 (unreleased)
 -------------------
 
+- Add new field in control panel : ts_project_submission_path. This is a path to an external e-guichet project form.
+  [boulch]
+
 - Update translations (faceted view name)
   [boulch]
 

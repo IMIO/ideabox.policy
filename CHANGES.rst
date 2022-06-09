@@ -5,6 +5,9 @@ Changelog
 3.4.10 (unreleased)
 -------------------
 
+- Update translations (faceted view name)
+  [boulch]
+
 - Change faceted view name (from "Explorer" to "Projects with a map")
   [boulch]
 

@@ -1,10 +1,10 @@
-# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
-# SOME DESCRIPTIVE TITLE.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#--- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+#SOME DESCRIPTIVE TITLE.
+#FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-06-29 08:58+0000\n"
+"POT-Creation-Date: 2022-06-09 09:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 
 #. Default: "Against"
-#: ../vocabularies.py:89
+#: ../vocabularies.py:91
 msgid "AGAINST"
 msgstr ""
 
@@ -31,16 +31,16 @@ msgstr ""
 msgid "Address"
 msgstr ""
 
-#: ../form/project_encoding.py:68
+#: ../form/project_encoding.py:73
 #: ../form/vote_encoding.py:82
 msgid "Anonymous"
 msgstr ""
 
-#: ../utils.py:101
+#: ../utils.py:95
 msgid "Apr"
 msgstr ""
 
-#: ../utils.py:89
+#: ../utils.py:83
 msgid "April"
 msgstr ""
 
@@ -48,11 +48,11 @@ msgstr ""
 msgid "Areas concerned :"
 msgstr ""
 
-#: ../utils.py:104
+#: ../utils.py:98
 msgid "Aug"
 msgstr ""
 
-#: ../utils.py:93
+#: ../utils.py:87
 msgid "August"
 msgstr ""
 
@@ -65,7 +65,7 @@ msgstr ""
 msgid "Campaign"
 msgstr ""
 
-#: ../content/project.pt:112
+#: ../content/project.pt:123
 msgid "Comment"
 msgstr ""
 
@@ -73,11 +73,16 @@ msgstr ""
 msgid "Configuration for ideabox product"
 msgstr ""
 
-#: ../content/project.py:47
+#: ../content/project.py:50
 #: ../content/state_progress.py:18
 msgid "Content"
 msgstr ""
 
+#: ../content/project.pt:115
+msgid "Coordinates"
+msgstr ""
+
+#: ../faceted/explorer.pt:22
 #: ../faceted/projects.pt:24
 msgid "Create project"
 msgstr ""
@@ -86,11 +91,11 @@ msgstr ""
 msgid "Date"
 msgstr ""
 
-#: ../utils.py:108
+#: ../utils.py:102
 msgid "Dec"
 msgstr ""
 
-#: ../utils.py:97
+#: ../utils.py:91
 msgid "December"
 msgstr ""
 
@@ -102,11 +107,11 @@ msgstr ""
 msgid "District(s) :"
 msgstr ""
 
-#: ../content/project.py:39
+#: ../content/project.py:42
 msgid "District(s) concerned"
 msgstr ""
 
-#: ../content/project.py:30
+#: ../content/project.py:33
 msgid "Domain(s) concerned"
 msgstr ""
 
@@ -139,7 +144,7 @@ msgstr ""
 msgid "Encoding vote with user"
 msgstr ""
 
-#: ../faceted/configure.zcml:32
+#: ../faceted/configure.zcml:41
 msgid "Events"
 msgstr ""
 
@@ -160,20 +165,20 @@ msgid "Export users with their votes"
 msgstr ""
 
 #. Default: "Female"
-#: ../vocabularies.py:48
+#: ../vocabularies.py:50
 msgid "FEMALE"
 msgstr ""
 
 #. Default: "For"
-#: ../vocabularies.py:89
+#: ../vocabularies.py:91
 msgid "FOR"
 msgstr ""
 
-#: ../utils.py:99
+#: ../utils.py:93
 msgid "Feb"
 msgstr ""
 
-#: ../utils.py:87
+#: ../utils.py:81
 msgid "February"
 msgstr ""
 
@@ -221,35 +226,35 @@ msgstr ""
 msgid "If there are multiple email addresses, separate them with semicolons"
 msgstr ""
 
-#: ../configure.zcml:61
+#: ../configure.zcml:68
 msgid "Installs the ideabox.policy add-on resources"
 msgstr ""
 
-#: ../configure.zcml:44
+#: ../configure.zcml:51
 msgid "Installs the ideabox.policy add-on."
 msgstr ""
 
-#: ../utils.py:98
+#: ../utils.py:92
 msgid "Jan"
 msgstr ""
 
-#: ../utils.py:86
+#: ../utils.py:80
 msgid "January"
 msgstr ""
 
-#: ../utils.py:103
+#: ../utils.py:97
 msgid "Jul"
 msgstr ""
 
-#: ../utils.py:92
+#: ../utils.py:86
 msgid "July"
 msgstr ""
 
-#: ../utils.py:102
+#: ../utils.py:96
 msgid "Jun"
 msgstr ""
 
-#: ../utils.py:91
+#: ../utils.py:85
 msgid "June"
 msgstr ""
 
@@ -281,19 +286,19 @@ msgid "Locality (Registration form)"
 msgstr ""
 
 #. Default: "Male"
-#: ../vocabularies.py:48
+#: ../vocabularies.py:50
 msgid "MALE"
 msgstr ""
 
-#: ../utils.py:100
+#: ../utils.py:94
 msgid "Mar"
 msgstr ""
 
-#: ../utils.py:88
+#: ../utils.py:82
 msgid "March"
 msgstr ""
 
-#: ../utils.py:90
+#: ../utils.py:84
 msgid "May"
 msgstr ""
 
@@ -301,11 +306,11 @@ msgstr ""
 msgid "Negative rating "
 msgstr ""
 
-#: ../form/project_submission.py:80
+#: ../form/project_submission.py:78
 msgid "New project submission"
 msgstr ""
 
-#: ../faceted/configure.zcml:24
+#: ../faceted/configure.zcml:33
 msgid "News"
 msgstr ""
 
@@ -317,23 +322,23 @@ msgstr ""
 msgid "Newsletter link"
 msgstr ""
 
-#: ../content/project.pt:151
+#: ../content/project.pt:162
 msgid "No"
 msgstr ""
 
-#: ../utils.py:107
+#: ../utils.py:101
 msgid "Nov"
 msgstr ""
 
-#: ../utils.py:96
+#: ../utils.py:90
 msgid "November"
 msgstr ""
 
-#: ../utils.py:106
+#: ../utils.py:100
 msgid "Oct"
 msgstr ""
 
-#: ../utils.py:95
+#: ../utils.py:89
 msgid "October"
 msgstr ""
 
@@ -341,7 +346,7 @@ msgstr ""
 msgid "Operational objectives"
 msgstr ""
 
-#: ../content/project.py:52
+#: ../content/project.py:57
 msgid "Original author"
 msgstr ""
 
@@ -371,7 +376,7 @@ msgstr ""
 msgid "Project Sorting"
 msgstr ""
 
-#: ../content/project.pt:119
+#: ../content/project.pt:130
 #: ../content/state_progress.pt:11
 msgid "Project Status"
 msgstr ""
@@ -381,7 +386,7 @@ msgstr ""
 msgid "Project encoding"
 msgstr ""
 
-#: ../form/project_submission.py:23
+#: ../content/project.py:54
 msgid "Project image"
 msgstr ""
 
@@ -407,11 +412,15 @@ msgstr ""
 msgid "Projects in progression"
 msgstr ""
 
+#: ../faceted/configure.zcml:25
+msgid "Projects with a map"
+msgstr ""
+
 #: ../browser/overrides/plone.app.contenttypes.browser.templates.newsitem.pt:19
 msgid "Published online on"
 msgstr ""
 
-#: ../vocabularies.py:98
+#: ../vocabularies.py:100
 msgid "Random sort"
 msgstr ""
 
@@ -423,7 +432,7 @@ msgstr ""
 msgid "Save"
 msgstr ""
 
-#: ../content/project.pt:141
+#: ../content/project.pt:152
 msgid "See more"
 msgstr ""
 
@@ -431,17 +440,17 @@ msgstr ""
 msgid "Select a container"
 msgstr ""
 
-#: ../form/project_encoding.py:144
-#: ../form/project_submission.py:122
+#: ../form/project_encoding.py:149
+#: ../form/project_submission.py:120
 #: ../form/vote_encoding.py:141
 msgid "Send"
 msgstr ""
 
-#: ../utils.py:105
+#: ../utils.py:99
 msgid "Sep"
 msgstr ""
 
-#: ../utils.py:94
+#: ../utils.py:88
 msgid "September"
 msgstr ""
 
@@ -473,13 +482,13 @@ msgstr ""
 msgid "Theme"
 msgstr ""
 
-#: ../content/project.pt:122
+#: ../content/project.pt:133
 msgid "There is no progress for the moment."
 msgstr ""
 
-#: ../form/project_submission.py:21
 #: ../tile/newsletter.py:12
 #: ../tile/priority_action.py:22
+#: ../tile/projects.py:22
 msgid "Title"
 msgstr ""
 
@@ -487,7 +496,7 @@ msgstr ""
 msgid "Title; Date; Link"
 msgstr ""
 
-#: ../configure.zcml:53
+#: ../configure.zcml:60
 msgid "Uninstalls the ideabox.policy add-on."
 msgstr ""
 
@@ -525,11 +534,11 @@ msgstr ""
 msgid "Votes"
 msgstr ""
 
-#: ../content/project.pt:146
+#: ../content/project.pt:157
 msgid "Would you like to be kept up to date on the progress of the project?"
 msgstr ""
 
-#: ../content/project.pt:156
+#: ../content/project.pt:167
 msgid "Yes"
 msgstr ""
 
@@ -554,19 +563,19 @@ msgid "diagnose and analysis"
 msgstr ""
 
 #. Default: "A new project has been created you can access it at the following url:\n              ${url}\n              "
-#: ../form/project_submission.py:68
+#: ../form/project_submission.py:66
 msgid "email_body_project_submission"
 msgstr ""
 
-#: ../configure.zcml:44
+#: ../configure.zcml:51
 msgid "ideabox.policy"
 msgstr ""
 
-#: ../configure.zcml:61
+#: ../configure.zcml:68
 msgid "ideabox.policy (resources)"
 msgstr ""
 
-#: ../configure.zcml:53
+#: ../configure.zcml:60
 msgid "ideabox.policy (uninstall)"
 msgstr ""
 

@@ -63,7 +63,7 @@ msgstr "Campagne"
 msgid "Comment"
 msgstr "Commentaires"
 
-#: ../browser/controlpanel.py:42
+#: ../browser/controlpanel.py:50
 msgid "Configuration for ideabox product"
 msgstr "Configuration pour Ideabox"
 
@@ -345,6 +345,11 @@ msgstr "Objectifs opérationnels"
 msgid "Original author"
 msgstr "Auteur original"
 
+#: ../browser/controlpanel.py:39
+#: ../upgrades/profiles/1012_to_1013/registry/e-guichet-project-form.xml
+msgid "Path to e-guichet project form"
+msgstr "Chemin vers le formulaire e-guichet de soumission de projets"
+
 #: ../profiles/default/actions.xml
 msgid "Personal information"
 msgstr "Informations personnelles"
@@ -453,6 +458,10 @@ msgstr "Septembre"
 #: ../browser/project.py:27
 msgid "Setting up"
 msgstr "Mise en place"
+
+#: ../browser/controlpanel.py:41
+msgid "Specify the path to the e-guichet project form. If not exist, system use default ideabox citizen form."
+msgstr "Spécifier le chemin vers le formulaire e-guichet de soumission de projet. Si vous ne spécifiez rien, ce sera le formulaire (ideabox) citoyen par défaut qui sera utilisé."
 
 #: ../profiles/default/types/state_progress.xml
 msgid "State progress"

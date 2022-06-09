@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-06-09 10:11+0000\n"
+"POT-Creation-Date: 2022-06-09 13:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: ideabox.policy\n"
 
-#: ../browser/controlpanel.py:43
+#: ../browser/controlpanel.py:51
 msgid ""
 msgstr ""
 
@@ -69,7 +69,7 @@ msgstr ""
 msgid "Comment"
 msgstr ""
 
-#: ../browser/controlpanel.py:42
+#: ../browser/controlpanel.py:50
 msgid "Configuration for ideabox product"
 msgstr ""
 
@@ -351,6 +351,11 @@ msgstr ""
 msgid "Original author"
 msgstr ""
 
+#: ../browser/controlpanel.py:39
+#: ../upgrades/profiles/1012_to_1013/registry/e-guichet-project-form.xml
+msgid "Path to e-guichet project form"
+msgstr ""
+
 #: ../profiles/default/actions.xml
 msgid "Personal information"
 msgstr ""
@@ -458,6 +463,10 @@ msgstr ""
 
 #: ../browser/project.py:27
 msgid "Setting up"
+msgstr ""
+
+#: ../browser/controlpanel.py:41
+msgid "Specify the path to the e-guichet project form. If not exist, system use default ideabox citizen form."
 msgstr ""
 
 #: ../profiles/default/types/state_progress.xml

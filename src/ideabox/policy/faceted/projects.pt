@@ -21,9 +21,9 @@
         batch python:isinstance(folderContents, Batch) and folderContents or Batch(folderContents, 100, int(b_start), orphan=0);">
           <div tal:condition="self/can_submit_project">
             <div i18n:domain="ideabox.policy">
-              <button class="btn" id="btn-create-projects" i18n:translate="" tal:attributes="onclick
-                  python:'window.open(\'{}/{}\',\'_self\')'.format(self.get_path(), '@@project_submission')">
-                Create project</button>
+              <button class="btn" id="btn-create-projects" i18n:translate=""
+                      tal:attributes="onclick self/open_project_form">Create project
+              </button>
             </div>
           </div>
           <div metal:use-macro="context/batch_macros/macros/navigation"/>

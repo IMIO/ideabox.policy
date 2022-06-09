@@ -9,6 +9,7 @@ from zope.i18n import translate
 from zope.schema.interfaces import IVocabularyFactory
 
 import json
+import requests
 
 
 class ProjectsView(MapView):
@@ -82,3 +83,26 @@ class ProjectsView(MapView):
         if self.context.portal_type != "campaign":
             return False
         return getattr(self.context, "project_submission", False)
+
+    @property
+    def is_there_eguichet_project_form(self):
+        if api.portal.get_registry_record(
+            "ideabox.policy.browser.controlpanel.IIdeaBoxSettingsSchema.ts_project_submission_path"
+        ):
+            return True
+        return False
+
+    @property
+    def open_project_form(self):
+        campagne_ideabox_url = requests.utils.quote(self.context.absolute_url())
+        eguichet_form_path = api.portal.get_registry_record(
+            "ideabox.policy.browser.controlpanel.IIdeaBoxSettingsSchema.ts_project_submission_path"
+        )
+        if self.is_there_eguichet_project_form:
+            return "window.open('{}/?campagne={}','_blank')".format(
+                eguichet_form_path, campagne_ideabox_url
+            )
+        else:
+            return "window.open('{}/{}','_self')".format(
+                self.get_path(), "@@project_submission"
+            )

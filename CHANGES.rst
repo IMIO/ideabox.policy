@@ -5,6 +5,9 @@ Changelog
 3.4.10 (unreleased)
 -------------------
 
+- if ts_project_submission_path is not None, we redirect to this form instead of ideabox citizen default form.
+  [boulch]
+
 - Add new field in control panel : ts_project_submission_path. This is a path to an external e-guichet project form.
   [boulch]
 

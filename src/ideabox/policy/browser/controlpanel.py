@@ -30,8 +30,8 @@ class IIdeaBoxSettingsSchema(Interface):
     )
 
     project_directly_submitted = schema.Bool(
-        title="Projects directly submitted",
-        description="If checked, projects are public as soon as they are submitted.",
+        title=_("Projects directly submitted"),
+        description=_("If checked, projects are public as soon as they are submitted."),
         default=True,
     )
 

@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-06-09 09:27+0000\n"
+"POT-Creation-Date: 2022-06-09 10:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -218,7 +218,8 @@ msgstr ""
 msgid "Ideabox project"
 msgstr ""
 
-#: ../upgrades.py:231
+#: ../browser/controlpanel.py:34
+#: ../upgrades/upgrades.py:231
 msgid "If checked, projects are public as soon as they are submitted."
 msgstr ""
 
@@ -268,7 +269,7 @@ msgstr ""
 
 #: ../browser/controlpanel.py:27
 #: ../profiles/default/registry.xml
-#: ../upgrades.py:203
+#: ../upgrades/upgrades.py:203
 msgid "Legal information text"
 msgstr ""
 
@@ -281,7 +282,7 @@ msgid "Limit projects"
 msgstr ""
 
 #: ../setuphandlers.py:115
-#: ../upgrades.py:171
+#: ../upgrades/upgrades.py:171
 msgid "Locality (Registration form)"
 msgstr ""
 
@@ -403,8 +404,9 @@ msgstr ""
 msgid "Projects"
 msgstr ""
 
+#: ../browser/controlpanel.py:33
 #: ../profiles/default/registry.xml
-#: ../upgrades.py:229
+#: ../upgrades/upgrades.py:229
 msgid "Projects directly submitted"
 msgstr ""
 

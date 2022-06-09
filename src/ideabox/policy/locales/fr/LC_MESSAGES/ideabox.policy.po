@@ -74,7 +74,7 @@ msgstr "Contenu"
 
 #: ../content/project.pt:115
 msgid "Coordinates"
-msgstr ""
+msgstr "Coordonnnées"
 
 #: ../faceted/explorer.pt:22
 #: ../faceted/projects.pt:24
@@ -116,7 +116,7 @@ msgstr "Modifier les dates de la ligne du temps"
 #: ../form/project_encoding.py:26
 #: ../form/vote_encoding.py:28
 msgid "Email"
-msgstr ""
+msgstr "Adresse e-mail"
 
 #: ../browser/controlpanel.py:19
 msgid "Email address of the project manager"
@@ -210,9 +210,10 @@ msgstr "Vue sommaire"
 
 #: ../profiles/default/types/Project.xml
 msgid "Ideabox project"
-msgstr ""
+msgstr "Projet Ideabox"
 
-#: ../upgrades.py:231
+#: ../browser/controlpanel.py:34
+#: ../upgrades/upgrades.py:231
 msgid "If checked, projects are public as soon as they are submitted."
 msgstr "Si cochée, les projet sont rendus publiques dès qu'ils sont soumis."
 
@@ -262,7 +263,7 @@ msgstr "Nom ou institution"
 
 #: ../browser/controlpanel.py:27
 #: ../profiles/default/registry.xml
-#: ../upgrades.py:203
+#: ../upgrades/upgrades.py:203
 msgid "Legal information text"
 msgstr "Mentions légales"
 
@@ -275,7 +276,7 @@ msgid "Limit projects"
 msgstr "Limite d'élément affiché"
 
 #: ../setuphandlers.py:115
-#: ../upgrades.py:171
+#: ../upgrades/upgrades.py:171
 msgid "Locality (Registration form)"
 msgstr "Localité (Formulaire d'inscription)"
 
@@ -397,8 +398,9 @@ msgstr "Projet(s)"
 msgid "Projects"
 msgstr "Projets"
 
+#: ../browser/controlpanel.py:33
 #: ../profiles/default/registry.xml
-#: ../upgrades.py:229
+#: ../upgrades/upgrades.py:229
 msgid "Projects directly submitted"
 msgstr "Soumettre directement le projet"
 

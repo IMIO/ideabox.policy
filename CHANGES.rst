@@ -5,6 +5,9 @@ Changelog
 3.4.10 (unreleased)
 -------------------
 
+- Change faceted view name (from "Explorer" to "Projects with a map")
+  [boulch]
+
 - Fix "us" separator (come from taxonomies) that was displaying in district and theme endpoints.
   [boulch]
 

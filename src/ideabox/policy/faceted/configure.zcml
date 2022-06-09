@@ -19,7 +19,7 @@
     for="*"
     name="faceted-explorer"
     template="explorer.pt"
-    title="Explorer"
+    title="Projects with a map"
     permission="zope2.View"
     class=".projects.ProjectsView"
     />

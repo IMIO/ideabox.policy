@@ -239,7 +239,8 @@ def to_1010(context):
 
 
 def to_1011(context):
-    fpath = os.path.join(os.path.dirname(__file__), "faceted", "config", "campaign.xml")
+    path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    fpath = os.path.join(path, "faceted", "config", "campaign.xml")
     for brain in api.content.find(portal_type="campaign"):
         obj = brain.getObject()
         xml = ""

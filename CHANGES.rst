@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.4.10 (unreleased)
+3.4.10 (2022-06-09)
 -------------------
 
 - if ts_project_submission_path is not None, we redirect to this form instead of ideabox citizen default form.

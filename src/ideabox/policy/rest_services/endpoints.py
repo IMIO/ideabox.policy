@@ -7,12 +7,12 @@ from plone.restapi.services import Service
 class ThemeProjectGet(Service):
     def reply(self):
         voc_theme = get_vocabulary("ideabox.vocabularies.theme")
-        result = [{"id": k, "text": v} for k, v in voc_theme.items()]
+        result = [{"id": voc.value, "text": voc.title} for voc in voc_theme]
         return result
 
 
 class DistrictProjectGet(Service):
     def reply(self):
         voc_district = get_vocabulary("ideabox.vocabularies.district")
-        result = [{"id": k, "text": v} for k, v in voc_district.items()]
+        result = [{"id": voc.value, "text": voc.title} for voc in voc_district]
         return result

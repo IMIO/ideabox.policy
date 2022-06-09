@@ -5,7 +5,8 @@ Changelog
 3.4.10 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Fix "us" separator (come from taxonomies) that was displaying in district and theme endpoints.
+  [boulch]
 
 
 3.4.9 (2022-06-02)

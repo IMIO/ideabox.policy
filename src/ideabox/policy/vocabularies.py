@@ -109,7 +109,12 @@ class DistrictVocabularyFactory:
         district_taxo = get_district()
         language = api.portal.get_current_language(context=context)
         district_voca = district_taxo.makeVocabulary(language).inv_data
-        return district_voca
+        items = [
+            (k, district_taxo.translate(k, target_language=language))
+            for k, v in district_voca.items()
+        ]
+        terms = make_terms(items)
+        return SimpleVocabulary(terms)
 
 
 DistrictVocabulary = DistrictVocabularyFactory()
@@ -120,7 +125,12 @@ class ThemeVocabularyFactory:
         theme_taxo = get_theme()
         language = api.portal.get_current_language(context=context)
         theme_voca = theme_taxo.makeVocabulary(language).inv_data
-        return theme_voca
+        items = [
+            (k, theme_taxo.translate(k, target_language=language))
+            for k, v in theme_voca.items()
+        ]
+        terms = make_terms(items)
+        return SimpleVocabulary(terms)
 
 
 ThemeVocabulary = ThemeVocabularyFactory()

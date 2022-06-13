@@ -4,6 +4,7 @@ from collective.faceted.map import _
 from collective.faceted.map.browser.map import MapView
 from ideabox.policy.utils import can_view_rating
 from plone import api
+from urllib.parse import urlparse
 from zope.component import getUtility
 from zope.i18n import translate
 from zope.schema.interfaces import IVocabularyFactory
@@ -94,13 +95,13 @@ class ProjectsView(MapView):
 
     @property
     def open_project_form(self):
-        campagne_ideabox_url = requests.utils.quote(self.context.absolute_url())
+        campagne_ideabox_path = urlparse(self.context.absolute_url()).path
         eguichet_form_path = api.portal.get_registry_record(
             "ideabox.policy.browser.controlpanel.IIdeaBoxSettingsSchema.ts_project_submission_path"
         )
         if self.is_there_eguichet_project_form:
             return "window.open('{}/?campagne={}','_blank')".format(
-                eguichet_form_path, campagne_ideabox_url
+                eguichet_form_path, campagne_ideabox_path
             )
         else:
             return "window.open('{}/{}','_self')".format(

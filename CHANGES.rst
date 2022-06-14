@@ -5,7 +5,8 @@ Changelog
 3.4.11 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Add missing interface to geolocating projects
+  [boulch]
 
 
 3.4.10 (2022-06-09)

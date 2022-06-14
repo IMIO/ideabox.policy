@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from Products.CMFPlone.utils import getToolByName
+from collective.geolocationbehavior.geolocation import IGeolocatable
 from collective.z3cform.select2.widget.widget import MultiSelect2FieldWidget
 from ideabox.policy import _
 from plone import api
@@ -23,7 +24,7 @@ from zope.interface import implementer
 from zope.schema.interfaces import IVocabularyFactory
 
 
-class IProject(model.Schema):
+class IProject(model.Schema, IGeolocatable):
     """IProject"""
 
     title = schema.TextLine(title=DXMF("label_title", default="Title"), required=True)

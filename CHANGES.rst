@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.4.11 (unreleased)
+3.4.11 (2022-06-14)
 -------------------
 
 - Add missing interface to geolocating projects

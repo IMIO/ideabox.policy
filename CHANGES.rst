@@ -5,6 +5,9 @@ Changelog
 3.4.12 (unreleased)
 -------------------
 
+- Fix image display in projects template
+  [boulch]
+
 - Add ts_project_submission_path field on campaign to specify an off site project form by campaign
   [boulch]
 

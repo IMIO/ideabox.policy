@@ -20,6 +20,14 @@ class ICampaign(model.Schema):
         required=False,
     )
 
+    ts_project_submission_path = schema.URI(
+        title=_("Path to e-guichet project form"),
+        required=False,
+        description=_(
+            "Specify the path to the e-guichet project form. If not exist, system use default ideabox citizen form."
+        ),
+    )
+
 
 @implementer(ICampaign)
 class Campaign(Container):

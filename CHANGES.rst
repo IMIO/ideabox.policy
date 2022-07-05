@@ -5,7 +5,8 @@ Changelog
 3.4.12 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Add ts_project_submission_path field on campaign to specify an off site project form by campaign
+  [boulch]
 
 
 3.4.11 (2022-06-14)

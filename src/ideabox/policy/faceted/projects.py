@@ -95,15 +95,21 @@ class ProjectsView(MapView):
 
     @property
     def open_project_form(self):
+        form_url = ""
         campagne_ideabox_path = urlparse(self.context.absolute_url()).path
-        eguichet_form_path = api.portal.get_registry_record(
-            "ideabox.policy.browser.controlpanel.IIdeaBoxSettingsSchema.ts_project_submission_path"
-        )
-        if self.is_there_eguichet_project_form:
-            return "window.open('{}/?campagne={}','_blank')".format(
+        if getattr(self.context, "ts_project_submission_path", None) is not None:
+            form_url = "window.open('{}/?campagne={}','_blank')".format(
+                self.context.ts_project_submission_path, campagne_ideabox_path
+            )
+        elif self.is_there_eguichet_project_form:
+            eguichet_form_path = api.portal.get_registry_record(
+                "ideabox.policy.browser.controlpanel.IIdeaBoxSettingsSchema.ts_project_submission_path"
+            )
+            form_url = "window.open('{}/?campagne={}','_blank')".format(
                 eguichet_form_path, campagne_ideabox_path
             )
         else:
-            return "window.open('{}/{}','_self')".format(
+            form_url = "window.open('{}/{}','_self')".format(
                 self.get_path(), "@@project_submission"
             )
+        return form_url

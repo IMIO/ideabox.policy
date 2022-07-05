@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.4.12 (unreleased)
+3.4.12 (2022-07-05)
 -------------------
 
 - Fix image display in projects template

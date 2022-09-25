@@ -5,7 +5,8 @@ Changelog
 3.4.13 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- SUP-24435: Fix random sort
+  [mpeeters]
 
 
 3.4.12 (2022-07-05)

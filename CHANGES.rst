@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.4.13 (unreleased)
+3.4.13 (2022-10-10)
 -------------------
 
 - SUP-24435: Fix random sort

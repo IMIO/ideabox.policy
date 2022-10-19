@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.4.14 (unreleased)
+3.4.14 (2022-10-19)
 -------------------
 
 - Fix project, explorer faceted and tests

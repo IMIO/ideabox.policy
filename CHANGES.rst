@@ -5,7 +5,8 @@ Changelog
 3.4.14 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Fix project, explorer faceted and tests
+  [boulch]
 
 
 3.4.13 (2022-10-10)

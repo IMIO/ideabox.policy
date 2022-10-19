@@ -40,7 +40,6 @@ class TestFacetedProject(IdeaboxTestCase):
         img = NamedBlobImage(**make_named_image())
         project.project_image = img
         self.assertIn("@@images/project_image/project_faceted", view())
-
         project.project_theme = ["PROP"]
         self.assertIn('<span class="theme"', view())
 

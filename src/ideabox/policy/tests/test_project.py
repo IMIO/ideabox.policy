@@ -224,6 +224,7 @@ class TestProject(IdeaboxTestCase):
         api.user.get(userid=TEST_USER_ID).setProperties(
             {"first_name": "KAMOU", "last_name": "LOX"}
         )
+
         view = queryMultiAdapter((project, self.request), name="view")
         self.assertIn('class="documentAuthor"', view())
         self.assertIn('<span class="authorname">KAMOU LOX', view())

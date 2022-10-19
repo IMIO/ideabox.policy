@@ -191,7 +191,7 @@ class ProjectView(view.DefaultView):
         return api.user.is_anonymous()
 
     def creator(self):
-        return getattr(self.context, "original_author", self.context.Creator())
+        return getattr(self.context, "original_author", None) or self.context.Creator()
 
     def author(self):
         return api.user.get(self.creator())
@@ -200,7 +200,8 @@ class ProjectView(view.DefaultView):
         author = self.author()
         if author:
             infos = [author.getProperty("first_name"), author.getProperty("last_name")]
-            return " ".join([i for i in infos if i])
+            fullname = " ".join([i for i in infos if i])
+            return None if fullname == "" else fullname
         return author and author["fullname"] or self.creator()
 
     def get_project_theme(self):

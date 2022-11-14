@@ -5,7 +5,8 @@ Changelog
 3.4.15 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- WEB-3782 : Fix redirection to login form when rating a project.
+  [boulch]
 
 
 3.4.14 (2022-10-19)

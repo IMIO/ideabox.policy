@@ -16,7 +16,7 @@ long_description = "\n\n".join(
 
 setup(
     name="ideabox.policy",
-    version="3.4.15",
+    version="3.4.16.dev0",
     description="IdeaBox",
     long_description=long_description,
     # Get more from https://pypi.python.org/pypi?%3Aaction=list_classifiers

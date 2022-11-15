@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.4.15 (unreleased)
+3.4.15 (2022-11-15)
 -------------------
 
 - WEB-3782 : Fix redirection to login form when rating a project.

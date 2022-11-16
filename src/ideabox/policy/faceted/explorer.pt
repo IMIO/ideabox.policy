@@ -49,13 +49,13 @@
                                          image_id brain/project_picture|string:;
                                          obj brain/getObject;
                                          image_url python:image_id and view_url + '/' + image_id + '/@@images/image/project_faceted' or self.default_image(obj)">
+                    <div tal:condition="python: portal_type=='Project'">
+                      <div tal:condition="python: self.rating(obj)" tal:content="structure obj/@@rating"></div>
+                    </div>
                     <a href=""
                        title=""
                        tal:attributes="href view_url;
                                        title title">
-                      <div tal:condition="python: portal_type=='Project'">
-                        <div tal:condition="python: self.rating(obj)" tal:content="structure obj/@@rating"></div>
-                      </div>
                       <div class="image" tal:attributes="style string: background-image:url('${image_url}')"></div>
                       <div>
                         <div class="title" tal:content="title">title</div>

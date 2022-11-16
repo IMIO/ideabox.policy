@@ -5,6 +5,9 @@ Changelog
 3.4.16 (unreleased)
 -------------------
 
+- Move div to avoid click on vote counter. (Bring confusion cause of project redirection)
+  [boulch]
+
 - Update / Add some translations
   [boulch]
 

@@ -15,6 +15,10 @@ msgstr ""
 "Domain: ideabox.policy\n"
 "X-Is-Fallback-For: fr-be fr-ca fr-lu fr-mc fr-ch fr-fr\n"
 
+#: ../browser/overrides/cioppino.twothumbs.browser.templates.login_to_rate.pt:20
+msgid "${login} ${close-link}"
+msgstr ""
+
 #. Default: "Against"
 #: ../vocabularies.py:91
 msgid "AGAINST"
@@ -38,7 +42,7 @@ msgstr "Avr"
 msgid "April"
 msgstr "Avril"
 
-#: ../content/project.pt:39
+#: ../content/project.pt:43
 msgid "Areas concerned :"
 msgstr "Domaine(s) concerné(s)"
 
@@ -59,7 +63,11 @@ msgstr "Date de naissance"
 msgid "Campaign"
 msgstr "Campagne"
 
-#: ../content/project.pt:123
+#: ../browser/overrides/cioppino.twothumbs.browser.templates.login_to_rate.pt:20
+msgid "Close"
+msgstr ""
+
+#: ../content/project.pt:127
 msgid "Comment"
 msgstr "Commentaires"
 
@@ -67,17 +75,17 @@ msgstr "Commentaires"
 msgid "Configuration for ideabox product"
 msgstr "Configuration pour Ideabox"
 
-#: ../content/project.py:50
+#: ../content/project.py:51
 #: ../content/state_progress.py:18
 msgid "Content"
 msgstr "Contenu"
 
-#: ../content/project.pt:115
+#: ../content/project.pt:119
 msgid "Coordinates"
 msgstr "Coordonnnées"
 
 #: ../faceted/explorer.pt:22
-#: ../faceted/projects.pt:24
+#: ../faceted/projects.pt:21
 msgid "Create project"
 msgstr "Déposer un projet"
 
@@ -97,19 +105,19 @@ msgstr "Décembre"
 msgid "District (Project)"
 msgstr "Quartier (Voir projet)"
 
-#: ../content/project.pt:43
+#: ../content/project.pt:47
 msgid "District(s) :"
 msgstr "Quartier(s) :"
 
-#: ../content/project.py:42
+#: ../content/project.py:43
 msgid "District(s) concerned"
 msgstr "Quartier(s) concerné(s)"
 
-#: ../content/project.py:33
+#: ../content/project.py:34
 msgid "Domain(s) concerned"
 msgstr "Domaine(s) concerné(s)"
 
-#: ../content/project.pt:74
+#: ../content/project.pt:78
 msgid "Edit timeline dates"
 msgstr "Modifier les dates de la ligne du temps"
 
@@ -280,6 +288,10 @@ msgstr "Limite d'élément affiché"
 msgid "Locality (Registration form)"
 msgstr "Localité (Formulaire d'inscription)"
 
+#: ../browser/overrides/cioppino.twothumbs.browser.templates.login_to_rate.pt:16
+msgid "Log in to rate"
+msgstr ""
+
 #. Default: "Male"
 #: ../vocabularies.py:50
 msgid "MALE"
@@ -317,7 +329,7 @@ msgstr ""
 msgid "Newsletter link"
 msgstr "Lien vers l'inscription à la newsletter"
 
-#: ../content/project.pt:162
+#: ../content/project.pt:166
 msgid "No"
 msgstr "Non"
 
@@ -341,11 +353,12 @@ msgstr "Octobre"
 msgid "Operational objectives"
 msgstr "Objectifs opérationnels"
 
-#: ../content/project.py:57
+#: ../content/project.py:58
 msgid "Original author"
 msgstr "Auteur original"
 
 #: ../browser/controlpanel.py:39
+#: ../content/campaign.py:24
 #: ../upgrades/profiles/1012_to_1013/registry/e-guichet-project-form.xml
 msgid "Path to e-guichet project form"
 msgstr "Chemin vers le formulaire e-guichet de soumission de projets"
@@ -376,7 +389,7 @@ msgstr "Projet"
 msgid "Project Sorting"
 msgstr "Tri pour les projets"
 
-#: ../content/project.pt:130
+#: ../content/project.pt:134
 #: ../content/state_progress.pt:11
 msgid "Project Status"
 msgstr "Etat d'avancement du projet"
@@ -386,7 +399,7 @@ msgstr "Etat d'avancement du projet"
 msgid "Project encoding"
 msgstr "Encoder un projet"
 
-#: ../content/project.py:54
+#: ../content/project.py:55
 msgid "Project image"
 msgstr "Image du projet"
 
@@ -425,7 +438,7 @@ msgstr "Mis en ligne le "
 msgid "Random sort"
 msgstr "Tri aléatoire"
 
-#: ../content/project.pt:87
+#: ../content/project.pt:91
 msgid "Read more"
 msgstr "En savoir plus"
 
@@ -433,7 +446,7 @@ msgstr "En savoir plus"
 msgid "Save"
 msgstr "Enregistrer"
 
-#: ../content/project.pt:152
+#: ../content/project.pt:156
 msgid "See more"
 msgstr "Voir plus"
 
@@ -460,6 +473,7 @@ msgid "Setting up"
 msgstr "Mise en place"
 
 #: ../browser/controlpanel.py:41
+#: ../content/campaign.py:26
 msgid "Specify the path to the e-guichet project form. If not exist, system use default ideabox citizen form."
 msgstr "Spécifier le chemin vers le formulaire e-guichet de soumission de projet. Si vous ne spécifiez rien, ce sera le formulaire (ideabox) citoyen par défaut qui sera utilisé."
 
@@ -487,7 +501,7 @@ msgstr "Les votes ont bien été encodés"
 msgid "Theme"
 msgstr "Thème"
 
-#: ../content/project.pt:133
+#: ../content/project.pt:137
 msgid "There is no progress for the moment."
 msgstr "Il n'y a pas d'état d'avancement pour le moment."
 
@@ -539,11 +553,11 @@ msgstr "Votants contre"
 msgid "Votes"
 msgstr "Votes"
 
-#: ../content/project.pt:157
+#: ../content/project.pt:161
 msgid "Would you like to be kept up to date on the progress of the project?"
 msgstr "Souhaitez-vous être tenu au courant de l’avancement du projet?"
 
-#: ../content/project.pt:167
+#: ../content/project.pt:171
 msgid "Yes"
 msgstr "Oui"
 

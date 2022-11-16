@@ -1,10 +1,10 @@
-#--- PLEASE EDIT THE LINES BELOW CORRECTLY ---
-#SOME DESCRIPTIVE TITLE.
-#FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-06-09 13:15+0000\n"
+"POT-Creation-Date: 2022-11-16 08:29+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,6 +19,10 @@ msgstr ""
 
 #: ../browser/controlpanel.py:51
 msgid ""
+msgstr ""
+
+#: ../browser/overrides/cioppino.twothumbs.browser.templates.login_to_rate.pt:20
+msgid "${login} ${close-link}"
 msgstr ""
 
 #. Default: "Against"
@@ -44,7 +48,7 @@ msgstr ""
 msgid "April"
 msgstr ""
 
-#: ../content/project.pt:39
+#: ../content/project.pt:43
 msgid "Areas concerned :"
 msgstr ""
 
@@ -65,7 +69,11 @@ msgstr ""
 msgid "Campaign"
 msgstr ""
 
-#: ../content/project.pt:123
+#: ../browser/overrides/cioppino.twothumbs.browser.templates.login_to_rate.pt:20
+msgid "Close"
+msgstr ""
+
+#: ../content/project.pt:127
 msgid "Comment"
 msgstr ""
 
@@ -73,17 +81,17 @@ msgstr ""
 msgid "Configuration for ideabox product"
 msgstr ""
 
-#: ../content/project.py:50
+#: ../content/project.py:51
 #: ../content/state_progress.py:18
 msgid "Content"
 msgstr ""
 
-#: ../content/project.pt:115
+#: ../content/project.pt:119
 msgid "Coordinates"
 msgstr ""
 
 #: ../faceted/explorer.pt:22
-#: ../faceted/projects.pt:24
+#: ../faceted/projects.pt:21
 msgid "Create project"
 msgstr ""
 
@@ -103,19 +111,19 @@ msgstr ""
 msgid "District (Project)"
 msgstr ""
 
-#: ../content/project.pt:43
+#: ../content/project.pt:47
 msgid "District(s) :"
 msgstr ""
 
-#: ../content/project.py:42
+#: ../content/project.py:43
 msgid "District(s) concerned"
 msgstr ""
 
-#: ../content/project.py:33
+#: ../content/project.py:34
 msgid "Domain(s) concerned"
 msgstr ""
 
-#: ../content/project.pt:74
+#: ../content/project.pt:78
 msgid "Edit timeline dates"
 msgstr ""
 
@@ -286,6 +294,10 @@ msgstr ""
 msgid "Locality (Registration form)"
 msgstr ""
 
+#: ../browser/overrides/cioppino.twothumbs.browser.templates.login_to_rate.pt:16
+msgid "Log in to rate"
+msgstr ""
+
 #. Default: "Male"
 #: ../vocabularies.py:50
 msgid "MALE"
@@ -323,7 +335,7 @@ msgstr ""
 msgid "Newsletter link"
 msgstr ""
 
-#: ../content/project.pt:162
+#: ../content/project.pt:166
 msgid "No"
 msgstr ""
 
@@ -347,11 +359,12 @@ msgstr ""
 msgid "Operational objectives"
 msgstr ""
 
-#: ../content/project.py:57
+#: ../content/project.py:58
 msgid "Original author"
 msgstr ""
 
 #: ../browser/controlpanel.py:39
+#: ../content/campaign.py:24
 #: ../upgrades/profiles/1012_to_1013/registry/e-guichet-project-form.xml
 msgid "Path to e-guichet project form"
 msgstr ""
@@ -382,7 +395,7 @@ msgstr ""
 msgid "Project Sorting"
 msgstr ""
 
-#: ../content/project.pt:130
+#: ../content/project.pt:134
 #: ../content/state_progress.pt:11
 msgid "Project Status"
 msgstr ""
@@ -392,7 +405,7 @@ msgstr ""
 msgid "Project encoding"
 msgstr ""
 
-#: ../content/project.py:54
+#: ../content/project.py:55
 msgid "Project image"
 msgstr ""
 
@@ -431,7 +444,7 @@ msgstr ""
 msgid "Random sort"
 msgstr ""
 
-#: ../content/project.pt:87
+#: ../content/project.pt:91
 msgid "Read more"
 msgstr ""
 
@@ -439,7 +452,7 @@ msgstr ""
 msgid "Save"
 msgstr ""
 
-#: ../content/project.pt:152
+#: ../content/project.pt:156
 msgid "See more"
 msgstr ""
 
@@ -466,6 +479,7 @@ msgid "Setting up"
 msgstr ""
 
 #: ../browser/controlpanel.py:41
+#: ../content/campaign.py:26
 msgid "Specify the path to the e-guichet project form. If not exist, system use default ideabox citizen form."
 msgstr ""
 
@@ -493,7 +507,7 @@ msgstr ""
 msgid "Theme"
 msgstr ""
 
-#: ../content/project.pt:133
+#: ../content/project.pt:137
 msgid "There is no progress for the moment."
 msgstr ""
 
@@ -545,11 +559,11 @@ msgstr ""
 msgid "Votes"
 msgstr ""
 
-#: ../content/project.pt:157
+#: ../content/project.pt:161
 msgid "Would you like to be kept up to date on the progress of the project?"
 msgstr ""
 
-#: ../content/project.pt:167
+#: ../content/project.pt:171
 msgid "Yes"
 msgstr ""
 

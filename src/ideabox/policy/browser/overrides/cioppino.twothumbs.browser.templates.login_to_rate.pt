@@ -17,6 +17,6 @@
            tal:attributes="href string:${context/portal_url}/login_form?came_from=${request/HTTP_REFERER}"
            i18n:translate="">Log in to rate</a>
     </span>
-    <a i18n:name="close-link" i18n:attributes="title" title="Close" class="close-link" href="#">&nbsp;</a>
+    <a i18n:name="close-link" i18n:attributes="title" title="Close" class="close-link" style="display:block;" href="#">&nbsp;</a>
 </div>
 </html>

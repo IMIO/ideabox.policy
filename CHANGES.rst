@@ -5,6 +5,9 @@ Changelog
 3.4.16 (unreleased)
 -------------------
 
+- Use request/HTTP_REFERER instead of absolute_url to redirect on real/good referer
+  [boulch]
+
 - Move div to avoid click on vote counter. (Bring confusion cause of project redirection)
   [boulch]
 

@@ -65,7 +65,7 @@ msgstr "Campagne"
 
 #: ../browser/overrides/cioppino.twothumbs.browser.templates.login_to_rate.pt:20
 msgid "Close"
-msgstr ""
+msgstr "Fermer"
 
 #: ../content/project.pt:127
 msgid "Comment"
@@ -290,7 +290,7 @@ msgstr "Localité (Formulaire d'inscription)"
 
 #: ../browser/overrides/cioppino.twothumbs.browser.templates.login_to_rate.pt:16
 msgid "Log in to rate"
-msgstr ""
+msgstr "Se connecter pour voter"
 
 #. Default: "Male"
 #: ../vocabularies.py:50
@@ -575,7 +575,7 @@ msgstr "Code postal / localité"
 
 #: ../profiles/default/registry.xml
 msgid "Zip code vocabulary values"
-msgstr ""
+msgstr "Code postaux"
 
 #: ../browser/project.py:22
 msgid "diagnose and analysis"

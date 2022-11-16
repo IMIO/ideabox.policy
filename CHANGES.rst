@@ -5,7 +5,8 @@ Changelog
 3.4.16 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Update / Add some translations
+  [boulch]
 
 
 3.4.15 (2022-11-15)

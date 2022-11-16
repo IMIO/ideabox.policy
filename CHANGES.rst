@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.4.16 (unreleased)
+3.4.16 (2022-11-16)
 -------------------
 
 - Use request/HTTP_REFERER instead of absolute_url to redirect on real/good referer

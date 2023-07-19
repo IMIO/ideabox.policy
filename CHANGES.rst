@@ -5,6 +5,9 @@ Changelog
 3.4.17 (unreleased)
 -------------------
 
+- Add option in control panel to choice if projects status must be display in campaign faceted view
+  [boulch]
+
 - [MIDBOXMSCA-5] Display projects status in campaign faceted view
   [boulch]
 

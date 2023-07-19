@@ -75,6 +75,10 @@ class ProjectsView(MapView):
             return self._themes.getTerm(key).title
         except KeyError:
             return ""
+    @property
+    def display_projects_status(self):
+        display_projects_status = api.portal.get_registry_record("ideabox.policy.browser.controlpanel.IIdeaBoxSettingsSchema.display_projects_status")
+        return display_projects_status
 
     def get_status(self, obj):
         current_lang = api.portal.get_current_language()

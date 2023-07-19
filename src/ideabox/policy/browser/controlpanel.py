@@ -35,6 +35,13 @@ class IIdeaBoxSettingsSchema(Interface):
         default=True,
     )
 
+    display_projects_status = schema.Bool(
+        title=_("Display projects status"),
+        description=_("If checked, display projects status in campaign faceted view."),
+        default=False,
+    )
+
+
     ts_project_submission_path = schema.TextLine(
         title=_("Path to e-guichet project form"),
         required=False,

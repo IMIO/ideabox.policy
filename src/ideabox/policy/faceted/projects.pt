@@ -60,6 +60,8 @@
                         </div>
                       </div>
                     </a>
+                    <div tal:attributes="class python:f'status {self.get_status(obj)[0]}'"
+                         tal:content="python:self.get_status(obj)[1]"></div>
                   </tal:block>
                 </div>
               </tal:block>

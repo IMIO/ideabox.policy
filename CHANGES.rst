@@ -5,7 +5,8 @@ Changelog
 3.4.17 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- [MIDBOXMSCA-5] Display projects status in campaign faceted view
+  [boulch]
 
 
 3.4.16 (2022-11-16)

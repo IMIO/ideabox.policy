@@ -4,13 +4,13 @@ from collective.faceted.map import _
 from collective.faceted.map.browser.map import MapView
 from ideabox.policy.utils import can_view_rating
 from plone import api
+from Products.CMFPlone import PloneMessageFactory as trad_plone
 from urllib.parse import urlparse
 from zope.component import getUtility
 from zope.i18n import translate
 from zope.schema.interfaces import IVocabularyFactory
 
 import json
-import requests
 
 
 class ProjectsView(MapView):
@@ -75,6 +75,11 @@ class ProjectsView(MapView):
             return self._themes.getTerm(key).title
         except KeyError:
             return ""
+
+    def get_status(self, obj):
+        current_lang = api.portal.get_current_language()
+        current_state = api.content.get_state(obj)
+        return [current_state, translate(trad_plone(current_state), context=self.request,target_language=current_lang)]
 
     def get_path(self):
         context = self.context

@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.4.17 (unreleased)
+3.4.17 (2023-07-24)
 -------------------
 
 - Add option in control panel to choice if projects status must be display in campaign faceted view

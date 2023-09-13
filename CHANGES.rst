@@ -5,7 +5,8 @@ Changelog
 3.4.18 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- MIDBOXMSCA-9 : Fix : Set geolocation field when project is submited by a citizen
+  [boulch]
 
 
 3.4.17 (2023-07-24)

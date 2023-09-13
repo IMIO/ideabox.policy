@@ -90,6 +90,7 @@ class ProjectSubmissionForm(Form):
             api.content.create,
             type="Project",
             title=data["title"],
+            geolocation=data["geolocation"],
             project_theme=data["project_theme"],
             project_district=data["project_district"],
             body=data["body"],

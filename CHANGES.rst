@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.4.18 (unreleased)
+3.4.18 (2023-09-13)
 -------------------
 
 - MIDBOXMSCA-9 : Fix : Set geolocation field when project is submited by a citizen
